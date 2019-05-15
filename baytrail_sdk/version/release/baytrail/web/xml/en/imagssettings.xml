@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImagsSettings>
+  <displaysettings>
+    <Common>
+      <Page>
+        <aImagsSets>Image Quality</aImagsSets>
+      </Page>
+    </Common>
+    <page>
+      <imageadjust>Image Adjustment</imageadjust>
+      <brightness>Brightness</brightness>
+      <constrast>Contrast</constrast>
+      <saturation>Saturation</saturation>
+      <acutance>Sharpness</acutance>
+      <exposure>Exposure</exposure>
+      <increase>Gain</increase>
+      <increaselimit>Gain Upper Limit</increaselimit>
+      <increaselevel>Gain Level</increaselevel>
+      <lightring>Aperture Mode</lightring>
+      <ringsensitivity>Aperture Sensitivity</ringsensitivity>
+      <ringsize>Aperture Size</ringsize>
+      <shutter>Shutter Mode</shutter>
+      <shutterdwon>Shutter Lower Threshold</shutterdwon>
+      <shutterupper>Shutter Upper Threshold</shutterupper>
+      <shutterlevel>Shutter Level</shutterlevel>
+      <againstflash>Anti-Flicker</againstflash>
+      <focusing>Focus</focusing>
+      <focusmode>Focus Mode</focusmode>
+      <minfocusdis>Min. Focus Distance</minfocusdis>
+      <maxfocusdis>Max. Focus Distance</maxfocusdis>
+      <altfocustips>Min. Focus Distance cannot be greater than the Max.</altfocustips>
+      <infinity>Infinity</infinity>
+      <whitebalance>White Balance</whitebalance>
+      <whitebalance_R>White Balance R Gain</whitebalance_R>
+      <whitebalance_B>White Balance B Gain</whitebalance_B>
+      <daynightchange>Day/Night Switch</daynightchange>
+      <daynightchange1>Day/Night Switch</daynightchange1>
+      <sensitivity>Sensitivity</sensitivity>
+	  <photolevel>Photosensitivity</photolevel>
+      <MDayStartTime>Day Mode Start Time</MDayStartTime>
+      <MDayEndTime>Day Mode End Time</MDayEndTime>
+      <changetime>Day/Night Switch Latency Time</changetime>
+	  <M_threshold>Switching Value</M_threshold>
+      <edittime>Edit Time</edittime>
+      <springstate>Trigger Status</springstate>
+      <imageincerse>Image Enhancement</imageincerse>
+      <denoiseMode3D>3D Noise Reduction</denoiseMode3D>
+	  <denoiseMode2D>2D Denoising</denoiseMode2D>
+      <denoise3D>3D Noise Reduction</denoise3D>
+      <denoise2D>2D Noise Reduction</denoise2D>
+      <dynamicaccommodation>Dynamic Adjust</dynamicaccommodation>
+      <BacklightCompensationsens>Backlight Sensitivity</BacklightCompensationsens>
+      <BacklightCompensationarea>Backlight Area</BacklightCompensationarea>
+      <widerange>WDR</widerange>
+      <widerangesens>WDR Sensitivity</widerangesens>
+      <strongligthdes>HLC</strongligthdes>
+      <strongligthdessens>HLC Level</strongligthdessens>
+      <Mfogthrough>Defog</Mfogthrough>
+      <Mfogthroughleve>Defog Sensitivity</Mfogthroughleve>
+      <MGamma>Gamma</MGamma>
+      <MGammaleve>Gamma Sensitivity</MGammaleve>
+      <MsmartIR>SmartIR</MsmartIR>
+      <smartIRleve>SmartIR Sensitivity</smartIRleve>
+      <turnandecho>Rotate and BNC</turnandecho>
+      <passagemode>Corridor Mode</passagemode>
+      <mirrormode>Mirror Mode</mirrormode>
+      <localecho>BNC Output</localecho>
+      <Mstartdraw>Edit</Mstartdraw>
+      <Mstopdraw>Stop Editting</Mstopdraw>
+      <Mcleanall>Delete All</Mcleanall>
+      <Mset>Setting</Mset>
+      <MRestoredefault>Restore</MRestoredefault>
+      <MRestoredesuccess>Restored</MRestoredesuccess>
+	  <MAntishake>EIS</MAntishake>
+	  <MAntishakeLevel>EIS Level</MAntishakeLevel>
+	  <Mstandard>Standard</Mstandard>
+	  <Mcourt>Court</Mcourt>
+	  <Mscntitne>Effect parameters</Mscntitne>
+	  <Maddscn>Add Scene</Maddscn>
+	  <Mscnname>Scene Name</Mscnname>
+	  <Mscnsave>Save parameters</Mscnsave>
+    </page>
+    <opt>
+      <open>Enable</open>
+      <close>Disable</close>
+      <auto>Auto</auto>
+      <manual>Manual</manual>
+      <MaFocusTypeOptions>
+        <focusonce>Single Focus</focusonce>
+        <focusmanual>Focus Manual</focusmanual>
+        <focuscontinue>Continuous Focus</focuscontinue>
+        <focuscontinueauto>Auto Focus</focuscontinueauto>
+      </MaFocusTypeOptions>
+      <MaWhiteTypeOptions>
+        <whitebalancemanual>Manual</whitebalancemanual>
+        <autowhitebalance1>Auto White Balance 1</autowhitebalance1>
+        <autowhitebalance2>Auto White Balance 2</autowhitebalance2>
+        <lockwhitebalance>Lock White Balance</lockwhitebalance>
+        <daylightlamp>Fluorescent Lamp</daylightlamp>
+        <filamentlamp>Incandescent Lamp</filamentlamp>
+        <warmlightlamp>Warm Light</warmlightlamp>
+        <Naturallight>Natural Light</Naturallight>
+      </MaWhiteTypeOptions>
+      <MaIrcutTypeOptions>
+        <day>Day</day>
+        <night>Night</night>
+        <autogain>Auto (gain triggered)</autogain>
+        <autophoto>Auto (photosensor triggered)</autophoto>
+        <timedaynight>Timed Day/Night</timedaynight>
+        <alarminspring>Alarm Triggered Switch</alarminspring>
+      </MaIrcutTypeOptions>
+      <hight>High</hight>
+      <middle>Middle</middle>
+      <low>Low</low>
+      <BacklightCompensationauto>Backlight Auto</BacklightCompensationauto>
+      <BacklightCompensationmanual>Backlight Manual</BacklightCompensationmanual>
+      <jspal>PAL</jspal>
+      <jsntsc>NTSC</jsntsc>
+      <jsline>Progressive (same as main stream resolution)</jsline>
+      <jsinterleave>Interlacing (same as main stream resolution)</jsinterleave>
+      <jsleft>Left</jsleft>
+      <jsright>Right</jsright>
+      <up>Up</up>
+      <down>Down</down>
+      <left>Left</left>
+      <right>Right</right>
+      <center>Center</center>
+      <custom>Custom</custom>
+      <updown>Up and Down</updown>
+      <leftright>Left and Right</leftright>
+      <js50hz>50Hz</js50hz>
+      <js60hz>60Hz</js60hz>
+      <jsAntiFlickerModeauto>Natural Light</jsAntiFlickerModeauto>
+	  <Mimagemode>Mode</Mimagemode>
+	  <MStrength>Level</MStrength>
+	  <Mlaser>
+	    <jslaser>Laser</jslaser>
+		<jsspotlightmode>Spotlight Mode</jsspotlightmode>
+	  	<jsdef>Default</jsdef>
+		<jslittlefacula>Small Light Spot Mode</jslittlefacula>
+		<jsbigfaxula>Large Light Spot Mode</jsbigfaxula>
+		<jscustom1>Custom Mode 1</jscustom1>
+		<jscustom2>Custom Mode 2</jscustom2>
+	  </Mlaser>
+	  <Minfrared>
+	    <jsinfrared>IR</jsinfrared>
+		<jsauto>Auto</jsauto>
+		<jsfarlamp>Far Lamp On</jsfarlamp>
+		<jsmiddlelamp>Middle Lamp On</jsmiddlelamp>
+		<jsnearlamp>Near Lamp On</jsnearlamp>
+		<jsexnearlamp>Super Near Lamp On</jsexnearlamp>
+	  </Minfrared>
+    </opt>
+  </displaysettings>
+</ImagsSettings>

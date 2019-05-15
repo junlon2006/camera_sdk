@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabAdcap">
+    <li><a id="Maadcap" name="Maadcap" href="javascript:ia(mtcf).update();" ></a></li>
+	</ul>
+<div class="panes panewidth" id="divAdcap">
+    <div class="pane" id="mtcf">
+          <div class="subparamsgray" id="submodechange" style="display:none">
+            <span class="firstspan"><label name="Mmode" id="Mmode"></label></span>
+            <span>
+                <select class="selectwidth width152" id="modechange" onchange="modechange(this)">
+                </select>
+            </span>
+            <span><label id="MRestart" name="MRestart"></label></span>
+          </div>
+          
+           <div class="subparamswhiteadcap" id="subhdsditext" style="display:none">
+                    <span class="localsecondspanmtcf1" style="margin-left:180px;">
+                        <!--<span style="display:block; height:20px; line-height:20px;">不支持HD-SDI回显输出</span>
+                        <span style="display:block; height:20px; line-height:20px;">支持双码流网络输出</span>-->
+                        <span><label name="MhdsdiTips"></label></span>
+                        <span><label name="MhdsdiTips1"></label></span>
+                    </span> 
+           </div>
+        
+    
+    
+        <div class="subparamswhite" id="subaac" style="display:none">
+            
+            <span class="firstspan">
+		        <label id="MLowdelaymodel" name="MLowdelaymodel"></label>
+		    </span>
+            <span class="localsecondspan" style="width:150px;">
+                            <input type="radio" name="mtcf" value="autolow" class="radio" />&nbsp;<label id="MautoLowdelaymodel" name="MautoLowdelaymodel" class="displayblock"></label>
+             </span>
+             <span class="localsecondspan"  style="width:150px;">
+                        <input type="radio" name="mtcf" value="normal" class="radio" />&nbsp;<label name="MNormalmode" class="displayblock"></label>
+             </span>
+             <span class="localsecondspan"  style="width:150px;">
+                        <input type="radio" name="mtcf" value="low" class="radio" />&nbsp;<label class="displayblock" id="MForcedlowdelaymodel" name="MForcedlowdelaymodel"></label>
+             </span>
+        </div>
+        
+           <div class="subparamswhiteadcap" id="subacctext" style="display:none">
+                    <span class="localsecondspanmtcf1" style="margin-left:180px;">
+                        <span ><label name="Mvideodelay" id="Mvideodelay"></label></span>
+                        <span >1、<label name="Mnoisereduction3D" id="Mnoisereduction3D"></label></span>
+                        <span>2、<label name="MImagemasking" id="MImagemasking"></label></span>
+                        <span><label name="MNormalmode"></label>：<label name="MNodelayoptimization"></label></span>
+                        <span><label name="MForcedlowdelaymodel"></label>：<label name="MForcedclose3D"></label></span>
+                        <span><label name="MautoLowdelaymodel"></label>：<label name="MForcedclose3D2"></label></span>
+                    </span> 
+           </div>
+          
+             <div class="clear"></div>
+   </div> 
+   <div class="spansave"><input type="button"  class="input_save"  id="Savemtcf" onclick="Savemtcf(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsmtcf"></span></div>    
+</div><!--<div class="panes">-->

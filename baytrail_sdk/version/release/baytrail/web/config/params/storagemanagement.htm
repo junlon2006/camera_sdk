@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ul class="tabs" id="tabStorageManagement">
+    <li><a href="javascript:ia(StorageManagement).update();" name="MStorageManagement" id="MStorageManagement"></a></li>
+</ul>
+<div class="panes" id="divStoragt">
+    <div class="pane" id="divStorageManagement" >
+        <div class="subparamswhite">
+			    <span class="firstspan"><label name="MDiskfullstrategy" id="MDiskfullstrategy"></label></span>
+				<span class="localsecondspan">
+                  <select class="Images_select" id="fullmode" onchange="Checkfullmode(this)">
+                      
+                    </select>
+                </span>
+			</div>
+        <div class="mainparams" style=" margin-top:5px;">
+				<span style="float:left"><label name="MStoragedevicelist" id="MStoragedevicelist"></label></span>
+                <span style=" float:right"><input type="button" onclick="formatManagement()" name="MFormatting" class="buttonclass" id="Formatting" value="" disabled="disabled"  style=" margin-right:10px;"/></span>
+			</div>
+        <div class="subparamsgray">
+           
+              </div>
+              <style>
+			 .tabStorageManagement {margin-top:10px; width:100%; margin:0 auto;border-collapse: collapse;font-size: 12px;}
+			  .ListTr { height:25px; line-height:25px;}
+			  .ListTd {width:100px;height:30px; line-height:30px;}
+			</style>
+             <div style="height:150px;overflow:auto;overflow-x:hidden;">
+            <table cellspacing="0" cellpadding="0" class="tabStorageManagement" id="TabManagement">
+                
+                  <tr align="center" class="ListTr">
+                    <td class="titletd ListTd"><label name="MDisknumber"></label></td>
+                    <td class="titletd"><label name="MCapacity"></label></td>
+                    <td class="titletd"><label name="Mremainingspace"></label></td>
+                    <td class="titletd"><label name="MState"></label></td>
+                    <td class="titletd"><label name="Mtype"></label></td>
+                    <td class="titletd"><label name="MAttribute"></label></td>
+                    <td class="titletd"><label name="Mprogress"></label></td>
+                  </tr>
+                 <tbody id="TbodyManagement" >
+                </tbody>
+              </table>
+        </div>
+       
+    </div>
+    <!------ 存储管理开始------------------->
+ 
+</div><!--<div class="panes">-->

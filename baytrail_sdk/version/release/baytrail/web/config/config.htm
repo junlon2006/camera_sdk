@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<link rel="stylesheet" type="text/css" href="../style/style.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type="text/css" href="../style/main.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type="text/css" href="../style/config/config.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type="text/css" href="../style/box.css?versiondate=7.1.2.249607" />
+<link rel="stylesheet" type="text/css" href="../style/tabs/tabs.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type="text/css" href="../style/menu/menu.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type="text/css" href="../style/viewer/jquery-ui-slider.css?versiondate=7.1.2.249607"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script language="javascript" type="text/javascript" src="../script/jquery-1.7.1.min.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/jquery.cookie.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/jquery.simplemodal.1.4.4.min.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/versionocx.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/inc.js?versiondate=7.1.2.249607"></script>
+
+
+
+<script language="javascript" type="text/javascript" src="../script/jquery-ui-slider.js?versiondate=7.1.2.249607"></script>
+
+<script language="javascript" type="text/javascript" src="../script/config/jquery.menu.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/tabs/jquery.tabs.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js?versiondate=7.1.2.249607" ></script>
+<script language="javascript" type="text/javascript" src="../script/config/singletoninheritor.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/system.js?versiondate=7.1.2.249607"></script>
+
+<script language="javascript" type="text/javascript" src="../script/config/tcpip.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/accessprotocol.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/osdset.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/timeset.js?versiondate=7.1.2.249607"></script>
+
+<script language="javascript" type="text/javascript" src="../script/config/recordplan.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/localconfig.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/common.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/stringtest.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/checkform.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/config.js?versiondate=7.1.2.249607"></script>
+
+<script language="javascript" type="text/javascript" src="../script/config/network.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/imagssettings.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/ptz.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/user.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/videoset.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/event.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/storage.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/serialpost.js?versiondate=7.1.2.249607"></script>
+
+<script language="javascript" type="text/javascript" src="../script/config/log.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/translator.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/md5.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/base64.js?versiondate=7.1.2.249607"></script>
+<script>
+
+var m_szSuccessState = "&nbsp;<img src='../images/config/smile.png' class='imgmiddle'>&nbsp;"; //设置成功
+//var m_szSuccessState = "&nbsp;"; //设置成功
+var m_szErrorState = "&nbsp;<img src='../images/config/tips.png' class='imgmiddle'>&nbsp;"; //设置失败
+//var m_szErrorState = "&nbsp;"; //设置失败
+var m_iTimePart = 10; // 布防时间段最大数
+var m_szWeekEnable = new Array(); //星期数组，用于保存时间段信息,一共7天
+for (var i = 0;i < 7;i ++)
+{
+	m_szWeekEnable[i] = false;
+}
+var m_szWeek = new Array(); //星期数组，用于保存时间段信息,一共7天，每天10个时间段
+//var m_szWeekIndex = new Array(); //从星期天开始
+for (var i = 0;i < 7;i ++)
+{
+   m_szWeek[i] = new Array();
+   for(var j = 0;j < m_iTimePart;j ++)
+   {
+	  // var m_arrIndex = new Array(7,1,2,3,4,5,6); //星期数组，用于保存时间段信息,一共7天，每天10个时间段
+       m_szWeek[i][j] = new Array();
+       m_szWeek[i][j][0] = "00:00:00";
+       m_szWeek[i][j][1] = "00:00:00";
+	   
+   }
+}
+
+
+//
+
+var m_iDay = 0; //初始化选择为星期天
+var UserNameLogin=$.cookie('UserNameLogin');   //
+var UserPassLogin=$.cookie('UserPassLogin');   //
+</script>
+
+
+
+</head>
+<body  onload="InitInterConfigface()" onunload="UnloadPage('../config/config.htm',4)">
+  <div class="container" id="container" >
+    <div id="contentleft" class="contentleft">
+       <div id="menu" class="configmenu"> 
+          <div id="SubLaconfig" class="basic mainmenu">
+              <span class="menuspan menuspaninc" ><label id="aMLocalConfig"  name="MLocalConfig" class="menulabel"></label></span>
+                <a id="MLocalConfig" name="MLocalConfig" class="submenu" href="javascript:showmenuconfig('LocalConfig', 0, 'LocalConfig')"></a>
+          </div>
+          <div id="SubFastSet" class="basic mainmenu collapsed">
+              <span class="menuspan menuspaninc"><label id="Mfastset" name="Mfastset" class="menulabel"></label></span>
+               <!-- <a id="aIPAddress" name="aIPAddress" class="submenu" href="javascript:showmenuconfig('IPAddress', 0, 'FastSetConfig')">&nbsp;</a>-->
+                <a id="aIPAddress" name="aIPAddress" class="submenu" href="javascript:showmenuconfig('IPAddress', 0, 'FastSetConfig')"></a>
+                <a id="aAccessProtocol" name="aAccessProtocol" class="submenu" href="javascript:showmenuconfig('AccessProtocol', 0, 'FastSetConfig')"></a>
+                <a id="aDeviceInformation" name="aDeviceInformation" class="submenu" href="javascript:showmenuconfig('deviceinfo', 0, 'FastSetConfig')"></a>
+                <a id="aDateTime" name="aDateTime" class="submenu" href="javascript:showmenuconfig('TimeSet', 0, 'FastSetConfig')"></a>
+          </div>
+          <div id="SubNetWork" class="basic mainmenu collapsed">
+              <span class="menuspan menuspaninc"><label id="aNetwork" name="aNetwork" class="menulabel"></label></span>
+                <a id="aTCPIPpost" name="aTCPIPpost" class="submenu" href="javascript:showmenuconfig('TCPIPpost', 0, 'NetWorkConfig')"></a>
+                <a id="aAccessProtocol" name="aAccessProtocol" class="submenu" href="javascript:showmenuconfig('AccessProtocolNet', 0, 'NetWorkConfig')"></a>
+                <a id="aOtherProtocol" name="aOtherProtocol" class="submenu" href="javascript:showmenuconfig('OtherProtocol', 0, 'NetWorkConfig')"></a>
+          </div>
+          <div id="SubVideoCamera" class="basic mainmenu collapsed">
+              <span class="menuspan menuspaninc"><label id="aVideoCamera" name="aVideoCamera" class="menulabel"></label></span>
+                <a id="aImagsSettings" name="aImagsSettings" class="submenu" href="javascript:showmenuconfig('ImagsSettings', 0, 'VideoConfig')"></a>
+                <a id="aOSD" class="submenu" href="javascript:showmenuconfig('OSD', 0, 'VideoConfig')">OSD</a>
+                <a id="aVideo" name="aVideo" class="submenu" href="javascript:showmenuconfig('Video', 0, 'VideoConfig')"></a>
+                <a id="aAudio" name="aAudio" class="submenu" href="javascript:showmenuconfig('Audio', 0, 'VideoConfig')"></a>
+                <a id="aPTZ" name="aPTZ" class="submenu" href="javascript:showmenuconfig('PTZ', 0, 'VideoConfig')"></a>
+                <!--<a id="aadcap" name="aadcap" class="submenu" href="javascript:showmenuconfig('Adcap', 0, 'VideoConfig')"></a>-->
+          </div>
+          <div id="SubEvent" class="basic mainmenu collapsed">
+              <span class="menuspan menuspaninc"><label id="aEvent" name="aEvent" class="menulabel"></label></span>
+                <a id="aVideoAnalysis" name="aVideoAnalysis" class="submenu" href="javascript:showmenuconfig('VideoAnalysis', 0, 'EventConfig')"></a>
+                <!--<a id="aOcclusionAlarm"  name="aOcclusionAlarm" class="submenu" href="javascript:showmenuconfig('Alarm', 0, 'EventConfig')"></a>-->
+                <a id="aAlarmInput" name="aAlarmInput" class="submenu" href="javascript:showmenuconfig('Input', 0, 'EventConfig')"></a>
+                <a id="aAlarmoutput" name="aAlarmoutput" class="submenu" href="javascript:showmenuconfig('Output', 0, 'EventConfig')"></a>
+                <a id="aAbnormal" name="aAbnormal" class="submenu" href="javascript:showmenuconfig('Abnormal', 0, 'EventConfig')"></a>
+          </div>
+          
+          <div id="SubStorage" class="basic mainmenu collapsed">
+              <span class="menuspan menuspaninc"><label id="aStorage" name="aStorage" class="menulabel"></label></span>
+                <a id="aStorageManagement" name="aStorageManagement" class="submenu" href="javascript:showmenuconfig('StorageManagement', 0, 'StorageConfig')"></a>
+                <a id="aVideoProgram"  name="aVideoProgram" class="submenu" href="javascript:showmenuconfig('VideoProgram', 0, 'StorageConfig')"></a>
+                <a id="aScreenshot" name="aScreenshot" class="submenu" href="javascript:showmenuconfig('Screenshot', 0, 'StorageConfig')"></a>
+          </div>
+          
+          
+          <div id="SubSyttem" class="basic mainmenu collapsed">
+               <span class="menuspan menuspaninc"><label id="aBaseConfig" name="aBaseConfig" class="menulabel"></label></span>
+                <a id="aDeviceInformation" name="aDeviceInformation" class="submenu" href="javascript:showmenuconfig('System', 0, 'SystemConfig')"></a>
+                <a id="aSecurity" name="aSecurity"  class="submenu" href="javascript:showmenuconfig('User', 0, 'SystemConfig')" ></a>
+                <a id="aDateTime" name="aDateTime" class="submenu" href="javascript:showmenuconfig('TimeSystem', 0, 'SystemConfig')"></a>
+                <a id="aSerialPost" name="aSerialPost" class="submenu" href="javascript:showmenuconfig('SerialPost', 0, 'SystemConfig')"></a>
+                <a id="aLog" name="aLog"  class="submenu" href="javascript:showmenuconfig('Log', 0, 'SystemConfig')"></a>
+                <a id="aSystemMaintenance" name="aSystemMaintenance" class="submenu" href="javascript:showmenuconfig('SystemMaintenance', 0, 'SystemConfig')"></a>
+           </div>
+
+       </div> 
+
+    </div>
+    <!----contentleft_end------>
+    <div id="contentright" class="contentright">
+       <div id="EditAreaContent" class="editcontent">
+       </div>
+    </div>
+    
+ </div><!----container_end--->
+  
+</body>
+</html>
+
+

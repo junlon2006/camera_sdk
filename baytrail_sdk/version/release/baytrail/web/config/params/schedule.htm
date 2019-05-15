@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div id="TimeScheduleEdit" style="display:none; height:370px;">
+<style>
+.width120 {width:100px;}
+.width50 { width:50px;}
+.display { display:none;}
+</style>
+<div  class="scheduleeditdiv" style="height:370px;" >
+  <div class="scheduleedittitlediv" id="divScheduleTitle"><label name="MButEditTime" id="MButEditTime" style="font-weight:bold"></label></div>
+  <div style="width:550px;  margin:20px auto 10px auto; ">
+    <ul id="ulSchedule" class="tabs">
+      <li><a href="javascript:jump_showdaytime('0');" name="MMonday" id="MMonday"></a></li>
+      <li><a href="javascript:jump_showdaytime('1');" name="MTuesday" id="MTuesday"></a></li>
+      <li><a href="javascript:jump_showdaytime('2');" name="MWednesday" id="MWednesday"></a></li>
+      <li><a href="javascript:jump_showdaytime('3');" name="MThursday" id="MThursday"></a></li>
+      <li><a href="javascript:jump_showdaytime('4');" name="MFriday" id="MFriday"></a></li>
+      <li><a href="javascript:jump_showdaytime('5');" name="MSaturday" id="MSaturday"></a></li>
+      <li><a href="javascript:jump_showdaytime('6');" name="MSunday" id="MSunday"></a></li>
+    </ul>
+    <div class="clear"></div>
+    <div style="padding:10px 0 0 0; height:185px; overflow:auto;overflow-x:hidden;" class="panes"> 
+		<table cellspacing="0" cellpadding="0" class="linkagetable" style="width:548px;">
+		  <tbody>
+            <tr style="background:#dedede; height:25px;">
+            <td class="scheduletd" style="width:55px;"></td>
+			<td class="scheduletd" style="width:100px;"><label name="MTimeslot" id="MTimeslot"></label></td>
+			<td class="scheduletd" style="width:150px;"><label name="MStartTime"></label></td>
+			<td class="scheduletd" style="width:150px;"><label name="MEndTime"></label></td>
+		  </tr>
+		  <tr style="height:25px;" id="schedule1">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox1" onchange="onChangeTime(this)" /></td>
+			<td class="scheduletd">1</td>
+			<td  class="scheduletd">
+			  <input id="StartTime1" name="StartTime1" class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td class="scheduletd">
+			  <input id="StopTime1" name="StopTime1" class="Wdate input_config width120"  onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+		  </tr>
+		  <tr style="height:25px;"  id="schedule2">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox2"  onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">2</td>
+			<td class="scheduletd">
+			  <input id="StartTime2" name="StartTime2" class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>  
+			<td  class="scheduletd ">
+			 <input id="StopTime2" name="StopTime2" class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+		  </tr>
+		  <tr style="height:25px;"  id="schedule3">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox3" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">3</td>
+			<td  class="scheduletd">
+			  <input id="StartTime3" name="StartTime3"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd">
+			  <input id="StopTime3" name="StopTime3"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+		  </tr>
+		  <tr style="height:25px;"  id="schedule4">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox4" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">4</td>
+			<td class="scheduletd ">
+			  <input id="StartTime4" name="StartTime4"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime4" name="StopTime4"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+		  </tr>
+          
+           <tr style="height:25px;"  id="schedule5">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox5" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">5</td>
+			<td class="scheduletd ">
+			  <input id="StartTime5" name="StartTime5"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime5" name="StopTime5"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+           </tr> 
+            
+          <tr style="height:25px;"  id="schedule6">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox6" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">6</td>
+			<td class="scheduletd ">
+			  <input id="StartTime6" name="StartTime6"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime6" name="StopTime6"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+		  </tr>
+          <tr style="height:25px;"  id="schedule7">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox7" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">7</td>
+			<td class="scheduletd ">
+			  <input id="StartTime7" name="StartTime7"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime7" name="StopTime7"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+		  </tr>
+          
+          <tr style="height:25px;"  id="schedule8">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox8" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">8</td>
+			<td class="scheduletd ">
+			  <input id="StartTime8" name="StartTime8"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime8" name="StopTime8"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+		  </tr>
+          <tr style="height:25px;"  id="schedule9">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox9" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">9</td>
+			<td class="scheduletd ">
+			  <input id="StartTime9" name="StartTime9"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd">
+			 <input id="StopTime9" name="StopTime9"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+		  </tr>
+          <tr style="height:25px;"  id="schedule10">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox10" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">10</td>
+			<td class="scheduletd ">
+			  <input id="StartTime10" name="StartTime10"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime10" name="StopTime10"  class="Wdate input_config width120" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+		  </tr>
+	   </tbody></table>   
+    </div>
+	<div style="height:30px; line-height:30px;">
+	  <span class="skybluefont"><label></label></span>
+      <input type="checkbox" onclick="SelectAllplandayList()" id="alldaylist" class="checkbox" name="alldaylist">&nbsp;
+      <label name="MSelectAll"></label>
+	</div>
+	<div style="height:30px;">
+      <div style="float:left">
+          <input type="checkbox" checked="checked" disabled="disabled" onClick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList0" name="ChannelplandayList0">
+          <label name="MMonday" id="MMonday"></label>
+          <input type="checkbox" onClick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList1" name="ChannelplandayList1">
+          <label name="MTuesday" id="MTuesday"></label>
+          <input type="checkbox" onClick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList2" name="ChannelplandayList2">
+          <label name="MWednesday" id="MWednesday"></label>
+          <input type="checkbox" onClick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList3" name="ChannelplandayList3">
+          <label name="MThursday" id="MThursday"></label>
+          <input type="checkbox" onClick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList4" name="ChannelplandayList4">
+          <label name="MFriday" id="MFriday"></label>
+          <input type="checkbox" onClick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList5" name="ChannelplandayList5">
+          <label name="MSaturday" id="MSaturday"></label>
+          <input type="checkbox" onClick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList6" name="ChannelplandayList6">
+          <label name="MSunday" id="MSunday"></label>
+	  </div>
+      <div style="float:right">
+      	<input type="button" onclick="CopyDayTimeInfo()" style="right; width:80px;height:24px;line-height:20px; vertical-align:middle;cursor:pointer;padding:0 5px;"  id="CopyTo" name="MCopyTo" value="">
+      </div>
+	</div>
+	<div style="height:40px; text-align:right;">
+	  <span class="formtips" id="SetResultTipsTwo"></span>
+      <input type="button" onclick="OKEditScheduleDlg()" style=" width:80px;height:24px;line-height:20px; vertical-align:middle;cursor:pointer;padding:0 5px;" value="" name="MButOK" id="ConfirmTips">
+	  <input type="button" onclick="CancelScheduleDlg();" style=" width:80px;height:24px;line-height:20px; vertical-align:middle;cursor:pointer;padding:0 5px;" value="" name="MlaCancel" id="laCancel">
+	</div>   
+  </div>
+</div>
+</div>
+</body>
+</html>

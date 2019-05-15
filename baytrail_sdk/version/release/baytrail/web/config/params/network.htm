@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabNetwork">
+    <li><a id="mDDNS" name="mDDNS" href="javascript:ia(DDNS).update();" >DDNS</a></li>
+	<li><a id="mPPPoE" name="mPPPoE" href="javascript:ia(PPPoE).update();" >PPPoE</a></li>
+	<li><a id="mSNMP" name="mSNMP" href="javascript:ia(SNMP).update();">K-SNMP</a></li>
+	<li><a id="mP8021x" name="mP8021x" href="javascript:ia(P8021x).update();">802.1X</a></li>
+	<li><a id="mQoS" name="mQoS" href="javascript:ia(QoS).update();">QoS</a></li>
+    <li><a id="mUPNP" name="mUPNP" href="javascript:ia(UPNP).update();">UPnP</a></li>
+    <li><a id="mDPSS" name="mDPSS" href="javascript:ia(DPSS).update();">DPSS</a></li>
+</ul>
+<div class="panes panewidth" id="divNetwork">
+  
+    
+    <div class="pane" id="divDDNS">
+        <div class="subparamswhite">
+            <span class="firstspan">
+		        <label name="laEnable"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <input type="checkbox" id="DDNSenabled" class="checkbox main_top5" onclick="checkboxddns(this)">
+            </span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MDDNSType" id="MDDNSType"></label></span>
+		    <span>
+		        <select class="selectwidth width152" id="provider" onchange="Changeprovider()">
+                </select>
+		    </span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MDeviceDomain" id="MDeviceDomain"></label></span>
+		    <span>
+                <input type="text" class="input_config width150" id="domainName" maxlength="64" /></span>
+		    </span>
+		    <span id="domainNametips" class="colortips"></span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MUserName"></label></span>
+		    <span>
+                <input type="text" class="input_config width150" id="UserNameDDNS" /></span>
+		    </span>
+		    <span id="UserNametips" class="colortips"></span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="MPassword"></label></span>
+		    <span>
+                <input type="password" class="input_config width150" id="PasswordDDNS"  /></span>
+		    </span>
+		    <span id="Passwordtips" class="colortips"></span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="MDDNSState" id="MDDNSState"></label></span>
+		    <span id="ddnsstate"></span>
+        </div>
+        <div class="subparamsgray" style="display:none">
+            <span class="firstspan"><label name="MDDNSUserPsw2" id="MDDNSUserPsw2"></label></span>
+		    <span>
+		        <input type="password"  maxlength="16" onkeydown="CheckKeyDown(event)" class="input_config width150" id="ConfirmPassword">
+		    </span>
+		    <span id="ConfirmPasswordtips" class="colortips"></span>
+        </div>
+        <div class="spansave"><input type="button"  class="input_save"  id="SaveDDNS" onclick="SaveDDNS(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsDDNS"></span></div>
+    </div>
+    
+    <div class="pane" id="divPPPoE">
+        <div class="subparamswhite">
+           <span class="firstspan">
+		        
+		        <label name="laEnable"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <input type="checkbox"  id="PPPOEenabled" class="checkbox main_top5" onclick="checkboxpppoe(this)">
+            </span>
+        </div>
+         <div class="subparamswhite">
+           <span class="firstspan">
+		        <label name="MPPPOEIP" id="MPPPOEIP"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <input onkeyup="CheckInput(event)"  maxlength="15" class="input_config width150" id="dynamicip" disabled="disabled">
+            </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="MUserName"></label></span>
+            <span>
+		        <input class="input_config width150" id="PPPOEUserName" onkeyup="CheckInput(event)"   onKeyDown="CheckKeyDown(event)" >
+		    </span>
+            <span id="PPPOEUserNametips" class="colortips"></span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MPassword"></label></span>
+            <span>
+		        <input type="password"  class="input_config width150" id="PPPOEUserPsw"  onKeyUp="CheckInput(event)"   onKeyDown="CheckKeyDown(event)" >
+		    </span>
+            <span id="PPPOEUserPswtips" class="colortips"></span>
+        </div>
+	    
+        <div class="spansave"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="Savepppoe()" name="MSaveConfigLocal" value=""><span id="SetResultTipsPPPoE"></span></div>
+    </div>
+    <div id="snmp" class="pane">
+        <div id="snmpv1v2c">
+            
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="MSvripadd" id="MSvripadd"></label></span>
+				<span class="localsecondspan">
+                  <input type="text" class="input_config width150" id="svrip" onblur="CheckDIPadd(this.value,'svriptips','MSvripadd')" />
+                </span>
+                <span id="svriptips" class="colortips"></span>
+			</div>
+            <div class="subparamsgray">
+			    <span class="firstspan"><label name="MSvrippost" id="MSvrippost"></label></span>
+				<span class="localsecondspan">
+                  <input type="text" class="input_config width150" id="svrport" disabled="disabled" />
+                </span>
+			</div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="Mdevicelocationinformation" id="Mdevicelocationinformation"></label></span>
+				<span class="localsecondspan">
+                  <input type="text" class="input_config width150" id="devadress" />
+                </span>
+                <span id="devadresstips" class="colortips"></span>
+			</div>
+            <div class="subparamsgray">
+			    <span class="firstspan"><label name="Mcpuvpt" id="Mcpuvpt"></label></span>
+				<span class="localsecondspan">
+                  <input type="text" class="input_config width150" id="cpuvpt"  />
+                </span>
+                <span id="fixedcpuvptTips" class="fixedTips"></span><span id="cpuvpttips" class="colortips"></span>
+			</div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="Mmemeryvpt" id="Mmemeryvpt"></label></span>
+				<span class="localsecondspan">
+                  <input type="text" class="input_config width150" id="memeryvpt" />
+                </span>
+                <span id="fixedmemeryvptTips" class="fixedTips"></span><span id="memeryvpttips" class="colortips"></span>
+			</div>
+            <div class="subparamsgray">
+			    <span class="firstspan"><label name="Mlostvpt" id="Mlostvpt"></label></span>
+				<span class="localsecondspan">
+                  <input type="text" class="input_config width150" id="lostvpt"   />
+                </span>
+                <span id="fixedlostvptTips" class="fixedTips"></span><span id="lostvpttips" class="colortips"></span>
+			</div>
+           
+        </div>
+        
+      
+        <div class="spansave"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="SaveConfigSnmp(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsSNMP"></span></div>
+    </div>
+
+    <div class="pane" id="P8021x">
+        <div class="subparamswhite">
+			    <span class="firstspan"><label name="laEnable"></label></span>
+				<span class="localsecondspan">
+                  <input type="checkbox" id="enable8021x" class="checkbox main_top5" onclick="checkboxP8021x(this)">
+                </span>
+			</div>
+       
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MP8021xType" id="MP8021xType"></label></span>
+		    <span>
+              <select class="selectwidth width152" id="protocoltype" name="protocoltype" disabled="disabled">
+                
+              </select>
+            </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="MP8021xversion" id="MP8021xversion"></label></span>
+		    <span>
+              <select class="selectwidth width152" id="eapolversion" name="eapolversion">
+                
+              </select>
+            </span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MUserName"></label></span>
+		    <span>
+		       <input  type="text" class="input_config width150" id="username8021" onkeyup="CheckInput(event)"   onKeyDown="CheckKeyDown(event)" >
+            </span>
+		    <span id="Name8021tips" class="colortips"></span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="MPassword"></label></span>
+		    <span>
+		        <input type="password"  class="input_config width150" id="password8021" onkeyup="CheckInput(event)" onkeydown="CheckKeyDown(event)" >
+		    </span>
+		    <span id="password8021tips" class="colortips"></span>
+        </div>
+       
+        <div class="spansave"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="SaveConfig8021(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsP8021x"></span></div>  
+    </div>
+  
+    <div class="pane" id="QoS" >
+        <div class="subparamswhite">
+           <span class="firstspan">
+		        
+		        <label name="laEnable"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <input type="checkbox"  id="dscpenabled" class="checkbox main_top5" disabled="disabled" checked="checked">
+            </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="Mvideodscpvalue" id="Mvideodscpvalue"></label></span>
+            <span>
+		        <input type="text" maxlength="2" class="input_config width150" id="videodscpvalue" >
+		    </span>
+            <span class="fixedTips" id="fixedvideodscpvalueQosTips"></span><span id="videodscpvaluetips" class="colortips"></span>
+        </div>
+        
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="Mmanagerdscpvalue" id="Mmanagerdscpvalue"></label></span>
+            <span>
+		        <input type="text"  class="input_config width150" id="managerdscpvalue">
+		    </span>
+            <span class="fixedTips" id="fixedmanagerdscpvalueQosTips"></span><span id="managerdscpvaluetips" class="colortips"></span>
+        </div>
+           <div class="spansave"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="SaveConfigQos(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsQos"></span></div>  
+    </div> 
+   
+    <div class="pane" id="dvUPNP">
+       
+         <div class="subparamswhite">
+            <span class="firstspan"><label name="laEnable"></label></span>
+            <span class="localsecondspan">
+              <input type="checkbox" class="checkbox main_top5" id="UPnpEnabled" onclick="checkboxUPnP(this)">
+            </span>
+         </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MAlias" id="MAlias"></label></span>
+            <span class="localsecondspan">
+                <input type="text"  maxlength="64" class="input_config width150" id="txtUPnPName">
+            </span>
+            <span id="spUPnPNameTips" class="colortips"></span>
+        </div>
+        <div class="mainparams main_top26">
+            <span><label name="MPortsMap" id="MPortsMap"></label></span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MUPnPMapType" id="MUPnPMapType"></label></span>
+            <span class="localsecondspan">
+                <select class="inputwidth selectwidth width152" id="portmapmodeType" onchange="Changeportmapmode(this)">
+                    
+                </select>
+            </span>
+        </div>
+        <div class="subparamswhite">
+          <span class="firstspan"><label name="MPortsMap1" id="MPortsMap1"></label></span>
+            <span class="localsecondspan">
+             <!-- <input type="button" value="添加" onclick="showAddPortmaplistWnd()" />
+              <input type="button" value="删除" onclick="tabledeldel()" />
+              -->
+            </span>
+        </div>
+        <style>
+		.tableclass { width:100%;margin:0 auto;border-collapse: collapse;font-size: 12px;}
+		.tablethtr  {height:30px; line-height:30px; text-indent:15px; background: #f9f9f9;border: 1px solid #ccc; }
+		.tablethtd {border: 1px solid #ccc;}
+		.tabletrtd {border: 1px solid #ccc; background:#FFF;}
+		.tablethtdwidth01 { width:65px; }
+		.tablethtdwidth02 { width:100px;}
+		</style>
+         <table width="600" border="0" cellspacing="0" cellpadding="0" class="tableclass">
+            <tr class="tablethtr">
+              <td class="tablethtd tablethtdwidth01"><label name="MChoice" id="MChoice"></label></td>
+              <td class="tablethtd tablethtdwidth02"><label name="MProtocolName" id="MProtocolName"></label></td>
+              <td class="tablethtd tablethtdwidth02">IP</td>
+              <td class="tablethtd tablethtdwidth02"><label name="MExternalPort" id="MExternalPort"></label></td>
+              <td class="tablethtd tablethtdwidth02"><label name="MPortsStatus" id="MPortsStatus"></label></td>
+            </tr>
+             <tbody id="UPnpListTbody" >
+              </tbody>
+          </table>
+
+          <div class="spansave"><input type="button"  class="input_save"  id="SaveUpnp" onclick="SaveUpnp(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsUpnp"  style="margin-left:10px;"></span></div>  
+  	</div>
+    <!-----dpss_str----------------->
+    <div id="dpss" class="pane">
+    	
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="laEnable"></label></span>
+				<span>
+                  <input id="enabledpss" class="checkbox main_top5" type="checkbox" onclick="checkbox(this)" value="">
+                </span>
+			</div>
+            
+           
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="Mrcvseveraddr"></label></span>
+				<span class="localsecondspan">
+                  <input type="text" class="input_config width150" id="rcvseveraddr" />
+                </span>
+                <span id="rcvseveraddrtips" class="colortips"></span>
+			</div>
+            <div class="subparamsgray">
+			    <span class="firstspan"><label name="Mdevident"></label></span>
+				<span class="">
+                  <input type="text" class="input_config width150" id="devident" maxlength="32"  />
+                </span>
+                <span id="devidenttips" class="colortips"></span>
+			</div>
+        <div class="spansave"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="SaveDpss(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsDPSS"></span></div>
+    </div>
+    <!-----dpss_end----------------->
+</div><!--<div class="panes">-->

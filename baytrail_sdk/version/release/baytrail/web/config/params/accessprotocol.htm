@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ul class="tabs" id="tabAccessProtocol">
+    <!--<li><a id="laAccessProtocol" name="laAccessProtocol" href="javascript:ia(AccessProtocol).update();"></a></li>-->
+    <li><a id="mVSIP" name="mVSIP"  href="javascript:ia(VSIP).update();">VSIP</a></li>
+    <li><a id="mOnvif" name="mOnvif"  href="javascript:ia(Onvif).update();">ONVIF</a></li>
+    <li><a id="mGB28181" name="mGB28181"  href="javascript:ia(GB28181).update();">GB28181</a></li>
+</ul>
+<div class="panes" id="divAccessProtocol">
+   <div class="pane" id="divVSIP" >
+            <div class="mainparams"><label  name="MRegistrationplatform"></label></div>
+            <div class="subparamswhite main_top10">
+                <span class="firstspan"><label name="laEnable" id="laEnable"></label></span>
+                <span class="localsecondspan">
+                    <input type="checkbox" class="checkbox main_top5" id="checkvsip" onclick="checkbox(this)" />
+                </span>
+           </div>
+           <div class="subparamswhite" style="display:none">
+                <span class="firstspan"><label name="laStreamType1">注册平台选择</label></span>
+                <span class="localsecondspan">
+                    <select class="Images_select" id="vsipplattype" onchange="Checkplattype(this)">
+                       <option value="plat">接入平台</option>
+                    </select>
+                </span>
+           </div>
+           <div class="subparamsgray" id="subbalanceraddip4" style="display:none">
+                <span class="firstspan"><label name="laVideoResolution1">负载均衡IP4地址</label></span>
+                <span class="localsecondspan">
+                   <input type="text" class="input_config width150" id="vsipbalanceripaddrv4" onblur="CheckIPadd(this.value,'vsipbalanceripaddrv4tips','lavsipipv4')"/>
+                </span>
+                <span id="vsipbalanceripaddrv4tips" class="colortips"></span>
+           </div>
+           
+           <div class="subparamsgray" id="subbalanceraddip6"  style="display:none">
+                <span class="firstspan"><label name="laVideoResolution1">负载均衡IP6地址</label></span>
+                <span class="localsecondspan">
+                   <input type="text" class="input_config width150" id="vsipbalanceripaddrv6" />
+                </span>
+           </div>
+           <div class="subparamsgray" id="subbalancerpost" style="display:none">
+                <span class="firstspan"><label name="laVideoResolution1">负载均衡服务器端口</label></span>
+                <span class="localsecondspan">
+                   <input type="text" class="input_config width150" id="vsipbalancerpost"  maxlength="5"  onblur="CheackServerIDIntNum(this.value,'vsipbalancerposttips','lavsippost',0,65535)"/>
+                </span>
+                <span id="vsipbalancerposttips" class="colortips"></span>
+           </div>
+           
+           <div class="subparamsgray" id="subslectipadd">
+            <span class="firstspan"><label id="MRplatformadd" name="MRplatformadd"></label></span>
+            <span class="localsecondspan">
+		       <select class="selectwidth width152" id="vsipaddresstype" onchange="Checkaddresstype(this)" >
+                 <option name="Mip" id="Mip" value="ip"></option>
+                 <option name="Murl" id="Murl" value="url"></option>
+                </select>
+            </span>
+           </div>
+            <div class="subparamswhite" id="subplatip4">
+            <span class="firstspan"><label id="MRplatformipv4" name="MRplatformipv4"></label></span>
+            <span>
+		        <input type="text" class="input_config width150" id="vsipipaddrv4" onblur="CheckIPadd(this.value,'vsipipaddrv4tips','MRplatformipv4')" />
+            </span>
+            <span id="vsipipaddrv4tips" class="colortips"></span>
+           </div>
+           <div class="subparamswhite" id="subplatip6" style="display:none">
+            <span class="firstspan"><label id="MRplatformipv6" name="MRplatformipv6"></label></span>
+            <span>
+		        <input type="text" class="input_config width150" id="vsipipaddrv6" />
+            </span>
+           </div>
+           <div class="subparamsgray" id="subplaturl">
+            <span class="firstspan"><label name="MRplatformurl" id="MRplatformurl"></label></span>
+            <span>
+		        <input type="text" class="input_config width150" id="vsipurl"  onblur="IsURL(this.value,'vsipurltips','MRplatformurl',64)"/>
+            </span>
+            <span id="vsipurltips" class="colortips"></span>
+           </div>
+           <div class="subparamsgray" id="subplatport">
+            <span class="firstspan"><label name="MRplatformpost" id="MRplatformpost"></label></span>
+            <span>
+		        <input type="text" class="input_config width150" id="vsipipport" maxlength="5" onblur="CheackServerIDIntNum(this.value,'vsipipporttips','MRplatformpost',1,65535)"/>
+            </span>
+           <span class="fixedTips">1~65535</span><span id="vsipipporttips"  class="colortips"></span>
+           </div>
+           
+           
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="Mvsipuuid" id="Mvsipuuid"></label></span>
+            <span>
+		        <input type="text" class="input_config width300" maxlength="32" id="vsipuuid"  onblur="CheckLetterNumber(this.value,'vsipuuidtips','Mvsipuuid',0,32)"/>
+            </span>
+            <span id="vsipuuidtips" class="colortips"></span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="Mvsipnetpassword" id="Mvsipnetpassword"></label></span>
+            <span>
+		        <input type="password" class="input_config width300" maxlength="32" id="vsipnetpassword" onblur="CheckLetterNumber(this.value,'vsipnetpasswordtips','Mvsipnetpassword',0,32)" />
+            </span>
+            <span id="vsipnetpasswordtips" class="colortips"></span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="MvsipNAT" id="MvsipNAT"></label></span>
+            <span>
+		        <input type="checkbox" class="checkbox main_top5" id="vsipsendnatpac" onclick="checkbox(this)" />
+            </span>
+           </div>
+           <div class="mainparams main_top26"><label id="MvsipService" name="MvsipService"></label></div>
+           <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="Mautomaticnetwork" id="Mautomaticnetwork"></label></span>
+            <span>
+		        <input type="checkbox" class="checkbox main_top5" id="vsipselfnetwork" onclick="checkbox(this)"/>
+            </span>
+           </div>
+      
+       <!--<div class="spansave"><input type="button"  class="input_save" name="MSaveConfigLocal"  id="SaveVSIP" onclick="SaveVSIP(this)" value=""><span id="SetResultTipsVSIP"></span></div>-->
+          <div class="spansave">
+            <input type="button"  class="input_save" name="MSaveConfigLocal"  id="SaveVSIP" onclick="SaveVSIP(this,'save')" value="">
+            <input type="button" class="input_save"  id="vsipJump" onclick="JumpProtocol('vsip')" value="" name="MjumpFast">
+            <input type="button" class="input_save" id="vsipup"  onclick="SaveVSIP(this,'up')" value="" name="MupFast">
+            <input type="button" class="input_save" id="vsipdown" onclick="SaveVSIP(this,'down')" value="" name="MdownFast"><span id="SetResultTipsVSIP"></span>
+         </div>
+    </div>
+   <div id="Onvif" class="pane">
+       <!---接入协议开始---->
+           <div class="mainparams ">
+              <label name="Mbasicconfiguration" id="Mbasicconfiguration"></label>
+            </div>
+           <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="laEnable" id="laEnable"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top5" id="checkonvif" onclick="checkbox(this)" />
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="MOnvifurl" id="MOnvifurl"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width300" id="Onvifurl" readonly="readonly" onblur="CheackStringLenthNull(this.value,'Onvifurltips','MOnvifurl',64)"/>
+            </span>
+            <span id="Onvifurltips" class="colortips"></span>
+           </div>
+           
+           
+          <div id="subauthmode" style="display:none">
+            <div class="mainparams main_top10">
+                  <label name="MAuthentication" id="MAuthentication"></label>
+            </div>
+            
+            <div class="subparamsgray">
+                <span class="firstspan"><label name="MAuthenticationmode" id="MAuthenticationmode"></label></span>
+                          <span class="localsecondspan" style="width:120px;">
+                                    <input type="radio" name="authmode" value="none" class="radio" /> &nbsp;
+                                    <label class="displayblock" id="Mnone" name="Mnone"></label>
+                         </span>
+                         <span class="localsecondspan">
+                                    <input type="radio" name="authmode" value="ws" class="radio" />&nbsp;
+                                    <label class="displayblock">WS-Username token</label>
+                         </span>
+               </div>
+       </div>
+           
+        <!--<div class="spansave"><input type="button"  class="input_save"  id="SaveOnvif" name="MSaveConfigLocal"  onclick="SaveOnvif(this)" value=""><span id="SetResultTipsOnvif"></span></div>-->
+         <div class="spansave">
+            <input type="button"  class="input_save"  id="SaveOnvif" name="MSaveConfigLocal"  onclick="SaveOnvif(this,'save')" value="">
+            <input type="button" class="input_save"  id="jumponvif" onclick="JumpProtocol('onvif')" value="" name="MjumpFast">
+            <input type="button" class="input_save" id="Onvifup" onclick="SaveOnvif(this,'up')" value="" name="MupFast">
+            <input type="button" class="input_save" id="Onvifdown" onclick="SaveOnvif(this,'down')" value="" name="MdownFast"><span id="SetResultTipsOnvif"></span>
+         </div>
+        
+       
+       <!---接入协议结束---->
+   </div>
+    <div class="pane" id="divGB28181">
+        
+            <div class="subparamsgray" id="subslectipadd">
+                <span class="firstspan"><label name="MRegistrationplat"></label></span>
+                <span class="localsecondspan">
+                   <select class="selectwidth width152" id="SelectGB28181" onchange="GetGb28181()">
+                    </select>
+                </span>
+           </div>
+        
+            <div class="subparamswhite">
+            <span class="firstspan"><label name="laEnable" id="laEnable"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top5" id="checkgb28181" onclick="checkbox(this)" />
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="MLocalport" id="MLocalport"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150"  id="localport"  />
+            </span>
+            <span class="fixedTips" id="fixedlocalportTips"></span><span id="locporttips" class="colortips"></span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="Mgbnetid" id="Mgbnetid"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" id="gbnetid" onblur="CheckLetterNumber(this.value,'gbnetidtips','Mgbnetid',0,20)" maxlength="20"/>
+            </span>
+               <span id="gbnetidtips" class="colortips"></span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="Mgbdevname" id="Mgbdevname"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" id="gbdevname" maxlength="32" onblur="CheckDeviceName(this.value, 'gbdevnametips','Mgbdevname',0,32)" />
+            </span>
+             <span id="gbdevnametips" class="colortips"></span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="Mgbplatid" id="Mgbplatid"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" id="gbplatid" onblur="CheckLetterNumber(this.value,'gbplatidtips','Mgbplatid',0,20)" maxlength="20"/>
+            </span>
+                <span id="gbplatidtips" class="colortips"></span>
+           </div>
+           <div class="subparamswhite" id="subgbipv4">
+            <span class="firstspan"><label name="Mgbplataddrv4" id="Mgbplataddrv4"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" id="gbplataddrv4" onblur="CheckIPadd(this.value,'gbplataddrv4tips','Mgbplataddrv4')"/>
+            </span>
+            <span id="gbplataddrv4tips" class="colortips"></span>
+           </div>
+           <div class="subparamswhite" d="subgbipv6" style="display:none">
+            <span class="firstspan"><label name="Mgbplataddrv6" id="Mgbplataddrv6"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" id="gbplataddrv6" />
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="Mplatport" id="Mplatport"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" id="gbplatport" />
+            </span>
+            <span class="fixedTips" id="fixedgbplatportTips"></span><span id="gbplatporttips" class="colortips"></span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="Mgbusername" id="Mgbusername"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" id="gbusername" />
+            </span>
+            <span id="gbusernametips" class="colortips"></span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="Mgbuserpassword" id="Mgbuserpassword"></label></span>
+            <span class="localsecondspan">
+		        <input type="password" class="input_config width150" id="gbuserpassword" />
+            </span>
+            <span id="gbuserpasswordtips" class="colortips"></span>
+           </div>
+           <!--<div class="subparamswhite">
+            <span class="firstspan"><label name="MAlarmnumber" id="MAlarmnumber">告警数目</label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" id="gbalarmnum" />
+            </span>
+           </div>-->
+            <div class="subparamsgray">
+            <span class="firstspan"><label name="Mgbrelettime" id="Mgbrelettime"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" id="gbrelettime" maxlength="6" onblur="CheackServerIDIntNum(this.value,'gbrelettimetips','Mgbrelettime',30,999999)" />
+            </span>
+            <span class="fixedTips">30~999999</span><span id="gbrelettimetips" class="colortips"></span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="Mgbheartbeat" id="Mgbheartbeat"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" maxlength="4" id="gbheartbeat" onblur="CheackServerIDIntNum(this.value,'gbheartbeattips','Mgbheartbeat',10,1000)"  />
+            </span>
+            <span class="fixedTips">10~1000</span><label id="MSeconds" name="MSeconds"></label><span id="gbheartbeattips" class="colortips"></span>
+           </div>
+           
+          <div class="subparamswhite">
+            <span class="firstspan"><label name="Mownership" id="Mownership"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" maxlength="32" onkeydown="CheckKeyDown(event)" id="owner"  />
+            </span>
+            <span id="ownertips"></span>
+           </div>
+           
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="Mcivilcode" id="Mcivilcode"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" maxlength="32"  onkeydown="CheckKeyDown(event)" id="civilcode"   />
+            </span>
+            <span id="civilcodetips"></span>
+           </div>
+           
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="Mpolicergn" id="Mpolicergn"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" maxlength="32" id="policergn" />
+            </span>
+            <span id="policergntips"></span>
+           </div>
+           
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="Msetupaddress" id="Msetupaddress"></label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" maxlength="32" id="setupaddress"   />
+            </span>
+            <span id="setupaddresstips"></span>
+           </div>
+           
+          
+          <style>
+			 .tabLog1 {margin-top:10px; width:100%; border-collapse: collapse;font-size: 12px;}
+			  .ListTr { height:25px; line-height:25px;text-align:left; text-indent:40px; width:300px;}
+			  .ListTd {height:30px; line-height:30px; text-align:left; text-indent:40px; width:300px;}
+			  .titletd {text-align:left; text-indent:40px;}
+			</style>
+             <div style="overflow:auto;overflow-x:hidden;">
+             
+            <table cellspacing="0" cellpadding="0" class="tabLog1"  id="TabEncchns" style="margin-top:10px;">
+                <thead>
+                  <tr  class="ListTr">
+                    <td class="titletd"><label id="MgbencvideoID" name="MgbencvideoID"></label></td>
+                    <td class="titletd"><label id="Mgbencvideoname" name="Mgbencvideoname"></label></td>
+                    <td class="titletd"><label name="MStreamType"></label></td>
+                  </tr>
+                </thead>
+                <tbody id="TbodyEncchns">
+                </tbody>
+              </table>
+                  <div class="textalignright main_top10" id="Subencchns" style="float:left; margin-bottom:10px;">
+                    <input type="button" onclick="AddGB('add')" class="buttonclass" name="AddDigitalIpBtn" id="addencchns" value="" >
+                    <input id="gbencchnsedit"  disabled="disabled" class="buttonclass" type="button" name="MdfDigitalIpBtn" value="" onclick="AddGB('edit')">
+                    <input type="button" disabled="disabled" onclick="DelGB()" class="buttonclass" name="DelDigitalIpBtn" id="Delencchns" value="">
+                  </div>
+              </div>
+            <div style="overflow:auto;overflow-x:hidden; margin-top:10px;">
+               
+              <table cellspacing="0" cellpadding="0" class="tabLog1"  id="TabalArmchns">
+                <thead  >
+                  <tr align="center" class="ListTr">
+                    <td class="titletd" ><label id="Mgbalarmchnsid" name="Mgbalarmchnsid"></label></td>
+                    <td class="titletd"><label id="Mgbalarmchnsname" name="Mgbalarmchnsname"></label></td>
+                  </tr>
+                </thead>
+                <tbody id="TbodyAlarmchns">
+                </tbody>
+              </table>
+              <div class="textalignright main_top10" id="SubArmchns" style="float:left; margin-bottom:10px;">
+                <input type="button" onclick="AlarmChns('add')" class="buttonclass" name="AddDigitalIpBtn" id="AddAlarmChns" value="" >
+                <input id="EditAlarmChns"  disabled="disabled" class="buttonclass" type="button" name="MdfDigitalIpBtn" value="" onclick="AlarmChns('edit')">
+                <input type="button" disabled="disabled" onclick="DelAlarm()" class="buttonclass" name="DelDigitalIpBtn" id="DelAlarmChns" value="">
+                </div>
+             </div>
+             
+           <div id="subexpand1" class="mainparams main_top10 mousepointer"><label class="mousepointer" id="Mconfiguration" name="Mconfiguration"></label>&nbsp;<span id="MexpandTips">>></span></div>
+             <div id="subexpand" class="main_top10" style="display:none;">
+                 <div class="subparamswhite" >
+                    <span class="firstspan"><label id="MOptionalconfiguration" name="MOptionalconfiguration"></label></span>
+                    <span class="localsecondspan">
+                        <select class="selectwidth width152" id="expandopt">
+                        </select>
+                    </span>
+                    <span class="localsecondspan">
+                       <input type="button" value="" name="AddDigitalIpBtn" onclick="addexpand()" class="buttonclass"/>
+                    </span>
+                     <span id="addexpandtips" class="colortips"></span>
+                 </div>
+                <div style="padding-left:10px; background:#ffffff;margin-left:10px;">
+                <span class="firstspan"><label name="Mconfiguration" id="Mconfiguration"></label></span>
+                <span class="localsecondspan">
+                   <!-- <input type=""class="input_config width150" maxlength="1024" id="expand"   />-->
+                   <div id="textareadiv">
+                     <textarea style="height:100px; width:280px;resize: none;" id="expand"></textarea>
+                   </div>
+                    
+                </span>
+                <span id="expandtips"></span>
+               </div>
+           </div>
+        <!-- <div class="spansave"><input type="button"  class="input_save" name="MSaveConfigLocal"   id="SaveGb28181" onclick="SaveGb28181(this)" value=""><span id="SetResultTipsGb28181"></span><span id="Resultgbips" class="colortips"></span></div>-->
+         <div class="spansave">
+            <input type="button"  class="input_save" name="MSaveConfigLocal"   id="SaveGb28181" onclick="SaveGb28181(this,'save')" value="">
+            <input type="button" class="input_save"  id="Junmgb" onclick="JumpProtocol('gb28181')" value="" name="MjumpFast">
+            <input type="button" class="input_save" id="gbup" onclick="SaveGb28181(this,'up')" value="" name="MupFast">
+            <input type="button" class="input_save" id="gbdown" onclick="SaveGb28181(this,'down')" value="" name="MdownFast"><span id="SetResultTipsGb28181"></span>
+         </div>
+    </div>
+</div>
+
+
+<style>
+.width120 {width:100px;}
+.width50 { width:50px;}
+.display { display:none;}
+
+
+.divsimplemodafoot {
+	height:30px; line-height:30px; background:#d8d8d8;
+}
+.divWinTitle {
+	height:35px; 
+	background:#d8d8d8; 
+	line-height:35px;
+	text-indent:10px;
+}
+.simplemodaconter 
+{
+   /*margin:10px;*/
+}
+</style>
+<div id="divWinTable" style="display:none; height:auto;" >
+  <div class="divWinTitle" id='WinEncchnsTitle'>
+     
+    </div>
+    <div class="simplemodaconter" style="padding:10px 0">
+         <div class="subparamsgray"> 
+         	<span class="firstspan"><label name="MgbencvideoID"></label></span>
+            <span class="localsecondspan"><input type="text" id='wingbencvideoID' class="input_config width200" maxlength="20" /></span>
+            <span id="wingbencvideoIDtips"></span>
+         </div>
+        
+        <div class="subparamsgray">
+           <span class="firstspan"><label name="Mgbencvideoname"></label></span>
+           <span class="localsecondspan"><input type="text" id='wingbencvideoname' class="input_config width200" maxlength="32" /></span>
+           <span id="wingbencvideonametips"></span>
+        </div>
+        
+        <div class="subparamsgray">
+           <span class="firstspan"><label name="MStreamType"></label></span>
+           <span class="localsecondspan"><select id='winStreamType' class="selectwidth width200"></select></span>
+        </div>
+        
+    </div>
+    <div class="divsimplemodafoot">
+       <div style=" float:right; margin-right:20px;">
+       	 <input id="btnAddencchns" class="buttonclass" type="button" name="MButOK" style="margin-top:3px;"  value="" onclick="wingbOKclick('add')">
+         <input id="btnEditencchns" class="buttonclass" type="button"  name="MButOK" style="margin-top:3px; display:none"  value="" onclick="wingbOKclick('edit')" >
+         <input id="" class="buttonclass" type="button" onclick="winClean('encchns');" style="margin-top:3px;" name="MlaCancel" value="">
+     	<span id="spCheckResultTips" class="formtips"></span>
+       </div>
+   </div>
+</div>
+<!-----告警------>
+<div id="divWinAlarm" style="display:none; height:auto;" >
+  <div class="divWinTitle" id='WinAlarmTitle'>
+     
+    </div>
+    <div class="simplemodaconter" style="padding:10px 0">
+         <div class="subparamsgray"> 
+         	<span class="firstspan"><label name="Mgbalarmchnsid"></label></span>
+            <span class="localsecondspan"><input type="text" id='winAlarmID' class="input_config width200" maxlength="20" /></span>
+            <span id="winAlarmIDtips"></span>
+         </div>
+        
+        <div class="subparamsgray">
+           <span class="firstspan"><label name="Mgbalarmchnsname"></label></span>
+           <span class="localsecondspan"><input type="text" id='winAlarmName' class="input_config width200" maxlength="32" /></span>
+           <span id="winAlarmNametips"></span>
+        </div>
+    </div>
+    <div class="divsimplemodafoot">
+       <div style=" float:right; margin-right:20px;">
+       	 <input id="btnAddAlarm" class="buttonclass" type="button" name="MButOK" style="margin-top:3px;"  value="" onclick="winAlarm('add')">
+         <input id="btnEditAlarm" class="buttonclass" type="button"  name="MButOK" style="margin-top:3px; display:none"  value="" onclick="winAlarm('edit')" >
+         <input id="btnCleanAlarm" class="buttonclass" type="button" onclick="winClean('Alarm');" style="margin-top:3px;" name="MlaCancel" value="">
+     	<span id="spCheckResultTips" class="formtips"></span>
+       </div>
+   </div>
+</div>

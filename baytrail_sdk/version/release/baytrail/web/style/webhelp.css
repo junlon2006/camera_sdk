@@ -1,0 +1,115 @@
+@charset "utf-8";
+*{ margin:0; padding:0;}
+html { height: 100%;margin: 0px;padding: 0px;}
+body { width:100%;height:100%; font-size:12px; font-family:"宋体",Arial, Helvetica, sans-serif; background:#f9f9f9;-moz-user-select:-moz-none;}
+div,ul,li,h2,h3,h4,dl,dd,dt,tr,td,p,span{margin:0; padding:0;list-style:none; border:0;}
+img { border:0px;}
+ul,li{list-style:none;}
+.clear {clear:both;height:0;font-size: 1px;line-height: 0px;} 
+.mousepointer {cursor:pointer;}
+textarea {outline: none;}
+.displayblock {display:inline-block;}
+.displaynone {display:none;}
+
+a {text-decoration: none; color: #121212;text-decoration:underline;color: #0000ff;}
+a:hover {color: #0000ff; text-decoration:underline}
+.indexcss  {text-decoration: none; color: #121212;}
+.contenter{
+	
+	width:500px;
+	margin:0 auto;
+	background-color: #FFF;
+	padding-bottom:10px;
+}
+.topTitle {
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	background:#d8d8d8;
+	text-indent:20px;
+	font-weight:bold;
+}
+.topTitle1 {
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	background:#ffffff;
+	text-indent:20px;
+	font-weight:bold;	
+}
+.topTitlespan { float:right; margin-right:20px;}
+.TitleExplain{
+   
+	line-height:30px;
+	margin:10px 20px 10px 40px;
+}
+.note{
+	color:#0068b7; font-weight:bold;
+	}
+/*******表格**********/
+.TitleExplaintable{
+	line-height:30px;
+	margin:10px 20px;
+}
+.tabhelp{
+	  width:100%;margin:0 auto;border-collapse: collapse;font-size: 12px; 
+  }
+.tabtr{
+	 height:25px; line-height:25px; border: 1px solid #ccc; text-align:center;
+	}
+.tabtd{
+	 height:25px; line-height:25px; border: 1px solid #ccc; border-bottom:none;
+	}
+.tableft{ text-align:left; padding-left:10px;}
+
+.subparamsindex
+{
+	line-height:30px;
+	
+}
+.subparamsindex .firstspan{
+	background:#d8d8d8;
+	text-indent:20px;
+	display:inline-block;
+	width:500px;
+}
+
+.subparamsindex .divspan{
+	
+	text-indent:30px;
+	display:inline-block;
+	width:500px;
+}
+.subparamswhite
+{
+	line-height:30px;
+	margin-bottom:10px;
+	color: #000;
+}
+.subparamswhite .firstspan{
+	background:#f2f2f2;
+	text-indent:20px;
+	display:inline-block;
+	width:500px;
+	font-family: "黑体";
+}
+.subparamswhite .contentspan{
+	line-height:25px;
+	display:inline-block;
+	padding:0 30px;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+.marginright {
+	margin-right:10px;
+}
+.margindot { font-size:32px; font-weight:bold;}
+.IcoClass { text-align:center;}
+.systext{
+  text-indent:10px;line-height:25px; margin:0 20px;	
+ }
+.imgbgbackground{ background:#f2f2f2; margin:0; padding-left:20px}
+
+.oldtr { background:#ffffff; }
+.evertr { background:#f2f2f2;}

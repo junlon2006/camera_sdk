@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PTZ控制</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+</head>
+<body>
+<div id="contenter" class="contenter">
+   <div class="topTitle"><span>PTZ控制&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"><a href="index.htm">返回目录</a></span>
+  </div>
+  <div class="systext">PTZ控制界面可实现对云台的转动，镜头视野、聚焦和光圈的调节，预置位的设置，以及灯光和雨刷等的控制。支持镜头控制的摄像机设备或在连接好摄像机与网络适配器的串口控制线后，可以进行云台控制。</div>
+   <div class="systext note">说明：出厂不带云台的设备，PTZ控制界面默认隐藏，需要时点击视频左侧隐藏按钮显示PTZ控制界面。</div>
+   <div class="TitleExplaintable">
+   <table class="tabhelp">
+         <tr class="tabtr">
+           <td width="17%" class="tabtd"><b>方向键</b></td>
+           <td width="83%" class="tabtd tableft">八个不同的方向键表示云台转动的不同方位，点击即可调整云台转动的方向。</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>云台复位</b></td>
+           <td  class="tabtd tableft"><img src="../../images/main/viewer/ptz/ptz_out_hover.png" class="IcoClass" />为云台复位按钮，点击使云台回到初始位置，并使视野恢复最大。</td>
+         </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>步长</b></td>
+           <td class="tabtd tableft">步长为每次按动方向键，云台所转动的速度。拖动云台方向键右侧的滑块 ，即可调整步长。步长越大，点击后摄像机的移动速度越快。带电动变焦镜头的摄像机，步长也可控制镜头Zoom和Focus步进。</td>
+         </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>视野</b></td>
+           <td class="tabtd tableft">视野指的是通过IPC监控到的空间范围。视野越大，看到的范围越大。点击<img src="../../images/main/viewer/ptz/ptz_zoomIn_hover.png" class="IcoClass" />可拉近视野，点击<img src="../../images/main/viewer/ptz/ptz_zoomOut_hover.png" class="IcoClass" />可拉远视野。</td>
+         </tr>
+          <tr class="tabtr">
+           <td class="tabtd"><b>聚焦</b></td>
+           <td class="tabtd tableft">调整聚焦的目的是使目标成像清晰。点击<img src="../../images/main/viewer/ptz/ptz_PushIn_hover.png" class="IcoClass" />可缩小聚焦，点击<img src="../../images/main/viewer/ptz/ptz_PullAway_hover.png" class="IcoClass" />可扩大聚焦，点击<img src="../../images/main/viewer/ptz/ptz_focusauto_hover.png" class="IcoClass" />可实现自动聚焦。也可在<a href="the_image_effect.htm"><b>摄像机-图像</b></a>界面设置聚焦模式。</td>
+            <tr class="tabtr">
+           <td class="tabtd"><b>光圈</b></td>
+           <td class="tabtd tableft">光圈控制镜头的进光量，大光圈进光量多，图像明亮。点击<img src="../../images/main/viewer/ptz/ptz_irisIn_hover.png" class="IcoClass" />可调大光圈，点击<img src="../../images/main/viewer/ptz/ptz_irisOut_hover.png"class="IcoClass" />可调小光圈，点击<img src="../../images/main/viewer/ptz/ptz_focusauto_hover.png" class="IcoClass" />可实现光圈自动调节。也可在<a href="the_image_effect.htm"><b>摄像机--图像</b></a>界面设置光圈模式。</td>
+            <tr class="tabtr">
+           <td class="tabtd"><b>开灯/关灯</b></td>
+           <td class="tabtd tableft">点击<img src="../../images/main/viewer/ptz/ptz_light_hover.png" class="IcoClass" />开启红外灯检测，将在光线条件变暗时开启红外灯进行辅助照明。点击<img src="../../images/main/viewer/ptz/ptz_mist_hover.png" class="IcoClass" />强制关闭红外灯，这时即使光线变暗也不会开启红外补光灯。
+           <div class="note">说明：需要IPC设备支持该功能。</div> </td>
+            <tr class="tabtr">
+           <td class="tabtd"><b>雨刷</b></td>
+           <td class="tabtd tableft">雨刷有清洁摄像机玻璃罩的作用。点击<img src="../../images/main/viewer/ptz/ptz_rain_hover.png" class="IcoClass" />打开雨刷，再次点击可关闭雨刷。开启雨刷后不关闭，雨刷工作十分钟后将自动停止。</td>
+            <tr class="tabtr">
+           <td class="tabtd"><b>预置位</b></td>
+           <td class="tabtd tableft">在预置位列表中点击相应预置位序号，即可对相应预置位进行调用、设置、清除的操作。预置位的设置方法可参考<a href="PTZ.htm"><b>摄像机-云台</b></a>章节。</td>
+            
+  
+   
+     </table>
+ 
+     
+ </div>
+   
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+<span class="title1"></span>
+</body>
+</html>

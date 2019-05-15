@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PTZ>
+  <Common>
+    <Page>
+      <MPTZPan>PT Maintenance</MPTZPan>
+      <MWatchset>Patrol Settings</MWatchset>
+      <MPresetPoint>Preset</MPresetPoint>
+      <MLimit>Restriction</MLimit>
+      <MCruise>Path Patrol</MCruise>
+      <MScanpattern>Variety Patrol</MScanpattern>
+      <MTimingTask>Timed Task</MTimingTask>
+      <MLocation>Positioning</MLocation>
+      <MPTZresetTitle>Reset</MPTZresetTitle>
+      <MzoomInTitle>Zoom in</MzoomInTitle>
+      <MzoomOutTitle>Zoom out</MzoomOutTitle>
+      <MpullAwayTitle>Focus -</MpullAwayTitle>
+      <MpushInTitle>Focus +</MpushInTitle>
+      <MfocusautoPushTitle>Auto Focus</MfocusautoPushTitle>
+      <MirisInTitle>Aperture +</MirisInTitle>
+      <MirisOutTitle>Aperture -</MirisOutTitle>
+      <MfocusautoTitle>Auto Aperture</MfocusautoTitle>
+	  <AskTipDel>Delete?</AskTipDel>
+    </Page>
+  </Common>
+  <PTZPan>
+    <page>
+      <MPTZversion>PT Version</MPTZversion>
+      <MScanningspeedgrade>Grade of Patrol Speed</MScanningspeedgrade>
+      <MPTZEnable1>Enable Auto PT Speed</MPTZEnable1>
+      <MPTZEnable2>Enable Power Failure Recovery</MPTZEnable2>
+      <MRecoverymode>Recovery Mode</MRecoverymode>
+      <Mrecoverytime>Recovery Time</Mrecoverytime>
+      <MPTZrestorefactory>Restore default PT settings</MPTZrestorefactory>
+      <MConfirmPTZrestorefactory>Restore default PTZ settings</MConfirmPTZrestorefactory>
+      <Mupgrade>PT Upgrade</Mupgrade>
+      <MInupgrade>Upgrading</MInupgrade>
+      <MUpdatefailed>Upgrade failed</MUpdatefailed>
+      <MUpdatesuccess>Upgraded</MUpdatesuccess>
+      <MUpgradepackageerror>Upgrade Packet Error</MUpgradepackageerror>
+      <MReadyupgrade>Ready to upgrade</MReadyupgrade>
+    </page>
+    <opt>
+      <optoutage>Power Failure Recovery</optoutage>
+      <optptzpreset>Load Preset When Power On</optptzpreset>
+    </opt>
+  </PTZPan>
+  <Watchset>
+    <page>
+      <MWatchEnable>Enable</MWatchEnable>
+      <MWatchmode>Patrol Mode</MWatchmode>
+      <MWaitingtime>Waiting Time</MWaitingtime>
+      <MPresetnumber>Preset No.</MPresetnumber>
+      <Mcruisepath>Patrol Path</Mcruisepath>
+      <Mscanningpath>Patrol Path</Mscanningpath>
+    </page>
+    <opt></opt>
+  </Watchset>
+  <PresetPoint>
+    <page>
+      <MPresetnumber>Preset No.</MPresetnumber>
+      <MPresetenable>Enable Presets</MPresetenable>
+      <MPresetname>Preset Name</MPresetname>
+      <MPresetset>Set</MPresetset>
+      <MPresetdel>Delete</MPresetdel>
+      <MPresetLoad>Load</MPresetLoad>
+    </page>
+    <js>
+      <Mfalse>Not Set</Mfalse>
+      <Mtrue>Already Set</Mtrue>
+    </js>
+  </PresetPoint>
+  <V5Limit>
+    <page>
+      <Mlimit>Restriction</Mlimit>
+      <MEnableKeylimit>Enable Manual Restrict Patrol</MEnableKeylimit>
+      <Mleftlimit>Left Restriction</Mleftlimit>
+      <Mrightlimit>Right Restriction</Mrightlimit>
+      <MEnableScanninglimit>Enable Auto Restrict Patrol</MEnableScanninglimit>
+    </page>
+  </V5Limit>
+  <Limit>
+    <page>
+      <MKeylimit>Manual Restrict Patrol</MKeylimit>
+      <MScanninglimit>Auto Restrict Patrol</MScanninglimit>
+      <MEnableKeylimit>Enable</MEnableKeylimit>
+      <MEnableScanninglimit>Enable Auto Restrict Patrol</MEnableScanninglimit>
+      <Mcleanlimit>Restriction Cleared</Mcleanlimit>
+      <Mleftlimit>Left Restriction</Mleftlimit>
+      <Mrightlimit>Right Restriction</Mrightlimit>
+    </page>
+  </Limit>
+  <Cruise>
+    <page>
+      <Mcruisepath>Patrol Path</Mcruisepath>
+      <Mcruisepath1>Patrol Path 1</Mcruisepath1>
+      <Mcruisepath2>Patrol Path 2</Mcruisepath2>
+      <Mcruisepath3>Patrol Path 3</Mcruisepath3>
+      <Mcruisepath4>Patrol Path 4</Mcruisepath4>
+      <Mcruisepath5>Patrol Path 5</Mcruisepath5>
+      <Mcruisepath6>Patrol Path 6</Mcruisepath6>
+      <Mcruisepath7>Patrol Path 7</Mcruisepath7>
+      <Mcruisepath8>Patrol Path 8</Mcruisepath8>
+      <MsaveCruise>Save</MsaveCruise>
+      <MdelCruise>Delete</MdelCruise>
+      <MLoadCruise>Load</MLoadCruise>
+      <MStopCruise>Stop</MStopCruise>
+    </page>
+    <Cruiselist>
+      <MaddCruise>Add</MaddCruise>
+      <MEditCruise>Modify</MEditCruise>
+      <MCruisepoint>Patrol Spot</MCruisepoint>
+      <MPreset>Preset</MPreset>
+      <Mstoptime>Stay Time</Mstoptime>
+      <MCruiseenable>Enable Patrol Spots</MCruiseenable>
+      <MPresetname>Patrol Spot Name</MPresetname>
+      <Mfalse>Not Set</Mfalse>
+      <Mtrue>Already Set</Mtrue>
+      <MChangeScan>Already modified, save?</MChangeScan>
+    </Cruiselist>
+  </Cruise>
+  <ScanPattern>
+    <page>
+      <Mscanningpath>Patrol Path</Mscanningpath>
+      <Mfigurepath>Variety Patrol Path</Mfigurepath>
+      <Mfigurepath1>Variety Patrol Path 1</Mfigurepath1>
+      <Mfigurepath2>Variety Patrol Path 2</Mfigurepath2>
+      <Mfigurepath3>Variety Patrol Path 3</Mfigurepath3>
+      <Mfigurepath4>Variety Patrol Path 4</Mfigurepath4>
+      <Mfigurepath5>Variety Patrol Path 5</Mfigurepath5>
+      <Mfigurepath6>Variety Patrol Path 6</Mfigurepath6>
+      <Mfigurepath7>Variety Patrol Path 7</Mfigurepath7>
+      <Mfigurepath8>Variety Patrol Path 8</Mfigurepath8>
+      <Mstartrecord>Start recording</Mstartrecord>
+      <Mstoprecord>Stop Recording</Mstoprecord>
+      <Mcleanrecord>Delete records</Mcleanrecord>
+      <MPreview>Preview</MPreview>
+      <MScanPatternstop>Stop</MScanPatternstop>
+    </page>
+    <titletips>
+      <MRecording>Recording</MRecording>
+      <MRecord1>No Record to Stop</MRecord1>
+      <MRecord2>Stop Recording Succeeded</MRecord2>
+      <MRecord3>No Record to Delete</MRecord3>
+      <MRecord4>No Record to Preview</MRecord4>
+      <MRecord5>No Preview to Stop</MRecord5>
+      <MRecord6>Recording failed</MRecord6>
+      <MRecord7>Stop Recording Failed</MRecord7>
+      <MRecord8>Deletion failed</MRecord8>
+      <MRecord9>Start Previewing</MRecord9>
+      <MRecord10>Preview Failed</MRecord10>
+      <MRecord11>Stop Previewing Succeeded</MRecord11>
+      <MRecord12>Stop Previewing Failed</MRecord12>
+      <Mfigurescan>Variety Patrol</Mfigurescan>
+      <Mfigurescan1>Previewing, request denied.</Mfigurescan1>
+      <Mconfirmask>The variety patrol record has already existed, overlay the record?</Mconfirmask>
+      <MScancleanerr>Recording variety patrol, deletion failed.</MScancleanerr>
+      <MScancleanerr1>Previewing variety patrol, deletion failed.</MScancleanerr1>
+      <MScancleanerr2>Recording variety patrol, preview failed.</MScancleanerr2>
+    </titletips>
+  </ScanPattern>
+  <TimingTask>
+    <page>
+      <MenableTimingTask>Enable</MenableTimingTask>
+      <Mrecoverytime>Task Recovery Time</Mrecoverytime>
+      <MTimingTasktime>Edit Time</MTimingTasktime>
+      <MEdittime>Edit</MEdittime>
+    </page>
+  </TimingTask>
+  <Location>
+    <page>
+      <MZerocorrection>Pan/Tilt Zero Correction</MZerocorrection>
+      <MZerocorrection1>Pan/Tilt Zero Correction</MZerocorrection1>
+      <MLocation>Positioning</MLocation>
+      <Mcurrentcoordinates>Present Coordinate</Mcurrentcoordinates>
+      <Mhorizontalcoordinate>Horizontal Coordinate</Mhorizontalcoordinate>
+      <MVerticalcoordinate>Vertical Coordinate</MVerticalcoordinate>
+      <MHorizontalpositioning>Horizontal Positioning</MHorizontalpositioning>
+      <MVerticalpositioning>Vertical Positioning</MVerticalpositioning>
+      <MPrecisepositioning>Accurate Positioning</MPrecisepositioning>
+    </page>
+    <Js>
+      <jsLevelx>Horizontal Coordinate</jsLevelx>
+      <jsVerticaly>Vertical Coordinate</jsVerticaly>
+    </Js>
+  </Location>
+</PTZ>

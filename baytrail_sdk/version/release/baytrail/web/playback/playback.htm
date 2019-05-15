@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">  
+<link rel="stylesheet" type="text/css" href="../style/style.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type="text/css" href="../style/playback.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type="text/css" href="../style/viewer/jquery-ui-slider.css?versiondate=7.1.2.249607" />
+<link rel="stylesheet" type='text/css' href="../style/box.css?versiondate=7.1.2.249607" />
+<link  language="javascript"  type="text/css" rel="stylesheet"  href="../My97DatePicker/skin/WdatePicker.css?versiondate=7.1.2.249607">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script language="javascript" type="text/javascript" src="../script/jquery-1.7.1.min.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/jquery.cookie.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/versionocx.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/playback/playback.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js?versiondate=7.1.2.249607" ></script>
+<script language="javascript" type="text/javascript" src="../script/common.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/jquery-ui-slider.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/uuid.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/jquery.simplemodal.1.4.4.min.js?versiondate=7.1.2.249607"></script>
+</head>
+<body  onunload="UnloadPage('../playback/playback.htm',2)"  onload="Initplayback()">
+<div id="contenter" class="contenter">
+  <!--main_left--->
+  <div id="main_left" class="contentleft">
+      <!--videotype--->
+       <div id="videotype" style="display:none">
+          <div class="Monthtitle"><label name="Mrecordtype"></label></div>
+          <div class="mainlefttop">
+              <div><input type="checkbox"  id="CheckedAll" value="all" class="checkbox marginright8"/><span><label id="Mall" name="Mall"></label></span></div>
+              <div style="margin-top:15px;"><input type="checkbox" class="checkbox marginright8" name="videotypelist" id="video1" value="pinalarm,motivealarm,externalarm,coverimage" onclick="videocheck(this)" /><span><label id="Malarmrecord" name="Malarmrecord"></label></span><span class="alramecolor" style="background:#ff7575"></span></div> 
+              <div style="margin-top:15px;"><input type="checkbox" class="checkbox marginright8" name="videotypelist" id="video2" value="timer,weekly,file" onclick="videocheck(this)" /><span><label id="Mplanrecord" name="Mplanrecord"></label></span><span class="alramecolor" style="background:#3e5f9c"></span></div>
+              <div style="margin-top:15px;"><input type="checkbox" class="checkbox marginright8" name="videotypelist" id="video3" value="manual" onclick="videocheck(this)" /><span><label id="Mmanualrecord" name="Mmanualrecord"></label></span><span class="alramecolor" style="background:#61bf84"></span></div>
+          </div>
+       </div>
+       <!--videotypeEnd--->
+       <!--videotypestr--->
+         <div id="MonthView" >
+            <div class="Monthtitle"><label id="MmonthView" name="MmonthView"></label></div>
+            <div style="width:183px; height:170px;">
+                 <div id="div1"></div>
+            </div>
+            
+       </div>
+       <input type="button" value="" name="Msearch" style=" margin:10px 0 0 4px;width:174px; height:28px; border:0px;background:#4e9fe5; cursor:pointer; color:#ffffff"  id="SearchVideo" onclick="SearchVideo()"/>
+       <span id="SearchVideotips" style="color:#900; line-height:25px; margin-left:15px;"></span>
+       <!--videotypeend--->
+       <!--localizerstr-------->
+       <div class="clear"></div>
+        <div id="localizer" class="localizer" >
+            <div id="videotype">
+              <div class="Monthtitle" style="border-top:1px solid #d1d1d1;"><label name="Mrecordtype"></label></div>
+              <div class="mainlefttop">
+                  <div style="margin-top:15px;"><span class="alramecolor" style="background:#ff7575; float:left"></span><span><label id="Malarmrecord" name="Malarmrecord"></label></span></div> 
+                  <div style="margin-top:15px;"><span class="alramecolor" style="background:#3e5f9c; float:left"></span><span><label id="Mplanrecord" name="Mplanrecord"></label></span></div>
+                  <div style="margin-top:15px;"><span class="alramecolor" style="background:#61bf84; float:left"></span><span><label id="Mmanualrecord" name="Mmanualrecord"></label></span></div>
+              </div>
+           </div>
+       
+             <div id="dingshi" class="timegototitle"><label id="Mbacktimeocation" name="Mbacktimeocation"></label></div>
+             <div style="height:5px;"></div>
+               <div style="padding:5px 0;">
+                 <span style="float:left; margin-left:6px;">
+                    <input type="text" id="time_shi" value="00" name="shi" maxlength="2" class="input_playback_width" onkeyup="if(!(Number(this.value) <= 23)) {this.value = this.value.replace(this.value,'00')}" onblur="CheackNum(this,'shi')"/>
+                 </span>
+                 <span style="margin:0 2px; height:21px; line-height:21px; float:left;">:</span>
+                 <span style="float:left;">
+                    <input type="text" id="time_fen" value="00" name="fen" maxlength="2" class="input_playback_width" onkeyup="if(!(Number(this.value) <= 59)) {this.value = this.value.replace(this.value,'00')}" onblur="CheackNum(this,'fan')"/>
+                 </span> 
+                 <span style="margin:0 2px; height:21px; line-height:21px; float:left;display:inline-block">:</span>
+                 <span style="float:left;">
+                    <input type="text" id="time_miao" value="00" name="miao" maxlength="2" class="input_playback_width" onkeyup="if(!(Number(this.value) <= 59)) {this.value = this.value.replace(this.value,'00')}" onblur="CheackNum(this,'fan')"/>
+                 </span>
+                 <span id="gototime" style="float:left; margin-left:7px;"  class="gototime" onclick="goseek()"></span>
+            </div>
+            
+           
+           
+         </div>
+        <!--localizerend-------->
+  </div>
+  <!--main_leftend-------->
+  <!----main_rightstart-------->
+     <div id="main_right" class="contentright">
+       <div id="borderplayback" class="borderplayback">
+       	<div id="mainplugin"  class="playplugin">
+        	<div id ="downloadplugin" class="downloadplugin" style="width:100%;height:100%;">
+          	</div>
+        </div>
+          <!----工具栏开始----->
+                 <div id="playtoolbar" class="playtoolbar">
+                  <div class="playtoolbarleft"> 
+                      
+                     
+                      <span class="btnmouseout1" onclick="PlayPause()">
+                        <div id="play" class="play" title=""></div>
+                      </span>
+                      
+                      <span class="btnmouseout" onclick="StopPlay()">
+                        <div id="stop" class="stop" title=""></div>
+                      </span>
+                      
+                      <span class="btnmouseout" onclick="decelerationPause()">
+                        <div id="deceleration" class="deceleration" title=""></div>
+                      </span>
+                      
+                      
+                      <span class="btnmouseout" onclick="accelerationPause()">
+                        <div id="acceleration" class="acceleration" title=""></div>
+                      </span>
+                      
+                     
+                      
+                      <span class="btnmouseout" onclick="forwardPause()">
+                        <div id="forward" class="forward" title=""></div>
+                      </span>
+                      
+                       <span class="btnmouseout" onclick="backPause()">
+                        <div id="back" class="back" title=""></div>
+                      </span>
+                      
+                      <!--<span class="btnmouseout">
+		        		<div onclick="OpenSound" class="sounddisable playbackico" style="float:left;" name="opensound" id="opensound" title="打开声音"></div>
+                		<div class="palyback_sound">
+                    	  <div id="slider-range-footer" class="slider_palyback_sound"></div>
+               		 	</div>
+              		 </span>-->
+                     <span class="btnmouseout">
+                        <div onclick="OpenSound()" class="opensound" name="opensound" id="opensound" title=""></div>
+                        <div class="view_slider_sound">
+                             <div id="slider-range-footer"></div>
+                        </div>
+                    </span>
+                 </div>
+                 
+                 <div class="playtoolbarright">
+                 
+                     <span class="btnmouseout" onclick="PullAway()">
+                        <div id="PullAway" class="PullAway" title="EPTZ"></div>
+                      </span>
+                     
+                     <span class="btnmouseout" onclick="Capture()">
+                         <div id="capture" class="capture" name="capture" title=""></div>
+                     </span>
+                     
+                      <span class="btnmouseout" onclick="PlayBackSaveFile()">
+                         <div id="recordClip" class="recordClip" name="recordClip"  title="" ></div>
+                     </span>
+                     
+                   
+                      <span class="btnmouseout" onclick="DownPause()">
+                         <div id="DownPause" class="DownPause" name="DownPause"  title="" ></div>
+                     </span>
+                   
+                     
+                     <span class="btnmouseout" onclick="EnlargePause()">
+                         <div id="enlarge" class="enlarge" name="enlarge"  title="" ></div>
+                     </span>
+                     
+                     
+                      <span class="btnmouseout" onclick="NarrowPause()">
+                         <div id="narrow" class="narrow" name="narrow"  title="" ></div>
+                     </span>
+                     <span class="btnmouseout" onclick="fullscreen()">
+		       			 <div class="full" name="full" id="full" title=""></div>
+		   			 </span>
+                 </div>
+                
+                  
+           </div>
+          <!----工具栏结束----->
+       </div>
+        
+        
+        
+        
+     </div>
+  <!-----main_rightend------->
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PTZ>
+  <Common>
+    <Page>
+      <MPTZPan>云台维护</MPTZPan>
+      <MWatchset>守望设置</MWatchset>
+      <MPresetPoint>预置位</MPresetPoint>
+      <MLimit>限位</MLimit>
+      <MCruise>巡航扫描</MCruise>
+      <MScanpattern>花样扫描</MScanpattern>
+      <MTimingTask>定时任务</MTimingTask>
+      <MLocation>定位</MLocation>
+	  <MPTZresetTitle>复位</MPTZresetTitle>
+	  <MzoomInTitle>拉近</MzoomInTitle>
+      <MzoomOutTitle>拉远</MzoomOutTitle>
+	  <MpullAwayTitle>聚近</MpullAwayTitle>
+      <MpushInTitle>聚远</MpushInTitle>
+      <MfocusautoPushTitle>自动聚焦</MfocusautoPushTitle>
+	  <MirisInTitle>光圈+</MirisInTitle>
+      <MirisOutTitle>光圈-</MirisOutTitle>
+      <MfocusautoTitle>自动光圈</MfocusautoTitle>
+	  <AskTipDel>是否删除?</AskTipDel>
+    </Page>
+  </Common>
+  <PTZPan>
+    <page>
+      <MPTZversion>云台版本</MPTZversion>
+      <MScanningspeedgrade>扫描速度等级</MScanningspeedgrade>
+      <MPTZEnable1>景深比例启用</MPTZEnable1>
+      <MPTZEnable2>断电恢复启用</MPTZEnable2>
+      <MRecoverymode>恢复方式</MRecoverymode>
+      <Mrecoverytime>恢复时间</Mrecoverytime>
+      <MPTZrestorefactory>云台恢复出厂</MPTZrestorefactory>
+      <MConfirmPTZrestorefactory>确认云台恢复出厂</MConfirmPTZrestorefactory>
+      <Mupgrade>云台升级</Mupgrade>
+      <MInupgrade>升级中</MInupgrade>
+      <MUpdatefailed>升级失败</MUpdatefailed>
+      <MUpdatesuccess>升级成功</MUpdatesuccess>
+      <MUpgradepackageerror>升级包错误</MUpgradepackageerror>
+      <MReadyupgrade>准备升级中</MReadyupgrade>
+    </page>
+    <opt>
+      <optoutage>断电记忆</optoutage>
+      <optptzpreset>上电加载预置位</optptzpreset>
+    </opt>
+  </PTZPan>
+  <Watchset>
+    <page>
+      <MWatchEnable>启用</MWatchEnable>
+      <MWatchmode>守望模式</MWatchmode>
+      <MWaitingtime>等待时间</MWaitingtime>
+      <MPresetnumber>预置位编号</MPresetnumber>
+	  <Mcruisepath>巡航路径</Mcruisepath>
+      <Mscanningpath>扫描路径</Mscanningpath>
+    </page>
+    <opt></opt>
+  </Watchset>
+  <PresetPoint>
+    <page>
+      <MPresetnumber>预置点编号</MPresetnumber>
+      <MPresetenable>预置点使能</MPresetenable>
+      <MPresetname>预置点名称</MPresetname>
+      <MPresetset>设置</MPresetset>
+      <MPresetdel>删除</MPresetdel>
+      <MPresetLoad>调用</MPresetLoad>
+    </page>
+    <js>
+      <Mfalse>未设置</Mfalse>
+      <Mtrue>已设置</Mtrue>
+    </js>
+  </PresetPoint>
+  <V5Limit>
+    <page>
+      <Mlimit>限位</Mlimit>
+      <MEnableKeylimit>启用键控限位</MEnableKeylimit>
+      <Mleftlimit>左限位</Mleftlimit>
+      <Mrightlimit>右限位</Mrightlimit>
+      <MEnableScanninglimit>启用扫描限位</MEnableScanninglimit>
+    </page>
+  </V5Limit>
+  <Limit>
+    <page>
+      <MKeylimit>键控限位</MKeylimit>
+      <MScanninglimit>扫描限位</MScanninglimit>
+      <MEnableKeylimit>启用</MEnableKeylimit>
+      <MEnableScanninglimit>启用扫描限位</MEnableScanninglimit>
+      <Mcleanlimit>限位清除</Mcleanlimit>
+      <Mleftlimit>左限位</Mleftlimit>
+      <Mrightlimit>右限位</Mrightlimit>
+    </page>
+  </Limit>
+  <Cruise>
+    <page>
+      <Mcruisepath>巡航路径</Mcruisepath>
+	  <Mcruisepath1>巡航路径 1</Mcruisepath1>
+	  <Mcruisepath2>巡航路径 2</Mcruisepath2>
+	  <Mcruisepath3>巡航路径 3</Mcruisepath3>
+	  <Mcruisepath4>巡航路径 4</Mcruisepath4>
+	  <Mcruisepath5>巡航路径 5</Mcruisepath5>
+	  <Mcruisepath6>巡航路径 6</Mcruisepath6>
+	  <Mcruisepath7>巡航路径 7</Mcruisepath7>
+	  <Mcruisepath8>巡航路径 8</Mcruisepath8>
+      <MsaveCruise>保存</MsaveCruise>
+      <MdelCruise>删除</MdelCruise>
+      <MLoadCruise>调用</MLoadCruise>
+      <MStopCruise>停止</MStopCruise>
+    </page>
+    <Cruiselist>
+      <MaddCruise>添加</MaddCruise>
+      <MEditCruise>修改</MEditCruise>
+      <MCruisepoint>巡航点</MCruisepoint>
+      <MPreset>预置点</MPreset>
+      <Mstoptime>停留时间</Mstoptime>
+      <MCruiseenable>巡航点使能</MCruiseenable>
+      <MPresetname>巡航点名称</MPresetname>
+      <Mfalse>未设置</Mfalse>
+      <Mtrue>已设置</Mtrue>
+	  <MChangeScan>已修改,是否保存</MChangeScan>
+    </Cruiselist>
+  </Cruise>
+  <ScanPattern>
+    <page>
+      <Mscanningpath>扫描路径</Mscanningpath>
+      <Mfigurepath>花样路径</Mfigurepath>
+	  <Mfigurepath1>花样路径 1</Mfigurepath1>
+	  <Mfigurepath2>花样路径 2</Mfigurepath2>
+	  <Mfigurepath3>花样路径 3</Mfigurepath3>
+	  <Mfigurepath4>花样路径 4</Mfigurepath4>
+	  <Mfigurepath5>花样路径 5</Mfigurepath5>
+	  <Mfigurepath6>花样路径 6</Mfigurepath6>
+	  <Mfigurepath7>花样路径 7</Mfigurepath7>
+	  <Mfigurepath8>花样路径 8</Mfigurepath8>
+      <Mstartrecord>开始记录</Mstartrecord>
+      <Mstoprecord>停止记录</Mstoprecord>
+      <Mcleanrecord>清除记录</Mcleanrecord>
+      <MPreview>预览</MPreview>
+      <MScanPatternstop>停止</MScanPatternstop>
+    </page>
+    <titletips>
+      <MRecording>记录中</MRecording>
+      <MRecord1>无记录可停</MRecord1>
+      <MRecord2>停止记录成功</MRecord2>
+      <MRecord3>无记录可清除</MRecord3>
+      <MRecord4>无记录可预览</MRecord4>
+      <MRecord5>无预览可停</MRecord5>
+	  <MRecord6>记录失败</MRecord6>
+	  <MRecord7>停止记录失败</MRecord7>
+	  <MRecord8>清除失败</MRecord8>
+	  <MRecord9>开始预览</MRecord9>
+	  <MRecord10>预览失败</MRecord10>
+	  <MRecord11>停止预览成功</MRecord11>
+	  <MRecord12>停止预览失败</MRecord12>
+	  <Mfigurescan>花样扫描</Mfigurescan>
+	  <Mfigurescan1>预览中,请求失败</Mfigurescan1>
+	  <Mconfirmask>花样扫描记录已存在，是否覆盖记录?</Mconfirmask>
+	  <MScancleanerr>花样扫描记录中,清除失败</MScancleanerr>
+	  <MScancleanerr1>花样扫描预览中,清除失败</MScancleanerr1>
+	  <MScancleanerr2>花样扫描记录中,预览失败</MScancleanerr2>
+    </titletips>
+  </ScanPattern>
+  <TimingTask>
+    <page>
+      <MenableTimingTask>启用</MenableTimingTask>
+      <Mrecoverytime>任务恢复时间</Mrecoverytime>
+      <MTimingTasktime>编辑时间</MTimingTasktime>
+      <MEdittime>编辑</MEdittime>
+    </page>
+  </TimingTask>
+  <Location>
+    <page>
+      <MZerocorrection>零位矫正</MZerocorrection>
+	  <MZerocorrection1>零位矫正</MZerocorrection1>
+      <MLocation>定位</MLocation>
+      <Mcurrentcoordinates>当前坐标</Mcurrentcoordinates>
+      <Mhorizontalcoordinate>水平坐标</Mhorizontalcoordinate>
+      <MVerticalcoordinate>垂直坐标</MVerticalcoordinate>
+      <MHorizontalpositioning>水平定位</MHorizontalpositioning>
+      <MVerticalpositioning>垂直定位</MVerticalpositioning>
+      <MPrecisepositioning>精准定位</MPrecisepositioning>
+    </page>
+    <Js>
+      <jsLevelx>水平坐标</jsLevelx>
+      <jsVerticaly>垂直坐标</jsVerticaly>
+    </Js>
+  </Location>
+</PTZ>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TCPIP>
+  <Common>
+    <Page>
+      <MCabnetwork>LAN</MCabnetwork>
+	  <Mwireless>Wireless</Mwireless>
+      <MIPPost>Port</MIPPost>
+      <jsnewip>Port modified, please use.</jsnewip>
+      <jsnewip1>Port re-login</jsnewip1>
+      <jsnewip2>Please re-login</jsnewip2>
+      <jsnewip3>Port modified, please login again via the new port.</jsnewip3>
+      <jsnewip4>Operation failed and the device is restoring. Please login again later.</jsnewip4>
+    </Page>
+	<Mpattern>Mode</Mpattern>
+	<MmaskAddress>Subnet Mask</MmaskAddress>
+    <MDefaultGatewayAddress>Default Gateway</MDefaultGatewayAddress>
+    <MDefaultGatewayErr>Gateway Error</MDefaultGatewayErr>
+	<MautoDNS>Automatically Obtain DNS Server Address</MautoDNS>
+    <MPrimaryDNS>Preferred DNS Server</MPrimaryDNS>
+    <MPrimaryDNS1>Alternate DNS Server</MPrimaryDNS1>
+    <MDNSErr>DNS Address Error</MDNSErr>
+	<jsipAddress>IP Address</jsipAddress>
+	<opt>
+      <Mstatic>Static</Mstatic>
+      <Mdynamic>DHCP</Mdynamic>
+	</opt>
+  </Common>
+  <TcpIPMain>
+    <Page>
+      <MIPAddress>IP Address</MIPAddress>
+      <MIPPost>Port</MIPPost>
+      <Mipversion>IP Version</Mipversion>
+      <MMulticastAddress>Multi-Cast Address</MMulticastAddress>
+      <MMulticastRange>The 1st part is an integer from 224 to 239.</MMulticastRange>
+      <MMacAddress>MAC Address</MMacAddress>
+      <MDNSServerConfig>DNS Server Setting</MDNSServerConfig>
+      <MMulticastErr>Multi-Cast Address Error</MMulticastErr>
+      <MMTUErr>MTU Address Error</MMTUErr>
+    </Page>
+    <opt>
+      <Mstatic>Static</Mstatic>
+      <Mdynamic>DHCP</Mdynamic>
+      <Mautoobtain>Automatically Obtain</Mautoobtain>
+      <Mmanual>Manual</Mmanual>
+      <Mroutannouncement>Route Map</Mroutannouncement>
+      <Mviewannouncement>View Route Bulletin</Mviewannouncement>
+    </opt>
+    <titletips>
+      <jsMtuParam>MTU</jsMtuParam>
+      <jsipAddressv6>IP Address V6</jsipAddressv6>
+      <jsMaskAddInvalidTips>Invalid Subnet Mask</jsMaskAddInvalidTips>
+      <jsdnsserver1>Preferred DNS Server</jsdnsserver1>
+      <jsdnsserver2>Alternate DNS Server</jsdnsserver2>
+      <jsMDefaultGatewayAddress>Gateway and IP Conflict</jsMDefaultGatewayAddress>
+    </titletips>
+  </TcpIPMain>
+  <WirelessMain>
+  	   <jsAddconnection>Add Connect</jsAddconnection>
+	   <jswinssid>Connect SSID</jswinssid>
+	   <jsPassword>Password</jsPassword>	
+	   <jsshowPassword>Display password</jsshowPassword>	
+	   <jsadvopt>Show advanced options</jsadvopt>
+	   <jsrssi>Signal strength</jsrssi>
+	   <jsencrypttype>The type of encryption</jsencrypttype>
+	   <jssecuritytype>Safety</jssecuritytype>
+	   <jsipmode>IP Mode</jsipmode>
+	   <jsRefresh>Refresh</jsRefresh>
+	   <jsRescan>Re scan</jsRescan>
+	   <jsHotlist>Hot list</jsHotlist>
+	   <jsBluetoothcon>Bluetooth configuration</jsBluetoothcon>
+	   <jsbluetoothkey>Bluetooth identification code</jsbluetoothkey>
+	   <jsWLANcom>WLAN Configuration</jsWLANcom>
+	   <jsStateWLAN>State</jsStateWLAN>
+	   <jsconnect>Connect</jsconnect>
+	   <jsNotconnect>Not Connect</jsNotconnect>
+	   <jsThrough>Through</jsThrough>
+	   <jsPasswordprotection>password protection</jsPasswordprotection>
+	   <MEnableNone>Not enabled</MEnableNone>
+  </WirelessMain>
+  <TcpIPPost>
+    <Page>
+      <MPost>Port</MPost>
+    </Page>
+    <titletips>
+      <jsHttpPortParam>HTTP Port</jsHttpPortParam>
+      <jsRtspPortParam>RTSP Port</jsRtspPortParam>
+      <jsHttpsPortParam>HTTPS Port</jsHttpsPortParam>
+      <jsPortRepeat>Port number repeated, fail to save</jsPortRepeat>
+      <jsPortConflict>Port conflict, fail to save.</jsPortConflict>
+      <jsPortAsk>The operation needs rebooting, continue?</jsPortAsk>
+    </titletips>
+  </TcpIPPost>
+</TCPIP>

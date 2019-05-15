@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+</head>
+
+<body>
+<!-- tabs -->
+<ul class="tabs" id="tabAudio">
+	<li><a href="javascript:ia(Audiocode).update();" name="MAudiocode" id="MAudiocode"></a></li>
+    <li><a href="javascript:ia(Audiodecoder).update();" name="MAudiodecoder" id="MAudiodecoder"></a></li>	
+</ul>
+
+<div id="Audio" class="panes panewidth">
+    
+    <div id="DivAudiocode" class="pane"   >
+       
+        <div class="subparamswhite">
+            <span class="firstspan"><label id="MAudioEncodingVolume" name="MAudioEncodingVolume"></label></span>
+            <span class="localsecondspan">
+                <div class="Images_slider210">
+                  <div id="slider_encVol" class="Images_slider"></div>
+                  <div class="Images_slider_value">
+                    <input type="text" id="encVol_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                  </div>
+                </div>
+            </span>
+        </div>
+        <div class="clear"></div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label id="MAudiocodingtype" name="MAudiocodingtype"></label></span>
+            <span class="localsecondspan">
+                <select class="selectwidth width152" id="AudiocodeType" onchange="ChangeAudiocodeType()">
+                </select>
+            </span>
+            <span id="AudiocodeTypetips" style="margin-left:5px;"></span>
+        </div>
+        <div id="subaec" class="subparamswhite">
+            <span class="firstspan"><label id="Maec" name="Maec"></label></span>
+            <span class="localsecondspan">
+                <input type="checkbox" class="main_top5" id="aec" onclick="checkbox(this)" />
+            </span>
+					
+        </div>
+         <div class="spansave"><input type="button"  class="input_save"  id="SaveAudiocode" onclick="SaveAudiocode(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsAudiocode"></span></div>
+	  
+    </div>
+    
+    
+    
+    <div id="DivAudiodecoder" class="pane" >
+        
+        <div class="subparamswhite">
+            <span class="firstspan"><label id="MAudioDecodingVolume" name="MAudioDecodingVolume"></label></span>
+            <span class="localsecondspan">
+               
+                <div class="Images_slider210">
+                  <div id="slider_decVol" class="Images_slider"></div>
+                  <div class="Images_slider_value">
+                    <input type="text" id="decVol_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                  </div>
+                </div>
+            </span>
+					
+        </div>
+        <div class="clear"></div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label id="Mremixvideo" name="Mremixvideo"></label></span>
+            <span class="localsecondspan  main_top10">
+                <input type="checkbox" id="mixerrec" onclick="checkbox(this)" class="checkbox" />
+            </span>
+        </div>
+       <div class="spansave"><input type="button"  class="input_save"  id="SaveConfigAudiodecoder" onclick="SaveConfigAudiodecoder(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsAudiodecoder"></span></div>
+    </div>
+</div><!--<div class="panes">-->
+</body>
+</html>

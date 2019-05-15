@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OsdSet>
+  <Common>
+    <Page>
+      <mOsdSet>OSD</mOsdSet>
+      <mOsdlocalecho>Display OSD</mOsdlocalecho>
+      <mcurplugin>Dynamic content Plug-in</mcurplugin>
+    </Page>
+  </Common>
+  <Osdcurplugin>
+    <Mplugin>Dynamic content Plug-in</Mplugin>
+    <Mplugintest>Dynamic content example</Mplugintest>
+    <Js>
+      <jsosdtest>Test failed, please check the linkage.</jsosdtest>
+    </Js>
+  </Osdcurplugin>
+</OsdSet>

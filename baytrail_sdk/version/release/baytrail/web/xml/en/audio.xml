@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Audio>
+  <Common>
+    <Page>
+      <MAudiocode>Audio Encoding</MAudiocode>
+      <MAudiodecoder>Audio Decoding</MAudiodecoder>
+    </Page>
+  </Common>
+  <Audiocode>
+    <Page>
+      <MAudioEncodingVolume>Encoding Volume</MAudioEncodingVolume>
+      <MAudiocodingtype>Audio Encoding Format</MAudiocodingtype>
+      <Maec>Echo Cancellation</Maec>
+    </Page>
+    <titletips>
+      <MSupport>Supported</MSupport>
+      <MDoesnotsupport>Not Supported</MDoesnotsupport>
+    </titletips>
+  </Audiocode>
+  <Audiodecoder>
+    <Page>
+      <MAudioDecodingVolume>Decoding Volume</MAudioDecodingVolume>
+      <Mremixvideo>Audio Mixing Recording</Mremixvideo>
+    </Page>
+  </Audiodecoder>
+  <aadcap></aadcap>
+</Audio>

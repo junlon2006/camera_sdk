@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Login>
+  <Page>
+    <MUserName>User Name</MUserName>
+    <Mpassword>Password</Mpassword>
+    <Mlogin>Login</Mlogin>
+    <MAnonymous>Anonymous Login</MAnonymous>
+  </Page>
+  <Js>
+    <LoginTips1>Please enter user name.</LoginTips1>
+    <LoginTips2>User name maximum length is 16 characters.</LoginTips2>
+    <LoginTips3>Password maximum length is 16 characters.</LoginTips3>
+    <LoginTips4>User name does not exist.</LoginTips4>
+    <LoginTips5>Please enter password.</LoginTips5>
+    <LoginTips6>Password Error</LoginTips6>
+    <LoginTips7>IP Limits</LoginTips7>
+    <LoginTips8>Illegal user name or password</LoginTips8>
+	<LoginTips9>The user is disabled</LoginTips9>
+    <NetworkErrorTips>Network Abnormal</NetworkErrorTips>
+    <ConnectTimeoutTips>Connection Timeout</ConnectTimeoutTips>
+    <CookieTips>Please enable cookies.</CookieTips>
+    <LoninIsie11>The web client does not support IE11 version or above.</LoninIsie11>
+    <LoninIsie6>The web client does not support IE6 version or earlier.</LoninIsie6>
+  </Js>
+</Login>

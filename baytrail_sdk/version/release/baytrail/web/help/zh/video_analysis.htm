@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>事件-视频分析</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+</head>
+<body>
+<div id="contenter" class="contenter">
+   <div class="topTitle"><span>移动侦测&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"><a href="index.htm">返回目录</a></span>
+  </div>
+  <div class="systext">侦测指定区域，检测视频的运动特征，一旦移动超出设置的灵敏度，将触发告警。告警恢复时间可在0~300s之间设置，默认5s。</div>
+  <div class="systext">设置方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选启用移动侦测；
+     <p><span class="marginright">2.</span>点击开始绘制按钮，视频图像被划分成16列12行的小区域，点击画面的一个方格，以此方格为起点划出一个区域，该区域为被侦测区域，为紫红色，IPC设备可同时支持4个区域的移动侦测功能；
+     <p><span class="marginright">3.</span>若需要重新绘制区域或清除当前绘制区域，点击清除绘制按钮即可；
+     <p><span class="marginright">4.</span>拖动滑块调整移动侦测灵敏度；
+     <p><span class="marginright">5.</span>点击编辑按钮，在弹出的界面中勾选时间段并设置移动侦测的开始时间和结束时间；
+     <p><span class="marginright">6.</span>点击复制按钮，可以将设置的移动侦测时间复制到其他某一天或一整星期；
+     <p><span class="marginright">7.</span>勾选联动方式，即移动侦测区域检测到异常情况后触发告警的联动方式。
+  </div>
+   <div class="topTitle"><span>遮挡报警&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+   <div class="systext">在监控场景中，如果摄像头的监控视野变化，被物体遮挡，不能实现正常的场景监控，摄像头遮挡检测算法能够实时检测出摄像头被遮挡，触发报警。</div>
+<div class="systext">设置方法可参考<b>移动侦测</b>的设置方法。</div>
+  </div>
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+<span class="title1"></span>
+</body>
+</html>

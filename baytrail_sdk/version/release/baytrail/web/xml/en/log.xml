@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Log>
+  <Common>
+    <Page>
+      <MLogMain>Logs</MLogMain>
+    </Page>
+  </Common>
+  <LogPage>
+    <EnableLogRecord>Enable Log Record</EnableLogRecord>
+    <MLogType>Log Type</MLogType>
+    <MSubtype>Secondary type</MSubtype>
+    <MCleanLog>Delete logs</MCleanLog>
+    <MSearchLog>Search</MSearchLog>
+    <MSaveLog>Save logs</MSaveLog>
+    <MSaveLoging>Log saving...</MSaveLoging>
+    <MLoguser>User Name</MLoguser>
+    <Museripadd>User IP Address</Museripadd>
+    <Mlogtime>Log Record Time</Mlogtime>
+    <MLogcontent>Contents</MLogcontent>
+    <MEmptyLog>Sure to delete all logs?</MEmptyLog>
+    <MNgreater>No great than</MNgreater>
+    <opt>
+      <MajorTypeOptions>
+        <MajorTypeOpt1>Search all</MajorTypeOpt1>
+        <MajorTypeOpt2>User Operation</MajorTypeOpt2>
+        <MajorTypeOpt3>Alarm info</MajorTypeOpt3>
+        <MajorTypeOpt4>Task</MajorTypeOpt4>
+        <MajorTypeOpt5>System Abnormality</MajorTypeOpt5>
+      </MajorTypeOptions>
+      <LogTypexUser>
+        <LogTypexUserOpt1>Alarm</LogTypexUserOpt1>
+        <LogTypexUserOpt2>Snapshot</LogTypexUserOpt2>
+        <LogTypexUserOpt3>PTZ Control</LogTypexUserOpt3>
+        <LogTypexUserOpt4>System Maintenance</LogTypexUserOpt4>
+        <LogTypexUserOpt5>Video</LogTypexUserOpt5>
+        <LogTypexUserOpt6>Audio</LogTypexUserOpt6>
+        <LogTypexUserOpt7>Image</LogTypexUserOpt7>
+      </LogTypexUser>
+      <LogTypexAlter>
+        <LogTypexAlterOpt1>Motion Detection Alarm Info</LogTypexAlterOpt1>
+        <LogTypexAlterOpt2>Parallel Port Alarm Info</LogTypexAlterOpt2>
+        <LogTypexAlterOpt3>Shield Area Alarm Info</LogTypexAlterOpt3>
+      </LogTypexAlter>
+    </opt>
+    <LogTypexText>
+      <LOG_USER_SET_MOVE_ALARM_PARAM>Configure motion detection parameters</LOG_USER_SET_MOVE_ALARM_PARAM>
+      <LOG_USER_SET_PIN_ALARM_PARAM>Configure Parallel Port Alarm</LOG_USER_SET_PIN_ALARM_PARAM>
+      <LOG_USER_SET_SHADE_ALARM_PARAM>Configure Shield Area Alarm</LOG_USER_SET_SHADE_ALARM_PARAM>
+      <LOG_USER_SET_REC_PARAM>Configure recording parameters</LOG_USER_SET_REC_PARAM>
+      <LOG_USER_START_REC>Start recording</LOG_USER_START_REC>
+      <LOG_USER_END_REC>Stop recording</LOG_USER_END_REC>
+      <LOG_USER_DOWNLOAD_REC>Download recordings</LOG_USER_DOWNLOAD_REC>
+      <LOG_USER_REPLAY_REC>Playback</LOG_USER_REPLAY_REC>
+      <LOG_USER_SET_SNAP_PARAM>Configure snapshot parameters</LOG_USER_SET_SNAP_PARAM>
+      <LOG_USER_IPC_SNAP>Camera Snapshot</LOG_USER_IPC_SNAP>
+      <LOG_USER_DOWNLOAD_SNAP_IMG>Download snapshots</LOG_USER_DOWNLOAD_SNAP_IMG>
+      <LOG_USER_PTZ>PTZ Control</LOG_USER_PTZ>
+      <LOG_USER_PTZ_UPGRADE>PTZ Upgrade</LOG_USER_PTZ_UPGRADE>
+      <LOG_USER_PTZ_FACTORY>Restore default PTZ settings</LOG_USER_PTZ_FACTORY>
+      <LOG_USER_SET_SERIAL_PARAM>Configure serial ports</LOG_USER_SET_SERIAL_PARAM>
+      <LOG_USER_DELETE_LOG_FILE>Delete logs</LOG_USER_DELETE_LOG_FILE>
+      <LOG_USER_SYSTEM_UPGRADE>Upgrade</LOG_USER_SYSTEM_UPGRADE>
+      <LOG_USER_SYSTEM_REBOOT>Reboot</LOG_USER_SYSTEM_REBOOT>
+      <LOG_USER_SET_USER_PARAM>Modify user management parameters</LOG_USER_SET_USER_PARAM>
+      <LOG_USER_SET_NETWORK>Configure network parameters</LOG_USER_SET_NETWORK>
+      <LOG_USER_SET_SNTP>Configure time synchronization</LOG_USER_SET_SNTP>
+      <LOG_USER_LOGIN>User Login</LOG_USER_LOGIN>
+      <LOG_USER_SET_VIDEO_PARAM>Configure video parameters</LOG_USER_SET_VIDEO_PARAM>
+      <LOG_USER_SET_AUDIO_PARAM>Configure audio parameters</LOG_USER_SET_AUDIO_PARAM>
+      <LOG_ALARM_MOVE_ALARM_START>Motion Detection Enabled</LOG_ALARM_MOVE_ALARM_START>
+      <LOG_ALARM_MOVE_ALARM_END>Motion Detection Cleared</LOG_ALARM_MOVE_ALARM_END>
+      <LOG_ALARM_PIN_ALARM_START>Parallel Port Alarm Enabled</LOG_ALARM_PIN_ALARM_START>
+      <LOG_ALARM_PIN_ALARM_END>Parallel Port Alarm Cleared</LOG_ALARM_PIN_ALARM_END>
+      <LOG_ALARM_SHADE_ALARM_START>Shield Area Alarm Enabled</LOG_ALARM_SHADE_ALARM_START>
+      <LOG_ALARM_SHADE_ALARM_END>Shield Area Alarm Cleared</LOG_ALARM_SHADE_ALARM_END>
+      <LOG_SYSTEM_MOVE_ALARM_START>Enable Timed Motion Detection</LOG_SYSTEM_MOVE_ALARM_START>
+      <LOG_SYSTEM_MOVE_ALARM_END>Disable Timed Motion Detection</LOG_SYSTEM_MOVE_ALARM_END>
+      <LOG_SYSTEM_PIN_ALARM_START>Enable Timed Parallel Port Detection</LOG_SYSTEM_PIN_ALARM_START>
+      <LOG_SYSTEM_PIN_ALARM_END>Disable Timed Parallel Port Detection</LOG_SYSTEM_PIN_ALARM_END>
+      <LOG_SYSTEM_SHADE_ALARM_START>Enable Timed Shield Area Alarm</LOG_SYSTEM_SHADE_ALARM_START>
+      <LOG_SYSTEM_SHADE_ALARM_END>Disable Timed Shield Area Alarm</LOG_SYSTEM_SHADE_ALARM_END>
+      <LOG_SYSTEM_REC_START>Enable Timed Recording</LOG_SYSTEM_REC_START>
+      <LOG_SYSTEM_REC_END>Disable Timed Recording</LOG_SYSTEM_REC_END>
+      <LOG_SYSTEM_DN_MODE_DAY>Timed Day/Night-Day Mode</LOG_SYSTEM_DN_MODE_DAY>
+      <LOG_SYSTEM_DN_MODE_NIGHT>Timed Day/Night-Night Mode</LOG_SYSTEM_DN_MODE_NIGHT>
+      <LOG_SYSTEM_PTZ_START>Enable Timed PTZ</LOG_SYSTEM_PTZ_START>
+      <LOG_SYSTEM_PTZ_END>Disable Timed PTZ</LOG_SYSTEM_PTZ_END>
+      <LogExceptionAllLogParem>All abnormality logs</LogExceptionAllLogParem>
+      <LOG_EXCEPTION_DISK_FULL>Disk Full</LOG_EXCEPTION_DISK_FULL>
+      <LOG_EXCEPTION_DISK_ERROR>Disk Error</LOG_EXCEPTION_DISK_ERROR>
+      <LOG_EXCEPTION_CABLE_BREAK>Network disconnection</LOG_EXCEPTION_CABLE_BREAK>
+      <LOG_EXCEPTION_CABLE_RESUME>Network reconnection</LOG_EXCEPTION_CABLE_RESUME>
+      <LOG_EXCEPTION_IP_CLASH>IP conflict</LOG_EXCEPTION_IP_CLASH>
+      <LOG_EXCEPTION_ILLEGAL_VISIT>Unauthorized access</LOG_EXCEPTION_ILLEGAL_VISIT>
+      <LOG_USER_SET_PINOUT_ALARM_PARAM>Configure alarm outputs</LOG_USER_SET_PINOUT_ALARM_PARAM>
+      <LOG_USER_SET_EXCEPTION_LINK_PARAM>Configure Abnormality Linkage</LOG_USER_SET_EXCEPTION_LINK_PARAM>
+      <LOG_USER_MEMORY_MANAGE>Storage</LOG_USER_MEMORY_MANAGE>
+      <LOG_USER_SET_PTZ_CONFIG>Configure PTZ parameters</LOG_USER_SET_PTZ_CONFIG>
+      <LOG_USER_SET_RTSP_ADENTI>RTSP parameters</LOG_USER_SET_RTSP_ADENTI>
+      <LOG_USER_SET_IP_FLITER>IP filter parameters</LOG_USER_SET_IP_FLITER>
+      <LOG_USER_SET_DEV_INFO>Configure Device Info</LOG_USER_SET_DEV_INFO>
+      <LOG_USER_RECOVER_FACTORY>Restore factory defaults</LOG_USER_RECOVER_FACTORY>
+      <LOG_USER_SET_DISCOVER_MODE>Configure detection mode</LOG_USER_SET_DISCOVER_MODE>
+      <LOG_USER_MANUAL_TIMING>Manual time correction</LOG_USER_MANUAL_TIMING>
+      <LOG_USER_SET_SUMMER_TIME>Configure summer time parameters</LOG_USER_SET_SUMMER_TIME>
+      <LOG_USER_EXPORT_CONFIG>Export configuration</LOG_USER_EXPORT_CONFIG>
+      <LOG_USER_INPORT_CONFIG>Import configuration</LOG_USER_INPORT_CONFIG>
+      <LOG_USER_SET_ADVANCED_CONFIG>Configure advanced settings</LOG_USER_SET_ADVANCED_CONFIG>
+      <LOG_USER_SET_AUTO_MAINTAIN>Configure auto maintenance parameters</LOG_USER_SET_AUTO_MAINTAIN>
+      <LOG_USER_SET_OSD_PARAM>User change OSD parameters</LOG_USER_SET_OSD_PARAM>
+      <LOG_USER_SET_ISP_PARAM>Configure image parameters</LOG_USER_SET_ISP_PARAM>
+    </LogTypexText>
+  </LogPage>
+</Log>

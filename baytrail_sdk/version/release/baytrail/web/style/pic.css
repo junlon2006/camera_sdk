@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentleft{
+    float:left;
+	width:183px;
+	border:1px solid #d1d1d1;
+	background:#FFF;
+	margin-right:10px;
+	height:675px;
+}
+.contentright {
+	float:right;
+	width:760px;
+	height:675px;
+	border:1px solid #d1d1d1;
+	background:#fff;
+}
+
+.Monthtitle{
+	height:30px;
+    line-height:30px;
+	background:#f9f9f9;
+	border-bottom:1px solid #d1d1d1;
+	text-indent:9px;
+	cursor:default;
+}
+.mainlefttop {margin:12px 0 21px 12px;}
+.marginright8 { margin-right:8px;  display:inline-block;}
+.alramecolor{float:right; margin-right:14px; width:28px; height:12px;}
+
+.picleft
+{
+    /*height:60px;*/
+	line-height:30px;
+	margin-left:10px;
+}
+
+.paddingleft5 {padding-left:5px;}
+.selectwidth{
+	margin:0 auto;padding:2px;border:1px solid #d1d1d1;background:#fcfcfc;
+}
+.pagetoolbar { 
+  border-top:1px solid #d1d1d1;
+  height:31px;
+  line-height:31px;
+  background:#f3f2f2;
+  bottom:0px;
+  position:absolute;
+  width:100%;
+}
+.rightimage {
+ padding:5px;	
+	}
+.imgul {
+   float:left;	
+   height:110px; width:118px;
+	}
+.imgwh{
+	width:105px;
+	height:70px;
+ }
+.btnmouseout
+{
+	float:left;
+	cursor:pointer;
+}
+.btnmousedefault
+{
+	float:left;
+	cursor:default;
+}
+.picico { 
+ width:31px; height:26px;
+ margin-top:3px;
+ margin-right:16px;
+}
+.picpageico { 
+ width:19px; height:18px;
+ margin-top:7px;
+ margin-right:12px;
+}
+.down{
+	background:url(../../images/main/viewer/pic/down_normal.png) no-repeat;
+}
+.down_hover{
+	background:url(../../images/main/viewer/pic/down_hover.png) no-repeat;
+}
+.down_down{
+	background:url(../../images/main/viewer/pic/down_press.png) no-repeat;
+}
+.down_disable{
+	background:url(../../images/main/viewer/pic/down_disable.png) no-repeat;
+}
+
+.lastPage{
+	background:url(../../images/main/viewer/pic/lastPage_normal.png) no-repeat;
+}
+.lastPage_hover{
+	background:url(../../images/main/viewer/pic/lastPage_hover.png) no-repeat;
+}
+.lastPage_down{
+	background:url(../../images/main/viewer/pic/lastPage_press.png) no-repeat;
+}
+.lastPage_disable{
+	background:url(../../images/main/viewer/pic/lastPage_disable.png) no-repeat;
+}
+
+.nextpage{
+	background:url(../../images/main/viewer/pic/nextpage_normal.png) no-repeat;
+}
+.nextpage_hover{
+	background:url(../../images/main/viewer/pic/nextpage_hover.png) no-repeat;
+}
+.nextpage_down{
+	background:url(../../images/main/viewer/pic/nextpage_press.png) no-repeat;
+}
+.nextpage_disable{
+	background:url(../../images/main/viewer/pic/nextpage_disable.png) no-repeat;
+}
+
+.endPage{
+	background:url(../../images/main/viewer/pic/endpage_normal.png) no-repeat;
+}
+.firstpage {
+   background:url(../../images/main/viewer/pic/firstpage_normal.png) no-repeat;
+}
+
+.piccurrentico { 
+ margin-top:7px;
+ margin-right:12px;
+}
+.current{
+	
+	height:16px;
+	border:1px solid #c4c4c4;
+	background:#fff;
+	line-height:16px;
+	text-align:center;
+	padding:0 7px;
+}
+.jumppagetext {
+	color:#636365;
+	margin-right:5px;
+}
+.jumppage {
+  	border:1px solid #c4c4c4;
+	height:16px;
+	width:23px;
+	background:#fff;
+	margin-top:7px;
+	*margin-top:0px;/*对IE7有效*/  
+	line-height:16px;
+	text-align:center;
+	padding:0 7px;
+}
+.jumppage1 {
+	border:1px solid #c4c4c4;
+	height:16px;
+	width:16px;
+	background:#fff;
+	border-left:none;
+	margin-top:7px;
+	line-height:16px;
+	text-align:center;	
+}
+.pagecount {
+	float:right; margin-right:7px;	
+}
+
+/********隔行换色*********/
+.trOdd { background:#f3f2f2;}
+.treven { background:#fff;}

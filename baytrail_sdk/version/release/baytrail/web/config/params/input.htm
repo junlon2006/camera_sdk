@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabInput">
+     <li><a href="javascript:ia(Input).update();" name="aInput" id="aInput"></a></li>
+</ul>
+<div class="panes panewidth" id="DivInput">
+    <div class="pane" id="divInput">
+    	   <div class="subparamswhite main_top10">
+                <span class="firstspan"><label name="laEnable"></label></span>
+                <span class="localsecondspan">
+                    <input type="checkbox" class="checkbox main_top8" id="InputEnable" onclick="checkbox(this)"/>
+                </span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="InNum"></label></span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width152" id="SelectAlarmnum" onchange="ChangeAlarmnum()">
+                </select>
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="AlarmName"></label></span>
+            <span>
+		        <input type="text" class="input_config width150" id="Inputalarmname" name="Inputalarmname" maxlength="16"   onblur="CheckDeviceName(this.value,'AlarmInNametips','JsInputName',16)" />
+            </span>
+              <span id="AlarmInNametips" class="colortips"></span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="AlarmType"></label></span>
+            <span class="localsecondspan">
+		        <select  class="selectwidth width152" id="SelectAlarmtype">
+                </select>
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="RecoveryTime"></label></span>
+            <span class="localsecondspan">
+		        <input type="button" onclick="EditSchedule()" class="buttonclass" name="MButEdit" id="ScheduleEditBtnInput"  value="">
+            </span>
+           </div>
+          
+       <div class="mainparams main_top26" id="subInputNormalLink"><label name="LinkMode"></label>(<label name="NormalLink"></label>)</div>
+           <div class="subparamsgray" id="subInputUploadcenter">
+            <span class="firstspan"><label name="UpCenter"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" id="InputUploadcenter" onclick="checkbox(this)"/>
+            </span>
+           </div>
+           <div class="subparamsgray" id="subInputShowosd">
+            <span class="firstspan"><label name="ShowContex"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" id="InputShowosd" onclick="checkbox(this)"/>
+            </span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="SoundAlarm"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" id="InputAudioout" onclick="checkbox(this)"  />
+            </span>
+           </div>
+           <div class="subparamsgray" id="subInputRec">
+            <span class="firstspan"><label name="RecLink"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" id="InputRec" onclick="checkbox(this)" />
+            </span>
+           </div>
+           <div class="subparamsgray" id="subInputSnap">
+            <span class="firstspan"><label name="Snap"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" id="InputSnap" onclick="checkbox(this)" />
+            </span>
+           </div>
+           
+       <div class="mainparams main_top10" id="subInputOtherLink"><label name="LinkMode"></label>(<label name="OtherLink"></label>)</div>
+           
+           <div class="subparamsgray" id="subInputalarmout">
+            <span class="firstspan"><label name="AlarmOut"></label></span>
+            <span class="localsecondspan">
+		        <div id="InputAlCheck"></div>
+            </span>
+           </div>
+           <div class="subparamswhite" id="subInputptz">
+            <span class="firstspan"><label name="PTZLink"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" id="InputPtz" onclick="checkbox(this)"/>&nbsp;
+            </span>
+           </div>
+           <div class="subparamsgray" id="subInputptzpresent">
+            <span class="firstspan"><label name="presetNum"></label></span>
+            <span class="localsecondspan">
+                  <select id="ptz_Input" class="selectwidth width120">
+                  </select>
+            </span>
+           </div>
+           
+         <div id="subcopytoalamin">
+              <div class="mainparams main_top10"><label name="copytoalamin" ></label></div>   
+              <div class="subparamsgray">
+                <span class="firstspan"><label name="selectall"></label></span>
+                <span class="localsecondspan">
+                      <input type="checkbox" class="checkbox main_top8" id="Inputcheckboxall" name="Inputcheckboxall"  />
+                </span>
+               </div>
+         </div> 
+       
+           
+          <div class="spansave"><input type="button"  class="input_save"  id="SaveInput" onclick="TimingTaskSave(this)" value="" name="MSaveConfigLocal"><span id="SetResultTipsInput"></span></div>
+    </div>
+</div><!--<div class="panes">-->
+
+
+<div id="TimeScheduleEdit1"></div>

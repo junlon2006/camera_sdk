@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<link rel="stylesheet" type="text/css" href="style/style.css?versiondate=7.1.2.249607" />
+<link rel="stylesheet" type="text/css" href="style/login.css?versiondate=7.1.2.249607" />
+<link rel="stylesheet" type="text/css" href="style/main.css?versiondate=7.1.2.249607" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script language="javascript" type="text/javascript" src="script/jquery-1.7.1.min.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="script/jquery.cookie.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="script/translator.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="script/common.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="script/login.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="script/md5.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="script/base64.js?versiondate=7.1.2.249607"></script>
+</head>
+<body onload="login()">
+<div id="isie" class="isie"></div>
+<div id="header">
+         <div id="head_top" class="head_top">
+              <span class="logo"></span>
+              <!-----语言模块开始-------->
+              <div class="languagepart">
+               <div class="LanguageChage_l">
+                 <div class="languageshow" id="laCurrentLanguage"></div>
+                 <div class="languagechange" id="divLanguageChoose"></div>
+               </div>
+             </div>
+              <!-----语言模块结束-------->
+          </div>
+          
+</div>
+<div id="MainLogin">
+   <div class="loginpart">
+        <div class="heightto4"></div>
+        <div id="login_member">
+            <div class="v7span"></div>
+            <div id="login_user" >            
+                   <div class="LoginInputUser"><label name="MUserName" id="MUserName"></label></div>
+                   <div class="LoginInputDiv" id="userdiv">
+                       <input type="text" name="logininput" id="username" maxlength="32"  class="logininputblur"  />
+                       <span class="userico"></span>
+                    </div>
+            </div>
+            <div class="clear"></div>
+            <div id="login_pass" style="margin-top:22px;">            
+                <div class="LoginInputUser"><label name="Mpassword" id="Mpassword"></label></div>
+                 <div class="LoginInputDiv" id="passdiv">
+                   <input type="password" name="logininput" id="password" maxlength="32" class="logininputblur"  />
+                   <span class="passico"></span>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div style="height:37px;" class="maintop19">
+              	 <div id="subanonymous" style="display:none">
+                	 <span class="f_pass" ><input type="checkbox" class="checkbox" id="anonymous" onclick="anonymous(this)"/><label name="MAnonymous" id="MAnonymous"></label></span>
+                </div>
+            </div>
+            <div class="clear"></div>
+                <span class="err" id="err"></span>
+            	<span class="login_button " id="login_button"   onclick="DoLogin(this)"><label name="Mlogin" class="mousepointer"></label></span>
+        </div>
+  </div>
+</div>
+<div id="footer" class="footer" style="display:none">
+   <div class="width962">
+      <span class="ios"></span>
+      <span class="iosmb">IOS版本</span>
+      <span class="android"></span>
+      <span class="iosmb">安卓版本</span>
+      <span class="iosreg">免费注册</span>
+  </div>
+</div>
+</body>
+</html>
+
+

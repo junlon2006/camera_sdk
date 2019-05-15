@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Audio>
+  <Common>
+    <Page>
+      <MAudiocode>音频编码</MAudiocode>
+      <MAudiodecoder>音频解码</MAudiodecoder>
+    </Page>
+  </Common>
+  <Audiocode>
+    <Page>
+      <MAudioEncodingVolume>编码音量</MAudioEncodingVolume>
+      <MAudiocodingtype>音频编码格式</MAudiocodingtype>
+      <Maec>回音抵消</Maec>
+    </Page>
+    <titletips>
+      <MSupport>支持</MSupport>
+      <MDoesnotsupport>不支持</MDoesnotsupport>
+    </titletips>
+  </Audiocode>
+  <Audiodecoder>
+    <Page>
+      <MAudioDecodingVolume>解码音量</MAudioDecodingVolume>
+      <Mremixvideo>混音录像</Mremixvideo>
+    </Page>
+  </Audiodecoder>
+  <aadcap></aadcap>
+</Audio>

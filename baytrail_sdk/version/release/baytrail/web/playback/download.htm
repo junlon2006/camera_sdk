@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">  
+<link rel="stylesheet" type="text/css" href="../style/style.css?versiondate=7.0.5.1968"  />
+<link rel="stylesheet" type="text/css" href="../style/playback.css?versiondate=7.0.5.1968"  />
+<link rel="stylesheet" type="text/css" href="../style/viewer/jquery-ui-slider.css?versiondate=7.0.5.1968" />
+<link rel="stylesheet" type='text/css' href="../style/box.css?versiondate=7.0.5.1968" />
+<link  language="javascript"  type="text/css" rel="stylesheet"  href="../My97DatePicker/skin/WdatePicker.css?versiondate=7.0.5.1968">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script language="javascript" type="text/javascript" src="../script/jquery-1.7.1.min.js?versiondate=7.0.5.1968"></script>
+<script language="javascript" type="text/javascript" src="../script/jquery.cookie.js?versiondate=7.0.5.1968"></script>
+<script language="javascript" type="text/javascript" src="../script/common.js?versiondate=7.0.5.1968"></script>
+<script language="javascript" type="text/javascript" src="../script/translator.js?versiondate=7.0.5.1970"></script>
+<script>
+function download(){
+	var authenticationinfo=$.cookie('authenticationinfo');   
+	if(document.all)
+	 {
+		$("#mainplugin").html('<object classid=clsid:eb3c8939-56ae-5d53-a89a-cb2120cdcd29 id="plugin0"  width="700" height="425" ></object>')
+	 }
+	 else
+	 {
+	    $("#mainplugin").html('<embed id="plugin0" type="application/x-ipcwebui"  width="700" height="425"></embed>')
+	 }
+	var download=document.getElementById("plugin0")
+	 download.setPluginType("download");
+	 var videoid=1;
+	 var ret=download.eventWebToPlugin("download",camera_hostname,videoid.toString(),authenticationinfo,camera_port.toString());
+	 download.eventWebToPlugin("changelanguage",$.cookie('language'))
+};
+var aa = 1;
+$(function (){
+  	$(window).resize(function() {
+		var tmp = 425 + aa%2 ;
+		$('#plugin0').css({"height":tmp + "px"});
+			aa = aa + 1;
+	
+	});	
+});
+
+</script>
+</head>
+
+<body  onload="download()">
+<div style="height:2px;"></div>
+<div id="plugin" style="width:700px; height:425px; min-width:700px; min-height:425px; margin: 0 auto">
+   <div id="mainplugin"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网络-IP及端口</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+</head>
+<body>
+<div id="contenter" class="contenter">
+   <div class="topTitle"><span>IP地址&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"><a href="index.htm">返回目录</a></span>
+  </div>
+  <div class="systext">在客户端的网络配置部分，可以对摄像机的网络参数进行设置。</div>
+  <div class="systext">IP地址设置：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>在IP版本下拉框中选择IP版本为IPV4；
+     <p><span class="marginright">2.</span>在模式下拉框中选择静态模式或DHCP自动获取模式，选择DHCP模式时自动获取IP，此时IP地址、子网掩码、默认网关不可设。选择静态模式，需手动设置IP地址、子网掩码、默认网关；
+     <p><span class="marginright">3.</span>填写多播地址，即组播发送码流地址；
+     <div class="systext note">说明：这是一种数据包传输方式，源主机可以只需要发送一份报文就可以到达组内每个需要接收的主机上，这中间还要取决于路由器对组内和组关系的维护和选择。</div>
+     <p><span class="marginright">4.</span>MAC地址栏显示当前登录设备的MAC地址，不可更改；
+     <p><span class="marginright">5.</span>设置MTU（最大传输单元）值，范围500~1500，默认为1500；
+     <p><span class="marginright">6.</span>配置DNS，当摄像机连接以域名形式提供外部访问的平台时，请新增设置动态DNS。当模式选择静态时，DNS服务器地址需要手动填写。当模式选择DHCP时，可手动填写DNS服务器地址或者勾选自动获取DNS（注意：勾选后自动获取DNS后无法手动设置）。
+  </div>
+  <div id="contenter" class="contenter">
+   <div class="topTitle"><span>端口&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="TitleExplaintable">
+  <table class="tabhelp">
+         <tr class="tabtr">
+           <td width="17%" class="tabtd"><b>HTTP端口</b></td>
+           <td width="83%" class="tabtd tableft">HTTP通信端口，默认为80，范围为1~65535。</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>HTTPS端口</b></td>
+           <td  class="tabtd tableft">HTTPS通信端口，默认为5544，范围为1~65535。使用默认端口时可采用https://ip登录，使用其他端口可采用https://ip:port方式登录设备。</td>
+         </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>RTSP端口</b></td>
+           <td class="tabtd tableft">RTSP端口号默认为554，范围为1~65535。使用RTSP登录时：rtsp://ip/id=0 (id=0播放主流，id=1播放辅流)</td>
+        
+          </table>
+   </div>
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+<span class="title1"></span>
+</body>
+</html>

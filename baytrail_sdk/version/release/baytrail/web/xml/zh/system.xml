@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <Common>
+    <Page>
+      <aDeviceInfo>设备信息</aDeviceInfo>
+      <aTimeSettings>时间设置</aTimeSettings>
+      <aMaintain>系统维护</aMaintain>
+      <aUserSafe>用户安全</aUserSafe>
+      <aSerial>串口</aSerial>
+	  <jsnewip>请重新登录</jsnewip>
+    </Page>
+  </Common>
+  <DeviceInfo>
+    <Page>
+      <laDeviceName>设备名称</laDeviceName>
+      <laDeviceType>设备型号</laDeviceType>
+      <laDeviceSn>设备序列号</laDeviceSn>
+      <laFirmwareVersion>硬件版本号</laFirmwareVersion>
+      <laSoftwareVersion>软件版本号</laSoftwareVersion>
+      <laVideoSrcNum>视频源个数</laVideoSrcNum>
+      <laSaveAsLabel>设定为OSD的台标文字</laSaveAsLabel>
+    </Page>
+  </DeviceInfo>
+  <TimeSettings>
+    <Page>
+      <laSpanTitle>时间设置</laSpanTitle>
+      <laDevZone>设备时区</laDevZone>
+      <laDevTime>设备时间</laDevTime>
+      <laDST>夏令时</laDST>
+      <laEnableDST>启用夏令时</laEnableDST>
+      <laManualTimeSync>手动设置</laManualTimeSync>
+      <laManualTime>手动设置时间</laManualTime>
+      <laAutoTimeSync>自动校时</laAutoTimeSync>
+      <laSyncPcTime>与计算机时间同步</laSyncPcTime>
+	  <jsTimeErrorTips>开始时间不能大于结束时间</jsTimeErrorTips>
+      <trTimeSync>校时</trTimeSync>
+      <laMode>方式</laMode>
+      <laNtpTimeSync>NTP校时</laNtpTimeSync>
+      <laNtpPort>NTP端口</laNtpPort>
+      <laNtpInterval>校时时间间隔</laNtpInterval>
+      <laProtocolTimeSync>接入协议校时</laProtocolTimeSync>
+      <laProtocalTip>通过K-VSIP、GB28181、ONVIF、SDK等接入平台、平台定时校准时间</laProtocalTip>
+      <timezoneOpt1>(GMT-12:00) 日界线西</timezoneOpt1>
+      <timezoneOpt2>(GMT-11:00) 中途岛，萨摩亚群岛</timezoneOpt2>
+      <timezoneOpt3>(GMT-10:00) 夏威夷</timezoneOpt3>
+      <timezoneOpt4>(GMT-09:00) 阿拉斯加</timezoneOpt4>
+      <timezoneOpt5>(GMT-08:00) 太平洋时间(美国和加拿大)</timezoneOpt5>
+      <timezoneOpt6>(GMT-07:00) 山地时间(美国和加拿大)</timezoneOpt6>
+      <timezoneOpt7>(GMT-06:00) 中部时间(美国和加拿大)</timezoneOpt7>
+      <timezoneOpt8>(GMT-05:00) 东部时间(美国和加拿大)</timezoneOpt8>
+      <timezoneOpt9>(GMT-04:30) 加拉斯加</timezoneOpt9>
+      <timezoneOpt10>(GMT-04:00) 大西洋时间(加拿大)</timezoneOpt10>
+      <timezoneOpt11>(GMT-03:30) 纽芬兰</timezoneOpt11>
+      <timezoneOpt12>(GMT-03:00) 乔治敦、巴西利亚</timezoneOpt12>
+      <timezoneOpt13>(GMT-02:00) 中大西洋</timezoneOpt13>
+      <timezoneOpt14>(GMT-01:00) 佛得角群岛、亚速尔群岛</timezoneOpt14>
+      <timezoneOpt15>(GMT+00:00) 都柏林、爱丁堡、伦敦</timezoneOpt15>
+      <timezoneOpt16>(GMT+01:00) 阿姆斯特丹、柏林、罗马、巴黎</timezoneOpt16>
+      <timezoneOpt17>(GMT+02:00) 雅典、耶路撒冷、伊斯坦布尔</timezoneOpt17>
+      <timezoneOpt18>(GMT+03:00) 巴格达、科威特、莫斯科</timezoneOpt18>
+      <timezoneOpt19>(GMT+03:30) 德黑兰</timezoneOpt19>
+      <timezoneOpt20>(GMT+04:00) 高加索标准时间</timezoneOpt20>
+      <timezoneOpt21>(GMT+04:30) 喀布尔</timezoneOpt21>
+      <timezoneOpt22>(GMT+05:00) 伊斯兰堡、卡拉奇、塔什干</timezoneOpt22>
+      <timezoneOpt23>(GMT+05:30) 马德拉斯、孟买、新德里</timezoneOpt23>
+      <timezoneOpt24>(GMT+05:45) 加德满都</timezoneOpt24>
+      <timezoneOpt25>(GMT+06:00) 阿拉木图、新西伯利亚、达卡</timezoneOpt25>
+      <timezoneOpt26>(GMT+06:30) 仰光</timezoneOpt26>
+      <timezoneOpt27>(GMT+07:00) 曼谷、河内、雅加达</timezoneOpt27>
+      <timezoneOpt28>(GMT+08:00) 北京、乌鲁木齐、新加坡</timezoneOpt28>
+      <timezoneOpt29>(GMT+09:00) 汉城、东京、大阪、札幌</timezoneOpt29>
+      <timezoneOpt30>(GMT+09:30) 阿德莱德、达尔文</timezoneOpt30>
+      <timezoneOpt31>(GMT+10:00) 墨尔本、悉尼、堪培拉</timezoneOpt31>
+      <timezoneOpt32>(GMT+11:00) 马加丹、索罗门群岛</timezoneOpt32>
+      <timezoneOpt33>(GMT+12:00) 奥克兰、惠灵顿</timezoneOpt33>
+      <timezoneOpt34>(GMT+13:00) 努库阿洛法</timezoneOpt34>
+      <DSTBiasOpt1>30分钟</DSTBiasOpt1>
+      <DSTBiasOpt2>60分钟</DSTBiasOpt2>
+      <DSTBiasOpt3>90分钟</DSTBiasOpt3>
+      <DSTBiasOpt4>120分钟</DSTBiasOpt4>
+      <laSelectTime>设置时间</laSelectTime>
+      <laDSTBias>偏移时间</laDSTBias>
+      <latime>时</latime>
+      <Month1>一月</Month1>
+      <Month2>二月</Month2>
+      <Month3>三月</Month3>
+      <Month4>四月</Month4>
+      <Month5>五月</Month5>
+      <Month6>六月</Month6>
+      <Month7>七月</Month7>
+      <Month8>八月</Month8>
+      <Month9>九月</Month9>
+      <Month10>十月</Month10>
+      <Month11>十一月</Month11>
+      <Month12>十二月</Month12>
+      <Week1>星期日</Week1>
+      <Week2>星期一</Week2>
+      <Week3>星期二</Week3>
+      <Week4>星期三</Week4>
+      <Week5>星期四</Week5>
+      <Week6>星期五</Week6>
+      <Week7>星期六</Week7>
+      <No1>首个</No1>
+      <No2>第二个</No2>
+      <No3>第三个</No3>
+      <No4>第四个</No4>
+      <No5>末个</No5>
+    </Page>
+    <Js>
+      <TimeIsNuLLTips>时间不能为空</TimeIsNuLLTips>
+      <NtpServerTips>服务器地址</NtpServerTips>
+      <NtpPortRangeTips>NTP端口</NtpPortRangeTips>
+      <DSTBiasIsNullTips>偏移时间不能为空</DSTBiasIsNullTips>
+      <DSTMonthSameTips>夏令时的起始月份和结束月份不能相同</DSTMonthSameTips>
+      <NTPIntervalRangeTips>校时间隔</NTPIntervalRangeTips>
+    </Js>
+  </TimeSettings>
+  <Maintain>
+    <Page>
+      <laParamImport>参数导入</laParamImport>
+      <laImportFile>参数文件</laImportFile>
+      <laParamExport>参数导出</laParamExport>
+      <btnImport>导入</btnImport>
+      <butExport>导出</butExport>
+      <btnExportFile>配置导出</btnExportFile>
+      <laRemoteUpgrade>升级</laRemoteUpgrade>
+      <laConManage>配置管理</laConManage>
+      <laconfigure>配置</laconfigure>
+      <laUpgradeFile>升级文件</laUpgradeFile>
+      <laUpgradeExplains>升级过程需要1-10分钟，请不要关闭电源，完成升级后将自动重启。</laUpgradeExplains>
+      <laRestart>重启</laRestart>
+      <laFound>发现</laFound>
+      <laFlashingtime>闪灯时间</laFlashingtime>
+      <laFlashing>闪灯</laFlashing>
+      <laAutomaticmaintenance>自动维护</laAutomaticmaintenance>
+      <lamaintenancecycle>维护周期</lamaintenancecycle>
+      <lamaintenancetime>维护时间</lamaintenancetime>
+      <Restore>恢复默认</Restore>
+      <btnCompleteRestore>完全恢复</btnCompleteRestore>
+      <btnSimpleRestore>简单恢复</btnSimpleRestore>
+      <laRestartDevice>重新启动设备。</laRestartDevice>
+      <laSimpleReStore>简单恢复设备参数。</laSimpleReStore>
+      <laCompleteReStore>完全恢复设备参数到出厂设置。</laCompleteReStore>
+      <laAdvanceCfg>高级配置</laAdvanceCfg>
+	  <MTimestamp>视频流时间戳</MTimestamp>
+	  <MVSIPTimestamp>VSIP申请的码流时间戳</MVSIPTimestamp>
+	  <MStandard>标准</MStandard>
+	  <MOldStandard>旧标</MOldStandard>
+	  <Moptclose>关闭</Moptclose>
+	  <Moptlow>低</Moptlow>
+      <Moptmiddle>中</Moptmiddle>
+      <Mopthigh>高</Mopthigh>
+	  <Mreduction>音频降噪</Mreduction>
+	  <MAcquisition>采集降噪</MAcquisition>
+	  <MDecoding>解码降噪</MDecoding>
+      <AdCfg1>VSIP协议兼容性</AdCfg1>
+      <AdCfg2>使用文字、位置信息重新生成OSD图片,选择字体</AdCfg2>
+      <AdCfg3>VSIP设置OSD时</AdCfg3>
+      <AdCfg4>直接使用VSIP发送的OSD图片</AdCfg4>
+      <AdCfg5>音视频流UDP保活</AdCfg5>
+      <AdCfg6>VSIP申请的音视频流保活</AdCfg6>
+      <AdCfg7>Onvif(RTSP)申请的音视频流保活</AdCfg7>
+      <AdCfg8>GB28181申请的音视频流保活</AdCfg8>
+      <AdCfg9>网络适应性</AdCfg9>
+      <AdCfg10>网络数据平滑发送</AdCfg10>
+      <AdCfg11>开启,会占用部分系统资源</AdCfg11>
+      <AdCfg12>支持回声抵消</AdCfg12>
+      <AdCfg13>功能开关</AdCfg13>
+      <AdCfg14>支持,启用后系统性能下降非常大</AdCfg14>
+	  <Mlimit>平滑发送限定带宽</Mlimit>
+	  <Mlimittips>(当码率超出此带宽时,以码率为准)</Mlimittips>
+      <ladynamicosd>OSD动态内容功能</ladynamicosd>
+	  <Mstreamheadex>码流扩展头</Mstreamheadex>
+      <laSuperuserauth>高级用户认证</laSuperuserauth>
+	  <mtcf>
+	      <Mmode>模式选择</Mmode>
+		  <MLowdelaymodel>低延时</MLowdelaymodel>
+		  <MautoLowdelaymodel>自动低延时模式</MautoLowdelaymodel>
+		  <MNormalmode>普通模式</MNormalmode>
+		  <MForcedlowdelaymodel>强制低延时模式</MForcedlowdelaymodel>
+		  <Mvideodelay>以下两个功能会增加视频延时</Mvideodelay>
+		  <Mnoisereduction3D>3D降嗓</Mnoisereduction3D>
+		  <MImagemasking>图像遮蔽</MImagemasking>
+		  <MNodelayoptimization>不对延时优化</MNodelayoptimization>
+		  <MForcedclose3D>强制关闭3D降嗓和图像遮蔽功能,获得最佳延时</MForcedclose3D>
+		  <MForcedclose3D2>在关闭3D降嗓和图像遮蔽时,自动启用低延时模式</MForcedclose3D2>
+		  <MRestart>重启生效</MRestart>
+		  <Mhdr>超宽动态模式</Mhdr>
+		  <Mfps60>60帧模式</Mfps60>
+		  <Mstream4>四流模式</Mstream4>
+		  <M4K>4K模式</M4K>
+		  <Mdiv4>4K四分屏模式</Mdiv4>
+		  <Mnormal>普通模式</Mnormal>
+		  <Mhdsdi>HDSDI-摄像机模式</Mhdsdi>
+		  <MhdsdiTips>HD-SDI回显支持高清输出,且支持回显OSD</MhdsdiTips>
+		  <MhdsdiTips1>仅支持单码流网络输出</MhdsdiTips1>
+		  <Mstream3>普通三码流模式</Mstream3>
+	  </mtcf>
+    </Page>
+    <opt>
+      <js5s>5秒</js5s>
+      <js10s>10秒</js10s>
+      <js30s>30秒</js30s>
+      <js1m>1分</js1m>
+      <js30m>30分</js30m>
+      <js60m>60分</js60m>
+      <js24h>24小时</js24h>
+    </opt>
+    <Js>
+      <tipsNoUpgradeFile>没有指定升级文件</tipsNoUpgradeFile>
+      <tipsUpgradeFailed>升级失败</tipsUpgradeFailed>
+      <tipsLanguageMismatch>升级语言不匹配</tipsLanguageMismatch>
+	  <tipsUpgradeTimeOut>升级超时,请检查是否升级成功</tipsUpgradeTimeOut>
+	  <tipsUpgradeTitle>设备升级中</tipsUpgradeTitle>
+	  <tipsUpgradeState>状态:准备升级中</tipsUpgradeState>
+	  <tipsUpgradeState1>状态:升级中</tipsUpgradeState1>
+      <tipsGetProgress>获取升级进度失败</tipsGetProgress>
+      <tipsGetStatus>获取升级状态失败</tipsGetStatus>
+      <tipsUpdating>正在升级...</tipsUpdating>
+      <tipsUpdateSucc>设备已升级完成</tipsUpdateSucc>
+      <tipsUpgradeReboot>升级完成后设备将自动重启，确定升级？</tipsUpgradeReboot>
+      <ImportRebootTips>参数导入将自动重启，确认导入?</ImportRebootTips>
+      <ImportSuccessTips>导入成功</ImportSuccessTips>
+      <ImportFailedTips>导入失败</ImportFailedTips>
+      <ExportSuccessTips>导出成功</ExportSuccessTips>
+      <ExportFailedTips>导出失败</ExportFailedTips>
+      <tipsRestoreSucc>恢复默认值成功</tipsRestoreSucc>
+      <tipsRestoreFailed>恢复默认值失败</tipsRestoreFailed>
+      <tipsRestoreReboot>恢复默认值成功，重启后生效</tipsRestoreReboot>
+      <tipsRestoreReboot1>恢复默认值完成后设备将自动重启，确定恢复？</tipsRestoreReboot1>
+      <Tip1>除IP地址和接入协议,其它配置恢复到出厂状态</Tip1>
+      <Tip2>所有配置恢复到出厂状态</Tip2>
+      <Tip3>导出所有配置到文件</Tip3>
+      <Tip4>除网络、设备名、OSD配置外，全部从文件导入</Tip4>
+      <jssong>宋体</jssong>
+      <jsblack>黑体</jsblack>
+	  <LoginTips4>用户名不存在</LoginTips4>
+	  <LoginTips5>请输入密码</LoginTips5>
+	  <LoginTips6>密码错误</LoginTips6>
+	  <LoginTips7>IP限制</LoginTips7>
+	  <ConnectTimeoutTips>连接超时</ConnectTimeoutTips>
+    </Js>
+  </Maintain>
+  <Serial>
+    <Type>类型</Type>
+    <Bound>波特率</Bound>
+    <DataBit>数据位</DataBit>
+    <StopBit>停止位</StopBit>
+    <SerialCheck>校验</SerialCheck>
+    <StreamCtrl>流控</StreamCtrl>
+    <Address>地址码</Address>
+    <CtrlPotocol>控制协议</CtrlPotocol>
+    <Manone>无</Manone>
+    <Maeven>偶校验</Maeven>
+    <Maodd>奇校验</Maodd>
+    <Mahardctrl>硬流控</Mahardctrl>
+    <Masoftctrl>软流控</Masoftctrl>
+  </Serial>
+</System>

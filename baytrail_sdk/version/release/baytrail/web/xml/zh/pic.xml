@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pic>
+  <Page>
+    <Mpictype>图片类型</Mpictype>
+    <Mall>全选</Mall>
+    <Malarmpic>告警抓拍</Malarmpic>
+    <Mmanualpic>手动抓拍</Mmanualpic>
+	<MEvent>事件抓拍</MEvent>
+	<MScheduled>定时抓拍</MScheduled>
+    <Mtime>时间</Mtime>
+    <Mallpic>所有图片</Mallpic>
+    <Mweekpic>一周内图片</Mweekpic>
+    <Mcustompic>自定义搜索范围</Mcustompic>
+    <Mstarttime>开始时间</Mstarttime>
+    <Mendtime>结束时间</Mendtime>
+    <Mnumber>序号</Mnumber>
+    <Msearch>查找</Msearch>
+    <Mtotal>共</Mtotal>
+    <Mstrip>条</Mstrip>
+    <Mjump>跳转</Mjump>
+  </Page>
+  <titletips>
+    <Mdown>下载</Mdown>
+    <MlastPage>上一页</MlastPage>
+    <Mnextpage>下一页</Mnextpage>
+	<Mfirstpage>首页</Mfirstpage>
+	<Mendpage>尾页</Mendpage>
+	<LoginConnectTimeoutTips>登录超时,请重新登录</LoginConnectTimeoutTips>
+  </titletips>
+  <Js>
+    <Mnomemorycard>无存储卡</Mnomemorycard>
+    <Mtypeofpicture>请选择图片类型</Mtypeofpicture>
+    <Mnotmorethan>不能大于</Mnotmorethan>
+    <MVerticaly>垂直坐标</MVerticaly>
+    <Mnopic>没有图片</Mnopic>
+    <Mbeyond>超出</Mbeyond>
+    <Mzhang>张</Mzhang>
+    <Msearchpic>可缩小查询范围</Msearchpic>
+  </Js>
+</Pic>

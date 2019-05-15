@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>摄像机-视频</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body>
+<div class="contenter STYLE1" id="contenter">
+   <div class="topTitle">Encoding&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="topTitlespan"><a href="index.htm">Return to Contents</a></span>  </div>
+   <div class="systext">The following table provides the description for each parameter. </div>
+  <div class="TitleExplaintable">
+   <table class="tabhelp">
+         <tr class="tabtr">
+           <td width="17%" class="tabtd"><b>Multi-Stream</b></td>
+           <td width="83%" class="tabtd tableft">The default value is <strong>Dual-Stream</strong>.
+           <div class="note">Note: Before configuring this parameter, confirm the camera capability.</div></td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>Stream Type </b></td>
+           <td  class="tabtd tableft">Stream type </td>
+         </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>Resolution</b></td>
+           <td class="tabtd tableft">Resolution</td>
+      </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>Encoding Rate Type</b></td>
+           <td class="tabtd tableft"><p>The default value is <strong>Fixed Encoding Rate</strong>.</p>
+           <p>If you select <strong>Variable Encoding Rate</strong>, you can configure<strong> Image Quality</strong>.  </p></td>
+      </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>Frame Rate </b></td>
+           <td class="tabtd tableft">Frame rate </td>
+      </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>Encoding Rate Upper Limit </b></td>
+           <td class="tabtd tableft">Upper limit for the encoding rate </td>
+      </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><strong>Encoding Format </strong></td>
+           <td class="tabtd tableft">The default value is <strong>H.264</strong>.</td>
+      </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><label id="MCodecComplexity" name="MCodecComplexity"><strong>Encoding Complexity</strong></label></td>
+           <td class="tabtd tableft">Encoding complexity 
+             <div class="note">Note: The high encoding complexity is, the less bandwidth resources are occupied but the higher the CPU usage is. You are advised to apply the <strong>Middle</strong> value.</div></td>
+      </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>Max Interval for Key Frame</b></td>
+           <td class="tabtd tableft">The default value is <strong>75</strong>. </td>
+    </table>
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle">Limited Encoding &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+  <div class="systext">Limited Encoding allows the camera to encode and display the video of a specific field. </div>
+  <div class="systext">To use Limited Encoding: </div>
+   <div class="TitleExplain">
+   <p><span class="marginright">1. Select the <strong>Enable</strong> check box. </span>     </p>
+     <p><span class="marginright">2.</span> Click <strong>Edit</strong>.
+     <p><span class="marginright">3.</span> Select a field using your mouse.
+     <p><span class="marginright">4.</span> Click <strong>Done</strong> and then <strong>Save</strong>. 
+   </div>
+     <div class="systext note">Note: You cannot select a very small field.</div>
+  </div>
+  <div id="contenter" class="contenter">
+    <div class="topTitle">ROI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+<div class="systext">
+  <p>When a region of interest (ROI) is created, the image quality in the ROI is high but that outside the ROI is low. In such a case, you are advised to decrease the encoding rate. </p>
+  </div>
+  <div class="systext">To create an ROI:</div>
+  <div class="TitleExplain">
+   <p><span class="marginright">1.</span><span class="marginright"> Select the <strong>Enable</strong> check box. </span>     </p>
+     <p><span class="marginright">2.</span> Click <strong>Edit</strong>.
+     <p><span class="marginright">3.</span> Select a field using your mouse.
+     <p><span class="marginright">4.</span> Select an encoding rate level.
+     <p><span class="marginright">5.</span> Click <strong>Done</strong> and then <strong>Save</strong>. 
+  </div>
+     <div class="systext note">Note: If you change the resolution and aspect ratio of the camera, an ROI no longer takes effect. </div>
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle">Privacy Mask &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+  <div class="systext">The privacy mask  feature prevents a camera from monitoring sensitive objects or areas in a  scene. When privacy masks are created in a scene, you cannot track objects if  the objects move to a masked area. Therefore, you are  advised to disable this function when you are tracking moving objects.</div>
+  <div class="systext">To create a privacy mask:</div>
+  <div class="TitleExplain">
+   <p><span class="marginright">1.</span> <span class="marginright">Select the <strong>Enable</strong> check box. </span>     </p>
+     <p><span class="marginright">2.</span> Click <strong>Edit</strong>. 
+     <p><span class="marginright">3.</span> Select a field using your mouse.
+     <p><span class="marginright">4.</span> Select a mask color.
+     <p><span class="marginright">5.</span> Click <strong>Done</strong> and then <strong>Save</strong>. </div>
+     <div class="systext note">Note: You can select a maximum of four fields. </div>
+  </div>
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+</body>
+</html>

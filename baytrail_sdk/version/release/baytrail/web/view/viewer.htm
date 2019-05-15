@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<link rel="stylesheet" type="text/css" href="../style/style.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type="text/css" href="../style/main.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type='text/css' href="../style/box.css?versiondate=7.1.2.249607" />
+<link rel="stylesheet" type="text/css" href="../style/viewer/view.css?versiondate=7.1.2.249607"  />
+<link rel="stylesheet" type="text/css" href="../style/viewer/jquery-ui-slider.css?versiondate=7.1.2.249607"  />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script language="javascript" type="text/javascript" src="../script/jquery-1.7.1.min.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/jquery.cookie.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/versionocx.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/jquery.simplemodal.1.4.4.min.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/jquery-ui-slider.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/checkform.js?versiondate=7.1.2.249607"></script>
+
+
+<script language="javascript" type="text/javascript" src="../script/common.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/stringtest.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/checkform.js?versiondate=7.1.2.249607"></script>
+<script language="javascript" type="text/javascript" src="../script/config/config.js?versiondate=7.1.2.249607"></script>
+
+<script language="javascript" type="text/javascript" src="../script/translator.js?versiondate=7.1.2.249607"></script>
+
+<script language="javascript" type="text/javascript" src="../script/viewer.js?versiondate=7.1.2.249607"></script>
+<script>
+var m_szSuccessState = "&nbsp;<img src='../images/config/smile.png' class='imgmiddle'>&nbsp;"; //设置成功
+var m_szErrorState = "&nbsp;<img src='../images/config/tips.png' class='imgmiddle'>&nbsp;"; //设置失败
+ 
+</script>
+</head>
+<body onunload="UnloadPage('viewer.htm',1)" onload="Load_viewer()" >
+<div class="container_show" id="container" style="height:574px;">
+    <div id="viewer_left" class="viererleft">
+      
+    <div id="viermenu" class="viewermenu">
+         
+          <!------PTZ Start-------->
+          <div class="PTZviewbasic">
+             <div id="subPTZPanel" class="ptz_menu viewercoll" style="border-top:none;"><label name="MPTZpanel"></label></div>
+             <div id="PTZ_Panel">
+                     <div class="ptz_ico">
+                      <div class="ptz_direction_left">
+                           <span id="ptz_leftup" class="ptz_direction ptz_leftup" onmousedown="SetPTZStart('move_leftup')" onmouseup="SetPTZStop('movestop')"  onmouseout="SetPTZStop('movestop')" ></span>
+                           <span id="ptz_up" class="ptz_direction ptz_up" onmousedown="SetPTZStart('moveup')" onmouseup="SetPTZStop('movestop')"  onmouseout="SetPTZStop('movestop')"></span>
+                           <span id="ptz_rightup" class="ptz_direction ptz_rightup" onmouseup="SetPTZStop('movestop')" onmousedown="SetPTZStart('move_rightup')" onmouseout="SetPTZStop('movestop')"></span>
+                           <span id="ptz_left" class="ptz_direction ptz_left" onmouseup="SetPTZStop('movestop')" onmousedown="SetPTZStart('moveleft')" onmouseout="SetPTZStop('movestop')"></span>
+                           <span id="ptz_auto" title="" class="ptz_direction ptz_auto" onclick="SetPTZClick('ptz_reset')" ></span>
+                           <span id="ptz_right" class="ptz_direction ptz_right" onmouseup="SetPTZStop('movestop')" onmousedown="SetPTZStart('moveright')" onmouseout="SetPTZStop('movestop')"></span>
+                           <span id="ptz_leftdown" class="ptz_direction ptz_leftdown" onmouseup="SetPTZStop('movestop')" onmousedown="SetPTZStart('move_leftdown')" onmouseout="SetPTZStop('movestop')"></span>
+                           <span id="ptz_down" class="ptz_direction ptz_down" onmouseup="SetPTZStop('movestop')" onmousedown="SetPTZStart('movedown')" onmouseout="SetPTZStop('movestop')"></span>
+                           <span id="ptz_rightdown" class="ptz_direction ptz_rightdown" onmouseup="SetPTZStop('movestop')" onmousedown="SetPTZStart('move_rightdown')" onmouseout="SetPTZStop('movestop')"></span>
+                          
+                          
+                            <span id="ptz_zoomIn" class="ptz_direction ptz_zoomIn" title="" style="margin-top:4px;" onmouseup="SetPTZStop('zoomstop')" onmousedown="SetPTZStart('zoomtele')" onmouseout="SetPTZStop('zoomstop')"></span>
+                           <span id="ptz_zoomOut" class="ptz_direction ptz_zoomOut" title="" style="margin-top:4px;" onmouseup="SetPTZStop('zoomstop')" onmousedown="SetPTZStart('zoomwide')" onmouseout="SetPTZStop('zoomstop')"></span>
+                           <div class="clear"></div> 
+                           
+                            <span id="ptz_PullAway" class="ptz_direction ptz_PullAway" title="" onmouseup="SetPTZStop('focusstop')" onmousedown="SetPTZStart('focusnear')" onmouseout="SetPTZStop('focusstop')"></span>
+                            <span id="ptz_PushIn" class="ptz_direction ptz_PushIn" title="" onmouseup="SetPTZStop('focusstop')" onmousedown="SetPTZStart('focusfar')" onmouseout="SetPTZStop('focusstop')"></span>
+                            <span id="ptz_focusautoPush" class="ptz_direction ptz_focusautoPush" title="" onclick="SetPTZClick('focusauto')"></span>
+                            <span id="ptz_irisIn" class="ptz_direction ptz_irisIn" title="" onmouseup="SetPTZStop('iris_stop')" onmousedown="SetPTZStart('iris_plus')" onmouseout="SetPTZStop('iris_stop')"></span>
+                            <span id="ptz_irisOut" class="ptz_direction ptz_irisOut" title="" onmouseup="SetPTZStop('iris_stop')" onmousedown="SetPTZStart('iris_minus')" onmouseout="SetPTZStop('iris_stop')"></span>
+                            <span id="ptz_focusauto" class="ptz_direction ptz_focusauto" title="" onclick="SetPTZClick('iris_auto')"></span>
+                      </div>
+                      
+                      <div class="ptz_direction_right">
+                            <!--<div id="slider-range-min" class="slider-range-min"></div>-->
+                            <div style=" margin-left:4px;">
+                                <div id="slider_vertical" class="slider-range-height"></div>
+                                <span id="vertical_value" style="display:none"></span>
+                            </div>
+                          <!--  <div style="float:right; width:30px;">
+                                <span id="sharpness_value1" class="ptz_minus"></span>
+                            
+                                 <span id="sharpness_value1" class="ptz_plus"></span>
+                                 
+                            </div>-->
+                            <span id="ptz_light" class="ptz_direction ptz_light" title="" style="margin-top:4px; margin-left:14px;"></span>
+                            <span id="ptz_mist" class="ptz_direction ptz_mist" title=""  style="margin-top:4px; margin-left:14px;"></span>
+                            <span id="ptz_rain" class="ptz_direction ptz_rain" title="" style="margin-top:4px; margin-left:14px;" onclick="SetRainClick('wiper_set')"></span>
+                            
+                          
+                      </div>
+                    <div class="clear"></div>  
+                </div>
+          	 </div>
+          
+          </div>
+          
+          <span class="viewbasic">
+             <span id="subpreset" class="ptz_menu viewercoll"><label name="MPreset"></label><span id="SetResultTipsPTZ" style="margin-left:5px;"></span></span>
+             <div id="preset_yzw" class="preset_yzw">
+            	 <div id="PTZ_Preset" class="ptzpanes_yzw">
+                 </div>
+          	 </div>
+          
+          </span>
+          
+          <span class="viewbasic" id="subimage">
+             <span id="subimageadjust" class="ptz_menu viewercollapsed" style="border-bottom:1px solid #d1d1d1"><label name="imageadjust"></label><span id="SetTipsImage" style="margin-left:5px;"></span></span>
+             <div id="ViewImages" class="displaynone" style="margin:10px 0 10px 10px;">
+            	<div id="sublightness" class="subparamsgray">
+                        <span class="viewimages_firstspan"><label name="brightness"></label></span>
+                        <span class="viewImages_secondspan">
+                           <div style="width:95px;">
+                            <div id="slider_brightness" class="viewImages_slider"></div>
+                             <div class="view_images_value">
+                               <input type="text" id="brightness_slider" onblur="CheackOnlyNum(this.value)"  class="siderwidview"  />
+                            </div>
+                           </div>
+                        </span>
+                </div>
+                
+                <div id="sublightness" class="subparamsgray">
+                        <span class="viewimages_firstspan"><label name="constrast"></label></span>
+                        <span class="viewImages_secondspan">
+                           <div style="width:95px;">
+                            <div id="slider_constrast" class="viewImages_slider"></div>
+                            <div class="view_images_value">
+                               <input type="text" id="constrast_slider" onblur="CheackOnlyNum(this.value)"  class="siderwidview"  />
+                            </div>
+                           </div>
+                        </span>
+                </div>
+                
+                <div id="sublightness" class="subparamsgray">
+                        <span class="viewimages_firstspan"><label name="saturation"></label></span>
+                        <span class="viewImages_secondspan">
+                           <div style="width:95px;">
+                            <div id="slider_saturation" class="viewImages_slider"></div>
+                           
+                            <div class="view_images_value">
+                               <input type="text" id="saturation_slider"  onblur="CheackOnlyNum(this.value)"  class="siderwidview"  />
+                            </div>
+                           </div>
+                        </span>
+                </div>
+                
+                <div id="sublightness" class="subparamsgray">
+                        <span class="viewimages_firstspan"><label name="acutance"></label></span>
+                        <span class="viewImages_secondspan">
+                           <div style="width:95px;">
+                            <div id="slider_huelevel" class="viewImages_slider"></div>
+                            <div class="view_images_value">
+                               <input type="text" id="huelevel_slider" onblur="CheackOnlyNum(this.value)"  class="siderwidview"  />
+                            </div>
+                           </div>
+                        </span>
+                </div>
+                <style>
+		.icon-large {
+			width:100px;
+			cursor:pointer;
+			height:20px;
+			text-align:left;
+			line-height:20px; 
+			cursor:pointer;
+			background: url(../../images/login/expanded.png)  no-repeat 97% 50%;
+			}
+		.icon1 {
+			background: url(../../images/config/select.png)  no-repeat 97% 80%;
+			width:16px; height:16px;
+			cursor:pointer;
+			float:right;
+			margin-top:8px;
+			margin-right:5px;
+		}
+		.delicon {
+			background: url(../../images/config/del.png)  no-repeat 97% 80%;
+			width:16px; height:16px;
+			cursor:pointer;
+			float:right;
+			margin-top:2px;
+			margin-right:5px;
+		}
+		#ulmode { border:1px #CCC solid; line-height:20px; margin:2px 0;}
+		#ulmode li { cursor:pointer; line-height:20px; padding-left:4px;}
+		.scnbutton{width:140px; height:30px; line-height:30px; background:#4f9fe6; border:0px; color:#fff; font-weight:bold; margin-top:20px; cursor:pointer;}
+        </style>
+                <div style="left:35px; margin-top:45px;position:absolute;">
+                    <div>
+                         <div class="scnbutton" style="text-align:center;position:absolute; bottom:5px;"><i class="icon1"></i><label name='Mscntitne' style="cursor:pointer;"></label></div>
+                         <ul id="ulmode" style="display:none; position: absolute;z-index:999;background:#fff; bottom: 35px; width: 138px;">
+                         </ul>
+                    </div>
+                </div>
+          	 </div>
+          
+          </span>
+          
+         <!-- <span class="viewbasic">
+             <span class="ptz_menu viewercollapsed" style="border-bottom:1px solid #d1d1d1">日夜转换</span>
+             <div id="PTZ_content" class="displaynone">
+            	 日夜转换名称
+          	 </div>
+          
+          </span>-->
+       </div>
+       
+    </div>
+    <!----viererleft_end------>
+    <div id="split_bottom" class="split_bottom">
+    	 <div class="split_top"></div>
+     	 <div id="menubar" class="menubar_close" onClick="dvChangeSize();"></div>
+    </div>
+    <div id="contentright" class="viererright" style="float:right;">
+       <div id="dvChangeSize" class="toptoolbar">
+         <div style="float:left;">
+           <span id="sizetoplug">
+              <div onclick="size4to3()"  class="size4to3" id="size4to3" title="4:3"></div>
+              <div onclick="size16to9()" class="size16to9" id="size16to9" title="16:9"></div>
+              <div onclick="sizeX1()"  class="sizeX1" id="sizeX1" title=""></div>
+              <div onclick="PluginAutoSize()" class="sizeauto" id="sizeauto" title=""></div>
+           </span> 
+         </div>
+         <div style="float:right">
+            <select style="border:1px solid #d2d2d2; width:120px; margin:6px 4px 2px 4px" class="mousepointer" onchange="changePlay()" id="changePlay">
+              <option id="MaviewTypeOpt1" name="MaviewTypeOpt1" value="1"></option>
+              <option id="MaviewTypeOpt2" name="MaviewTypeOpt2" value="2"></option>
+              <option id="MaviewTypeOpt3" name="MaviewTypeOpt3" value="3"></option>
+              <option id="MaviewTypeOpt4" name="MaviewTypeOpt4" value="4"></option>
+            </select>
+         </div>
+       </div>
+       <!-----toptoolbar end---------->
+       <div id="mainplugin" class="mainplugin"></div>
+       <div id="footer_toolbar" class="footer_toolbar">
+          <div class="toolbarleft">
+              <span class="btnmouseout1" onclick="StartRealPlay()">
+		        <div name="play" id="play" class="play" title=""></div>
+		      </span>
+              <span class="btnmouseout" onclick="StopAll()">
+		        <div class="stop" name="stop" id="stop" title="" ></div>
+		      </span>
+              
+              <span class="btnmouseout" id="subsound">
+		        <div onclick="OpenSound()" class="opensound" name="opensound" id="opensound" title=""></div>
+                <div class="view_slider_sound">
+                     <div id="slider_sound"></div>
+                </div>
+		    </span>
+            <div class="previewtips" id="divPreviewTips"></div>
+          </div>
+          <!----toolbarleft---->
+         <div class="toolbarright">
+              <span id="Talksub" class="btnmouseoutright" onclick="Talk(this)">
+		        <div class="voiceoff" name="voiceTalk" id="voiceoff" title="" ></div>
+	         </span>
+             
+             <span class="btnmouseout" id="SubTalksider" style="display:none">
+		        <div class="view_slider_sound">
+                     <div id="talk_slider_sound"></div>
+                </div>
+		    </span>
+             
+             
+             <span class="btnmouseoutrightdown" onclick="CapturePicture()">
+		        <div class="capture" name="capture" id="capture" title=""></div>
+		    </span>
+            <span class="btnmouseoutrightdown" id="isDevSnapPic" style="margin-left:-12px; display:none" onclick="downcap()">
+		        <div class="downcap" name="downcap" id="downcap" title=""></div>
+		    </span>
+            <span class="btnmouseoutright" onclick="record()">
+		        <div class="record" name="record" id="record" title=""></div>
+		    </span>
+            <span class="btnmouseoutright" onclick="EPTZ()">
+		        <div class="ePTZ" name="ePTZ" id="ePTZ" title="EPTZ"></div>
+		    </span>
+            <span class="btnmouseoutright" onclick="recordptz()">
+		        <div class="recordptz" name="recordptz" id="recordptz" title="PTZ"></div>
+		    </span>
+            
+            <span id="videodecstate" class="btnmouseoutrightdown" onclick="VideoInfoState()">
+		        <div class="recordState" name="recordState" id="recordState" title=""></div>
+		    </span>
+            
+            <span class="btnmouseoutrightdown" onclick="fullscreen()">
+		        <div class="full" name="full" id="full" title=""></div>
+		    </span>
+             
+          </div>
+          <!----toolbarright---->
+       </div>
+    </div>
+    
+</div>
+</body>
+</html>
+
+<style>
+.width120 {width:100px;}
+.width50 { width:50px;}
+.display { display:none;}
+
+
+.divsimplemodafoot {
+	height:30px; line-height:30px; background:#d8d8d8;
+}
+.divWinTitle {
+	height:35px; 
+	background:#d8d8d8; 
+	line-height:35px;
+	text-indent:10px;
+}
+.simplemodaconter 
+{
+   /*margin:10px;*/
+}
+</style>
+
+<div id="divScnTable" style="display:none; height:auto;" >
+  <div class="divWinTitle" id='WinEncchnsTitle'>
+      <label name="Maddscn"></label>
+    </div>
+    <div class="simplemodaconter" style="padding:10px 0">
+         <div class="subparamsgray"> 
+         	<span class="firstspan"><label name="Mscnname"></label></span>
+            <span class="localsecondspan"><input type="text" id='scnname' class="input_config width200" /></span>
+            <span id="scnnametips"></span>
+         </div>
+    </div>
+    <div class="divsimplemodafoot">
+       <div style=" float:right; margin-right:20px;">
+       	 <input id="btnAddencchns" class="buttonclass" type="button" name="MButOK" style="margin-top:3px;"  value="" onclick="ScnOKclick()">
+         <input id="" class="buttonclass" type="button" onclick="CleanScn();" style="margin-top:3px;" name="MlaCancel" value="">
+     	<span id="ScnResultTips" class="formtips"></span>
+       </div>
+   </div>
+</div>
+

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OsdSet>
+  <Common>
+    <Page>
+      <mOsdSet>OSD</mOsdSet>
+      <mOsdlocalecho>回显OSD</mOsdlocalecho>
+      <mcurplugin>动态内容插件</mcurplugin>
+    </Page>
+  </Common>
+  <Osdcurplugin>
+    <Mplugin>动态内容插件</Mplugin>
+    <Mplugintest>动态内容示例</Mplugintest>
+    <Js>
+	  <jsosdtest>测试失败，请检查线路链接是否正常</jsosdtest>
+	</Js>
+  </Osdcurplugin>
+</OsdSet>

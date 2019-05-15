@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Login>
+  <Page>
+    <MUserName>用户名</MUserName>
+    <Mpassword>密   码</Mpassword>
+    <Mlogin>登录</Mlogin>
+    <MAnonymous>匿名登录</MAnonymous>
+  </Page>
+  <Js>
+    <LoginTips1>请输入用户名</LoginTips1>
+    <LoginTips2>用户名长度不能大于16</LoginTips2>
+    <LoginTips3>密码长度不能大于16</LoginTips3>
+    <LoginTips4>用户名不存在</LoginTips4>
+    <LoginTips5>请输入密码</LoginTips5>
+    <LoginTips6>密码错误</LoginTips6>
+    <LoginTips7>IP限制</LoginTips7>
+	<LoginTips8>无效的用户名或密码</LoginTips8>
+	<LoginTips9>用户被禁用</LoginTips9>
+    <NetworkErrorTips>网络异常</NetworkErrorTips>
+    <ConnectTimeoutTips>连接超时</ConnectTimeoutTips>
+    <CookieTips>对不起，您的浏览器的Cookie功能被禁用，请开启</CookieTips>
+    <LoninIsie11>当前客户端不支持IE11及以上版本</LoninIsie11>
+    <LoninIsie6>当前客户端不支持IE6及以下版本</LoninIsie6>
+  </Js>
+</Login>

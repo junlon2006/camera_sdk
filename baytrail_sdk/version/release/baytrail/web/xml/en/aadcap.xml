@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aadcap>
+  <Common>
+    <Page>
+      <Maadcap>Working Mode</Maadcap>
+    </Page>
+  </Common>
+  <Mtcf>
+    <Page>
+      <Mmode>Mode</Mmode>
+      <MLowdelaymodel>Low-delay</MLowdelaymodel>
+      <MautoLowdelaymodel>Auto Low-delay Mode</MautoLowdelaymodel>
+      <MNormalmode>Normal</MNormalmode>
+      <MForcedlowdelaymodel>Forced Low-delay Mode</MForcedlowdelaymodel>
+      <Mvideodelay>The following 2 functions will increase time delay.</Mvideodelay>
+      <Mnoisereduction3D>3D Noise Reduction</Mnoisereduction3D>
+      <MImagemasking>Privacy Mask</MImagemasking>
+      <MNodelayoptimization>No optimization of time delay.</MNodelayoptimization>
+      <MForcedclose3D>Disable functions of 3D Noise Reduction and Privacy Mask by force to optimize time delay.</MForcedclose3D>
+      <MForcedclose3D2>When functions of 3D Noise Reduction and Privacy Mask are disabled, Low-delay Mode is enabled automatically.</MForcedclose3D2>
+      <MRestart>Effective after reboot.</MRestart>
+    </Page>
+    <opt>
+      <Mhdr>Super WDR Mode</Mhdr>
+      <Mfps60>60 Frames Mode</Mfps60>
+      <Mstream4>Quad-stream Mode</Mstream4>
+      <M4K>4K Mode</M4K>
+      <Mdiv4>4K Quad View Mode</Mdiv4>
+      <Mnormal>Normal</Mnormal>
+      <Mhdsdi>HDSDI Mode</Mhdsdi>
+      <MhdsdiTips>HD-SDI supports HD stream output and the HD stream supports OSD display.</MhdsdiTips>
+      <MhdsdiTips1>Support single stream output only.</MhdsdiTips1>
+    </opt>
+  </Mtcf>
+</aadcap>

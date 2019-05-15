@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Event>
+  <Common>
+    <Page>
+      <videoAnalyze>Video Analysis</videoAnalyze>
+      <aInput>Alarm Input</aInput>
+      <aOutput>Alarm Output</aOutput>
+      <aAbnormal>Abnormaility Linkage</aAbnormal>
+      <aShiled>Shield Area Alarm</aShiled>
+      <aMotion>Motion Detection</aMotion>
+	  <aGuard>Guard Line</aGuard>
+      <aVirtualfocus>Virtual Focus Detection</aVirtualfocus>
+      <aScene>Scene Change Detection</aScene>
+    </Page>
+    <Js></Js>
+  </Common>
+  <videoAnalyze>
+    <Page>
+	  <Mwarningline>Guard Line Direction</Mwarningline>
+      <Regional>Area Setting</Regional>
+      <Startdrawing>Edit</Startdrawing>
+      <Stopdrawing>Stop</Stopdrawing>
+      <Cleardrawing>Clear</Cleardrawing>
+      <ClearAll>Clear All</ClearAll>
+      <Sensitivity>Sensitivity</Sensitivity>
+      <RecoveryTime>Duration</RecoveryTime>
+      <LinkMode>Linkage Type</LinkMode>
+      <NormalLink>Normal Linkage</NormalLink>
+      <UpCenter>Report to Center</UpCenter>
+      <ShowContex>Text Overlay</ShowContex>
+      <SoundAlarm>Acoustic Alarm</SoundAlarm>
+      <RecLink>Recording Linkage</RecLink>
+      <Snap>Snapshot</Snap>
+      <OtherLink>Other Linkage</OtherLink>
+      <AlarmOut>Alarm Output</AlarmOut>
+      <AlarmOut1>Alarm Output 1</AlarmOut1>
+      <AlarmOut2>Alarm Output 2</AlarmOut2>
+      <PTZLink>PTZ Linkage</PTZLink>
+      <presetNum>Preset ID</presetNum>
+      <Mailnotification>Email Notice</Mailnotification>
+	  <Mab>A-></Mab>
+	  <Mba>B-></Mba>
+	  <Mabba>A-> And B-></Mabba>
+    </Page>
+    <Js></Js>
+  </videoAnalyze>
+  <Input>
+    <Page>
+      <InNum>Alarm Input ID</InNum>
+      <AlarmName>Alarm Name</AlarmName>
+      <AlarmType>Alarm Type</AlarmType>
+      <AlarmOut>Alarm Output</AlarmOut>
+      <AlarmOut1>Alarm Output 1</AlarmOut1>
+      <AlarmOut2>Alarm Output 2</AlarmOut2>
+      <copytoalamin>Copy to Alarm</copytoalamin>
+      <selectall>All</selectall>
+    </Page>
+    <opt>
+      <Maopen>Always Enabled</Maopen>
+      <Maclose>Always Disabled</Maclose>
+    </opt>
+  </Input>
+  <Output>
+    <Page>
+      <delaytime>Delay Time</delaytime>
+    </Page>
+    <Js>
+      <js5s>5 s</js5s>
+      <js10s>10 s</js10s>
+      <js30s>30 s</js30s>
+      <js1m>1 min</js1m>
+      <js2m>2 min</js2m>
+      <js5m>5 min</js5m>
+      <js10m>10 min</js10m>
+      <jsmanual>Manual</jsmanual>
+    </Js>
+  </Output>
+  <Abnormal>
+    <Page>
+      <ExceptionTypes>Abnormaility Type</ExceptionTypes>
+      <AlarmOut>Alarm Output</AlarmOut>
+      <AlarmOut1>Alarm Output 1</AlarmOut1>
+      <AlarmOut2>Alarm Output 2</AlarmOut2>
+    </Page>
+    <Js>
+      <Madiskfull>Disk Full</Madiskfull>
+      <Madiskerr>Disk Error</Madiskerr>
+      <Madisconnect>Internet Disconnected</Madisconnect>
+      <Maiperr>IP Address Conflict</Maiperr>
+      <Maillegalaccess>Unauthorized Access</Maillegalaccess>
+    </Js>
+  </Abnormal>
+</Event>

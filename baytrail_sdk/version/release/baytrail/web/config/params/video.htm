@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabVideo">
+    <li><a href="javascript:ia(Video).update();" name="MVideo" id="MVideo" ></a></li>
+    <li><a href="javascript:ia(cropping).update();" name='Mcropping' id='Mcropping' ></a></li>
+	<li><a href="javascript:ia(ROI).update();" name='mROI' id='mROI' >ROI</a></li>
+    <li><a href="javascript:ia(privacymasks).update();" name='Mprivacymasks' id='Mprivacymasks'></a></li>
+</ul>
+
+<div id="DivVideo" class="panes" >
+    <div class="pane" id="divVideo">
+       <div class="mainparams" ><label name="MVideo"></label></div>
+       <div class="subparamswhite main_top8">
+            <span class="firstspan"><label name="MMultistream" id="MMultistream"></label></span>
+            <span>
+		        <select  class="selectwidth width152" id="multivideoType" onchange="ChangemultivideoType()">
+                 </select>
+            </span>
+            <span><label id="MRestart" name="MRestart"></label></span>
+        </div>
+    
+	   
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="MStreamType" id="MStreamType"></label></span>
+            <span>
+		        <select  class="selectwidth width152" id="StreamTypeIn" onchange="GetStreamTypeIn()">
+                 </select>
+            </span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MResolution" id="MResolution"></label></span>
+            <span>
+		        <select class="selectwidth width152" id="videoResolution" onchange="ChangeResolution()">
+                </select>
+            </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="MVideoQualityControlType" id="MVideoQualityControlType"></label></span>
+            <span>
+		        <select class="selectwidth width152" id="videoQualityControlType" onchange="QualityControlType()">
+                </select>
+            </span>
+        </div>
+	    <div class="subparamsgray" id="SubImagequality">
+            <span class="firstspan"><label name="MfixedQuality" id="MfixedQuality"></label></span>
+            <span>
+		        <select class="selectwidth width152" id="fixedQuality">
+                </select>
+            </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="MVideoFrameRate" id="MVideoFrameRate"></label></span>
+            <span>
+              <input type="text"   class="input_config width150" id="maxFrameRate" onkeydown="CheckKeyDown(event)" />
+            </span>
+            <span id="fixedmaxFrameRateTips" class="fixedTips"></span>
+            <span id=""><input type="button" id="flickertips" value="" name="MUpperLimit" onclick="flickerwin()" /></span>
+            <span id="VideoFrameRatetips" class="colortips"></span>
+        </div>  
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MMaxDataRate" id="MMaxDataRate"></label></span>
+            <span id="MaxDataRate">
+                <input type="text" maxlength="5"  class="input_config width150" id="constantBitRate" onkeydown="CheckKeyDown(event)">
+		    </span>
+            <span id="fixedconstantBitRateTips" class="fixedTips"></span>(Kbps)<span id="MaxBitRatetips" class="colortips"></span>
+        </div>
+      
+	    <div class="subparamswhite">
+            <span class="firstspan"><label name="MVideoCodeType" id="MVideoCodeType"></label></span>
+            <span>
+		        <select  class="selectwidth width152" id="videoCodecType" onchange="changevideotype()">
+                </select>
+            </span>
+        </div>
+        <div class="subparamsgray"  id="CodecComplexity_tr">
+            <span class="firstspan"><label name="MCodecComplexity" id="MCodecComplexity"></label></span>
+            <span>
+		        <select class="selectwidth width152" id="selectCodecComplexity">
+                </select>
+            </span>
+        </div>	  
+          
+        <div  class="subparamswhite" id="IntervalFrameI_tr">
+            <span class="firstspan"><label name="MIntervalFrameI" id="MIntervalFrameI"></label></span>
+            <span>
+			    <input type="text"  maxlength="3"  class="input_config width150" id="IntervalFrameI" onkeydown="CheckKeyDown(event)" onblur="CheackServerIDIntNum(this.value,'IntervalFrameItips','MIntervalFrameI',1,400)">
+		    </span>
+            <span id="fixedIntervalFrameITips" class="fixedTips"></span><span id="IntervalFrameItips" class="colortips"></span>
+        </div>
+      
+        
+        <span class="spansave"><input type="button"  class="input_save" id="ConfigBtn" onclick="SaveConfigVideo(this)" name="MSaveConfigLocal" value=""><span id="SetResultVideoTips"></span></span>
+       
+       <!--<div id="subvideoAntiFlicker">
+         <div class="mainparams main_top8" ><label name="mFramelimit"></label></div>
+         <div class="subparamswhite main_top8">
+            <span class="firstspan"><label name="mExposureflicker"></label></span>
+            <span>
+		        <select class="selectwidth width152" id="videoAntiFlickerMode">
+                </select>
+            </span>
+            <span>
+               <img src="../../images/config/help_tips.png" onclick="videohelp_tips()" width="16px" height="16px" style="cursor:pointer;vertical-align:middle;" />
+            </span>
+        </div>
+        
+        <span class="spansave"><input type="button"  class="input_save"  onclick="SaveConfigflicker(this)" name="MSaveConfigLocal" value=""><span id="SetResultflashTips"></span></span>
+       </div>	-->	   		    
+    </div>
+    
+  <div class="pane" id="divcropping">
+       <div class="Imags_left">
+         <div id="mainplugincropping" style="width:352px;height:254px; background:#fff;">
+         </div>
+       </div>
+       <div class="Imags_right">
+           <div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label  name="laEnable"></label></span>
+					<span class="Images_localsecondspan">
+					    <input type="checkbox" class="checkbox main_top10"  id="checkobjcropping" onclick="checkcropping(this)"/>
+					</span>
+          </div>
+          <div class="subparamsgray360">
+				    <span class="Imags_firstspan"><label id="Mdrawarea" name="Mdrawarea"></label></span>
+					<span class="Images_localsecondspan">
+					    <input type="button" id="Selectedcropping" name="MStartdraw" class="buttonlength" onclick="Selectedcropping(this)"/>
+                        <input type="button" id="ClearAllcropping" name="MCleandraw" class="buttonlength" onclick="clearallarea('video','enccut')" />
+					</span>
+          </div>
+          <div class="spansave"  style="margin-left:120px;"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="SaveConfigcropping(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipscropping"></span></div>
+       </div>
+       
+      
+    </div>
+    <div class="pane" id="divROI">
+         <div class="Imags_left">
+           <div id="mainpluginRoi" style="width:352px;height:254px; background:#fff;">
+           </div>
+       </div>
+       <div class="Imags_right">
+           <div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label name="laEnable"></label></span>
+					<span class="Images_localsecondspan">
+					    <input type="checkbox" class="checkbox main_top10" maxlength="32" id="checkobjroi" onclick="checkRoi(this)"/>
+					</span>
+          </div>
+          <div class="subparamsgray360">
+				    <span class="Imags_firstspan"><label id="MSelectregion" name="MSelectregion"></label></span>
+					<span class="Images_localsecondspan">
+					    <input type="button" value="" name="MSelectregion" id="SelectedRoi" class="buttonlength" onclick="SelectedRoi()" />
+                        <input type="button" value="" name="MCleanregion" id="ClearAllRoi" class="buttonlength"  onclick="clearallarea('video','roi')" />
+					</span>
+          </div>
+          <div class="subparamsgray360 main_top10">
+				    <span class="Imags_firstspan"><label id="MClass" name="MClass"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select main_top5" id="codelevel" onchange="ChangeROIlevel()">
+                        </select>
+					</span>
+          </div>
+         
+          <div class="spansave" style="margin-left:120px;"><input type="button"  class="input_save"  id="SaveConfigBtn" name="MSaveConfigLocal" onclick="SaveConfigRoi(this)" value=""><span id="SetResultTipsRoi"></span></div>
+         
+    </div>
+
+    
+    
+</div>
+    
+    <div class="pane" id="privacymasks">
+       <div class="Imags_left">
+       
+     
+         <div id="mainpluginPrivacymasks" style="width:352px;height:254px; background:#fff;">
+         </div>
+       </div>
+       <div class="Imags_right">
+          <div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label name="laEnable"></label></span>
+					<span class="Images_localsecondspan">
+					    <input type="checkbox" class="checkbox main_top10" id="checkprivacymasks" onclick="checkprivacymasks(this)" />
+					</span>
+          </div>
+          <div class="subparamsgray360">
+				    <span class="Imags_firstspan"><label id="Mdrawarea" name="Mdrawarea"></label></span>
+					<span class="Images_localsecondspan">
+					    <input type="button" value="" id="shieldstr" class="buttonlength" onclick="shiledpluginPrivacymasks(this)" />
+                        <input type="button" value="" name="MCleandraw" id="shieldclear" class="buttonlength" onclick="clearallarea('video','shield')"/>
+					</span>
+          </div>
+          <div class="subparamswhite360 main_top10">
+				    <span class="Imags_firstspan"><label id="MShadingcolor" name="MShadingcolor"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select" id="shieldcolortype">
+                        </select>
+					</span>
+          </div>
+           <div class="spansave" style="margin-left:120px;"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="SaveConfigprivacymasks(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsprivacymasks"></span></div>
+       </div>
+       
+        
+    </div>
+    
+</div>
+
+<style>
+.divsimplemodafoot {
+	height:30px; line-height:30px; background:#d8d8d8;
+}
+.divWinTitle {
+	height:35px; 
+	background:#d8d8d8; 
+	line-height:35px;
+	text-indent:10px;
+}
+.simplemodaconter 
+{
+   /*margin:10px;*/
+}
+</style>
+<div id="divHelpTipsTable" style="display:none; height:auto;">
+   <div class="divWinTitle">
+     <label name="mFramelimit"></label>
+   </div>
+   
+  <div id="subvideoAntiFlicker">
+     <div class="subparamswhite main_top8">
+        <span class="firstspan"><label name="mExposureflicker"></label></span>
+        <span>
+            <select class="selectwidth width152" id="videoAntiFlickerMode">
+            </select>
+        </span>
+    </div>
+    
+    <span class="spansave"><input type="button"  class="input_save"  onclick="SaveConfigflicker(this)" name="MSaveConfigLocal" value=""><span id="SetResultflashTips"></span></span>
+    <div class="mainparams main_top8" style="display:none"><label name="htlptitle"></label></div>
+      <div  style="margin:10px 20px;line-height:25px; display:inline-block;vertical-align:top;width:560px;word-wrap:break-word; white-space:normal;word-break:normal;"> 
+          <span style="display:block"><label name="htlpmodeltips1"></label></span>
+          <span style="display:block; margin-left:10px;""><label name="htlpmodeltips2"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips3"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips4"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips5"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips6"></label></span>
+      </div>
+     
+    
+   </div>
+   
+    
+  <div class="userfoot" style="height:30px; line-height:30px; background:#d8d8d8; ">
+      <input id="" class="buttonclass" type="button" onclick="help_tipsclose()" style=" margin-top:3px;margin-right:20px; float:right;" name="optclose" value="">
+  </div>
+</div>

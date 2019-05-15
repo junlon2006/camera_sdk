@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>摄像机-云台</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+<style type="text/css">
+<!--
+.STYLE2 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body>
+<div id="contenter" class="contenter">
+   <div class="topTitle STYLE2">Dome Maintenance &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="topTitlespan"><a href="index.htm">Return to Contents</a></span>  </div>
+   <div class="TitleExplaintable STYLE2">
+  <table class="tabhelp">
+         <tr class="tabtr">
+           <td width="17%" class="tabtd"><b>Dome Version </b></td>
+           <td width="83%" class="tabtd tableft">Dome version </td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>Patrol Speed Level</b></td>
+           <td  class="tabtd tableft">A high value indicates a high speed. </td>
+         </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>Enable Adaptive Pan Speed</b></td>
+           <td class="tabtd tableft">When this option is selected, the pan speed is adaptive. When you zoom in, the pan speed decreases. When you zoom out, the pan speed increases. </td>
+    </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>Go to Last Spot upon Power-on</b></td>
+           <td class="tabtd tableft"><p>When this option is selected, the camera  goes to a spot when powered off and then on.</p>
+             <p>To determine the spot, select an option from the <strong>When powered on</strong> drop-down list.<br/>
+               <b>Go to last spot</b>: When the cameras stays at a spot for a period determined by the<strong> The Recover time </strong>parameter, the camera records this spot and goes to this spot when powered off and then on. The default value for <strong>The Recover time</strong> is <strong>60</strong>. <br/>
+             <b>Go to a preset</b>: If you select this option, you need to determine a preset. Then, the camera goes to this preset when powered off and then on. </p>
+            <div class="note">Note: You need to configure presets before selecting the <strong>Go to a preset</strong> option.</div></td>
+    </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><p><b>Restore Dome Default</b></p>
+           <p>&nbsp;</p></td>
+           <td class="tabtd tableft">Restore factory defaults for the dome. </td>
+    </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>Dome Upgrade</b></td>
+           <td class="tabtd tableft">You need to upload *.bin files to upgrade the dome. Do not perform any operation during upgrades.</td> 
+    </table>
+   </div>
+   <div id="contenter" class="contenter">
+    <div class="topTitle STYLE2">Patrol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+ <div class="systext STYLE2">On the <strong>Patrol</strong> tab page, you can enable the Pan Patrol, Tilt Patrol, Load Preset, Manual Patrol, Frame Patrol, Random Patrol, Panoramic Patrol, and Track Patrol functions. </div>
+  <div class="systext STYLE2">Before enabling these functions, select the <strong>Enable</strong> check box. </div>
+  <div class="systext STYLE2">All these functions are listed in the <strong>Mode</strong> drop-down list. </div>
+  <div class="TitleExplaintable STYLE2">
+   <table class="tabhelp">
+         <tr class="tabtr">
+           <td width="17%" class="tabtd"><span class="STYLE2 systext"><strong>Pan Patrol</strong></span></td>
+           <td width="83%" class="tabtd tableft">The pan patrol range is  0 ° - 180°. The <strong>Resumed In  </strong>parameter specifies the time in which a patrol is resumed after being interrupted. The default value of this <strong></strong>parameter is <strong>1</strong> minute. </td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><span class="STYLE2 systext"><strong>Tilt Patrol</strong></span></td>
+           <td  class="tabtd tableft">The tilt patrol range is  0 ° - 180°. The <strong>Resumed In </strong>parameter specifies the time in which a patrol is resumed after being interrupted. The default value of this <strong></strong>parameter is <strong>1</strong> minute. </td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><span class="STYLE2 systext"><strong>Load Preset</strong></span></td>
+           <td  class="tabtd tableft">The camera goes to a preset when it does not receive any PTZ command for a period specified by the<strong>Resumed In</strong> parameter. The default value for this parameter is <strong>3</strong> minutes. </td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><span class="STYLE2 systext"><strong>Path Patrol</strong></span></td>
+           <td  class="tabtd tableft">The camera patrols paths when it does not receive any PTZ command for a period specified by the<strong>Resumed In</strong><strong> </strong>parameter. The default value for this parameter is <strong>1</strong> minute.</td>
+         </tr>
+          <tr class="tabtr">
+           <td  class="tabtd"><span class="STYLE2 systext"><strong>Frame Patrol</strong></span></td>
+           <td  class="tabtd tableft">The camera pans 90° upon receiving every other key frame. The <strong>Resumed In </strong>parameter specifies the time in which a patrol is resumed after being interrupted. The default value of this <strong></strong>parameter is <strong>1</strong> minute.</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><span class="STYLE2 systext"><strong>Random Patrol</strong></span></td>
+           <td  class="tabtd tableft">The camera randomly pans. The <strong>Resumed In </strong>parameter specifies the time in which a patrol is resumed after being interrupted. The default value of this <strong></strong>parameter is <strong>1</strong> minute.</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><span class="STYLE2 systext"><strong>Panoramic Patrol</strong></span></td>
+           <td  class="tabtd tableft">The camera  pans from 0 ° to 360° and tilts from 0 ° to 180°. The <strong>Resumed In </strong>parameter specifies the time in which a patrol is resumed after being interrupted. The default value of this <strong></strong>parameter is <strong>1</strong> minute.</td>
+         </tr>
+          <tr class="tabtr">
+           <td  class="tabtd"><b>Track Patrol </b></td>
+           <td  class="tabtd tableft">The camera patrols history tracks. The <strong>Resumed In </strong>parameter specifies the time in which a patrol is resumed after being interrupted. The default value of this <strong></strong>parameter is <strong>1</strong> minute.</td>
+         </tr>
+    </table>
+</div>
+    <div class="contenter STYLE2" id="contenter">
+     <div class="topTitle">Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+  <div class="systext">
+    <p>To configure a preset: </p>
+    </div>
+<div class="systext">
+  <p>1. Select a position using direction arrows. </p>
+  <p>2. Configure the focus and aperture.</p>
+  <p>3. Select an ID. </p>
+  <p>4. Name the preset.</p>
+  <p>5. Click <strong>Apply</strong>.   </p>
+  <p>6. (Optional) Click <strong>Load</strong> to load the preset. </p>
+</div>
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle STYLE2">Border&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+  <div class="systext STYLE2">Borders are used to limit the viewing and patrol range of the camera.</div>
+  <div class="systext STYLE2">To configure borders:</div>
+  <div class="TitleExplain STYLE2">
+   <p>1. Move the camera to a position using the left direction arrows.    </p>
+     <p>2. Click <strong>Left Border</strong>.     
+     <p>3.  
+  Move the camera to a position using the right direction arrows.
+     <p>4. Click <strong>Right Border</strong>. 
+     
+     <p>To clear all preset borders, click <strong>Clear Borders</strong>.      
+     <p>When <strong>Enable Manual Restrict Patrol Area</strong> is selected, the preset borders take effect when you move the camera to look around the area under surveillance.     
+     <p>When <strong>Enable Auto Restrict Patrol Area</strong> is selected, the presets borders take effect during a patrol. 
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle STYLE2">Path Patrol &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+ <div class="systext STYLE2">All the 256 presets can form 8 paths. When a path is selected, the camera can patrol 32 presets. Presets 1 through 32 are assigned to path 1, presets 33 through 64 to path 2, and likewise the rest presets. </div>
+<div class="systext STYLE2">To add a preset to a path:</div>
+<div class="TitleExplain STYLE2">
+   <p> 1. Select a path from the <strong>Patrol Path</strong> drop-down list. </p>
+  <p>2. Click <strong>Add</strong>. </p>
+  <p>3. Specify parameters displayed in the <strong>Add</strong> dialog box. </p>
+  <p>4. Click <strong>Confirm</strong>.</div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle STYLE2">Track Patrol &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+  <div class="systext STYLE2">During a track patrol, the camera patrols all the positions that the camera goes to during a specific period of time. A maximum of four tracks can be created. </div>
+  <div class="systext STYLE2">To create a track: </div>
+  <div class="TitleExplain STYLE2">
+   <p>1. Select a track from the  <strong>Patrol Track</strong> drop-down list.    </p>
+     <p>2. Click <strong>Start Recording</strong>.     
+     <p>3. Move the camera using PTZ control buttons.
+     <p>4. Click <strong>Stop Recording</strong>. Note that each recording lasts for up to 10 minutes. 
+     <div class="systext STYLE2">
+       <p>To preview a track, click <strong>Preview</strong>. To stop a preview, click <strong>Stop</strong>. </p>
+       <p>To remove all the recorded PTZ controls from a track, click <strong>Clear Records</strong>. </p>
+     </div>
+  </div>
+  <div id="contenter" class="contenter">
+   <div class="topTitle STYLE2">Scheduled Task &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+   <div class="systext STYLE2"></div>
+  <div class="systext STYLE2">
+    <p>To schedule a task:</p>
+  </div>
+  <div class="TitleExplain STYLE2">
+   <p><span class="marginright">1.</span> Select the <strong>Enable Scheduled Task</strong> check box.    </p>
+     <p><span class="marginright">2.</span> Specify <strong>Resumed After</strong>. 
+     A scheduled task (for example, pan patrol) is occasionally interrupted by PTZ control operations. This parameter specifies the time after which the task is resumed. 
+     <p><span class="marginright">3.</span> Click <strong>Edit</strong>. 
+     <p><span class="marginright">4.</span> Select a day. 
+     <p><span class="marginright">5.</span> Select one or multiple durations. 
+     <p><span class="marginright">6.</span> Select a task from the <strong>Option</strong> drop-down list for each duration. For specific tasks, you need to specify <strong>ID</strong>. 
+     <p><span class="marginright">7.</span> (Optional) Copy the settings to other days.     
+     <p><span class="marginright">8.</span> Click <strong>Confirm</strong>.     
+  </div>
+  <div class="contenter STYLE2" id="contenter">
+  <div class="topTitle">Position&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+  <div class="systext">When you click<strong> Zero Correction</strong>, the camera goes to the mechanical zero point. </div>
+  <div class="systext">To change the position of a camera:</div>
+  <div class="TitleExplain">
+   <p>1. Specify <strong>Horizontal Coordinate</strong>.    </p>
+     <p>2. Click <strong>Horizontal Position</strong>.     
+     <p>3. Specify <strong>Vertical Coordinate</strong>.     
+     
+     <p>4. Click <strong>Vertical Position</strong>. </p>
+     <p>Alternatively, specify<strong> Horizontal Coordinate</strong> and <strong>Vertical Coordinate</strong>, and then click <strong>Position</strong>. </p>
+  </div>
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+  <span class="title1 STYLE2"></span>
+</body>
+</html>

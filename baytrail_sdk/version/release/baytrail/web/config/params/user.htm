@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ul class="tabs"  id="tabUser">
+  <li><a href="javascript:ia(User).update();" name="MUser" id="MUser" ></a></li>
+  <li><a href="javascript:ia(RTSPAuth).update();" name="MRTSPAuth" id="MRTSPAuth"></a></li>
+  <li><a href="javascript:ia(IPFilter).update();" name="MIPFilter" id="MIPFilter"></a></li>
+  <li><a href="javascript:ia(SafetyService).update();" name="MSafetyService" id="MSafetyService" ></a></li>
+</ul>
+<!-- panes -->
+<div id="divUser" class="panes panewidth">
+  <div id="UserPage" class="pane" >
+    <div class="margintop10" id="UserListContent">
+      <div class="subparamswhite">
+       <span class="firstspan"><label name="MEnableAnonymous" id="MEnableAnonymous"></label></span> 
+       <span class="localsecondspan main_top10">
+          <input type="checkbox"  onchange="anonymityinfo(this)" id="anonymityinfo" class="checkbox"/>
+        </span>
+      </div>
+      <div class="textalignright main_top10" id="UserListHeader" style="float:right; margin-bottom:10px;">
+        <input type="button" onclick="AddNewUser('add')" class="buttonclass" name="AddDigitalIpBtn" id="AddDigitalIpBtn" value="" >
+        <input type="button" disabled="disabled" onclick="AddNewUser('edit')" class="buttonclass" name="MdfDigitalIpBtn" id="ModifyUserBtn" value="">
+        <input type="button" disabled="disabled" onclick="DelUserInfo()" class="buttonclass" name="DelDigitalIpBtn" id="DelUserBtn" value="">
+      </div>
+      <div class="clear"></div>
+      <table border="0" cellspacing="0" cellpadding="0" id="Table_User">
+           <thead>
+             <tr>
+                <td class="td_user"><label name="Mnumber"></label></td>
+                <td class="td_user2"><label name="MUserName"></label></td>
+                <td class="td_user2" style="display:none"></td>
+                <td class="td_user2"><label name="MUserType"></label></td>
+                <td class="td_user2" style="display:none"></td>
+                <td class="td_user2" style="display:none"></td>
+             </tr>
+           </thead>
+           <tbody id="UserListTbody">
+           </tbody>
+      </table>
+      <div class="spansave" style=" display:none"><input type="button"  class="input_save"  id="SaveUserList" onclick="SaveUserList()" value="" name="MSaveConfigLocal"><span id="SetResultTipsUserList"></span></div>
+    </div>
+    <div class="margintop10" id="Usertable" style="display:none">
+           <div class="subparamsgray" >
+            <span class="firstspan"><label name="MUserName"></label></span>
+            <span>
+            <input type="text" class="input_config width150" disabled="disabled" id="UserinfoUserName" maxlength="32"/>
+            <input type="password" style="display:none" class="input_config width150" disabled="disabled" id="UserinfoOldUserName" maxlength="32"/>
+            </span>
+            
+            <span id="UserinfoUserNametips" class="colortips"></span>
+          </div>
+          <div class="subparamsgray" >
+            <span class="firstspan"><label name="MUserOldPsw"></label></span>
+            <span>
+              <input type="password"class="input_config width150" id="UserinfoOldUserPsw" maxlength="32"/>
+            </span>
+            <span id="UserinfoOldUserPswtips" class="colortips"></span>
+          </div> 
+          <div class="subparamsgray" >
+            <span class="firstspan"><label name="MUserNewPsw"></label></span>
+            <span>
+            <input type="password" class="input_config width150" id="UserinfoUserPsw" maxlength="32"/>
+            </span>
+            <span id="UserinfoUserPswtips" class="colortips"></span>
+          </div>
+          <div class="subparamsgray" >
+            <span class="firstspan"><label name="MUserConfirmPsw"></label></span>
+            <span>
+            <input type="password" class="input_config width150" id="UserinfoUserPsw2" maxlength="32"/></span>
+            <span id="UserinfoUserPsw2tips" class="colortips"></span>
+          </div>
+          <div class="subparamsgray">
+            <span class="firstspan"><label name="MUserType"></label></span>
+            <span class="localsecondspan">
+                <select class="selectwidth width152" id="UserInfoSelectUser" disabled="disabled">
+                  <option name="Madministrator" id="Madministrator" value="administrator"></option>
+                  <option name="Moperator" id="Moperator" value="operator" selected="selected"></option>
+                  <option name="Mviewer" id="Mviewer" value="viewer"></option>
+                </select>
+            </span>
+           
+          </div>
+        <style>
+		#IsUserListDiv { width:720px; border:1px solid #ccc; overflow:hidden; margin-left:10px;}
+		#IsUserListDiv .title { height:30px; line-height:30px; background:#f9f9f9; border-bottom:1px solid #ccc; text-indent:10px;}
+		#IsUserListDiv ul { padding:10px;}
+		#IsUserListDiv ul li { float:left; width:330px; margin:5px; }
+		#IsUserListDiv .checkbox { margin-right:10px;}
+		</style>
+        <div id="IsUserListDiv">
+          <span id='span1' style="border-left:1px solid #cccccc; position:relative;   display:inline; float:left; left:350px; z-index:10;"></span>
+          <div class="title">
+             <label name="MAuthorizationlist" id="MAuthorizationlist"></label>
+          </div>
+          <ul>
+            <li id="iUserliview" style="display:none"><input type="checkbox" disabled="disabled" id="userinfoview" value="view" class="usercheckbox" name="userunfoBaseUser">&nbsp;<label id="useradminid1" name="Mview"></label></li>
+            <li id="iUserlirecandpic" style="display:none"><input type="checkbox" disabled="disabled" id="userinforecandpic" class="usercheckbox" name="userunfoBaseUser" value="recandpic">&nbsp;<label id="useradminid2" name="Mrecandpic"></label></li>
+            <li id="iUserliptz" style="display:none"><input type="checkbox" disabled="disabled" id="userinfoptz" class="usercheckbox" name="userunfoBaseUser" value="ptz">&nbsp;<label id="useradminid3" name="Mptz"></label></li>
+            <li id="iUserliparamset" style="display:none"><input type="checkbox" disabled="disabled" id="userinfoparamset" class="usercheckbox" name="userunfoBaseUser" value="paramset">&nbsp;<label id="useradminid4" name="Mparamset"></label></li>
+            <li id="iUserlimemory" style="display:none"><input type="checkbox" disabled="disabled" id="userinfomemory" class="usercheckbox" name="userunfoBaseUser" value="memory">&nbsp;<label id="useradminid5" name="Mmemory"></label></li>
+            <li id="iUserlireboot" style="display:none"><input type="checkbox" disabled="disabled" id="userinforeboot" class="usercheckbox" name="userunfoBaseUser" value="reboot">&nbsp;<label id="useradminid6" name="Mreboot"></label></li>
+            <li id="iUserlisystem" style="display:none"><input type="checkbox" disabled="disabled" id="userinfosystem" class="usercheckbox" name="userunfoBaseUser" value="system">&nbsp;<label id="useradminid7" name="Msystem"></label></li>
+            <li id="iUserlisadmin" style="display:none"><input type="checkbox" disabled="disabled" id="userinfoadmin" class="usercheckbox" name="userunfoBaseUser" value="admin">&nbsp;<label id="useradminid8" name="Madmin"></label></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+       
+       <div class="spansave"><input type="button"  class="input_save"  id="SaveUserList" onclick="SaveUserinfoPass(this)" value="" name="MSaveConfigLocal"><span id="SetResultTipsUserinfoList"></span></div>
+
+  </div>
+    
+    
+   </div> 
+  <div id="RTSPAuth" class="pane">
+    <div class="subparamswhite"> 
+    	<span class="firstspan"><label name="Mauthenticationmode" id="Mauthenticationmode"></label></span> 
+        <span class="localsecondspan">
+          <select class="selectwidth width152" id="selRTSPAuthType" onchange="CheangeRTSPAuth()">
+          </select>
+        </span>
+        <span id="RtspTips" class="fixedTips" style="display:none; margin-left:5px;"><label name="MRtsptipts"></label></span>
+     </div>
+  </div>
+
+  <div id="divIPFilter" class="pane">
+    <div class="subparamsgray">
+    	 <span class="firstspan"><label name="MIPFilterType"></label></span> 
+         <span class="localsecondspan">
+          <select class="selectwidth width152" id="selIPFilterType" onchange="ChangeselIPFilterType()">
+          </select>
+      </span> 
+     </div>
+    <div class="ipfilterhead main_top10"> 
+      <span class="right">
+          <input type="button" disabled="disabled" id="btnAddIP" onclick="showAddIPAddressWnd('add')" class="buttonclass" name="AddDigitalIpBtn" value="">
+          <input type="button" disabled="disabled" id="btnModifyIP" onclick="showAddIPAddressWnd('edit')" class="buttonclass" name="MdfDigitalIpBtn" value="">
+          <input type="button" disabled="disabled" onclick="DelIPFilterBtn()" class="buttonclass" name="DelDigitalIpBtn" id="DelDigitalIpBtn" value="">
+          <input type="button" disabled="disabled" id="btnCleanIP" onclick="deleteAllIPAddress()" class="buttonclass" name="MCleanALl" value="">
+      </span>
+    </div>
+    <div id="divIPAddressFilterList" class="main_top10">
+      <table border="0" cellspacing="0" cellpadding="0" id="Table_IPAddress">
+           <thead>
+             <tr>
+                <td class="td_user" style="min-width:100px;"><label name="MSerialNumber"></label></td>
+                <td>IP</td>
+             </tr>
+           </thead>
+           <tbody id="TbodyFilterList">
+           </tbody>
+      </table>
+    </div>
+    <div class="spansave"><input type="button"  class="input_save"  id="Saveipfilter" onclick="Saveipfilter(this)" value="" name="MSaveConfigLocal"><span id="SetResultTipsipfilter"></span></div>
+  </div>
+  <div id="SafetyService" class="pane" >
+   <div class="subparamsgray">
+  	<span class="firstspan">
+    	<label id="laEnableSSH1" name="MIsEnableSSH">
+    	</label>
+    </span>
+    <span  class="localsecondspan">
+    	<input id="IsEnableSSH" class="checkbox main_top5" type="checkbox" onclick="checkbox(this)" value=""></input>
+    </span>
+    </div>
+    <div class="subparamsgray">
+    <span class="firstspan">
+    	<label id="laEnableILL1" name="MIsEnableILL">
+    	</label>
+   </span>
+   <span class="localsecondspan">
+    	<input id="IsEnableILL" class="checkbox main_top5" type="checkbox" onclick="checkbox(this)" value="" ></input>
+    </span>
+    </div>
+    <div class="spansave">
+      <input id="SaveSafetyService" class="input_save" type="button" value="" name="MSaveConfigLocal" onclick="SaveSafetyService(this)"></input>
+      <span id="SetResultSafetyService"></span>
+    </div>
+  </div>
+</div>
+<!--<div class="panes">-->
+<style>
+.width120 {width:100px;}
+.width50 { width:50px;}
+.display { display:none;}
+</style>
+<div id="divIPFilterTable" style="display:none;">
+    <div class="scheduleedittitlediv">
+    	<label id="divIPFilterTitle" style="font-weight:bold"></label>
+    </div>
+    <div style="background:#FFF;">
+     <div style="padding:10px 0">
+      <div class="subparamsgray"> 
+      	<span class="firstspan"><label name="MAIPAddress"></label></span> 
+        <span class="localsecondspan">
+       	 	<input type="text" class="input_config width150" id="IPaddfil" />
+        </span>
+        <span style="vertical-align:top;word-wrap:break-word; white-space:normal;word-break:normal;max-width:205px; display:inline-block" id="IPaddfiltips"></span> 
+      </div>
+      </div>
+      <div  style="height:32px; width:100%; line-height:32px; background:#e7e7e7;">
+        <span style="float:right; margin-right:10px;">
+            <span id="btnIPFilterOKTips" class="formtips"></span>
+            <input id="IPFilterAdd" style="display:none" class="buttonclass" type="button" name="MButOK" value="" onclick="IPFilterOKclick('add')">
+            <input id="IPFilterEdit" style="display:none" class="buttonclass" type="button" name="MButOK" value="" onclick="IPFilterOKclick('edit')">
+            <input  class="buttonclass" type="button" onclick="$.modal.impl.close();" name="MlaCancel" value="">
+        </span> 
+      </div>
+  </div>
+</div>
+
+
+<!-----添加用户----->
+<div id="divAddUsetTable" style="display:none; height:auto;" >
+    <div class="scheduleedittitlediv" id="divScheduleTitle" style="font-weight:normal;">
+      <label id="UserTitleTips" style="font-weight:bold"></label>
+    </div>
+    <div style="background:#FFF;">
+      <div class="subparamsgray" style="padding-top:10px;">
+        <span class="firstspan"><label name="MUserName"></label></span>
+        <span class="localsecondspan">
+        <input type="text" class="input_config width150" style="display:none" disabled="disabled" readonly="readonly" id="OldEditUserName" />
+        <input type="text" class="input_config width150" style="display:none" disabled="disabled" readonly="readonly" id="OldEditPassword" />
+        <input type="text" class="input_config width150" id="UserName" maxlength="32" /></span>
+        <span id="UserNametips" class="colortips"></span>
+      </div>
+      <div class="subparamsgray" >
+        <span class="firstspan"><label name="MUserPsw"></label></span>
+        <span>
+        <input type="password" class="input_config width150" id="UserPsw" maxlength="32"/></span>
+        <span id="UserPswtips" class="colortips"></span>
+      </div>
+      <div class="subparamsgray" >
+        <span class="firstspan"><label name="MUserConfirmPsw"></label></span>
+        <span>
+        <input type="password" class="input_config width150" id="UserPsw2" maxlength="32"/></span>
+        <span id="UserPsw2tips" class="colortips"></span>
+      </div>
+      <div class="subparamsgray">
+        <span class="firstspan"><label name="MUserType"></label></span>
+        <span class="localsecondspan">
+            <select class="selectwidth width152" id="SelectUser" onchange="ChangeSelectUser()">
+              <option name="Madministrator" id="Madministrator" value="administrator"></option>
+              <option name="Moperator" id="Moperator" value="operator" selected="selected"></option>
+              <option name="Mviewer" id="Mviewer"value="viewer"></option>
+            </select>
+        </span>
+       
+      </div>
+      <style>
+	    #UserListDiv {
+		  margin:10px 0 0 10px;
+		  width:579px;
+		  border:1px solid #cccccc;
+		  
+		}
+		#UserListDiv .title{
+		  height:25px; 
+		  line-height:25px;
+		  background:#f9f9f9;
+		  text-indent:5px;
+		}
+		#UserListDiv .titlespan{
+		width:289px;border-right:1px solid #cccccc; display:block
+		}
+		#UserListDiv ul {
+		  width:580px;
+		}
+		#UserListDiv ul li {
+			width:284px;
+			float:left;
+			height:25px;
+			margin-left:5px;
+			line-height:25px;
+			border-right:1px solid #cccccc;
+		}
+		.checkbox {vertical-align:middle;cursor:pointer;}
+		#UserListDiv .label  {
+			margin-left:10px;
+		}
+	  </style>
+     <div  style="padding-bottom:10px;">
+       
+       <div id="UserListDiv">
+          <div class="title">
+             <span class="titlespan"><label name="MAuthorizationlist"></label></span>
+             <span></span>
+          </div>
+         <div style=" margin-left:-1px; float:left;border:1px solid #cccccc;border-top:none;border-right:none;">
+         <ul>
+            <li id="liview"><input type="checkbox" class="checkbox" name="BaseUser" value="view" id="view" /><label name="Mview" class="label"></label></li>
+            <li id="lirecandpic"><input type="checkbox" class="checkbox" name="BaseUser" value="recandpic" id="recandpic" /><label name="Mrecandpic" class="label"></label></li>
+            <li id="liptz"><input type="checkbox" class="checkbox" name="BaseUser" value="ptz" id="ptz" /><label name="Mptz" class="label"></label></li>
+            <li id="liparamset"><input type="checkbox" class="checkbox" name="BaseUser" value="paramset" id="paramset" /><label name="Mparamset" class="label"></label></li>
+            <li id="limemory"><input type="checkbox" class="checkbox" name="BaseUser" value="memory" id="memory" /><label name="Mmemory" class="label"></label></li>
+            <li id="lireboot"><input type="checkbox" class="checkbox" name="BaseUser" value="reboot" id="reboot" /><label name="Mreboot" class="label"></label></li>
+            <li id="lisystem"><input type="checkbox" class="checkbox" name="BaseUser" value="system" id="system" /><label name="Msystem" class="label"></label></li>
+         </ul>
+        </div>
+        </div>
+       
+     </div>
+       <div  style="height:32px; width:100%; line-height:32px; background:#e7e7e7; clear:both;">
+       	   <span style="float:right; margin-right:10px;">
+            <span id="UserAddOKTips" class="formtips"></span>
+            <input id="UserAddOKclick" class="buttonclass"  type="button" name="MButOK" value="" onclick="UserAddOKclick(this,'add')">
+            <input id="btnuserOK" class="buttonclass" style="display:none" type="button" name="MButOK" value="" onclick="UserAddOKclick(this,'edit')">
+            <input id="" class="buttonclass" type="button" onclick="UserCancelClick()" name="MlaCancel" value="">
+           </span>
+      </div>
+     
+   </div>
+</div>

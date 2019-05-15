@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabOsdSet">
+	<li><a href="javascript:ia(OsdSet).update();"  id="mOsdSet"></a></li>
+    <li><a href="javascript:ia(curplugin).update();" name="mcurplugin" id="mcurplugin"></a></li>
+</ul>
+<div id="DivOsdSet" class="panes" >
+    <div class="pane" id="divOSDsettings">
+       <div style="height:555px;" id="mainplugin">
+        </div>
+       <div class="Images_spansave" style="display:none"><input type="button" onclick="SaveOsdSet()" class="input_save" id="SaveOsdSet" value="保存"><span id="SetResultTipsOsdSet"></span></div>
+       
+    </div>
+    <div class="pane" id="divCurplugin">
+        <div class="subparamswhite">
+           <span class="firstspan">
+		        <label name="laEnable" id="laEnable"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <input type="checkbox"  id="Osdenabled" class="checkbox main_top5" onclick="osdcheckbox(this)">  
+            </span>
+        </div>
+         <div class="subparamswhite">
+           <span class="firstspan">
+		        <label name="Mplugin" id="Mplugin"></label>
+		    </span>
+            <span>
+              <select class="selectwidth width152" id="osdselect" onchange="osdselect()">
+                
+              </select>
+            </span>
+            <span>
+              <input type="button"  value="测试" id="osdtest" class="buttonclass" onclick="osdtest()">
+              <span id="OsdTestTips"></span>
+            </span>
+        </div>
+        
+        <div style="padding-left:10px;background:#ffffff;margin-left:10px;">
+           <span class="firstspan" style="vertical-align:top;">
+		        <label name="Mplugintest" id="Mplugintest"></label>
+		    </span>
+            <span class="localsecondspan" style="line-height:30px;" >
+               <div id="spanosd" style="width:500px; display:block"></div>
+                 <!--<span style="width:500px; display:block">dfsfa</span>
+                 <span style="width:500px; display:block">aaaa</span>-->
+           </span>
+        </div>
+        
+        <!--<div class="spansave"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="SaveOsd(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsosd"></span></div>-->
+    </div>
+    <!--<div class="panes">-->
+</div>

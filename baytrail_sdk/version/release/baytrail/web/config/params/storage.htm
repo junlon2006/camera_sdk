@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabStorage">
+	<li><a href="javascript:ia(VideoProgram).update();"  name="aVideoProgram" id="aVideoProgram"></a></li>
+	<li><a href="javascript:ia(StorageManagement).update();" name="aStorageManagement" id="aStorageManagement"></a></li>
+</ul>
+<div class="panes" id="divStorag">
+    
+    
+    <!----- 录像计划开始------->
+    <div class="pane" id="divVideoProgram" >
+         
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="PrescoWay" id="PrescoWay"></label></span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width152">
+                   <!--<option>不预录</option>
+                   <option>5秒</option>
+                   <option>10秒</option>
+                   <option>15秒</option>
+                   <option>20秒</option>
+                   <option>25秒</option><option>5秒</option>
+                   <option>30秒</option>
+                   <option>不受限制</option>-->
+                </select>
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">录像延时</label></span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width152">
+                   <option>不预录</option>
+                   <option>5秒</option>
+                   <option>10秒</option>
+                   <option>15秒</option>
+                   <option>20秒</option>
+                   <option>25秒</option><option>5秒</option>
+                   <option>30秒</option>
+                   <option>不受限制</option>
+                </select>
+            </span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="laStreamType1">记录音频</label></span>
+            <span class="localsecondspan">
+		        <select id="" class="selectwidth width152">
+                  <option>是</option>
+                  <option>否</option>
+                </select>
+            </span>
+           </div>
+           
+       <div class="mainparams main_top26"><label name="laNetCardConfig" id="laNetCardConfig1">启用录像计划</label></div>
+           <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="laStreamType1">启用录像计划</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">布防时间显示</label></span>
+            <span class="localsecondspan">
+		        布防时间显示
+            </span>
+           </div>
+           
+       <div class="mainparams main_top26"><label name="laNetCardConfig" id="laNetCardConfig1">录像方式</label></div>
+            <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="laStreamType1">录像选择</label></span>
+            <span class="localsecondspan">
+                <select id="" class="selectwidth width152">
+                  <option>主流</option>
+                  <option>辅流</option>
+                </select>
+            </span>
+           </div>
+          <span class="spansave"><input type="button" onclick="showmenuconfig('set', 1)" class="input_save" id="SaveConfigBtn" value="保存"></span>
+    </div>
+    <!------ 录像计划结束------------------->
+    
+    
+    <!------ 存储管理开始------------------->
+    
+    <div class="pane" id="divStorageManagement" style="display:block" >
+       
+        <div class="subparamswhite">
+            <span class="firstspan">
+		        <label name="StorageList" id="StorageList"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width152">
+                  <option></option>
+                </select>
+            </span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="Formatting" id="Formatting"></label></span>
+		    <span class="localsecondspan">
+		        <input type="button" name="Formatting" id="Formatting" />
+		    </span>
+        </div>
+    
+        
+      
+        
+        <!--<span class="spansave"><input type="button" onclick="showmenuconfig('set', 1)" class="input_save" id="SaveConfigBtn" value="保存"></span>-->
+    </div>
+    
+    
+
+   
+</div><!--<div class="panes">-->

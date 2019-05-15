@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统-用户安全</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+</head>
+<body>
+<div id="contenter" class="contenter">
+   <div class="topTitle"><span>用户&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"><a href="index.htm">返回目录</a></span>
+  </div>
+  <div class="systext">在用户管理界面可以添加用户、删除用户、修改用户名和密码、设置用户权限等。</div>
+   <div class="systext"><b>是否启用匿名登录</b></div>
+   <div class="systext">勾选启用后，在客户端的登录界面，点击匿名登录即可登录客户端。</div>
+   <div class="systext note">说明：匿名登录用户只有实时浏览的权限，不具备其他权限。</div>
+ <div class="systext"><b>添加用户：</b></div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright"></span>点击添加按钮，在弹出的添加用户界面中输入用户名和密码，在用户类型下拉框中选择用户类型，在权限列表中为新添加的用户配置权限，配置完成后点击确定按钮。
+    </div> 
+  <div class="systext"><b>删除用户：</b></div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright"></span>选中用户，点击删除按钮，即可删除所选用户。
+     </div> 
+ <div class="systext"><b>修改用户：</b></div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright"></span>选中用户，点击修改按钮，在弹出的界面中进行修改。
+      </div>
+      <div class="systext"><b>用户默认权限说明：</b></div>
+  <div class="TitleExplaintable">
+  <table class="tabhelp">
+         <tr class="tabtr">
+           <td  class="tabtd"><b>管理员</b></td>
+           <td  class="tabtd tableft">默认拥有所有权限。</td>
+         </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>操作员</b></td>
+           <td class="tabtd tableft">默认拥有浏览、回放/图片、云台控制的权限，不具备其他权限。</td>
+        </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>普通用户</b></td>
+           <td class="tabtd tableft">默认只有浏览权限，不具备其他权限。</td>
+          </table>
+           <div class="systext note"><b>说明：有些配置修改后需要重启才能生效，这时用户需要同时具备配置权限和重启权限。</b></div>
+          </div>
+      <div class="topTitle"><span>RTSP认证&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext"><b>认证方式-</b>在下拉框中选择RTSP服务认证方式，none、basic或digest，默认为none。</div>
+  </div>
+<div id="contenter" class="contenter">
+  <div class="topTitle"><span>IP地址过滤&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext">通过设置IP地址过滤，设置访问权限。白名单即可以访问设备的IP地址名单，黑名单即不能访问设备的IP地址名单。</div>
+  <div class="systext">设置方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>选择IP地址过滤方式：在下拉框中选择IP地址过滤方式，可选择禁用、黑名单或白名单；
+      <div class="systext note">说明：若选择禁用则不开启IP地址过滤。</div>
+     <p><span class="marginright">2.</span>添加黑名单/白名单：点击添加按钮，在弹出的添加IP地址界面中填写IP地址，然后点击确认按钮；
+     <p><span class="marginright"> </span>修改黑名单/白名单：在列表中选中相应IP，点击修改按钮，在弹出的修改IP地址界面中修改IP地址，然后点击确认按钮即可；
+     <p><span class="marginright"> </span>删除黑名单/白名单：在列表中选中相应IP，点击删除按钮，即可删除相应IP。点击清除全部按钮，即可删除所添加的所有IP。
+    <div class="systext note"><b>说明：启用白名单后，若白名单列表为空，会导致设备无法登陆。</b></div>
+      </div>
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+<span class="title1"></span>
+</body>
+</html>

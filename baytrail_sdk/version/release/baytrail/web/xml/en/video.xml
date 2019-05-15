@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Video>
+  <Common>
+    <Page>
+      <MVideo>Encoding Format</MVideo>
+      <Mcropping>Encoding Clipping</Mcropping>
+      <Mprivacymasks>Privacy Mask</Mprivacymasks>
+    </Page>
+  </Common>
+  <Video>
+    <Page>
+      <MMultistream>Multi-Stream</MMultistream>
+      <MRestart>Effective after reboot</MRestart>
+      <MStreamType>Code Stream Type</MStreamType>
+      <MResolution>Resolution</MResolution>
+      <MVideoQualityControlType>Code Rate Type</MVideoQualityControlType>
+      <MfixedQuality>Image Quality</MfixedQuality>
+      <MVideoFrameRate>Frame Rate</MVideoFrameRate>
+      <MMaxDataRate>Code Rate Upper Limit</MMaxDataRate>
+      <MVideoCodeType>Encoding Format</MVideoCodeType>
+      <MCodecComplexity>Encoding Complexity</MCodecComplexity>
+      <MIntervalFrameI>Max Interval of Key Frame</MIntervalFrameI>
+    </Page>
+    <opt>
+      <VideoTypeOpt1>Single Stream</VideoTypeOpt1>
+      <VideoTypeOpt2>Dual-Stream</VideoTypeOpt2>
+      <VideoTypeOpt3>Triple-Stream</VideoTypeOpt3>
+      <VideoTypeOpt4>Quad-Stream</VideoTypeOpt4>
+      <StreamTypeInOpt1>Main Stream</StreamTypeInOpt1>
+      <StreamTypeInOpt2>Secondary Stream</StreamTypeInOpt2>
+      <StreamTypeInOpt3>Third Stream</StreamTypeInOpt3>
+      <StreamTypeInOpt4>Fourth Stream</StreamTypeInOpt4>
+      <optfix>Fixed Encoding Rate</optfix>
+      <optvar>Variable Encoding Rate</optvar>
+      <maqualitylowest>Lowest</maqualitylowest>
+      <maqualitylower>Lower</maqualitylower>
+      <maqualitylow>Low</maqualitylow>
+      <maqualitymiddle>Middle</maqualitymiddle>
+      <maqualityhight>Higher</maqualityhight>
+      <maqualityhighest>Highest</maqualityhighest>
+      <optlow>Low</optlow>
+      <optmiddle>Middle</optmiddle>
+      <opthigh>High</opthigh>
+      <mFramelimit>Maximum Frame Rate</mFramelimit>
+      <MUpperLimit>Upper Limit</MUpperLimit>
+      <mExposureflicker>Anti-flicker</mExposureflicker>
+      <mjs50hz>50Hz (25 frames)</mjs50hz>
+      <mjs60hz>60Hz (30 frames)</mjs60hz>
+      <mjsAntiFlickerModeauto>Natural Light (30 Frames)</mjsAntiFlickerModeauto>
+    </opt>
+  </Video>
+  <cropping>
+    <Page>
+      <Mdrawarea>Area</Mdrawarea>
+      <MStartdraw>Edit</MStartdraw>
+      <MStopdraw>Stop</MStopdraw>
+      <MCleandraw>Clear</MCleandraw>
+    </Page>
+  </cropping>
+  <ROI>
+    <Page>
+      <MSelectregion>Edit</MSelectregion>
+      <MCleanregion>Clear</MCleanregion>
+      <MClass>Grade</MClass>
+    </Page>
+    <opt>
+      <optlow>Low</optlow>
+      <optmiddle>Middle</optmiddle>
+      <opthigh>High</opthigh>
+    </opt>
+  </ROI>
+  <shield>
+    <Page>
+      <Mdrawarea>Area</Mdrawarea>
+      <MStartdraw>Edit</MStartdraw>
+      <MStopdraw>Stop</MStopdraw>
+      <MCleandraw>Clear</MCleandraw>
+      <MShadingcolor>Mask Color</MShadingcolor>
+    </Page>
+    <opt>
+      <optblack>Black</optblack>
+      <optred>Red</optred>
+      <optorange>Orange</optorange>
+      <optgreen>Green</optgreen>
+      <optyellow>Yellow</optyellow>
+      <optblue>Blue</optblue>
+      <optgray>Grey</optgray>
+      <opttransparent>Transparent</opttransparent>
+      <opthalf-transparent>Semitransparent</opthalf-transparent>
+      <optmosaic>Mosaic</optmosaic>
+      <optwhite>White</optwhite>
+    </opt>
+  </shield>
+</Video>

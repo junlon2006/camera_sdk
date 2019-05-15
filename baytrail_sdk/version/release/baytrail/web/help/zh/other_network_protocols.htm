@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网络-DDNS</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+</head>
+<body>
+<div id="contenter" class="contenter">
+   <div class="topTitle"><span>DDNS&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"><a href="index.htm">返回目录</a></span>
+  </div>
+  <div class="systext">DDNS是通过连接各种类型的服务器，从而达到通过服务器访问该设备的目的。在各服务器网站申请域名，可通过域名直接访问该设备（即使IP地址改变也可通过域名访问）。</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选开启DDNS服务；
+     <p><span class="marginright">2.</span>在DDNS类型下拉框中选择DDNS服务类型；
+     <p><span class="marginright">3.</span>根据所选的服务器填写相应的域名登录信息；
+     <p><span class="marginright">4.</span>开启DDNS服务后会显示状态信息。
+      </div>
+     <div class="systext note">说明：正确填写DDNS设置信息保存后，在“状态”处会显示相关连接信息。</div>
+  </div>
+  <div id="contenter" class="contenter">
+   <div class="topTitle"><span>PPPoE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext">PPPOE是通过设置运行商（电信、联通、移动）提供的上网账号，使设备能拨号连接英特网。</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选启用PPPoE拨号功能；
+     <p><span class="marginright">2.</span>填写网络运营商ISP提供的上网用户名和密码；
+     <p><span class="marginright">3.</span>拨号成功后显示动态IP。
+  </div>
+  <div class="topTitle"><span>K-SNMP&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+<div class="systext">设备支持Keda网络管理协议。</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>填写网管服务器地址和设备位置信息；
+     <p><span class="marginright">2.</span>设置CPU利用率阈值、内存利用率阈值和视频丢包率阈值，范围1~100。
+  </div>
+  <div class="topTitle"><span>802.1X&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+ <div class="systext">802.1x称为基于端口的访问控制协议（port based network access control protocol）。支持用户手动选择认证方式来控制连接到局域网的设备是否能够接入局域网，能够很好的支撑网络的认证、计费、安全和管理要求。</div>
+ <div class="systext">配置方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选启用IEEE 802.1X协议；
+     <p><span class="marginright">2.</span>在协议类型下拉框中选择协议类型；
+     <p><span class="marginright">3.</span>在EAPOL版本下拉框中选择版本；
+     <p><span class="marginright">4.</span>填写用户名和密码。
+  </div>
+   <div class="topTitle"><span>QoS&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+    </div>
+    <div class="systext">对于DSCP优先级有64个(0-63)，标识了包的优先级不同，0优先级最低，63优先级最高，根据包的优先级选择的不同出队列，不同出队列所占的带宽资源，拥塞时丢弃比例不同，从而实现服务质量的目标。</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选开启QoS；
+     <p><span class="marginright">2.</span>设置音视频DSCP和管理DSCP值，范围0~63。
+  </div>
+  <div class="topTitle"><span>UPnP&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+    </div>
+    <div class="systext">通过UPnP协议在私网与外网间建立映射关系。内部端口为网络摄像机端口，外部端口为路由器端口，用户访问外部端口时就能访问网络摄像机。</div>
+     <div class="systext">对于一台处在内网环境的网络摄像机，UPnP功能可以使网关或路由器做自动端口映射，将网络摄像机监听的端口从网关或路由器映射到内网设备上，网关或路由器的网络防火墙模块开始对Internet上其他电脑开放这个端口。</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选启用开启UPnP功能。
+     <p><span class="marginright">2.</span>设置别名。设置后，在同一局域网广播域中开启了UPnP协议的电脑系统上，用户可以直接在系统的网络中搜索到该别名，双击该图标，即会自动弹出浏览器页面访问设备的当前IP地址。
+     <p><span class="marginright">3.</span>选择映射端口方式为手动或自动。
+      <p><span class="marginright">4.</span>设置完成后，点击保按钮存。
+  </div>
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+<span class="title1"></span>
+</body>
+</html>

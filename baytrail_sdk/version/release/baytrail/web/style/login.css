@@ -1,0 +1,104 @@
+@charset "utf-8";
+a:focus, *:focus {noFocusLine: expression(this.onFocus=this.blur());} /*去掉焦点线：*/
+#HeadTop {
+	 height:33px;
+     width:100%;
+	 background:#fff;
+	 border-bottom:1px solid #e3e3e3;
+	 min-width:970px;}
+.width962auto { width:962px; margin:0 auto;}
+#MainLogin {
+    width:328px;
+	position:relative;
+	top:30%;
+	margin:0 auto;
+	height:300px;
+	
+}
+.loginpart
+{
+	width:327px;
+	height:239px;    
+	position:absolute;
+	border:1px solid #dfdfdf;
+	background:#fff;
+}
+.LanguageChage_Login{
+	position:relative;
+	/*top:10px;
+	right:1px;*/
+	float:right;
+	width:50px;
+	
+}
+
+.LoginInputDiv {
+	width:188px; height:27px; line-height:27px; border:1px #CCC solid; background:#FFF;float:right;
+}
+.LoginAnonymous{
+	background:#f0f0f0;
+}
+.LoginInputUser {
+	float:left; height:27px; line-height:27px; width:70px;
+}
+
+.logo1{ margin-top:8px; float:left}
+
+.heightto4 { height:4px; background:#4f9fe4;}
+#login_member {  padding:0px 25px; height:235px;  }
+.v7span {font-size:14px; height:53px; text-align:center; line-height:53px;}
+
+/***获取焦点****/
+/***获取焦点****/
+.textboxfocus {width:243px; border:1px solid #7dc1fe; border-left:2px solid #7dc1fe; height:27px; line-height:27px;   }
+.usernamefocus {border:0; height:27px; line-height:27px; margin-left:8px; width:202px; float:left;}
+
+/****失云焦点*********/
+.textboxblur00 {  border:1px solid #dfdfdf; height:27px; line-height:27px; color:#d0d0d0; }
+.usernameblur1111 {  height:27px; line-height:27px;  float:left; border:0;color:#d0d0d0; text-indent:10px; }
+
+
+
+.logininputblur{ width:130px;height:25px; line-height:25px\9; color:#404040; border:0; margin:0 10px;  position:absolute; }
+.passico {float:right; background:url(../images/login/icon_password.png) 0px 4px no-repeat; margin-left:150px;  width:22px; height:22px; position:absolute;  }
+.labelogin {
+	float:left;  position:absolute; 
+	}
+/***获取焦点****/
+.inputfocus{ border:1px solid #7dc1fe;width:188px; }
+/****失云焦点*********/
+.inputblur{border:none;width:163x;}
+
+.userico { float:right;background:url(../images/login/icon_uer.png) 0px 5px no-repeat; margin-left:150px; width:22px; height:22px;position:absolute;}
+
+.test_span {position:absolute; height:32px; line-height:32px; margin-left:10px;}
+
+.login_button { float:right; height:28px; background:#4f9fe6; line-height:28px; width:95px; color:#FFFFFD; text-align:center; font-size:14px; cursor:pointer;}
+.login_buttonmousemove { background:#8ac9ff;}
+.login_buttonmouseout { background:#418ed1;}
+
+
+.checkbox { vertical-align:middle; margin-right:10px;}
+
+.logininputwidth { width:140px; border:0px; border-style:none; }
+.labelloginwidth { margin-left:17px; float:left;}
+.err {  line-height:20px; color:#930; float:left;
+ display:inline-block;
+	vertical-align:top;
+	word-wrap:break-word; white-space:normal;
+	word-break:normal;
+	max-width:170px;
+ }
+
+.f_pass { float:right; margin-right:5px;}
+.maintop19
+{ 
+	margin-top:19px;
+	*margin-top:0px;/*IE7*/
+}
+.maintop21{ margin-top:21px;}
+
+
+.inputwidth {width:246px; height:29px; margin:0 auto; margin-bottom:19px;}
+.auto-hint {width:243px; border:1px solid #7dc1fe; border-left:2px solid #7dc1fe; height:27px; line-height:27px; text-indent:10px;}
+.auto-hove {width:245px; border:1px solid #dfdfdf;  height:27px; line-height:27px; text-indent:10px;}

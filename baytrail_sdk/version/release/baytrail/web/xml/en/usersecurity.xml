@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Usersecurity>
+  <Common>
+    <Page>
+      <MUser>User</MUser>
+      <MRTSPAuth>RTSP Authorization</MRTSPAuth>
+      <MIPFilter>IP Filter</MIPFilter>
+	  <MSafetyService>Security service</MSafetyService>
+    </Page>
+  </Common>
+  <User>
+    <Page>
+      <MEnableAnonymous>Anonymous Access</MEnableAnonymous>
+    </Page>
+    <userlist>
+      <Mnumber>Serial No.</Mnumber>
+      <MUserName>User Name</MUserName>
+      <MUserType>User Type</MUserType>
+      <Madministrator>Administrator</Madministrator>
+      <Moperator>Operator</Moperator>
+      <Mviewer>Viewer</Mviewer>
+    </userlist>
+    <userwindows>
+      <Madduser>Add User</Madduser>
+      <Medituser>Modify User</Medituser>
+      <MUserType>User Type</MUserType>
+      <MUserPsw>Password</MUserPsw>
+	  <MUserpStr>Password strength</MUserpStr>
+	  <MUserpWeak>Weak</MUserpWeak>
+	  <MUserpGood>Good</MUserpGood>
+	  <MUserpStrong>Strong</MUserpStrong>
+      <MUserOldPsw>Old Password</MUserOldPsw>
+      <MUserNewPsw>New Password</MUserNewPsw>
+      <MUserConfirmPsw>Password Confirm</MUserConfirmPsw>
+      <MAuthorizationlist>Authorization List</MAuthorizationlist>
+      <Mview>View</Mview>
+      <Mrecandpic>Playback/Picture</Mrecandpic>
+      <Mptz>PTZ Control</Mptz>
+      <Mparamset>Parameter Configuration</Mparamset>
+      <Mmemory>Storage</Mmemory>
+      <Mreboot>Reboot, Discover, Auto maintenance</Mreboot>
+      <Msystem>System Maintenance</Msystem>
+      <Madmin>Advanced Configuration</Madmin>
+      <Mpermissions>Select at least 1 authorization</Mpermissions>
+      <jsUserexists>User Name exists.</jsUserexists>
+      <jsUsernon>User does not exist. May have been deleted.</jsUsernon>
+    </userwindows>
+  </User>
+  <RTSPAuth>
+    <Page>
+      <Mauthenticationmode>Authorization Type</Mauthenticationmode>
+	  <MRtsptipts>An anonymous user has logged in and authentication is omitted.</MRtsptipts>
+    </Page>
+  </RTSPAuth>
+  <IPFilter>
+    <Page>
+      <MIPFilterType>IP Filter</MIPFilterType>
+      <MSerialNumber>Serial No.</MSerialNumber>
+      <MAIPAddress>IP Address</MAIPAddress>
+      <MAddIPAddress>Add IP</MAddIPAddress>
+      <MEditIPAddress>Modify IP</MEditIPAddress>
+    </Page>
+    <opt>
+      <optdisable>Disable</optdisable>
+      <optwhite>White List</optwhite>
+      <optblack>Black List</optblack>
+    </opt>
+    <js>
+      <jsIPFilterlist>List cannot be null.</jsIPFilterlist>
+      <jsDataexists>Already exists.</jsDataexists>
+    </js>
+  </IPFilter>
+  <SafetyService>
+     <Page>
+      <MIsEnableSSH>Enable SSH Login</MIsEnableSSH>
+	  <MIsEnableTelnet>Enable telnet</MIsEnableTelnet>
+	  <MIsEnableILL>Enable Unauthorized Login Locking</MIsEnableILL>
+	  <MIsEnableWPF>Enable Weak Password Reminder</MIsEnableWPF>
+	 </Page>
+  </SafetyService>
+</Usersecurity>

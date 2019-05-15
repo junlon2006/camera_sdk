@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabScreenshot">
+    <li><a href="javascript:ia(Screenshot).update();"  name="MScreenshot" id="MScreenshot"></a></li>
+	
+</ul>
+<div class="panes" id="divScreenshot">
+    
+<div id="Screenshot" class="pane">
+            
+            <div class="subparamsgray">
+			    <span class="firstspan"><label name="Mpictype" id="Mpictype"></label></span>
+				<span class="localsecondspan">
+                  <select class="selectwidth width152" id="pictype">
+                   
+                  </select>
+                </span>
+			</div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="MpicResolution" id="MpicResolution"></label></span>
+				<span class="localsecondspan">
+                  <select class="selectwidth width152" id="picresolution">
+                    
+                  </select>
+                </span>
+			</div>
+            <div class="subparamsgray">
+			    <span class="firstspan"><label name="Mpicquality" id="Mpicquality"></label></span>
+				<span class="localsecondspan">
+                  <select class="selectwidth width152" id="picquality">
+                 
+                  </select>
+                </span>
+			</div>
+            <!----定时抓拍开始---->
+            
+            <div class="mainparams main_top10"><label name="MsnapScheduled" ></label></div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="laEnable"></label></span>
+				<span class="localsecondspan">
+                  <input type="checkbox" class="checkbox main_top8" id="checksnappictime" onclick="checkbox(this)">
+                </span>
+                <span id="checkScreenshottips" class="colortips" style="margin-left:130px; display:inline;"></span>
+			</div>
+            
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="Msanptype"></label></span>
+				<span>
+                  <select class="selectwidth width152" id="selectsnaptype" onchange="selectsnaptype(this)">
+                    
+                  </select>
+                </span>
+               
+			</div>
+            
+            <div class="subparamswhite" style="display:none" id="Subnum">
+			    <span class="firstspan"><label name="Mtimesnapnum"></label></span>
+				<span>
+                  <input type="text" class="input_config width150" id="timesnapnum"  />
+                </span>
+                <span class="fixedTips" id="fixedtimesnapnumTips"></span><span id="timesnapnumtips" class="colortips"></span>
+			</div>
+            
+            <div class="subparamswhite" style="display:none"  id="Subtime">
+			    <span class="firstspan"><label name="Msanptime"></label></span>
+				<span>
+                  <input type="text" class="input_config width150" id="timesnapspeed"  />
+                </span>
+                <span class="fixedTips" id="fixedtimesnapspeedTips"></span>
+                <label name="MSeconds"></label>
+                <span id="timesnapspeedtips" class="colortips"></span>
+			</div>
+            
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="Msanpspid"></label></span>
+				<span>
+                  <input id="ScheduleEditBtnInput" class="buttonclass" type="button" value="" name="MButEdit" onclick="EditSchedule()">
+                </span>
+			</div>
+            
+           
+            
+            <div class="mainparams main_top10"><label name="MsnapEvent"></label></div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="laEnable"></label></span>
+				<span class="localsecondspan">
+                  <input type="checkbox" class="checkbox main_top8" id="checksnapevent" onclick="checkbox(this)">
+                </span>
+                <span id="checkScreenshottips" class="colortips" style="margin-left:130px; display:inline;"></span>
+			</div>
+            
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="Msanptime"></label></span>
+				<span>
+                  <input type="text" class="input_config width150" id="eventsnapspeed"  />
+                </span>
+                <span class="fixedTips" id="fixedeventsnapspeedTips"></span>
+                <label name="MSeconds"></label>
+                <span id="eventsnapspeedTips" class="colortips"></span>
+			</div>
+            
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="Mtimesnapnum"></label></span>
+				<span>
+                  <input type="text" class="input_config width150" id="eventsnapnum"  />
+                </span>
+                <span class="fixedTips" id="fixedeventsnapnumTips"></span><span id="eventsnapnumtips" class="colortips"></span>
+			</div>
+            
+           
+            
+         <!--<div class="spansave"><input type="button"  class="input_save"  id="SaveScreenshot" onclick="SaveScreenshot(this)" value="" name="MSaveConfigLocal"><span id="SetResultTipsScreenshot"></span></div>-->
+         <div class="spansave"><input id="SaveScreenshot" class="input_save" type="button" value="" name="MSaveConfigLocal" onclick="TimingTaskSave(this)"><span id="SetTipsSnap"></span></div>
+    </div>
+</div><!--<div class="panes">-->
+<div id="TimeScheduleEdit1"></div>

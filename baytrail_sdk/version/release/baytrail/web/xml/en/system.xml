@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <Common>
+    <Page>
+      <aDeviceInfo>Device Info</aDeviceInfo>
+      <aTimeSettings>Time Setting</aTimeSettings>
+      <aMaintain>System Maintenance</aMaintain>
+      <aUserSafe>User Security</aUserSafe>
+      <aSerial>Serial Port</aSerial>
+      <jsnewip>Please login again</jsnewip>
+    </Page>
+  </Common>
+  <DeviceInfo>
+    <Page>
+      <laDeviceName>Device Name</laDeviceName>
+      <laDeviceType>Device Model</laDeviceType>
+      <laDeviceSn>Device Serial No.</laDeviceSn>
+      <laFirmwareVersion>Hardware Version</laFirmwareVersion>
+      <laSoftwareVersion>Software Version</laSoftwareVersion>
+      <laVideoSrcNum>Number of Video Sources</laVideoSrcNum>
+      <laSaveAsLabel>Set as OSD text.</laSaveAsLabel>
+    </Page>
+  </DeviceInfo>
+  <TimeSettings>
+    <Page>
+      <laSpanTitle>Time Setting</laSpanTitle>
+      <laDevZone>Device Timezone</laDevZone>
+      <laDevTime>Device Time</laDevTime>
+      <laDST>DST</laDST>
+      <laEnableDST>Enable DST</laEnableDST>
+      <laManualTimeSync>Manual Setting</laManualTimeSync>
+      <laManualTime>Manual Time Setting</laManualTime>
+      <laAutoTimeSync>Auto Time Correction</laAutoTimeSync>
+      <laSyncPcTime>Synchronize time with PC</laSyncPcTime>
+      <jsTimeErrorTips>The start time must be earlier than the end time.</jsTimeErrorTips>
+      <trTimeSync>Time Correction</trTimeSync>
+      <laMode>Method</laMode>
+      <laNtpTimeSync>NTP Clock Synchronization</laNtpTimeSync>
+      <laNtpPort>NTP Port</laNtpPort>
+      <laNtpInterval>Time Correction Interval</laNtpInterval>
+
+      <laProtocolTimeSync>Access Protocol</laProtocolTimeSync>
+      <laProtocalTip>Access to the VMS via K-VSIP, GB28181, Onvif and SDK, and VMS corrects time.</laProtocalTip>
+      <timezoneOpt1>(GMT-12:00) West side of the IDL</timezoneOpt1>
+      <timezoneOpt2>(GMT-11:00) Midway Island, Samoa Islands</timezoneOpt2>
+      <timezoneOpt3>(GMT-10:00) Hawaii</timezoneOpt3>
+      <timezoneOpt4>(GMT-09:00) Alaska</timezoneOpt4>
+      <timezoneOpt5>(GMT-08:00) Pacific time (American and Canada)</timezoneOpt5>
+      <timezoneOpt6>(GMT-07:00) Mountain time (American and Canada)</timezoneOpt6>
+      <timezoneOpt7>(GMT-06:00) Central time (USA and Canada)</timezoneOpt7>
+      <timezoneOpt8>(GMT-05:00) Eastern time (American and Canada)</timezoneOpt8>
+      <timezoneOpt9>(GMT-04:30) Caracas</timezoneOpt9>
+      <timezoneOpt10>(GMT-04:00) The Atlantic time (Canada)</timezoneOpt10>
+      <timezoneOpt11>(GMT-03:30) Newfoundland</timezoneOpt11>
+      <timezoneOpt12>(GMT-03:00) Georgetown, Brasilia</timezoneOpt12>
+      <timezoneOpt13>(GMT-02:00) Middle Atlantic</timezoneOpt13>
+      <timezoneOpt14>(GMT-01:00) The Cape Verde Islands, the Azores</timezoneOpt14>
+      <timezoneOpt15>(GMT+00:00) Dublin, Edinburgh, London</timezoneOpt15>
+      <timezoneOpt16>(GMT+01:00) Amsterdam, Berlin, Rome, Paris</timezoneOpt16>
+      <timezoneOpt17>(GMT+02:00) Athens, Jerusalem, Istanbul</timezoneOpt17>
+      <timezoneOpt18>(GMT+03:00) Baghdad, Kuwait, Moscow</timezoneOpt18>
+      <timezoneOpt19>(GMT+03:30) Tehran</timezoneOpt19>
+      <timezoneOpt20>(GMT+04:00) Caucasus standard time</timezoneOpt20>
+      <timezoneOpt21>(GMT+04:30) Kabul</timezoneOpt21>
+      <timezoneOpt22>(GMT+05:00) Islamabad, Karachi, Tashkent</timezoneOpt22>
+      <timezoneOpt23>(GMT+05:30) Madras, Mumbai, New Delhi</timezoneOpt23>
+      <timezoneOpt24>(GMT+05:45) Kathmandu</timezoneOpt24>
+      <timezoneOpt25>(GMT+06:00) Ala Mutu, Novosibirsk, Dhaka</timezoneOpt25>
+      <timezoneOpt26>(GMT+06:30) Yangon</timezoneOpt26>
+      <timezoneOpt27>(GMT+07:00) Bangkok, Hanoi, Jakarta</timezoneOpt27>
+      <timezoneOpt28>(GMT+08:00) Beijing, Urumqi, Singapore</timezoneOpt28>
+      <timezoneOpt29>(GMT+09:00) Seoul, Tokyo, Osaka, Sapporo</timezoneOpt29>
+      <timezoneOpt30>(GMT+09:30) Adelaide, Darwin</timezoneOpt30>
+      <timezoneOpt31>(GMT+10:00) Melbourne, Sydney, Canberra</timezoneOpt31>
+      <timezoneOpt32>(GMT+11:00) Magadan, Salomon Islands</timezoneOpt32>
+      <timezoneOpt33>(GMT+12:00) Oakland, Wellington</timezoneOpt33>
+      <timezoneOpt34>(GMT+13:00) Nukualofa</timezoneOpt34>
+      <DSTBiasOpt1>30 min</DSTBiasOpt1>
+      <DSTBiasOpt2>60 min</DSTBiasOpt2>
+      <DSTBiasOpt3>90 min</DSTBiasOpt3>
+      <DSTBiasOpt4>120 min</DSTBiasOpt4>
+      <laSelectTime>Set Time</laSelectTime>
+      <laDSTBias>Time Deviation</laDSTBias>
+      <latime>o'clock</latime>
+      <Month1>January</Month1>
+      <Month2>February</Month2>
+      <Month3>March</Month3>
+      <Month4>April</Month4>
+      <Month5>May</Month5>
+      <Month6>June</Month6>
+      <Month7>July</Month7>
+      <Month8>August</Month8>
+      <Month9>September</Month9>
+      <Month10>October</Month10>
+      <Month11>November</Month11>
+      <Month12>December</Month12>
+      <Week1>Sunday</Week1>
+      <Week2>Monday</Week2>
+      <Week3>Tuesday</Week3>
+      <Week4>Wednesday</Week4>
+      <Week5>Thursday</Week5>
+      <Week6>Friday</Week6>
+      <Week7>Saturday</Week7>
+      <No1>First</No1>
+      <No2>Second</No2>
+      <No3>Third</No3>
+      <No4>Fourth</No4>
+      <No5>Last</No5>
+    </Page>
+    <Js>
+      <TimeIsNuLLTips>Please enter a time.</TimeIsNuLLTips>
+      <NtpServerTips>Server Address</NtpServerTips>
+      <NtpPortRangeTips>NTP Port</NtpPortRangeTips>
+      <DSTBiasIsNullTips>Time Deviation cannot be null.</DSTBiasIsNullTips>
+      <DSTMonthSameTips>The start month and end month of DST must differ.</DSTMonthSameTips>
+      <NTPIntervalRangeTips>Correction Interval</NTPIntervalRangeTips>
+    </Js>
+  </TimeSettings>
+  <Maintain>
+    <Page>
+      <laParamImport>Import Parameter</laParamImport>
+      <laImportFile>Parameter File</laImportFile>
+      <laParamExport>Export Parameter</laParamExport>
+      <btnImport>Import</btnImport>
+      <butExport>Export</butExport>
+      <btnExportFile>Configuration Export</btnExportFile>
+      <laRemoteUpgrade>Upgrade</laRemoteUpgrade>
+      <laConManage>Configuration Management</laConManage>
+      <laconfigure>Configuration</laconfigure>
+      <laUpgradeFile>Upgrade packet</laUpgradeFile>
+      <laUpgradeExplains>The upgrade will take 1-10 minutes. Do not power off the device during the upgrade. The device will reboot automatically after upgrade.</laUpgradeExplains>
+      <laRestart>Reboot</laRestart>
+      <laFound>Discover</laFound>
+      <laFlashingtime>Flash Time</laFlashingtime>
+      <laFlashing>Flash</laFlashing>
+      <laAutomaticmaintenance>Auto Maintenance</laAutomaticmaintenance>
+      <lamaintenancecycle>Maintenance Cycle</lamaintenancecycle>
+      <lamaintenancetime>Maintenance Time</lamaintenancetime>
+      <Restore>Restore Default</Restore>
+      <btnCompleteRestore>Complete Restoration</btnCompleteRestore>
+      <btnSimpleRestore>Partial Restoration</btnSimpleRestore>
+      <laRestartDevice>Reboot the device</laRestartDevice>
+      <laSimpleReStore>All parameters restore to factory default except camera IP address and protocols.</laSimpleReStore>
+      <laCompleteReStore>All restore to factory default.</laCompleteReStore>
+      <laAdvanceCfg>Advanced Configuration</laAdvanceCfg>
+	  <MTimestamp>Stream Timestamp</MTimestamp>
+	  <MVSIPTimestamp>VSIP Stream Timestamp</MVSIPTimestamp>
+	  <MStandard>Standard</MStandard>
+	  <MOldStandard>Old Standard</MOldStandard>
+	  <Moptclose>Close</Moptclose>
+	  <Moptlow>Low</Moptlow>
+      <Moptmiddle>Middle</Moptmiddle>
+      <Mopthigh>High</Mopthigh>
+	  <Mreduction>Audio Noise Reduction</Mreduction>
+	  <MAcquisition>Collect Audio Stream</MAcquisition>
+	  <MDecoding>Decode Audio Stream</MDecoding>
+      <AdCfg1>VSIP Protocol Compatibility</AdCfg1>
+      <AdCfg2>Creat new osd pictrue</AdCfg2>
+      <AdCfg3>When edit OSD text</AdCfg3>
+      <AdCfg4>OSD picture sent directly via VSIP</AdCfg4>
+      <AdCfg5>Keep alive the stream UDP.</AdCfg5>
+      <AdCfg6>VSIP Device</AdCfg6>
+      <AdCfg7>Onvif (RTSP) Device</AdCfg7>
+      <AdCfg8>GB28181 Device</AdCfg8>
+      <AdCfg9>Network Adaptation</AdCfg9>
+      <AdCfg10>Smooth Transmission</AdCfg10>
+      <AdCfg11>Yes (Will occupy system resources)</AdCfg11>
+      <AdCfg12>AEC supported</AdCfg12>
+      <AdCfg13>Function Switch</AdCfg13>
+      <AdCfg14>Support (System will to down)</AdCfg14>
+	  <Mlimit>Smooth Sending Bandwidth Limit</Mlimit>
+	  <Mlimittips>(When code rate exceeds this value, subject to actural bandwidth)</Mlimittips>
+      <ladynamicosd>OSD Active Content</ladynamicosd>
+	  <Mstreamheadex>Stream extension head</Mstreamheadex>
+      <laSuperuserauth>Advanced User</laSuperuserauth>
+	  <mtcf>
+	      <Mmode>Mode selection</Mmode>
+		  <MLowdelaymodel>Low-Delay Mode</MLowdelaymodel>
+		  <MautoLowdelaymodel>Auto</MautoLowdelaymodel>
+		  <MNormalmode>Common</MNormalmode>
+		  <MForcedlowdelaymodel>Forcible</MForcedlowdelaymodel>
+		  <Mvideodelay>The following features will increase the delay:</Mvideodelay>
+		  <Mnoisereduction3D>3D Denoising</Mnoisereduction3D>
+		  <MImagemasking>Privacy Mask</MImagemasking>
+		  <MNodelayoptimization>In this mode, the system will not shorten the delay.</MNodelayoptimization>
+		  <MForcedclose3D>In this mode, the system forcibly disables the 3D Denoising and Privacy Mask features.</MForcedclose3D>
+		  <MForcedclose3D2>In this mode, the system disables the 3D Denoising and Privacy Mask features and enables the low-delay mode.</MForcedclose3D2>
+		  <MRestart>Restart to take effect</MRestart>
+		  <Mhdr>Ultra wide dynamic model</Mhdr>
+		  <Mfps60>60 frames model</Mfps60>
+		  <Mstream4>Four flow patterns</Mstream4>
+		  <M4K>4 k mode</M4K>
+		  <Mdiv4>4 k four split screen mode</Mdiv4>
+		  <Mnormal>Normal Mode</Mnormal>
+		  <Mhdsdi>HDSDI Mode</Mhdsdi>
+		  <MhdsdiTips>HD-SDI Back support HD output, and support the echo OSD</MhdsdiTips>
+		  <MhdsdiTips1>Only supports single stream network output</MhdsdiTips1>
+		  <Mstream3>Ordinary three yards flow pattern</Mstream3>
+	  </mtcf>
+    </Page>
+    <opt>
+      <js5s>5 s</js5s>
+      <js10s>10 s</js10s>
+      <js30s>30 s</js30s>
+      <js1m>1 min</js1m>
+      <js30m>30 min</js30m>
+      <js60m>60 min</js60m>
+      <js24h>24 h</js24h>
+    </opt>
+    <Js>
+      <tipsNoUpgradeFile>No upgrade packet is selected.</tipsNoUpgradeFile>
+      <tipsUpgradeFailed>Upgrade failed</tipsUpgradeFailed>
+      <tipsLanguageMismatch>Upgrade language mismatch</tipsLanguageMismatch>
+      <tipsUpgradeTimeOut>Upgrade timeout. Please check if it has been upgraded.</tipsUpgradeTimeOut>
+      <tipsUpgradeTitle>Device is being upgraded.</tipsUpgradeTitle>
+      <tipsUpgradeState>Status: ready for upgrading</tipsUpgradeState>
+      <tipsUpgradeState1>Status: upgrading</tipsUpgradeState1>
+      <tipsGetProgress>Fail to obtain upgrade progress.</tipsGetProgress>
+      <tipsGetStatus>Fail to obtain upgrade status.</tipsGetStatus>
+      <tipsUpdating>Upgrading...</tipsUpdating>
+      <tipsUpdateSucc>Device is upgraded.</tipsUpdateSucc>
+      <tipsUpgradeReboot>After upgrade, the device will reboot. Are you sure to upgrade?</tipsUpgradeReboot>
+      <ImportRebootTips>Importing settings will reboot the device automatically. Are you sure to import?</ImportRebootTips>
+      <ImportSuccessTips>Imported</ImportSuccessTips>
+      <ImportFailedTips>Import failed</ImportFailedTips>
+      <ExportSuccessTips>Exported</ExportSuccessTips>
+      <ExportFailedTips>Export failed</ExportFailedTips>
+      <tipsRestoreSucc>Default values are restored.</tipsRestoreSucc>
+      <tipsRestoreFailed>Default values restoring failed.</tipsRestoreFailed>
+      <tipsRestoreReboot>Restored to default. Reboot to make it effective.</tipsRestoreReboot>
+      <tipsRestoreReboot1>After restoring to default values, the device will reboot. Are you sure to restore?</tipsRestoreReboot1>
+      <Tip1>All parameters restore to factory default except camera IP address and protocols.</Tip1>
+      <Tip2>Restore to factory default</Tip2>
+      <Tip3>Export all settings to a file.</Tip3>
+      <Tip4>All parameters are imported from the file except the network, device name and OSD setting.</Tip4>
+      <jssong>Song Typeface</jssong>
+      <jsblack>Bold</jsblack>
+      <LoginTips4>User name does not exist.</LoginTips4>
+      <LoginTips5>Please enter password</LoginTips5>
+      <LoginTips6>Password Error</LoginTips6>
+      <LoginTips7>IP Limitation</LoginTips7>
+      <ConnectTimeoutTips>Connection Timeout</ConnectTimeoutTips>
+    </Js>
+  </Maintain>
+  <Serial>
+    <Type>Type</Type>
+    <Bound>Baud Rate</Bound>
+    <DataBit>Data Bits</DataBit>
+    <StopBit>Stop Bits</StopBit>
+    <SerialCheck>Correction</SerialCheck>
+    <StreamCtrl>Stream Control</StreamCtrl>
+    <Address>Address Code</Address>
+    <CtrlPotocol>Control Protocol</CtrlPotocol>
+    <Manone>None</Manone>
+    <Maeven>Even ECC</Maeven>
+    <Maodd>Odd ECC</Maodd>
+    <Mahardctrl>Hardware Stream Control</Mahardctrl>
+    <Masoftctrl>Software Stream Control</Masoftctrl>
+  </Serial>
+</System>

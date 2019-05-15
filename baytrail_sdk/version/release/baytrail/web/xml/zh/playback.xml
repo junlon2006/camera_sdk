@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Playback>
+  <Page>
+    <Mrecordtype>录像类型</Mrecordtype>
+    <Mall>全选</Mall>
+    <Malarmrecord>告警录像</Malarmrecord>
+    <Mplanrecord>计划录像</Mplanrecord>
+    <Mmanualrecord>手动录像</Mmanualrecord>
+    <MmonthView>录像月视图</MmonthView>
+    <Msearch>查找</Msearch>
+    <Mbacktimeocation>回放时间点定位</Mbacktimeocation>
+  </Page>
+  <titletips>
+    <Mplay>播放</Mplay>
+    <Mpause>暂停</Mpause>
+    <Mstop>停止</Mstop>
+    <Mdeceleration>减速</Mdeceleration>
+    <Macceleration>加速</Macceleration>
+    <Mforward>前一片段</Mforward>
+    <Mback>下一片段</Mback>
+    <Msound>声音</Msound>
+    <Mcat>抓拍</Mcat>
+    <Mstartclip>开始剪辑</Mstartclip>
+    <Mstopclip>停止剪辑</Mstopclip>
+    <Mdown>下载</Mdown>
+    <Menlarge>刻度放大</Menlarge>
+    <Mnarrow>刻度缩小</Mnarrow>
+    <Mfull>全屏</Mfull>
+    <Mgoseek>定位失败</Mgoseek>
+	<LoginConnectTimeoutTips>登录超时,请重新登录</LoginConnectTimeoutTips>
+  </titletips>
+  <Js>
+    <startrecord>开始录像</startrecord>
+    <jsstoprecord>暂停</jsstoprecord>
+    <jsplayrecord>播放</jsplayrecord>
+    <jsposition>定位失败</jsposition>
+	<Mnomemorycard>无存储卡</Mnomemorycard>
+  </Js>
+</Playback>

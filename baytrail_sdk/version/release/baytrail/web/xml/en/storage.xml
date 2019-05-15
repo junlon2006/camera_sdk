@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Storage>
+  <Common>
+    <Page>
+      <MStorageManagement>Storage Management</MStorageManagement>
+      <MVideoProgram>Recording</MVideoProgram>
+      <MScreenshot>Snapshot</MScreenshot>
+    </Page>
+  </Common>
+  <StorageManagement>
+    <Page>
+      <MDiskfullstrategy>Disk Full Strategy</MDiskfullstrategy>
+      <MStoragedevicelist>Storage Device List</MStoragedevicelist>
+      <MFormatting>Formatting</MFormatting>
+      <MDisknumber>Disk ID</MDisknumber>
+      <MCapacity>Capacity</MCapacity>
+      <Mremainingspace>Remaining Space</Mremainingspace>
+      <MState>Status</MState>
+      <Mtype>Type</Mtype>
+      <MAttribute>Attribute</MAttribute>
+      <Mprogress>Progress</Mprogress>
+    </Page>
+    <opt>
+      <Mover>Overwrite earlier data</Mover>
+      <Mstop>Stop</Mstop>
+    </opt>
+    <Js>
+      <jstipsnull>Does not Exist</jstipsnull>
+      <jstipsdisker>Damage</jstipsdisker>
+      <jstipsdiskrslowish>Slow Read-write</jstipsdiskrslowish>
+      <jstipsidel>Normal</jstipsidel>
+      <jsAskformat>Do you want to format?</jsAskformat>
+      <jstipsformatsucc>Formatted</jstipsformatsucc>
+      <jstipsnoformat>Unformatted</jstipsnoformat>
+      <jstipsformating>Formatting</jstipsformating>
+      <jstipsidentifing>Identifying the memory card</jstipsidentifing>
+      <jstipslocal>Local</jstipslocal>
+      <jstipsnet>Network Disk</jstipsnet>
+      <jstipsreadonly>Read-only</jstipsreadonly>
+      <jstipsall>Read-write</jstipsall>
+    </Js>
+  </StorageManagement>
+  <VideoProgram>
+    <Page>
+      <Mrecordconfig>Recording Configuration</Mrecordconfig>
+      <Mrecordtype>Recording Type</Mrecordtype>
+      <MStreampackaging>Code Stream Format</MStreampackaging>
+      <MRestart>Effective after reboot.</MRestart>
+      <MPrerecordedway>Prerecord</MPrerecordedway>
+      <Mrecorddelay>Recording Delay</Mrecorddelay>
+      <Mrecordprogram>Recording</Mrecordprogram>
+	  <MScheduledRecording>Scheduled Recording</MScheduledRecording>
+	  <MTimeTable>Time Table</MTimeTable>
+    </Page>
+    <opt>
+      <StreamTypeInOpt1>Main Stream</StreamTypeInOpt1>
+      <StreamTypeInOpt2>Secondary Stream</StreamTypeInOpt2>
+      <StreamTypeInOpt3>Third Stream</StreamTypeInOpt3>
+      <StreamTypeInOpt4>Fourth Stream</StreamTypeInOpt4>
+      <jsesopt>ES (VSIP/Onvif)</jsesopt>
+      <jspsopt>PS (GB28181)</jspsopt>
+      <jsnoneopt>Prerecord Disabled</jsnoneopt>
+      <js5opt>5 s</js5opt>
+      <js10opt>10 s</js10opt>
+      <js15opt>15 s</js15opt>
+      <js20opt>20 s</js20opt>
+      <js25opt>25 s</js25opt>
+      <js30opt>30 s</js30opt>
+      <jsinfinite>Unlimited</jsinfinite>
+      <jsnonetime>Without Delay</jsnonetime>
+    </opt>
+    <js>
+      <RestartStreamTips>Recording settings have been modified and the device will reboot. Save?</RestartStreamTips>
+    </js>
+  </VideoProgram>
+  <Screenshot>
+    <Page>
+      <Mpictype>Format</Mpictype>
+      <MpicResolution>Resolution</MpicResolution>
+      <Mpicquality>Quality</Mpicquality>
+      <MScreenshotOpen>Enable</MScreenshotOpen>
+      <Msanpspid>Snapshot Interval</Msanpspid>
+	  <Msanptype>Snapshot Type</Msanptype>
+	  <Msanptime>Time Interval</Msanptime>
+      <Mtimesnapnum>Number of Snapshots</Mtimesnapnum>
+	  <Msnaptime>According to the time</Msnaptime>
+	  <Msnapnum>According to the number</Msnapnum>
+	  <MsnapEvent>Event Snapshot</MsnapEvent>
+	  <MsnapScheduled>Scheduled Snapshot</MsnapScheduled>
+    </Page>
+    <opt>
+      <Mlow>Low</Mlow>
+      <Mmiddle>Middle</Mmiddle>
+      <Mhight>High</Mhight>
+      <Mnocard>No memory card is detected. Please check if it is inserted.</Mnocard>
+    </opt>
+  </Screenshot>
+</Storage>

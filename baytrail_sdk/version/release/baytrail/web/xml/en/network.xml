@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Network>
+  <DDNS>
+    <Page>
+      <MDDNSType>DDNS Server</MDDNSType>
+      <MDeviceDomain>Domain</MDeviceDomain>
+      <MDDNSState>Status</MDDNSState>
+    </Page>
+  </DDNS>
+  <PPPoE>
+    <Page>
+      <MUsePPPOE>Enable</MUsePPPOE>
+      <MPPPOEIP>DHCP</MPPPOEIP>
+    </Page>
+  </PPPoE>
+  <SNMP>
+    <Page>
+      <MSvripadd>Network Management Server IP Address</MSvripadd>
+      <MSvrippost>Network Management Server Port Number</MSvrippost>
+      <Mdevicelocationinformation>Device Location</Mdevicelocationinformation>
+      <Mcpuvpt>CPU Utilization Threshold</Mcpuvpt>
+      <Mmemeryvpt>Memory Utilization Threshold</Mmemeryvpt>
+      <Mlostvpt>Packet Loss Rate Threshold</Mlostvpt>
+    </Page>
+  </SNMP>
+  <P8021x>
+    <Page>
+      <MP8021xType>Protocol Type</MP8021xType>
+      <MP8021xversion>EAPOL Version</MP8021xversion>
+    </Page>
+  </P8021x>
+  <QoS>
+    <Page>
+      <Mvideodscpvalue>DSCP for Audio/Video</Mvideodscpvalue>
+      <Mmanagerdscpvalue>DSCP Management</Mmanagerdscpvalue>
+    </Page>
+  </QoS>
+  <UPnP>
+    <Page>
+      <MAlias>Alias</MAlias>
+      <MPortsMap>Port Mapping</MPortsMap>
+      <MUPnPMapType>Mapping Mode</MUPnPMapType>
+      <MPortsMap1>Mapping Port Table</MPortsMap1>
+      <MChoice>Select</MChoice>
+      <MProtocolName>Protocol</MProtocolName>
+      <MExternalPort>External Port Number</MExternalPort>
+      <MPortsStatus>Status</MPortsStatus>
+    </Page>
+    <opt>
+      <Oautomatic>Auto</Oautomatic>
+      <Omanual>Manual</Omanual>
+    </opt>
+    <titletips>
+      <jsvalid>Apply</jsvalid>
+      <jsinvalid>Not Take Effect</jsinvalid>
+    </titletips>
+  </UPnP>
+  <DPSS>
+    <Page>
+      <Mrcvseveraddr>DPSS Receiving Server Address</Mrcvseveraddr>
+      <Mdevident>Device Name</Mdevident>
+    </Page>
+  </DPSS>
+</Network>

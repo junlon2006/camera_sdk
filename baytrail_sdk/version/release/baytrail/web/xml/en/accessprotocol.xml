@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AccessProtocol>
+  <VsipMain>
+    <page>
+      <MRegistrationplatform>Registered VMS</MRegistrationplatform>
+      <MEnableRegistrationplatform>Enable</MEnableRegistrationplatform>
+      <MRplatformadd>VMS Method</MRplatformadd>
+      <MRplatformipv4>VMS Address (IPv4)</MRplatformipv4>
+      <MRplatformipv6>VMS Address (IPv6)</MRplatformipv6>
+      <MRplatformurl>Registered VMS Domain</MRplatformurl>
+      <MRplatformpost>VMS Port Number</MRplatformpost>
+      <Mvsipuuid>Camera UUID</Mvsipuuid>
+      <Mvsipnetpassword>Camera Password</Mvsipnetpassword>
+      <MvsipNAT>Send NAT Probe Packets</MvsipNAT>
+      <MvsipService>VSIP Service</MvsipService>
+      <Mautomaticnetwork>Auto Networking</Mautomaticnetwork>
+    </page>
+    <Option>
+      <Mip>IP Address</Mip>
+      <Murl>Domain</Murl>
+    </Option>
+  </VsipMain>
+  <OnvifMain>
+    <page>
+      <Mbasicconfiguration>Basic</Mbasicconfiguration>
+      <MOnvifEnable>Enable</MOnvifEnable>
+      <MOnvifurl>Server Address (URL)</MOnvifurl>
+      <MAuthentication>Authentication</MAuthentication>
+      <MAuthenticationmode>Authentication Method</MAuthenticationmode>
+      <Mnone>N/A</Mnone>
+    </page>
+  </OnvifMain>
+  <GB28181Main>
+    <Page>
+      <MRegistrationplat>Registered VMS</MRegistrationplat>
+      <MRegistrationplatform1>Registered VMS 1</MRegistrationplatform1>
+      <MRegistrationplatform2>Registered VMS 2</MRegistrationplatform2>
+      <MRegistrationplatform3>Registered VMS 3</MRegistrationplatform3>
+      <MRegistrationplatform4>Registered VMS 4</MRegistrationplatform4>
+      <MGb28181Enable>Enable</MGb28181Enable>
+      <MLocalport>Local Port Number</MLocalport>
+      <Mgbnetid>Network Access ID</Mgbnetid>
+      <Mgbdevname>Camera Name</Mgbdevname>
+      <Mgbplatid>VMS ID</Mgbplatid>
+      <Mgbplataddrv4>VMS Address (IP V4)</Mgbplataddrv4>
+      <Mgbplataddrv6>VMS Address (IP V6)</Mgbplataddrv6>
+      <Mplatport>VMS Port Number</Mplatport>
+      <Mgbusername>User Name</Mgbusername>
+      <Mgbuserpassword>Password</Mgbuserpassword>
+      <MAlarmnumber>Number</MAlarmnumber>
+      <Mgbrelettime>Renewal Time</Mgbrelettime>
+      <Mgbheartbeat>Heartbeat Signaling Interval</Mgbheartbeat>
+      <Mownership>Camera Ownership</Mownership>
+      <Mcivilcode>Administrative Region</Mcivilcode>
+      <Mpolicergn>Guard Area</Mpolicergn>
+      <Msetupaddress>Installation Address</Msetupaddress>
+      <Mgbencchns>Channel ID</Mgbencchns>
+      <MgbencvideoID>Video Encoding Channel ID</MgbencvideoID>
+      <Mgbencvideoname>Video Encoding Channel Name</Mgbencvideoname>
+      <Mgbalarmchnsid>Alarm ID</Mgbalarmchnsid>
+      <Mgbalarmchnsname>Alarm Name</Mgbalarmchnsname>
+      <Mconfiguration>Extension Setting</Mconfiguration>
+      <MOptionalconfiguration>Optional Extension Setting</MOptionalconfiguration>
+      <MDataexists>Already exists.</MDataexists>
+	  <MStreamType>IPC Stream Type</MStreamType>
+	  <StreamTypeInOpt1>Main Stream</StreamTypeInOpt1>
+      <StreamTypeInOpt2>Secondary Stream</StreamTypeInOpt2>
+      <StreamTypeInOpt3>Third Stream</StreamTypeInOpt3>
+      <StreamTypeInOpt4>Fourth Stream</StreamTypeInOpt4>
+	  <StreamTypeInOpt5>Fifth Stream</StreamTypeInOpt5>
+    </Page>
+    <titletips></titletips>
+  </GB28181Main>
+</AccessProtocol>

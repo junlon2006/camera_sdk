@@ -1,0 +1,93 @@
+/*
+config_menu左侧菜单
+*/
+.configmenu 
+{ width:168px; display:inline;}
+.configmenu .displaynone
+{
+    display:none;
+}
+.mainmenu
+{
+	/*padding-left:6px;*/
+	/*border-top: 1px solid #C6C6C7;
+	font-weight:bold;*/
+	width:168px;
+	overflow: hidden;
+	border-bottom:1px solid #d1d1d1;
+}
+.collapsed 
+{
+	height:25px;
+	/*background:#f9f9f9 url(../../images/config/ico_menu_link.png) 10px 10px  no-repeat;*/
+	background:#f9f9f9;
+}
+.currentMenu 
+{
+    /*font-weight:bold;*/
+}
+.menuspan 
+{
+	display: block;
+	height:25px; line-height:25px;
+	color: #000;
+	font-size:14px;
+	font-weight:normal;
+	/*background:#f9f9f9 url(../../images/config/open_down.png) no-repeat 95% 50%;**/
+	background:#f9f9f9 ;
+	cursor: pointer;
+	text-indent:20px;
+	border-bottom:1px solid #d1d1d1;
+
+	
+}
+.menuspaninc {background:#f9f9f9 url(../../images/config/open_down.png) no-repeat 95% 50%;}   /***选中的向下箭头***/
+.collapsed .menuspan
+{
+	 background: url(../../images/config/down_normal.png) no-repeat 95% 50%;
+}
+
+
+
+
+.menulabel
+{
+    font-size:12px;
+	cursor:pointer;
+}
+.submenu
+{
+	width:169px;
+	/*padding: 5px 10px;*/
+	/*background: #FFFFFF url(point.gif) no-repeat center left;*/
+	background: #f1f1f1;
+	display: block;
+	color: #000;
+	font-size:12px;
+	height:25px; line-height:25px;
+	font-weight:normal;
+	text-indent:31px;
+
+	blr:expression(this.onFocus=this.blur());	
+
+}
+.current 
+{
+	
+	color:#fff; 
+     background:#4f9fe6 url(../../images/config/ico_menu_hover.png)  160px 10px  no-repeat;
+}
+.local 
+{
+	
+	
+}
+.basic 
+{
+	
+}
+
+.advanced 
+{
+	
+}

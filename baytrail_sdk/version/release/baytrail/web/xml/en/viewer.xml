@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Viewer>
+  <Page>
+    <MPreset>Preset</MPreset>
+    <MPTZpanel>PTZ Control</MPTZpanel>
+    <MSizeauto>Adaptive</MSizeauto>
+    <MsizeX1>Original Size</MsizeX1>
+  </Page>
+  <opt>
+    <MaviewTypeOpt1>Main Stream</MaviewTypeOpt1>
+    <MaviewTypeOpt2>Secondary Stream</MaviewTypeOpt2>
+    <MaviewTypeOpt3>Third Stream</MaviewTypeOpt3>
+    <MaviewTypeOpt4>Fourth Stream</MaviewTypeOpt4>
+  </opt>
+  <titletips>
+    <Mstandard>Standard</Mstandard>
+    <Mcourt>Court</Mcourt>
+    <Mscntitne>Effect parameters</Mscntitne>
+    <Maddscn>Add Scene</Maddscn>
+    <Mscnname>Scene Name</Mscnname>
+    <Mscnsave>Save parameters</Mscnsave>
+    <Mplay>Play</Mplay>
+    <Mpause>Pause</Mpause>
+    <Mstop>Stop</Mstop>
+    <Mcall>Call</Mcall>
+    <Mcap>Snapshot</Mcap>
+    <Mrecord>Recording</Mrecord>
+    <Mstate>Streaming Information</Mstate>
+    <Mfull>Full Screen</Mfull>
+    <Mreset>Reset</Mreset>
+    <Msound>Volume</Msound>
+    <MLoadTitle>Load</MLoadTitle>
+    <MSetTielt>Setting</MSetTielt>
+    <MCleanTitle>Clear</MCleanTitle>
+    <Mcruise>Pan Patrol</Mcruise>
+    <Mstopcall>Stop Call</Mstopcall>
+    <Mcallsucc>Call succeeded</Mcallsucc>
+    <Mcallerr>Call failed</Mcallerr>
+    <Mcallstoperr>Stopping call failed</Mcallstoperr>
+    <Mcapsucc>Snapshot Succeeded</Mcapsucc>
+    <Mcaperr>Snapshot Failed</Mcaperr>
+    <Mrecordsucc>Recording succeeded</Mrecordsucc>
+    <Mrecorderr>Recording failed</Mrecorderr>
+    <Mgopresssuc>Loaded</Mgopresssuc>
+    <Mopterr>Operation Failed</Mopterr>
+    <Msetsucc>Saved</Msetsucc>
+    <MCleansucc>Cleared</MCleansucc>
+    <imageadjust>Image Adjustment</imageadjust>
+    <brightness>Brightness</brightness>
+    <constrast>Contrast</constrast>
+    <saturation>Saturation</saturation>
+    <acutance>Sharpness</acutance>
+    <MRestoredefault>Restore</MRestoredefault>
+    <MAsk>Do you want to restore the default?</MAsk>
+    <MSuccess>Save Succeeded</MSuccess>
+    <MError>Operation Failed</MError>
+    <ptz>
+      <MzoomIn>Zoom In</MzoomIn>
+      <MzoomOut>Zoom Out</MzoomOut>
+      <MpullAway>Focus-</MpullAway>
+      <MpushIn>Focus+</MpushIn>
+      <MfocusautoPush>Auto Focus</MfocusautoPush>
+      <MirisIn>Aperture+</MirisIn>
+      <MirisOut>Aperture-</MirisOut>
+      <Mfocusauto>Auto Aperture</Mfocusauto>
+      <Mlight>Enable Backlight</Mlight>
+      <Mmist>Disable Backlight</Mmist>
+      <Maddlight>Brighten IR Light</Maddlight>
+      <Msubmist>Weaken IR Light</Msubmist>
+      <Mrain>Wiper</Mrain>
+    </ptz>
+    <LoginConnectTimeoutTips>Timeout, please login again.</LoginConnectTimeoutTips>
+    <Mdiskfull>Disk full, recording stopped.</Mdiskfull>
+  </titletips>
+</Viewer>

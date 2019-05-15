@@ -1,0 +1,440 @@
+<ul class="tabs" id="tabSystemMaintenance">
+    <li><a href="javascript:ia(Maintain).update();" name="aMaintain" id="aMaintain"></a></li>
+</ul>
+<div id="DivSystemMaintenance" class="panes">
+      <div class="pane">
+       <div id="diMaintain">
+          <div class="mainparams">
+					<label  name="laRestart"></label>
+		 </div>
+         <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="laRestart"></label></span>
+            <span class="localsecondspan">
+                <input type="button"  value="" name="laRestart" class="buttonclass" onclick="systemreboot()"/>
+            </span>
+            <span><label id="laDeviceNameTips" class="tips"/></span>
+         </div>
+         <div id="subfind">
+             <div class="mainparams main_top10">
+                <label id="laFound" name="laFound"></label>
+             </div>
+             <div class="subparamswhite main_top10">
+                    <span class="firstspan"><label name="laFlashingtime"></label></span>
+                    <span class="localsecondspan">
+                        <select class="selectwidth width100" id="speedselct">
+                          <option name="js5s" value="5s"></option>
+                          <option name="js10s" value="10s"></option>
+                          <option name="js30s" value="30s"></option>
+                          <option name="js1m" value="1m"></option>
+                          <option name="js30m" value="30m"></option>
+                          <option name="js60m" value="60m"></option>
+                          <option name="js24h" value="24h"></option>
+                        </select>
+                    </span>
+                 </div>
+              
+              <div class="subparamsgray main_top10" id="subutomaintain">
+           		 <span class="firstspan"><label  name="laFlashing"></label></span>
+            	 <span class="localsecondspan"><input type="button" value="" name="laFlashing"  class="buttonclass" onclick="ledfind()"></span>
+       		 </div>
+              
+              
+         </div>
+        
+          
+           
+         <div id="subautomaintain">  
+           <div class="mainparams main_top10">
+				<label name="laAutomaticmaintenance"></label>
+		  </div>
+         <div class="subparamswhite">
+            <span class="firstspan"><label name="MEnable"></label></span>
+            <span class="localsecondspan main_top10">
+                <input type="checkbox" class="checkbox" id="automaintainenable" onclick="checkbox(this)" />
+            </span>
+         </div>
+         <div class="subparamsgray main_top10">
+                <span class="firstspan "><label name="lamaintenancecycle"></label></span>
+                <span class="localsecondspan">
+                   <select class="selectwidth width100" id="cycleType">
+                  <option value="everyday"></option>
+                  <option value="monday"></option>
+                  <option value="tuesday"></option>
+                  <option value="wednesday"></option>
+                  <option value="thursday"></option>
+                  <option value="friday"></option>
+                  <option value="saturday"></option>
+                  <option value="sunday"></option>
+                </select>
+                </span>
+           </div>
+            
+          <div class="subparamsgray main_top10">
+                <span class="firstspan"><label name="lamaintenancetime"></label></span>
+                <span>
+                  <input id="automaintainTime" class="Wdate" type="text" style="width:100px;" onclick="CreateCalendar(2)">
+                </span>
+           </div>
+           <div class="clear"></div>
+           <div class="subparamsgray" style=" margin-left:185px;">
+                <span class="localsecondspansys" style="margin-top:3px;">
+                   <input type="button" value="" name="MSaveConfigLocal"  id="automaintain" class="buttonclass" onclick="automaintain(this)" />
+                </span>
+                <span id="SetResultTipsautomaintain"></span>
+           </div>
+          </div> 
+           <div class="clear"></div>
+          <div class="mainparams main_top10">
+				<label  name="laRemoteUpgrade"></label>
+		 </div> 
+         <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="laRemoteUpgrade"></label></span>
+           <span class="localsecondspan"> <input type="button"  value="" class="buttonclass" name="laRemoteUpgrade" id="SysUpgrade" onclick="StateFile('teUpgradeFile')" /></span>
+         </div> 
+           
+           
+         <div class="mainparams main_top10">
+				<label name="laConManage"></label>
+		</div>
+         <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="btnSimpleRestore"></label></span>
+            <span class="localsecondspansys"><input type="button" name="btnSimpleRestore" class="buttonclass" onclick="factorydefaultSys('base')" /></span>
+            <span class="fixedTips"><label name="Tip1"></label></span>
+         </div>
+         
+         <div class="subparamsgray main_top10">
+            <span class="firstspan"><label name="btnCompleteRestore"></label></span>
+            <span class="localsecondspansys"><input type="button"  value="" name="btnCompleteRestore" class="buttonclass"  onclick="factorydefaultSys('full')" /></span>
+            <span class="fixedTips"><label name="Tip2"></label></span>
+         </div>
+         
+         <div class="subparamsgray main_top10">
+            <span class="firstspan"><label name="btnExportFile"></label></span>
+            <span class="localsecondspansys"><input type="button" class="buttonclass" value="" name="butExport" onclick="cfgdown()"></span>
+             <span class="fixedTips"><label name="Tip3"></label></span>
+           </div>
+         
+         <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="laParamImport"></label></span>
+            <span class="localsecondspansys"><input type="button" class="buttonclass" value="" name="btnImport" onclick="Introduction('tdPath')"></span>
+            <span class="fixedTips"><label name="Tip4"></label></span>
+         </div>
+
+         <div id="mainplugin" style="width:0; height:0"></div>
+       </div>
+       <div id="laServerUping"></div>
+       
+       <div id="SubAdvanceConfig">
+           <div class="mainparams main_top10" >
+                    <label name="laAdvanceCfg"></label>
+            </div> 
+            <div class="subparamsgray main_top10">
+                    <span class="firstspan"><label name="laAdvanceCfg"></label></span>
+                    <span class="localsecondspan">
+                       <input type="button"  value="" name="laconfigure" class="buttonclass" id="AdvanceConfig" onclick="AdvanceConfig()" />
+                    </span>
+               </div>
+       </div>
+       
+       
+   </div>
+   <div class="spansave" style=" height:30px;margin-top:30px;"><span id="SetSystemTips"></span></div>
+  <!-- <div id="UpgradeId" style="width:500px; height:120px; margin:0 auto; display:none;">
+      
+         <span class="progressBar" id="pb1">100%</span>
+     
+   </div>-->
+</div><!--<div class="panes">-->
+<style>
+.width120 {width:100px;}
+.width50 { width:50px;}
+.display { display:none;}
+
+
+.divsimplemodafoot {
+	height:30px; line-height:30px; background:#d8d8d8;
+}
+.divWinTitle {
+	height:35px; 
+	background:#d8d8d8; 
+	line-height:35px;
+	text-indent:10px;
+}
+.simplemodaconter 
+{
+   /*margin:10px;*/
+  overflow:scroll;
+ overflow-x:hidden;
+}
+</style>
+<div id="divPortMapTable" style="display:none; height:auto;" >
+  <div class="divWinTitle">
+      <label name="laSuperuserauth" id="laSuperuserauth"></label>
+    </div>
+    <div class="simplemodaconter" style="padding:10px 0">
+         <div class="subparamsgray"> <span class="firstspan">
+        <label name="MUserName"></label>
+        </span> <span class="localsecondspan">
+        <input type="text" class="input_config width150" id="UserName" value="admin" disabled="disabled" />
+        </span> <span id="UserNametips"></span> </div>
+        
+        <div class="subparamsgray"> <span class="firstspan">
+        <label name="MPassword"></label>
+        </span> <span class="localsecondspan">
+        <input type="password" class="input_config width150" id="UserPWD" onkeydown="keydownEvent()" />
+        </span> <span id="UserPWDtips"></span> </div>
+    </div>
+    <div class="divsimplemodafoot">
+      
+        
+       		 <input id="" class="buttonclass" type="button" onclick="$.modal.impl.close();" style="margin-top:3px;margin-right:20px; float:right;" name="MlaCancel" value="">
+        
+         
+       		 <input id="btnIPFilterOK" class="buttonclass" type="button" name="MButOK" style="margin-top:3px;margin-right:20px; float:right;"  value="" onclick="AdvanceConfigOKclick()">
+        
+        <span id="spCheckResultTips" class="formtips" style="margin-right:20px; float:right;"></span>
+        
+   </div>
+   
+   
+  
+</div>
+
+<div id="divAdvanceinfoTable" style="display:none; height:auto;">
+    <div class="divWinTitle">
+      <label name="laAdvanceCfg" id="laScheduleEdit"></label>
+    </div>
+    <div class="simplemodaconter" style="height:400px;overflow:scroll;overflow-x:hidden;">
+        <!---码流时间戳标准--->
+       <div id="Subkedavsiptimestamp" style="display:none">
+            <div class="mainparams"><label name="MTimestamp"></label></div>
+            <div class="subadvancedparamsgray"> 
+             <span class="advancedfirstspan"><label name="MVSIPTimestamp"></label></span> 
+              <span class="localsecondspan" style="width:120px;">
+                        <input type="radio" name="kedavisiptimestamp" value="normal" class="radio" /> &nbsp;
+                        <label class="displayblock" name="MStandard"></label>
+             </span>
+             <span class="localsecondspan">
+                        <input type="radio" name="kedavisiptimestamp" value="old" class="radio" />&nbsp;
+                        <label class="displayblock" name="MOldStandard"></label>
+             </span>
+          </div>
+      </div> 
+        
+    
+        <div id="dvosd" style="display:none">
+         <div class="mainparams"><label name="AdCfg1"></label></div>
+          <div class="subadvancedparamsgray"> 
+             <span class="advancedfirstspan"><label name="AdCfg3"></label></span> 
+              <span class="localsecondspanadv" style="width:410px;"> 
+                        <input type="radio" name="osdpicsource" value="dev" class="radio" style="float:left; margin-top:8px;" /> &nbsp;
+                        <label class="displayblock" name="AdCfg2" style="float:left;  margin-left:10px;"></label>
+                        <select id="osdpicfont"  class="selectwidth" style="float:left;margin-left:2px;margin-top: 2px; min-width:100px;">
+                         <!-- <option id="jssong" value="song" name="jssong"></option>
+						  <option id="jsblack" value="black" name="jsblack"></option>
+                          -->
+                        </select>
+             </span>
+          </div>
+          <div class="subadvancedparamsgray"> 
+             <span class="advancedfirstspan"></span> 
+              <span class="localsecondspanadv" >
+                        <input type="radio" name="osdpicsource" value="client" class="radio" /> &nbsp;
+                        <label class="displayblock" name="AdCfg4"></label>
+             </span>
+          </div>
+        </div>
+        
+        <!------音视频流UDP保活_str------->
+        <div id="subkedavisipavlive" class="mainparams  main_top10" style="display:none"><label  name="AdCfg5"></label></div>
+        <!------VSIP申请的音视频流保活_str----->
+        <div class="subadvancedparamsgray" id="Subkedavsipavalive" style="display:none"> 
+              <span class="advancedfirstspan"><label name="AdCfg6"></label></span> 
+              <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="kedavisipavlive" value="auto" class="radio" /> &nbsp;
+                        <label class="displayblock" name="MAuto"></label>
+             </span>
+             <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="kedavisipavlive" value="open" disabled="disabled" class="radio" />&nbsp;
+                        <label class="displayblock" name="MEnable"></label>
+             </span>
+             <span class="localsecondspanadv">
+                        <input type="radio" name="kedavisipavlive" value="close" class="radio" />&nbsp;
+                        <label class="displayblock" name="optclose"></label>
+             </span>
+        </div>
+        <!---VSIP申请的音视频流保活_end--->
+        <!---Onvif(RTSP)申请的音视频流保活_str--->
+        <div class="subadvancedparamsgray"  id="Subonvifavalive" style="display:none"> 
+             <span class="advancedfirstspan"><label name="AdCfg7"></label></span> 
+              <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="onvifavlive" value="auto" class="radio" /> &nbsp;
+                        <label class="displayblock" name="MAuto"></label>
+             </span>
+             <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="onvifavlive" value="open" class="radio" />&nbsp;
+                       <label class="displayblock" name="MEnable"></label>
+             </span>
+             <span class="localsecondspanadv">
+                        <input type="radio" name="onvifavlive" value="close" class="radio" />&nbsp;
+                        <label class="displayblock" name="optclose"></label>
+             </span>
+        </div>
+        <!---Onvif(RTSP)申请的音视频流保活_end--->
+        <!---GB28181申请的音视频流保活_str--->
+        <div class="subadvancedparamsgray" id="subgb28181avalive" style="display:none"> 
+              <span class="advancedfirstspan"><label name="AdCfg8"></label></span> 
+              <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="gb28181avlive" value="auto" class="radio" /> &nbsp;
+                        <label class="displayblock" name="MAuto"></label>
+             </span>
+             <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="gb28181avlive" value="open" class="radio" />&nbsp;
+                        <label class="displayblock" name="MEnable"></label>
+             </span>
+             <span class="localsecondspanadv">
+                        <input type="radio" name="gb28181avlive" value="close" class="radio" />&nbsp;
+                        <label class="displayblock" name="optclose"></label>
+             </span>
+        </div>
+        <!---GB28181申请的音视频流保活_end--->
+        <!---网络适应性_str--->
+        <div id="SubNettccontrol" style="display:none">
+            <div class="mainparams"><label name="AdCfg9"></label></div>
+            
+            <div class="subadvancedparamsgray" id="subtccontrol" style="display:none"> 
+                 <span class="advancedfirstspan"><label name="AdCfg10"></label> </span> 
+                  <span class="localsecondspanadv" style="width:120px;">
+                            <input type="radio" name="tccontrol" value="false" class="radio" /> &nbsp;
+                            <label class="displayblock" name="optclose"></label>
+                 </span>
+                 <span>
+                            <input type="radio" name="tccontrol" value="true" class="radio" />&nbsp;
+                            <label class="displayblock" name="AdCfg11"></label>
+                 </span>
+            </div>
+            <div class="subadvancedparamsgray" id="sublimit" style="display:none"> 
+                 <span class="advancedfirstspan"><label name="Mlimit"></label> </span> 
+                 <span class="localsecondspanadv" >
+                            <input type="text"  value="" id="limit" class="input_config width50" onkeydown="return OnlyNumbers(event)"/>
+                            <span id="fixedlimitTips" class="fixedTips"></span>
+                            <span class="fixedTips">(Kbps)</span><span><label name="Mlimittips"></label></span>
+                            <span class="colortips" id="limitTips"></span>
+                 </span>
+                 
+            </div>
+        </div>
+        <!---网络适应性_end--->
+        <!---功能开关--->
+        <div class="mainparams" id="subaecsupport" style="display:none"><label  name="AdCfg13"></label></div>
+        <!---支持回声抵消_str--->
+        <div class="subadvancedparamsgray" id="subaec" style="display:none"> 
+             <span class="advancedfirstspan"><label name="AdCfg12"></label></span> 
+              <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="aecsupport" value="false" class="radio" /> &nbsp;
+                        <label class="displayblock" name="optclose"></label>
+             </span>
+             <span class="localsecondspanadv">
+                        <input type="radio" name="aecsupport" value="true" class="radio" />&nbsp;
+                        <label class="displayblock" name="AdCfg14"></label>
+             </span>
+        </div>
+        <!---支持回声抵消_end--->
+        <div class="subadvancedparamsgray" id="subdynamicosd" style="display:none"> 
+             <span class="advancedfirstspan"><label name="ladynamicosd"></label></span> 
+              <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="dynamicosd" value="false" class="radio" /> &nbsp;
+                        <label class="displayblock" name="optclose"></label>
+             </span>
+             <span class="localsecondspanadv">
+                        <input type="radio" name="dynamicosd" value="true" class="radio" />&nbsp;
+                        <label class="displayblock" name="MEnable"></label>
+             </span>
+        </div>
+        
+        <div id="submtcfcat" style="display:none">
+            <div class="mainparams" id="submtcf"><label id="aadcap" name="aadcap"></label></div>
+            <div class="subadvancedparamsgray" id="aacmode"> 
+                  <span class="advancedfirstspan"><label id="MLowdelaymodel" name="MLowdelaymodel"></label></span> 
+                  <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="advancedmtcf" value="autolow" class="radio" /> &nbsp;
+                        <label id="MautoLowdelaymodel" class="displayblock" name="MautoLowdelaymodel"></label>
+                 </span>
+                 <span class="localsecondspanadv" style="width:120px;">
+                        <input type="radio" name="advancedmtcf" value="normal" class="radio" /> &nbsp;
+                        <label class="displayblock" name="MNormalmode"></label>
+                 </span>
+                 <span class="localsecondspanadv">
+                        <input type="radio" name="advancedmtcf" value="low" class="radio" />
+                        <label name="MForcedlowdelaymodel" id="MForcedlowdelaymodel" class="displayblock"></label>
+                 </span>
+                 <span>
+                   <img src="../../images/config/help_tips.png" onclick="mtcfhelp_tips('aacmode')" width="16px" height="16px" style="cursor:pointer;vertical-align:middle;" />
+                </span>
+            </div>
+            <div class="subadvancedparamsgray" id="submtcfchange"> 
+                 <span class="advancedfirstspan"><label id="Mmode" name="Mmode"></label></span> 
+                  <span class="localsecondspanadv" style="margin-top:5px">
+                    <select class="selectwidth width152" id="modechange" onchange="modechange(this)">
+                    </select>
+                 </span>
+                 <span class="localsecondspanadv">
+                      <label id="MRestart" name="MRestart"></label>
+                 </span>
+                 <span>
+                   <img src="../../images/config/help_tips.png" onclick="mtcfhelp_tips('mtcfmode')" width="16px" height="16px" style="cursor:pointer;vertical-align:middle;" />
+                </span>
+            </div>
+        </div>
+        
+        <!---降噪--->
+        <div id="Subreduction" style="display:none">
+        	 <div class="mainparams"><label name="Mreduction"></label></div>
+             <div class="subadvancedparamsgray" id="SubCapdenoise" style="display:none"> 
+                 <span class="advancedfirstspan"><label name="MAcquisition"></label></span> 
+                  <span class="localsecondspanadv" style="width:120px;">
+                            <select id="capdenoiseopt"  class="selectwidth" style="min-width: 100px;">
+                        	</select>
+                 </span>
+                 <span><label class="displayblock" name="AdCfg11"></label></span>
+                 
+            </div>
+            
+            <div class="subadvancedparamsgray" id="SubDecdenoise" style="display:none"> 
+                 <span class="advancedfirstspan"><label name="MDecoding"></label></span> 
+                  <span class="localsecondspanadv" style="width:120px;">
+                            <select id="decdenoiseopt"  class="selectwidth" style="min-width: 100px;">
+                        	</select>
+                 </span>
+                 <span><label class="displayblock" name="AdCfg11"></label></span>
+            </div>
+        
+        </div>
+        
+        
+        
+    </div>
+  <div class="divsimplemodafoot">
+      <input  class="buttonclass" type="button" id="AdvanceSaveCloseclick"  onclick="$.modal.impl.close();" style=" margin-top:3px;margin-right:20px; float:right;" name="optclose" value="">
+      <input class="buttonclass" type="button" id="AdvanceSaveOKclick" name="MSaveConfigLocal" style=" margin-top:3px;margin-right:20px; float:right;"  value="" onclick="AdvanceSaveOKclick()">
+      <span id="AdvanceSaveTips" class="formtips" style="margin-right:20px; float:right;"></span>
+  </div>
+</div>
+
+
+<div id="divHelpTipsTable11" style="display:none; height:auto;" >
+    <div class="scheduleedittitlediv" id="divScheduleTitle" style="font-weight:normal;">
+      <label name="htlptitle" id="htlptitle" style="font-weight:bold"></label>
+    </div>
+      <div  style="margin:10px 20px;line-height:25px; display:inline-block;vertical-align:top;width:560px;word-wrap:break-word; white-space:normal;word-break:normal;"> 
+          <span style="display:block"><label name="htlpmodeltips1"></label></span>
+          <span style="display:block; margin-left:10px;""><label name="htlpmodeltips2"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips3"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips4"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips5"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips6"></label></span>
+      </div>
+  <div class="userfoot" style="height:30px; line-height:30px; background:#d8d8d8; ">
+      <input id="" class="buttonclass" type="button" onclick="help_tipsclose()" style=" margin-top:3px;margin-right:20px; float:right;" name="optclose" value="">
+  </div>
+</div>

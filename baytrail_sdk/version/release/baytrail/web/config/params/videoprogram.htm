@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabVideoProgram">
+    <li><a href="javascript:ia(VideoProgram).update();"  name="MVideoProgram" id="MVideoProgram"></a></li>
+</ul>
+<div class="panes" id="divVideoProgram">
+    
+<div class="pane" id="VideoProgram">
+         <div class="mainparams main_top10"><label name="Mrecordconfig" id="Mrecordconfig"></label></div>
+            <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="Mrecordtype"></label></span>
+            <span class="localsecondspan">
+                <select id="Selectrectype" class="selectwidth width180">
+                  <!--<option value="main">主流</option>
+                  <option value="assist">辅流</option>-->
+                </select>
+            </span>
+            <span style="display:none"><label name="MRestart"></label></span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="MStreampackaging"></label></span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width180" id="SelectEsPs">
+                </select>
+            </span>
+            <span><label name="MRestart"></label></span>
+           </div>
+           
+           
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="MPrerecordedway" id="MPrerecordedway"></label></span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width180" id="SelectPrepareTime">
+                </select>
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="Mrecorddelay"></label></span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width180" id="SelectDelayTime">
+                  
+                </select>
+            </span>
+           </div>
+          
+          
+       <div class="mainparams main_top26"><label name="MScheduledRecording"></label></div>
+           <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="laEnable"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" id="VideoProgramenalbled" onclick="checkbox(this)"/>
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="MTimeTable"></label></span>
+            <span class="localsecondspan">
+		        <input type="button" onclick="EditSchedule()" class="buttonclass" name="MButEdit" id="ScheduleEditBtnInput"  value="">
+            </span>
+           </div>
+          <div class="spansave"><input type="button"  class="input_save"  id="SaveVideoProgram" onclick="TimingTaskSave(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsVideoProgram"></span></div>
+    </div>
+
+</div><!--<div class="panes">-->
+<div id="TimeScheduleEdit1"></div>

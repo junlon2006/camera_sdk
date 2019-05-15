@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>摄像机-云台</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+</head>
+<body>
+<div id="contenter" class="contenter">
+   <div class="topTitle"><span>云台维护&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"><a href="index.htm">返回目录</a></span>
+  <span class="topTitlespan"></span>
+  </div>
+  <div class="TitleExplaintable">
+  <table class="tabhelp">
+         <tr class="tabtr">
+           <td width="17%" class="tabtd"><b>云台版本</b></td>
+           <td width="83%" class="tabtd tableft">显示云台版本。</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>扫描速度等级</b></td>
+           <td  class="tabtd tableft">设置巡航扫描时的速度等级（1~40），数值越大，扫描速度越快。</td>
+         </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>景深比例</b></td>
+           <td class="tabtd tableft">勾选开启景深比例。在不同视野下，云台转动保持相同的线速度。当视野放大时，云台减小线速度；视野缩小时，云台增大线速度。</td>
+            </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>断电恢复</b></td>
+           <td class="tabtd tableft">1.勾选开启断电恢复；
+           <br/>2.选择恢复方式:
+           <br/><b>上电加载预置位：</b>即在断电重启后加载到设置的预置位。选择上电加载预置位后，填写需加载的预置位编号。
+           <br/>
+           <b>断电记忆：</b>云台在同一个位置停止时间达到设置时间，自动记录云台当前位置。设备重启后，云台会自动载入这个位置。默认设置时间为60s。
+            <div class="note">说明：预置位需提前设置好才能调用。</div></td>
+           </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>云台恢复出厂</b></td>
+           <td class="tabtd tableft">所有已设的云台设置将被重置为出厂设置。</td>
+          </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>云台升级</b></td>
+           <td class="tabtd tableft">云台升级是对球机固件进行升级，非特殊情况下，无需升级。云台升级需获取本地升级文件<*.bin>，在升级过程中，请耐心等待，并不能做其他操作。</td> 
+          </table>
+   </div>
+   <div id="contenter" class="contenter">
+    <div class="topTitle"><span>守望设置&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+ <div class="systext">守望功能指球机在设定的时间内没有接收到控制指令就能运行所设定的动作。可设定动作包括：水平扫描、垂直扫描、载入预置位、路径巡航、帧扫描、随机扫描、全景扫描和花样扫描。</div>
+  <div class="systext"><b>使能-</b>勾选开启守望任务。</div>
+  <div class="systext"><b>守望模式-</b>在下拉框中选择守望模式。</div>
+  <div class="TitleExplaintable">
+   <table class="tabhelp">
+         <tr class="tabtr">
+           <td width="17%" class="tabtd"><b>水平扫描</b></td>
+           <td width="83%" class="tabtd tableft">摄像机自动从水平位置0°到360°水平巡视。时间可设置，默认1分钟。</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>垂直扫描</b></td>
+           <td  class="tabtd tableft">在摄像头允许的角度范围中自动垂直（0°至180°）扫描，时间可设置，默认1分钟。</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>载入预置位</b></td>
+           <td  class="tabtd tableft">停止对摄像头操作的一段时间后，摄像头将自动回归到用户自己设定的预置位。时间可设置，默认3分钟。预置位设置可参考预置位设置部分。</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>路径巡航</b></td>
+           <td  class="tabtd tableft">停止对摄像头操作的一段时间后，摄像机自动启动路径巡航功能。时间可设置，默认1分钟。</td>
+         </tr>
+          <tr class="tabtr">
+           <td  class="tabtd"><b>帧扫描</b></td>
+           <td  class="tabtd tableft">每隔一个关键帧间隔时间，摄像机自动水平转动90°，时间可设置，默认1分钟。</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>随机扫描</b></td>
+           <td  class="tabtd tableft">摄像机自动在水平方向上左右随机巡视，时间可设置，默认1分钟。</td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>全景扫描</b></td>
+           <td  class="tabtd tableft">摄像机进行水平方向0°~360°以及垂直位置0°~180°全面巡视，时间可设置，默认1分钟。</td>
+         </tr>
+          <tr class="tabtr">
+           <td  class="tabtd"><b>花样扫描</b></td>
+           <td  class="tabtd tableft">摄像机按已记录的时间段内云台运动轨迹进行巡视，时间可设置，默认1分钟。  </td>
+         </tr>
+         </table>
+    </div>
+    <div id="contenter" class="contenter">
+     <div class="topTitle"><span>预置位&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext">预置位是一组包含云台位置、镜头焦距的信息。由用户设置保存，并可随时调用，更改删除。</div>
+<div class="systext">调节云台到指定位置，并根据需要调整视野、光圈、焦距，在<b>预置点编号</b>下拉框中选择编号，在<b>预置点名称</b>中输入预置点名称，点击<b>设置</b>按钮，即完成预置位的设置。可依次设置不同的摄像机位置。点击<b>调用</b>按钮，即可调用相应编号的预置位。点击<b>删除</b>按钮，则删除相应编号的预置位。</div>
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle"><span>限位&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext">限位分为键控限位和扫描限位。启用限位功能后，可以对云台扫描的边界进行设置。</div>
+  <div class="systext">设置方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright"></span>勾选启用键控限位或扫描限位功能，调节云台到合适位置，并设置当前位置为左限位，再次调节云台位置，设置为右限位。设置完成后，立即生效。若要清除限位，点击限位清除按钮即可。
+     <p><span class="marginright"></span>设置后，如果开启键控限位功能，则手动控制云台的转动只能在左限位和右限位之间进行进行转动；如果开启扫描限位功能，则云台只能在左限位和右限位之间进行水平扫描。
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle"><span>巡航扫描&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+ <div class="systext">巡航扫描是指对某一路径上所有有效设置的预置位进行巡航。开启该功能后，点击任意云台控制按钮即可停止该功能。目前，路径1包括1~32号预置位，路径2包括第33~64号预置位，以此类推。</div>
+<div class="systext">操作方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>在巡航路径下拉框中选择巡航路径；
+     <p><span class="marginright">2.</span>点击添加按钮，在弹出的界面中添加预置点并设置停留时间。每条路径最多可添加32个预置点；
+     <p><span class="marginright">3.</span>点击保存；<p><span class="marginright">4.</span>根据操作需要点击相应按钮进行调用、删除、停止巡航扫描的操作。
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle"><span>花样扫描&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext">花样扫描是指摄像机按已记录的时间段内云台运动轨迹进行巡视。一共可设置4条花样扫描路径。</div>
+  <div class="systext">设置方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright"></span>在<b>扫描路径</b>下拉框中选择花样扫描路径，点击<b>开始记录</b>按钮，搭配调整云台控制，记录云台转动、步长、视野拉伸操作，点击<b>停止记录</b>按钮，停止记录，每条路径最长记录十分钟。
+     <p><span class="marginright"></span>点击<b>预览</b>按钮，浏览所记录的云台操作。点击<b>停止</b>按钮，停止预览。
+     <p><span class="marginright"></span>选择路径，点击<b>记录清除</b>按钮，即可删除该路径下所记录的云台操作。
+  </div>
+  <div id="contenter" class="contenter">
+   <div class="topTitle"><span>定时任务&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext">启用定时任务，设置定时任务时间及操作任务，在任务时间内，摄像机执行其操作任务。</div>
+  <div class="systext">设置方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选启用定时任务；
+     <p><span class="marginright">2.</span>输入任务恢复时间（5~720s），例如5秒，在任务时间内进行其他云台操作，5秒后，摄像机恢复其定时操作任务；
+     <p><span class="marginright">3.</span>点击编辑按钮，在弹出的界面中勾选时间段，选择开始时间和结束时间，不同时间段编号项所设置的时间段不可重叠；
+     <p><span class="marginright">4.</span>在守望模式下拉框中选择需执行的定时任务；
+     <p><span class="marginright">5.</span>设置编号，如果任务有多条扫描路径或多个预置位，编号可设置（如花样扫描有多条扫描路径，则任务参数可设置为扫描路径编号值；如加载预置位，可设置预置位编号值），反之，则无法设置；
+     <p><span class="marginright">6.</span>复制，点击复制按钮，可以将设置的任务时间复制到其他某一天或一整星期。
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle"><span>定位&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext">零位矫正：当进行载入预置位等云台操作时，各位置都出现错位，此时必须进行零位校正。零位校正后，摄像机的零位将自动被矫正到机械零位。点击零位矫正按钮，即可进行零位矫正。</div>
+  <div class="systext">定位方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright"></span>调节云台到指定位置，即可显示当前位置的坐标信息。根据当前位置的坐标信息，在水平坐标和垂直坐标栏中填写目标位置坐标信息。点击<b>水平定位</b>按钮，即可在水平方向转动云台至水平坐标位置。点击<b>垂直定位</b>按钮，即可在垂直方向转动云台至垂直坐标位置。点击<b>精准定位</b>按钮，即可转动云台至水平坐标和垂直坐标目标位置。
+       </div>
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+<span class="title1"></span>
+</body>
+</html>

@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabImagsSettings">
+    <li><a href="javascript:ia(ImagsSets).update();" name="aImagsSets" id="aImagsSets" ></a></li>
+</ul>
+
+<div id="DivImagsSettings" class="panes" >
+    <div class="pane" id="divImagsSets" style="height:740px;">
+      <div class="Imags_left" style="height:350px; background:#FFF">
+       <div id="mainplugin" style=" width:352px;height:254px;background:#3b3b3b;">
+       </div>
+        <div id="blccustom" style="display:none;margin-top:10px;">
+        <input type="button" onclick="StartImages(this)" id="StartImages" value="" class="buttonclass"   />
+        <input type="button" onclick="Clearmages()" id="Clearmages" disabled="disabled" value="" name="Mcleanall" class="buttonclass"  />
+        <input type="button" onclick="SafeImages()" id="SafeImages" disabled="disabled" value="" name="Mset" class="buttonclass" />
+        </div>
+        
+        <style>
+		.icon-large {
+			width:100px;
+			cursor:pointer;
+			height:20px;
+			text-align:left;
+			line-height:20px; 
+			cursor:pointer;
+			background: url(../../images/login/expanded.png)  no-repeat 97% 50%;
+			}
+		.icon1 {
+			background: url(../../images/config/select.png)  no-repeat 97% 80%;
+			width:16px; height:16px;
+			cursor:pointer;
+			float:right;
+			margin-top:8px;
+			margin-right:5px;
+		}
+		.delicon {
+			background: url(../../images/config/del.png)  no-repeat 97% 80%;
+			width:16px; height:16px;
+			cursor:pointer;
+			float:right;
+			margin-top:2px;
+			margin-right:5px;
+		}
+		#ulmode { border:1px #CCC solid; line-height:20px; margin:2px 0;}
+		#ulmode li { cursor:pointer; line-height:20px; padding-left:4px;}
+		.scnbutton{width:140px; height:30px; line-height:30px; background:#4f9fe6; border:0px; color:#fff; font-weight:bold; margin-top:20px; cursor:pointer;}
+        </style>
+         <div style="float:right;margin-top:9px;">
+         
+         <div id="SaveConfigBtn" class="scnbutton" style="text-align:center"><i class="icon1"></i><label name='Mscntitne' style="cursor:pointer;"></label></div>
+         <ul id="ulmode" style="display:none">
+         </ul>
+         </div>
+      </div>
+       <div class="Imags_right">
+            <div style="width:100%;" id="hegigtisp">
+            
+              <div id="questions">
+	<ul>
+		<li class="clearfix" id="imageinfo">
+			<h5 id="lightnessh5"><label name="imageadjust" id="imageadjust"></label><b class="UI-ask"></b></h5>
+			<div class="foldContent">
+				<div class="subparamswhite360" id="sublightness">
+                        <span class="Imags_firstspan"><label id="brightness" name="brightness"></label></span>
+                        <span class="Images_localsecondspan">
+                           <div class="Images_slider200">
+                            <div id="slider-lightness" class="Images_slider"></div>
+                            <div class="Images_slider_value">
+                              <input type="text" id="lightness_value" onblur="CheackOnlyNum(this.value)" class="siderwid"  />
+                            </div>
+                           </div>
+                        </span>
+                </div>
+                <div class="clear"></div>
+                <div class="subparamsgray360" id="subcontrast">
+                        <span class="Imags_firstspan"><label id="constrast" name="constrast"></label></span>
+                        <span class="Images_localsecondspan">
+                          <div class="Images_slider200">
+                            <div id="slider-contrast" class="Images_slider"></div>
+                            <div class="Images_slider_value">
+                              <input type="text" id="contrast_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                            </div>
+                          </div>
+                        </span>
+                </div>
+                <div class="clear"></div>
+                <div class="subparamswhite360" id="subsaturation">
+                        <span class="Imags_firstspan"><label id="saturation" name="saturation"></label></span>
+                        <span class="Images_localsecondspan">
+                           <div class="Images_slider200">
+                            <div id="slider-saturation" class="Images_slider"></div>
+                            <div class="Images_slider_value">
+                              <input type="text" id="saturation_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                            </div>
+                           </div>
+                        </span>
+                </div>
+                <div class="clear"></div>
+                <div class="subparamsgray360" id="subsharpness">
+                        <span class="Imags_firstspan"><label id="acutance" name="acutance"></label></span>
+                        <span class="Images_localsecondspan">
+                           <div class="Images_slider200">
+                            <div id="slider-sharpness" class="Images_slider"></div>
+                            <div class="Images_slider_value">
+                              <input type="text" id="sharpness_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                            </div>
+                           </div>
+                        </span>
+                </div>
+			</div>
+		</li>
+		<li class="fold clearfix" id="exposure">
+			<h5 id="exposureh5"><label name="exposure"></label><b class="UI-bubble"></b></h5>
+			<div class="foldContent">
+				<div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label id="increase" name="increase"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="GainMode" onchange="ChangeGainMode()">
+                        </select>
+					</span>
+               </div>
+              
+               <div class="subparamswhite360" id="subgainmax">
+				    <span class="Imags_firstspan"><label id="increaselimit" name="increaselimit"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_gainmax" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                           <input type="text" id="gainmax_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+               <div class="clear"></div>
+              <div class="subparamswhite360" id="GainSlider">
+				    <span class="Imags_firstspan"><label id="increaselevel" name="increaselevel"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_gainlevel" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                           <input type="text" id="gainlevel_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                         </div>
+                       </div>
+					</span>
+              </div>
+              <div class="clear"></div>
+              <div id="subIris">
+                   <div class="subparamsgray360">
+                        <span class="Imags_firstspan"><label id="lightring" name="lightring"></label></span>
+                        <span class="Images_localsecondspan">
+                            <select class="Images_select2" id="IrisType" onchange="ChangeIrisType()">
+                              
+                            </select>
+                        </span>
+                   </div>
+                   <div class="subparamswhite360" id="sbuirissize">
+                        <span class="Imags_firstspan"><label id="ringsize" name="ringsize"></label></span>
+                        <span class="Images_localsecondspan">
+                           <div class="Images_slider200">
+                            <div id="slider_irissize" class="Images_slider"></div>
+                            <div class="Images_slider_value">
+                               <input type="text" id="irissize_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                             </div>
+                           </div>
+                        </span>
+                  </div>
+              
+                  <div class="subparamswhite360" id="subirislevel">
+                        <span class="Imags_firstspan"><label id="ringsensitivity" name="ringsensitivity"></label></span>
+                        <span class="Images_localsecondspan">
+                           <div class="Images_slider200">
+                            <div id="slider_irislevel" class="Images_slider"></div>
+                            <div class="Images_slider_value">
+                               <input type="text" id="irislevel_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                             </div>
+                           </div>
+                        </span>
+                  </div>
+              </div>
+              <div id="subshutter">
+                   <div class="subparamsgray360">
+                        <span class="Imags_firstspan"><label id="shutter" name="shutter"></label></span>
+                        <span class="Images_localsecondspan">
+                            <select class="Images_select2" id="ShuterMode" onchange="ChangeShuterMode()">
+                            </select>
+                        </span>
+                   </div>
+                   <div class="subparamswhite360" id="subshutermin">
+                        <span class="Imags_firstspan"><label id="shutterdwon" name="shutterdwon"></label></span>
+                        <span class="Images_localsecondspan">
+                            <select class="Images_select2" id="Shutermin" onchange="Chageshutter()">
+                            </select>
+                        </span>
+                   </div>
+                   <div class="subparamsgray360" id="subshutermax" style="display:none">
+                        <span class="Imags_firstspan"><label id="shutterupper" name="shutterupper"></label></span>
+                        <span class="Images_localsecondspan">
+                            <select class="Images_select2" id="Shuttershutermax" onchange="Chageshutter()">
+                              
+                            </select>
+                        </span>
+                   </div>
+               </div>
+               <div class="subparamsgray360" id="sublevel">
+				    <span class="Imags_firstspan"><label name="shutterlevel"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="Shutterlevel" onchange="Chageshutter()">
+                        </select>
+					</span>
+               </div>
+               
+               <div class="subparamsgray360" id="subAntiFlickerMode">
+				    <span class="Imags_firstspan"><label id="againstflash" name="againstflash"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="AntiFlickerMode" onchange="AntiFlickerMode()">
+                        </select>
+					</span>
+                    <span>
+                       <img src="../../images/config/help_tips.png" onclick="help_tips()" width="16px" height="16px" style="margin-left:-45px;cursor:pointer;vertical-align:middle;" />
+                    </span>
+               </div>
+			</div>
+		</li>
+        
+        
+        <li class="fold clearfix" id="focus">
+			<h5 id="focush5"><label name="focusing" id="focusing"></label><b class="UI-bubble"></b></h5>
+			<div class="foldContent">
+				<div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label id="focusmode" name="focusmode"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="FocusType" onchange="SetFocus('mode')">
+                        </select>
+					</span>
+                </div>
+                <div class="subparamsgray360" id="subminfocusdis" style="display:none">
+				    <span class="Imags_firstspan"><label id="minfocusdis" name="minfocusdis"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="focusminType" onchange="SetFocus('min')">
+                        </select>
+					</span>
+                </div>
+                <div class="subparamsgray360" id="submaxfocusdis" style="display:none">
+				    <span class="Imags_firstspan"><label id="maxfocusdis" name="maxfocusdis"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="focusmaxType" onchange="SetFocus('max')">
+                        </select>
+					</span>
+                </div>
+			</div>
+		</li>
+        
+        <li class="fold clearfix" id="whiteblance">
+			<h5 id="whiteblanceh5"><label  name="whitebalance"></label><b class="UI-bubble"></b></h5>
+			<div class="foldContent">
+				<div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label name="whitebalance"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="WhiteBalance" onchange="ChangeWhiteBalance()">
+                        </select>
+					</span>
+              </div>
+              <div class="clear"></div>
+              <div class="subparamsgray360" id="sliderR">
+				    <span class="Imags_firstspan"><label id="whitebalance_R" name="whitebalance_R"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_R" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                           <input type="text" id="R_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                         </div>
+                       </div>
+					</span>
+              </div>
+              <div class="clear"></div>
+              <div class="subparamswhite360"  id="sliderB">
+				    <span class="Imags_firstspan"><label id="whitebalance_B" name="whitebalance_B"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_B" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                           <input type="text" id="B_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                         </div>
+                        
+                       </div>
+					</span>
+              </div>
+			</div>
+		</li>
+        
+        <li class="fold clearfix" id="ircutfilter">
+			<h5 id="ircutfilterh5"><label name="daynightchange"></label><b class="UI-bubble"></b></h5>
+			<div class="foldContent">
+				<div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label name="daynightchange1"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="IrcutfilterType" onchange="ChangeIrcutfilterType()">
+                        </select>
+					</span>
+                    
+              </div>
+              <div class="subparamsgray360" id="edittime" style="display:none;">
+				    <span class="Imags_firstspan" style="display:inline-block;"></span>
+					<span>
+                        <input type="button" value="" name="edittime"  onclick="EditTime()"/>
+					</span>
+              </div>
+              <div class="subparamsgray360" id="SubTriggerState">
+				    <span class="Imags_firstspan"><label id="springstate" name="springstate"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="TriggerType" onchange="ChangeTriggerType()">
+                          
+                        </select>
+					</span>
+              </div>
+             
+              <div class="subparamsgray360" id="subdaytonightlevel">
+				    <span class="Imags_firstspan"><label id="sensitivity" name="sensitivity"></label></span>
+					<span class="Images_localsecondspan">
+					   <div class="Images_slider200" style="margin-top:3px;">
+					    <div id="slider_daytonightlevel" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="daytonightlevel_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+                       
+                       <!-- <select class="Images_select2" id="daytonightlevel" onchange="daytonightlevel()">
+                          
+                        </select>-->
+					</span>
+              </div>
+              
+              <div class="subparamsgray360" id="subphotolevel" style="display:none">
+				    <span class="Imags_firstspan"><label id="photolevel" name="photolevel"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200" style="margin-top:3px;">
+					    <div id="slider_photolevel" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="photolevel_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+              <div class="subparamswhite360" id="subdaytonight">
+				    <span class="Imags_firstspan"><label id="changetime" name="changetime"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200" style="margin-top:3px;">
+					    <div id="slider_daytonight" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="daytonight_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                        <span style="display:inline-block;margin-left:20px;*margin-left:28px;"><label  name="MSeconds"></label></span>
+                       </div>
+					</span>
+              </div>
+              <div class="clear"></div>
+              
+               <div class="subparamswhite360" id="subthreshold" style="display:none">
+				    <span class="Imags_firstspan"><label name="M_threshold"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200" style="margin-top:3px;">
+					    <div id="slider_threshold" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="threshold_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              <div class="clear"></div>
+              
+			</div>
+		</li>
+        
+        
+        <!-----infrared--------->
+        <li class="fold clearfix" id="subliinfrared"  style="display:none">
+			<h5 id="infraredh5"><label name="jsinfrared"></label><b class="UI-bubble"></b></h5>
+            <div class="foldContent">
+                <div class="subparamsgray360" id="Subinfraredmode">
+                        <span class="Imags_firstspan"><label name="Mimagemode"></label></span>
+                        <span class="Images_localsecondspan">
+                            <select class="Images_select2" id="infraredmode" onchange="SetInfraredLaser('infrared','contrlmode')">
+                              
+                            </select>
+                        </span>
+                  </div>
+                  <div class="subparamsgray360" id="subinfraredlevel">
+				    <span class="Imags_firstspan"><label name="MStrength"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_infrared" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="infrared_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+             </div>
+        </li>
+        <!-----laser--------->
+        <li class="fold clearfix" id="sublilaser" style="display:none">
+			<h5 id="infraredh5"><label name="jslaser"></label><b class="UI-bubble"></b></h5>
+            <div class="foldContent">
+            	 <div class="subparamsgray360" id="Sublaser">
+                        <span class="Imags_firstspan"><label name="Mimagemode"></label></span>
+                        <span class="Images_localsecondspan">
+                            <select class="Images_select2" id="lasermode" onchange="SetInfraredLaser('laser','lasermode')">
+                              
+                            </select>
+                        </span>
+                  </div>
+                  <div class="subparamsgray360" id="sublaserlevel">
+				    <span class="Imags_firstspan"><label name="MStrength"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_laser" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="laser_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+                <div class="subparamsgray360" id="Sublasermode">
+                        <span class="Imags_firstspan"><label name="jsspotlightmode"></label></span>
+                        <span class="Images_localsecondspan">
+                            <select class="Images_select2" id="contrlmode" onchange="SetInfraredLaser('laser','contrlmode')">
+                              
+                            </select>
+                        </span>
+                  </div>
+             </div>
+        </li>
+        
+        
+        <li class="fold clearfix" id="ImageEnhancement">
+			<h5 id="ImageEnhancementh5"><label name="imageincerse"></label><b class="UI-bubble"></b></h5>
+			<div class="foldContent">
+                <div class="subparamsgray360" id="submode2d">
+				    <span class="Imags_firstspan"><label id="denoiseMode2D" name="denoiseMode2D"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="mode2d" onchange="Set2DNoisereduce()">
+                        </select>
+					</span>
+               </div>
+				<div class="subparamsgray360" id="noisereduce2D">
+				    <span class="Imags_firstspan"><label id="denoise2D" name="denoise2D"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_2D" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="2D_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+              <div class="subparamsgray360" id="submode3d">
+				    <span class="Imags_firstspan"><label id="denoiseMode3D" name="denoiseMode3D"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="mode3d" onchange="Set3DNoisereduce('select')">
+                        </select>
+					</span>
+              </div>
+              
+              <div class="subparamsgray360" id="noisereduce3D">
+				    <span class="Imags_firstspan"><label id="denoise3D" name="denoise3D"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_3D" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="3D_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+              <!---动态调节开--->
+               <div class="subparamsgray360">
+				    <span class="Imags_firstspan"><label id="dynamicaccommodation" name="dynamicaccommodation"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="backlightmode" onchange="Changebacklightmode()">
+                        </select>
+					</span>
+              </div>
+              <div class="subparamswhite360" id="wdr">
+				    <span class="Imags_firstspan"><label id="widerangesens" name="widerangesens"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_wdr" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="wdr_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              <div class="subparamswhite360" id="hlc">
+				    <span class="Imags_firstspan"><label id="strongligthdessens" name="strongligthdessens"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_hlc" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="hlc_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              <div class="subparamswhite360" id="subfogthrough" style="display:none">
+				    <span class="Imags_firstspan"><label id="Mfogthroughleve" name="Mfogthroughleve"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_fogthrough" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="fogthrough_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              <div class="subparamswhite360" id="subGammaleve" style="display:none">
+				    <span class="Imags_firstspan"><label id="MGammaleve" name="MGammaleve"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_Gammaleve" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="Gammaleve_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+              <div class="subparamswhite360" id="subsmartIR" style="display:none">
+				    <span class="Imags_firstspan"><label id="smartIRleve" name="smartIRleve"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_smartIR" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="smartIR_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+              <div class="subparamswhite360" id="autoblcevel">
+				    <span class="Imags_firstspan"><label id="BacklightCompensationsens" name="BacklightCompensationsens"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="slider_autoblc" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="autoblc_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+              
+              <div class="subparamsgray360" id="blc">
+				    <span class="Imags_firstspan"><label id="BacklightCompensationarea" name="BacklightCompensationarea"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="blcmode" onchange="Changeblcmode()">
+                           
+                        </select>
+					</span>
+              </div>
+              <div class="clear"></div>
+              <div id="subimageenhance" style="display:none"> 
+               <div class="subparamsgray360">
+				    <span class="Imags_firstspan"><label id="dynamicaccommodation" name="imageincerse"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="imageenhance_slect" onchange="imageenhance_mode()">
+                         
+                        </select>
+					</span>
+              </div>
+              <div class="clear"></div>
+              <div class="subparamswhite360" id="imageenhance_wdr" style="display:none">
+				    <span class="Imags_firstspan"><label id="widerangesens" name="widerangesens"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="imageenhance_slider_wdr" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="imageenhance_wdr_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              <div class="subparamswhite360" id="imageenhance_autoblcevel" style="display:none">
+				    <span class="Imags_firstspan"><label id="BacklightCompensationsens" name="BacklightCompensationsens"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="imageenhance_slider_autoblc" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="imageenhance_autoblc_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+              <div class="subparamsgray360" id="imageenhance_blc" style="display:none">
+				    <span class="Imags_firstspan"><label id="BacklightCompensationarea" name="BacklightCompensationarea"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="imageenhance_Images_select2" id="imageenhance_blcmode" onchange="imageenhance_Changeblcmode()">
+                           
+                        </select>
+					</span>
+              </div>
+              <div class="subparamswhite360" id="imageenhance_hlc" style="display:none">
+				    <span class="Imags_firstspan"><label name="strongligthdessens"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="imageenhance_slider_hlc" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="imageenhance_hlc_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              <div class="subparamswhite360" id="imageenhance_subsmartIR" style="display:none">
+				    <span class="Imags_firstspan"><label id="smartIRleve" name="smartIRleve"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="imageenhance_slider_smartIR" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="imageenhance_smartIR_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+              <div class="subparamswhite360" id="imageenhance_subfogthrough" style="display:none">
+				    <span class="Imags_firstspan"><label id="Mfogthroughleve" name="Mfogthroughleve"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="imageenhance_slider_fogthrough" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="imageenhance_fogthrough_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              <div class="subparamswhite360" id="imageenhance_subGammaleve" style="display:none">
+				    <span class="Imags_firstspan"><label id="MGammaleve" name="MGammaleve"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="imageenhance_slider_Gammaleve" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="imageenhance_Gammaleve_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+             </div>
+             
+             <!--------------互斥exclusion-------------->
+             <!---宽动?-->
+              <div class="subparamswhite360" id="exclusion_wdrEnable" style="display:none">
+				    <span class="Imags_firstspan"><label name="laEnable"></label><label name="widerange"></label></span>
+					<span class="Images_localsecondspan">
+                      <input type="checkbox" onclick="SetCheckBox('exclusion','wdr')" id="exclusion_wdr_enable" class="checkbox main_top5" >
+					</span>
+              </div>
+              <div class="subparamswhite360" id="exclusion_wdr" style="display:none">
+				    <span class="Imags_firstspan"><label id="widerangesens" name="widerangesens"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="exclusion_slider_wdr" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="exclusion_wdr_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+             
+             <!--------透雾--------->
+              <div class="subparamswhite360" id="exclusion_fogthroughEnable" style="display:none">
+				    <span class="Imags_firstspan"><label name="laEnable"></label><label name="Mfogthrough"></label></span>
+					<span class="Images_localsecondspan">
+                      <input type="checkbox" id="exclusion_fogthrough_enable" onclick="SetCheckBox('exclusion','fogthrough')" class="checkbox main_top5" >
+					</span>
+              </div>
+              <div class="subparamswhite360" id="exclusion_subfogthrough" style="display:none">
+				    <span class="Imags_firstspan"><label id="Mfogthroughleve" name="Mfogthroughleve"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="exclusion_slider_fogthrough" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="exclusion_fogthrough_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+               <!-----Gamma-------->
+              <div class="subparamswhite360" id="exclusion_gammaEnable" style="display:none">
+				    <span class="Imags_firstspan"><label name="laEnable"></label><label>Gamma</label></span>
+					<span class="Images_localsecondspan">
+                      <input type="checkbox" id="exclusion_gamma_enable" onclick="SetCheckBox('exclusion','gamma')" class="checkbox main_top5" >
+					</span>
+              </div>
+              <div class="subparamswhite360" id="exclusion_subgamma" style="display:none">
+				    <span class="Imags_firstspan"><label id="MGammaleve" name="MGammaleve"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider200">
+					    <div id="exclusion_slider_gammaleve" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="exclusion_gammaleve_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                        </div>
+                       </div>
+					</span>
+              </div>
+              
+              
+             
+             
+             
+			</div>
+		</li>
+        
+         <!---antishake-->
+        <li class="fold clearfix" id="SubAntishake">
+			  <h5 id="Antishake5"><label name="MAntishake"></label><b class="UI-bubble"></b></h5>
+              <div class="foldContent">
+                  <div class="subparamswhite360">
+                         <div id="SubAntishakeMode" class="subparamsgray360">
+                            <span class="Imags_firstspan"><label name="Mimagemode"></label></span>
+                            <span class="Images_localsecondspan">
+                            <select id="ModeAntishake" class="Images_select2" onchange="SetAntishake('mode','show');"></select>
+                            </span>
+                         </div>
+                         <div class="subparamswhite360" id="SubAntishakeLevel" >
+                            <span class="Imags_firstspan"><label name="MAntishakeLevel"></label></span>
+                            <span class="Images_localsecondspan">
+                               <div class="Images_slider200">
+                                <div id="slider_antishake" class="Images_slider"></div>
+                                <div class="Images_slider_value">
+                                    <input type="text" id="antishake_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                                </div>
+                               </div>
+                            </span>
+                        </div>
+                  </div>
+              </div>
+       </li>
+        
+        
+        <li class="fold clearfix" id="other">
+			<h5 id="otherh5"><label name="turnandecho"></label><b class="UI-bubble"></b></h5>
+			<div class="foldContent">
+				<div id="subcorridormode" class="subparamswhite360">
+				    <span class="Imags_firstspan"><label id="passagemode" name="passagemode"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="corridormode" onchange="Setcorridormode()">
+                          
+                        </select>
+					</span>
+              </div>
+              
+              <div id="subimagemode" class="subparamswhite360">
+				    <span class="Imags_firstspan"><label id="mirrormode" name="mirrormode"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="imagemode" onchange="Setimagemode()">
+                          
+                        </select>
+					</span>
+              </div>
+             
+              <div id="subcvbsmode" class="subparamsgray360">
+				    <span class="Imags_firstspan"><label id="localecho" name="localecho"></label></span>
+					<span class="Images_localsecondspan">
+					    <select class="Images_select2" id="cvbsmode" onchange="ChangeCvbsmode()">
+                          
+                        </select>
+					</span>
+              </div>
+			</div>
+		</li>
+        
+        
+	
+		
+		
+	</ul>
+</div>
+<!---结束----->
+            
+            </div>
+            <div style=" float:right; margin-top:20px;"><span id="SetResultImagsSettingsTips"></span></div>
+        </div>
+        
+    </div>
+    
+    <!--<div class="panes">-->
+</div>
+
+
+<div id="divTimeTable" style="display:none; height:auto;">
+    <style>
+#TabImags {width:560px;margin:0 auto;border-collapse: collapse;font-size: 12px;text-indent:20px;}
+#TabImags thead  td{ background:#f0f0f0;height:30px; line-height:30px;border: 1px solid #ccc;}
+#TabImags tbody  td { line-height:25px; border: 1px solid #ccc;padding:3px 0;}
+#TabImags .td1 { width:120px;}
+#TabImags .time { width:160px; }
+#TabImags .width120 {width:120px;}
+		
+				
+			  </style>
+    <div class="scheduleedittitlediv" id="divScheduleTitle" style="font-weight:normal;">
+      <label style="font-weight:bold" id="TitleTalbe"></label>
+    </div>
+    <div style="background:#FFF; padding-left:20px; padding-right:20px; ">
+       <div style="margin-top:20px">
+         <table border="0" cellspacing="0" cellpadding="0" id="TabImags">
+             <thead>
+                 <tr>
+                    <td class="td1"></td>
+                    <td class="time"><label id="MDayStartTime" name="MDayStartTime"></label></td>
+                    <td class="time"><label id="MDayEndTime" name="MDayEndTime"></label></td>
+                 </tr>
+              </thead>
+              <tbody>
+                 <tr>
+                    <td class="td1"><input type="checkbox" class="checkbox" onclick="AlldayTime(this)"  id="AllTime"  />&nbsp;<label id="Meveryday" name="Meveryday"></label></td>
+                    <td class="time"><input type="text"  id="starttimeALl" value="07:00:00" class="Wdate input_config width120"  onclick="CreateCalendar(2)"/></td>
+                    <td class="time"><input type="text"  id="endtimeALl" value="18:00:00" class="Wdate input_config width120"   onclick="CreateCalendar(2)"/></td>
+                 </tr>
+                 <tr>
+                    <td class="td1"><input type="checkbox" class="checkbox" name="weekday" id="Week01" onclick="weekday(1)" />&nbsp;<label name="MSunday" id="MSunday"></label></td>
+                    <td class="time"><input type="text" id="starttime01" value="07:00:00" class="Wdate input_config  width120" onclick="CreateCalendar(2)"/></td>
+                    <td class="time"><input type="text" id="endtime01" value="18:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                 </tr>
+                 <tr>
+                    <td class="td1"><input type="checkbox" class="checkbox"  name="weekday" id="Week02" onclick="weekday(2)"  />&nbsp;<label name="MMonday" id="MMonday"></label></td>
+                    <td class="time"><input type="text" id="starttime02" value="07:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                    <td class="time"><input type="text" id="endtime02" value="18:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                 </tr>
+                 <tr>
+                    <td class="td1"><input type="checkbox" class="checkbox" name="weekday" id="Week03" onclick="weekday(3)" />&nbsp;<label name="MTuesday" id="MTuesday"></label></td>
+                    <td class="time"><input type="text" id="starttime03" value="07:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                    <td class="time"><input type="text" id="endtime03" value="18:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                 </tr>
+                 <tr>
+                    <td class="td1"><input type="checkbox" class="checkbox" name="weekday" id="Week04" onclick="weekday(4)" />&nbsp;<label name="MWednesday" id="MWednesday"></label></td>
+                    <td class="time"><input type="text" id="starttime04" value="07:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                    <td class="time"><input type="text" id="endtime04" value="18:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                 </tr>
+                 <tr>
+                    <td class="td1"><input type="checkbox" class="checkbox" name="weekday" id="Week05" onclick="weekday(5)" />&nbsp;<label name="MThursday" id="MThursday"></label></td>
+                    <td class="time"><input type="text" id="starttime05" value="07:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                    <td class="time"><input type="text" id="endtime05" value="18:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                 </tr>
+                 <tr>
+                    <td class="td1"><input type="checkbox" class="checkbox" name="weekday" id="Week06" onclick="weekday(6)" />&nbsp;<label name="MFriday" id="MFriday"></label></td>
+                    <td class="time"><input type="text" id="starttime06" value="07:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                    <td class="time"><input type="text" id="endtime06" value="18:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                 </tr>
+                 <tr>
+                    <td class="td1"><input type="checkbox" class="checkbox" name="weekday" id="Week07" onclick="weekday(7)"  />&nbsp;<label name="MSaturday" id="MSaturday"></label></td>
+                    <td class="time"><input type="text" id="starttime07" value="07:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                    <td class="time"><input type="text" id="endtime07" value="18:00:00" class="Wdate input_config width120" onclick="CreateCalendar(2)"/></td>
+                 </tr>
+              </tbody>
+         </table>
+       
+         
+      </div>   
+      
+    </div>
+	<div class="userfoot" style="height:32px; line-height:32px; margin-top:20px; background:#e7e7e7; bottom:0px;">
+        <span style="float:right; margin-right:20px; ">
+           <span id="EditTimeTips" class="fixedTips"></span><input type="button" value="" name="Mset" class="buttonclass" onclick="SetTimeircutfilter()"/>
+          <!--<input id="UpgradeClose" disabled="disabled" class="savebtn" style=" padding:0 5px;" type="button" onclick="CancelScheduleDlg();" name="laCancel" value="">-->
+          <input type="button" onClick="CancelDlg();" class="buttonclass" value="" name="close" id="laCancel1">
+        </span>
+   </div>
+</div>
+<div id="divHelpTipsTable" style="display:none; height:auto;" >
+    <div class="scheduleedittitlediv" id="divScheduleTitle" style="font-weight:normal;">
+      <label name="htlptitle" id="htlptitle" style="font-weight:bold"></label>
+    </div>
+      <div  style="margin:10px 20px;line-height:25px; display:inline-block;vertical-align:top;width:560px;word-wrap:break-word; white-space:normal;word-break:normal;"> 
+          <span style="display:block"><label name="htlpmodeltips1"></label></span>
+          <span style="display:block; margin-left:10px;""><label name="htlpmodeltips2"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips3"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips4"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips5"></label></span>
+          <span style="display:block; margin-left:10px;"><label name="htlpmodeltips6"></label></span>
+      </div>
+  <div class="userfoot" style="height:30px; line-height:30px; background:#d8d8d8; ">
+      <input id="" class="buttonclass" type="button" onclick="help_tipsclose()" style=" margin-top:3px;margin-right:20px; float:right;" name="optclose" value="">
+  </div>
+</div>
+
+<style>
+.width120 {width:100px;}
+.width50 { width:50px;}
+.display { display:none;}
+
+
+.divsimplemodafoot {
+	height:30px; line-height:30px; background:#d8d8d8;
+}
+.divWinTitle {
+	height:35px; 
+	background:#d8d8d8; 
+	line-height:35px;
+	text-indent:10px;
+}
+.simplemodaconter 
+{
+   /*margin:10px;*/
+}
+</style>
+
+<div id="divScnTable" style="display:none; height:auto;" >
+  <div class="divWinTitle" id='WinEncchnsTitle'>
+      <label name="Maddscn"></label>
+    </div>
+    <div class="simplemodaconter" style="padding:10px 0">
+         <div class="subparamsgray"> 
+         	<span class="firstspan"><label name="Mscnname"></label></span>
+            <span class="localsecondspan"><input type="text" id='scnname' class="input_config width200" /></span>
+            <span id="scnnametips"></span>
+         </div>
+    </div>
+    <div class="divsimplemodafoot">
+       <div style=" float:right; margin-right:20px;">
+       	 <input id="btnAddencchns" class="buttonclass" type="button" name="MButOK" style="margin-top:3px;"  value="" onclick="ScnOKclick()">
+         <input id="" class="buttonclass" type="button" onclick="CleanScn();" style="margin-top:3px;" name="MlaCancel" value="">
+     	<span id="ScnResultTips" class="formtips"></span>
+       </div>
+   </div>
+</div>

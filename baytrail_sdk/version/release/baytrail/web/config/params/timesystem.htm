@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ul class="tabs" id="tabTimeSystem">
+  <li><a id="aTimeSettings" name="aTimeSettings" href="javascript:ia(TimeSystem).update();"></a></li>
+</ul>
+<div class="panes"  id="divTimeSystem1">
+  <div class="pane" id="TimeSystem">
+    <div >
+      <div class="subparamswhite main_top10">
+      	<span class="firstspan"><label name="laDevZone" id="laDevZone"></label></span> 
+        <span> 
+        <!-- <select class="selectwidth width300" onchange="updateSystemTime(this)" id="seTimeZone">-->
+            <select class="selectwidth width300" onchange="ia(TimeSystem).updateSystemTime()" id="seTimeZone" disabled="disabled">
+              <option value="GMT-12:00" name="timezoneOpt1" id="timezoneOpt1"></option>
+              <option value="GMT-11:00" name="timezoneOpt2" id="timezoneOpt2"></option>
+              <option value="GMT-10:00" name="timezoneOpt3" id="timezoneOpt3"></option>
+              <option value="GMT-09:00" name="timezoneOpt4" id="timezoneOpt4"></option>
+              <option value="GMT-08:00" name="timezoneOpt5" id="timezoneOpt5"></option>
+              <option value="GMT-07:00" name="timezoneOpt6" id="timezoneOpt6"></option>
+              <option value="GMT-06:00" name="timezoneOpt7" id="timezoneOpt7"></option>
+              <option value="GMT-05:00" name="timezoneOpt8" id="timezoneOpt8"></option>
+              <option value="GMT-04:30" name="timezoneOpt9" id="timezoneOpt9"></option>
+              <option value="GMT-04:00" name="timezoneOpt10" id="timezoneOpt10"></option>
+              <option value="GMT-03:30" name="timezoneOpt11" id="timezoneOpt11"></option>
+              <option value="GMT-03:00" name="timezoneOpt12" id="timezoneOpt12"></option>
+              <option value="GMT-02:00" name="timezoneOpt13" id="timezoneOpt13"></option>
+              <option value="GMT-01:00" name="timezoneOpt14" id="timezoneOpt14"></option>
+              <option value="GMT+00:00" name="timezoneOpt15" id="timezoneOpt15"></option>
+              <option value="GMT+01:00" name="timezoneOpt16" id="timezoneOpt16"></option>
+              <option value="GMT+02:00" name="timezoneOpt17" id="timezoneOpt17"></option>
+              <option value="GMT+03:00" name="timezoneOpt18" id="timezoneOpt18"></option>
+              <option value="GMT+03:30" name="timezoneOpt19" id="timezoneOpt19"></option>
+              <option value="GMT+04:00" name="timezoneOpt20" id="timezoneOpt20"></option>
+              <option value="GMT+04:30" name="timezoneOpt21" id="timezoneOpt21"></option>
+              <option value="GMT+05:00" name="timezoneOpt22" id="timezoneOpt22"></option>
+              <option value="GMT+05:30" name="timezoneOpt23" id="timezoneOpt23"></option>
+              <option value="GMT+05:45" name="timezoneOpt24" id="timezoneOpt24"></option>
+              <option value="GMT+06:00" name="timezoneOpt25" id="timezoneOpt25"></option>
+              <option value="GMT+06:30" name="timezoneOpt26" id="timezoneOpt26"></option>
+              <option value="GMT+07:00" name="timezoneOpt27" id="timezoneOpt27"></option>
+              <option value="GMT+08:00" name="timezoneOpt28" id="timezoneOpt28"></option>
+              <option value="GMT+09:00" name="timezoneOpt29" id="timezoneOpt29"></option>
+              <option value="GMT+09:30" name="timezoneOpt30" id="timezoneOpt30"></option>
+              <option value="GMT+10:00" name="timezoneOpt31" id="timezoneOpt31"></option>
+              <option value="GMT+11:00" name="timezoneOpt32" id="timezoneOpt32"></option>
+              <option value="GMT+12:00" name="timezoneOpt33" id="timezoneOpt33"></option>
+            </select>
+        </span>
+      </div>
+      <div class="subparamswhite" id="subDeviceTime">
+        <span class="firstspan"><label name="laDevTime" id="laDevTime"></label></span>
+        <span><input type="text" readonly="readonly" disabled="disabled" class="timetext" id="teDeviceTime">  <input type="button" class="buttonclass" name="laManualTimeSync" value="" id="setmanual" onclick="ia(TimeSystem).setmanual()"  /></span>
+        <span><label class="tips" id="laDeviceTimeTips"></label></span>
+      </div>
+      <div id="diAutoTimeSync">
+        <div class="mainparams main_top26">
+          <label name="laAutoTimeSync" id="laAutoTimeSync"></label>
+        </div>
+        <div class="subparamswhite main_top10">
+            <span class="firstspan">
+		        <label name="laAutoTimeSync" id="laAutoTimeSync"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <input type="checkbox" id="AutoTime" class="checkbox main_top5" onclick="ia(TimeSystem).CheckBoxAutoTime()">
+            </span>
+        </div>
+        
+        
+         <div class="subparamswhite main_top10" id="spAgreementType">
+				<span class="firstspan"><label id="laMode" name="laMode"></label></span>
+				<span>
+				   <input type="radio" name="raNetsPreach" id="inputprotocol" value="inputprotocol" class="radio" onclick="pr(TimeSystem).setRadioItem('diTimeConfig', $(this).val())">&nbsp;
+          			<label id="laProtocolTimeSync" name="laProtocolTimeSync"></label>
+				</span>
+				<span>
+				   <input type="radio" name="raNetsPreach" id="ntp" value="ntp" class="radio" onclick="pr(TimeSystem).setRadioItem('diTimeConfig', $(this).val())">&nbsp;
+         		   <label id="laNtpTimeSync" name="laNtpTimeSync"></label>
+				</span>
+			</div>
+        <div class="subparamswhite" id="inputprotocolExplain">
+          <span class="firstspan"></span>
+          <span class="localsecondspanTime">
+             <label name="laProtocalTip" id="laProtocalTip"></label>
+          </span>
+        </div>
+        <div class="clear"></div>
+        <div id="systemntp">
+          <div class="subparamsgray" id="subNtpServer">
+            <span class="firstspan"><label id="NtpServerTips" name="NtpServerTips"></label> </span>
+            <span  class="localsecondspan"><input type="text"  maxlength="64" class="timetext" id="teNtpServer"  onblur="IsURLIP(this.value,'laNtpServerTips','NtpServerTips')"></span>
+            <span style="margin-left:130px;"><label class="colortips" id="laNtpServerTips"></label></span>
+          </div>
+          <div class="subparamswhite" id="subNtpPort">
+            <span class="firstspan"><label name="laNtpPort" id="laNtpPort"></label></span>
+            <span><input type="text"  maxlength="5" class="timetext" disabled="disabled" id="teNtpPort" onblur="CheackServerIDIntNum(this.value,'laNtpPortTips','NtpPortRangeTips',0,65535)"></span>
+            <span><label class="colortips" id="laNtpPortTips"></label></span>
+          </div>
+          <div class="subparamsgray" id="subNtpInterval">
+            <span class="firstspan"><label name="laNtpInterval" id="laNtpInterval"></label></span>
+            <span><input type="text"  maxlength="5" class="timetext" id="teNtpInterval"  onblur="CheackIDNORange(this.value,'laNtpIntervalTips','NTPIntervalRangeTips',1,65535)"></span>
+            <span><label name="MMinute"></label></span>
+            <span><label class="colortips" id="laNtpIntervalTips"></label></span>
+          </div>
+        </div>
+      </div>
+      
+      <div id="dvDST">
+        <div  class="mainparams main_top26">
+          <label name="laDST" id="laDST"></label>
+        </div>
+        <div class="subparamswhite main_top10" id="IsEnableDSTTr"> <span class="firstspan"></span> <span class="localsecondspan"> 
+          <!-- <input type="checkbox" onclick="ia(TimeSettings).clickDST()" id="IsEnableDST" class="checkbox">-->
+          <input type="checkbox" onclick="EnableclickDST(this)" id="IsEnableDST" class="checkbox">
+          &nbsp;
+          <label name="laEnableDST" id="laEnableDST"></label>
+          </span> </div>
+        <div class="subparamsgray" id="StartTimeTr"> <span class="firstspan">
+          <label name="MStartTime" id="MStartTime"></label>
+          </span> <span>
+          <select class="selectwidth width100" id="StartMonth">
+            <option name="StartMonthOpt1" id="StartMonthOpt1" value="1"></option>
+            <option name="StartMonthOpt2" id="StartMonthOpt2" value="2"></option>
+            <option name="StartMonthOpt3" id="StartMonthOpt3" value="3"></option>
+            <option name="StartMonthOpt4" id="StartMonthOpt4" value="4"></option>
+            <option name="StartMonthOpt5" id="StartMonthOpt5" value="5"></option>
+            <option name="StartMonthOpt6" id="StartMonthOpt6" value="6"></option>
+            <option name="StartMonthOpt7" id="StartMonthOpt7" value="7"></option>
+            <option name="StartMonthOpt8" id="StartMonthOpt8" value="8"></option>
+            <option name="StartMonthOpt9" id="StartMonthOpt9" value="9"></option>
+            <option name="StartMonthOpt10" id="StartMonthOpt10" value="10"></option>
+            <option name="StartMonthOpt11" id="StartMonthOpt11" value="11"></option>
+            <option name="StartMonthOpt12" id="StartMonthOpt12" value="12"></option>
+          </select>
+          &nbsp;
+          <select class="selectwidth width100" id="StartWeek">
+            <option name="StartWeekOpt1" id="StartWeekOpt1" value="1"></option>
+            <option name="StartWeekOpt2" id="StartWeekOpt2" value="2"></option>
+            <option name="StartWeekOpt3" id="StartWeekOpt3" value="3"></option>
+            <option name="StartWeekOpt4" id="StartWeekOpt4" value="4"></option>
+            <option name="StartWeekOpt5" id="StartWeekOpt5" value="5"></option>
+            <option name="StartWeekOpt6" id="StartWeekOpt6" value="6"></option>
+          </select>
+          &nbsp;
+          <select class="selectwidth width100" id="StartWeekDay">
+            <option name="MSunday" id="MSunday" value="1"></option>
+            <option name="MMonday" id="MMonday" value="2"></option>
+            <option name="MTuesday" id="MTuesday" value="3"></option>
+            <option name="MWednesday" id="MWednesday" value="4"></option>
+            <option name="MThursday" id="MThursday" value="5"></option>
+            <option name="MFriday" id="MFriday" value="6"></option>
+            <option name="MSaturday" id="MSaturday" value="7"></option>
+          </select>
+          &nbsp;
+          <select class="selectwidth width100" id="StartTime">
+            <option value="0">00</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+          </select>
+          </span> <span>
+          <label name="latime" id="latime"></label>
+          </span> </div>
+        
+        <div class="subparamswhite" id="EndTimeTr"> <span class="firstspan">
+          <label name="MEndTime" id="MEndTime"></label>
+          </span> <span>
+          <select class="selectwidth width100" id="StopMonth">
+            <option name="StartMonthOpt1" id="StartMonthOpt1" value="1"></option>
+            <option name="StartMonthOpt2" id="StartMonthOpt2" value="2"></option>
+            <option name="StartMonthOpt3" id="StartMonthOpt3" value="3"></option>
+            <option name="StartMonthOpt4" id="StartMonthOpt4" value="4"></option>
+            <option name="StartMonthOpt5" id="StartMonthOpt5" value="5"></option>
+            <option name="StartMonthOpt6" id="StartMonthOpt6" value="6"></option>
+            <option name="StartMonthOpt7" id="StartMonthOpt7" value="7"></option>
+            <option name="StartMonthOpt8" id="StartMonthOpt8" value="8"></option>
+            <option name="StartMonthOpt9" id="StartMonthOpt9" value="9"></option>
+            <option name="StartMonthOpt10" id="StartMonthOpt10" value="10"></option>
+            <option name="StartMonthOpt11" id="StartMonthOpt11" value="11"></option>
+            <option name="StartMonthOpt12" id="StartMonthOpt12" value="12"></option>
+          </select>
+          &nbsp;
+          <select class="selectwidth width100" id="StopWeek">
+           <option name="StartWeekOpt1" id="StartWeekOpt1" value="1"></option>
+            <option name="StartWeekOpt2" id="StartWeekOpt2" value="2"></option>
+            <option name="StartWeekOpt3" id="StartWeekOpt3" value="3"></option>
+            <option name="StartWeekOpt4" id="StartWeekOpt4" value="4"></option>
+            <option name="StartWeekOpt5" id="StartWeekOpt5" value="5"></option>
+            <option name="StartWeekOpt6" id="StartWeekOpt6" value="6"></option>
+          </select>
+          &nbsp;
+          <select class="selectwidth width100" id="StopWeekDay">
+            <option name="MSunday" id="MSunday" value="1"></option>
+            <option name="MMonday" id="MMonday" value="2"></option>
+            <option name="MTuesday" id="MTuesday" value="3"></option>
+            <option name="MWednesday" id="MWednesday" value="4"></option>
+            <option name="MThursday" id="MThursday" value="5"></option>
+            <option name="MFriday" id="MFriday" value="6"></option>
+            <option name="MSaturday" id="MSaturday" value="7"></option>
+          </select>
+          &nbsp;
+          <select class="selectwidth width100" id="StopTime">
+            <option value="0">00</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+          </select>
+          </span> <span>
+          <label name="latime" id="latime"></label>
+          </span> </div>
+        <div class="subparamsgray" id="DSTBiasTr"> <span class="firstspan">
+          <label name="laDSTBias" id="laDSTBias"></label>
+          </span> <span>
+          <select class="selectwidth width100" id="DSTBias">
+          </select>
+          </span> </div>
+      </div>
+     	 <!--<div class="spansave">
+            <input type="button"  class="input_save"  id="SaveTimeSystem" onclick="SaveTimeSystem(this)" name="MSaveConfigLocal" value="">
+            <span id="SetResultTipsTimeSystem"></span>
+          </div>-->
+          <div class="spansave">
+                 <input type="button"  class="input_save"  id="SaveTimeSystem" onclick="SaveTimeSystem(this,'save')" name="MSaveConfigLocal" value="">
+           		 <input type="button" class="input_save"  id="TimeSystemup" onclick="SaveTimeSystem(this,'up')" value="" name="MupFast"></span>
+                 <input type="button" class="input_save"  id="TimeSystemsucc" onclick="SaveTimeSystem(this,'succ')" value="" name="MfinishFase"><span id="SetResultTipsTimeSystem"></span>
+        </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.width250 { width:250px;}
+.width120 {width:120px;}
+.width100 {width:100px;}
+.width50 { width:50px;}
+.display { display:none;}
+</style>
+<div id="divTimeTable" style="display:none; height:auto;" >
+    <div class="scheduleedittitlediv" id="divScheduleTitle" style="font-weight:normal;">
+      <label style="font-weight:bold" name="laManualTime" id="laManualTime"></label>
+    </div>
+    <div style="background:#FFF;">
+        <div class="subparamswhite" style="padding-top:10px;">
+      	<span class="firstspan width100"><label name="laDevZone" id="laDevZone"></label></span> 
+        <span> 
+            <select class="selectwidth width300" onchange="ia(TimeSystem).ModalupdateSystemTime()" id="ModalseTimeZone">
+              <option value="GMT-12:00" name="timezoneOpt1" id="timezoneOpt1"></option>
+              <option value="GMT-11:00" name="timezoneOpt2" id="timezoneOpt2"></option>
+              <option value="GMT-10:00" name="timezoneOpt3" id="timezoneOpt3"></option>
+              <option value="GMT-09:00" name="timezoneOpt4" id="timezoneOpt4"></option>
+              <option value="GMT-08:00" name="timezoneOpt5" id="timezoneOpt5"></option>
+              <option value="GMT-07:00" name="timezoneOpt6" id="timezoneOpt6"></option>
+              <option value="GMT-06:00" name="timezoneOpt7" id="timezoneOpt7"></option>
+              <option value="GMT-05:00" name="timezoneOpt8" id="timezoneOpt8"></option>
+              <option value="GMT-04:30" name="timezoneOpt9" id="timezoneOpt9"></option>
+              <option value="GMT-04:00" name="timezoneOpt10" id="timezoneOpt10"></option>
+              <option value="GMT-03:30" name="timezoneOpt11" id="timezoneOpt11"></option>
+              <option value="GMT-03:00" name="timezoneOpt12" id="timezoneOpt12"></option>
+              <option value="GMT-02:00" name="timezoneOpt13" id="timezoneOpt13"></option>
+              <option value="GMT-01:00" name="timezoneOpt14" id="timezoneOpt14"></option>
+              <option value="GMT+00:00" name="timezoneOpt15" id="timezoneOpt15"></option>
+              <option value="GMT+01:00" name="timezoneOpt16" id="timezoneOpt16"></option>
+              <option value="GMT+02:00" name="timezoneOpt17" id="timezoneOpt17"></option>
+              <option value="GMT+03:00" name="timezoneOpt18" id="timezoneOpt18"></option>
+              <option value="GMT+03:30" name="timezoneOpt19" id="timezoneOpt19"></option>
+              <option value="GMT+04:00" name="timezoneOpt20" id="timezoneOpt20"></option>
+              <option value="GMT+04:30" name="timezoneOpt21" id="timezoneOpt21"></option>
+              <option value="GMT+05:00" name="timezoneOpt22" id="timezoneOpt22"></option>
+              <option value="GMT+05:30" name="timezoneOpt23" id="timezoneOpt23"></option>
+              <option value="GMT+05:45" name="timezoneOpt24" id="timezoneOpt24"></option>
+              <option value="GMT+06:00" name="timezoneOpt25" id="timezoneOpt25"></option>
+              <option value="GMT+06:30" name="timezoneOpt26" id="timezoneOpt26"></option>
+              <option value="GMT+07:00" name="timezoneOpt27" id="timezoneOpt27"></option>
+              <option value="GMT+08:00" name="timezoneOpt28" id="timezoneOpt28"></option>
+              <option value="GMT+09:00" name="timezoneOpt29" id="timezoneOpt29"></option>
+              <option value="GMT+09:30" name="timezoneOpt30" id="timezoneOpt30"></option>
+              <option value="GMT+10:00" name="timezoneOpt31" id="timezoneOpt31"></option>
+              <option value="GMT+11:00" name="timezoneOpt32" id="timezoneOpt32"></option>
+              <option value="GMT+12:00" name="timezoneOpt33" id="timezoneOpt33"></option>
+            </select>
+        </span>
+      </div>
+      <div class="subparamswhite" id="subDeviceTime">
+        <span class="firstspan width100"><label name="laDevTime" id="laDevTime"></label></span>
+        <span><input type="text" readonly="readonly" disabled="disabled" class="timetext" id="ModalteDeviceTime"></span>
+        <span><label class="tips" id="laDeviceTimeTips"></label></span>
+      </div>
+      <div id="systemmanual">
+        <div class="subparamsgray" id="subSelectTime" style="margin-bottom:5px;">
+          <span class="firstspan width100"><label name="laSelectTime" id="laSelectTime"></label></span>
+          <span>
+          	<input type="text" onclick="CreateCalendar(1)" class="Wdate timetext" style="width:300px;" id="ModalteSelectTime">
+          </span> 
+          <span>
+         	 <input type="checkbox"  id="chTimeSyncWithPC" class="checkbox"  onclick="ia(TimeSystem).clickTimeSyncWithPC()">
+          </span> 
+          <span style="vertical-align:top;word-wrap:break-word; white-space:normal;word-break:normal;max-width:135px; display:inline-block">
+          	<label name="laSyncPcTime" id="laSyncPcTime"></label>
+          </span>
+           </div>
+      </div>  
+        
+       <div style="height:30px; line-height:30px; background:#d8d8d8;">
+       	   <span style="margin-right:20px; float:right;">
+               <span id="ModalTimeTips" class="formtips"></span>
+               <input id="ModalManualTime" class="buttonclass" type="button" name="MSaveConfigLocal" value="" onclick="ia(TimeSystem).ModalTimeOKclick()">
+               <input id="ModalManualTimeclose" class="buttonclass" type="button" onclick="$.modal.impl.close();" name="MlaCancel" value="">
+           </span>
+      </div> 
+        
+     
+  </div>
+</div>
+

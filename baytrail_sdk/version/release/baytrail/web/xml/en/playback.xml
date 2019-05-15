@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Playback>
+  <Page>
+    <Mrecordtype>Recording Type</Mrecordtype>
+    <Mall>All</Mall>
+    <Malarmrecord>Alarm Triggered</Malarmrecord>
+    <Mplanrecord>Scheduled</Mplanrecord>
+    <Mmanualrecord>Manual</Mmanualrecord>
+    <MmonthView>Month View</MmonthView>
+    <Msearch>Search</Msearch>
+    <Mbacktimeocation>Go To</Mbacktimeocation>
+  </Page>
+  <titletips>
+    <Mplay>Play</Mplay>
+    <Mpause>Pause</Mpause>
+    <Mstop>Stop</Mstop>
+    <Mdeceleration>Decelerate</Mdeceleration>
+    <Macceleration>Accelerate</Macceleration>
+    <Mforward>Previous Video Section</Mforward>
+    <Mback>Next Video Section</Mback>
+    <Msound>Volume</Msound>
+    <Mcat>Snapshot</Mcat>
+    <Mstartclip>Start Clipping</Mstartclip>
+    <Mstopclip>Stop Clipping</Mstopclip>
+    <Mdown>Download</Mdown>
+    <Menlarge>Zoom in Timeline</Menlarge>
+    <Mnarrow>Zoom out Timeline</Mnarrow>
+    <Mfull>Full Screen</Mfull>
+    <Mgoseek>Positioning failed.</Mgoseek>
+    <LoginConnectTimeoutTips>Timeout, please login again.</LoginConnectTimeoutTips>
+  </titletips>
+  <Js>
+    <startrecord>Start Recording</startrecord>
+    <jsstoprecord>Pause</jsstoprecord>
+    <jsplayrecord>Play</jsplayrecord>
+    <jsposition>Positioning failed.</jsposition>
+    <Mnomemorycard>No Memory Card Detected</Mnomemorycard>
+  </Js>
+</Playback>

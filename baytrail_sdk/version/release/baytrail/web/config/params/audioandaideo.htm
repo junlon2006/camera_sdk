@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+$(function (){
+	
+	$(function() {
+		$( "#slider_encVol" ).slider({
+		  range: "min",
+		  value: 50,
+		  min: 0,
+		  max: 255,
+		  slide: function( event, ui ) {
+			$("#encVol_value").text(ui.value);
+		  },
+		change: function( event, ui ) {
+			$("#encVol_value").text($( "#slider_encVol" ).slider( "value" ))
+		  }});
+		$("#encVol_value").text($( "#slider_encVol" ).slider( "value" ))
+	  });
+	
+	$(function() {
+		$( "#slider_decVol" ).slider({
+		  range: "min",
+		  value: 50,
+		  min: 0,
+		  max: 255,
+		  slide: function( event, ui ) {
+			$("#decVol_value").text(ui.value);
+		  },
+		change: function( event, ui ) {
+			$("#decVol_value").text($( "#slider_decVol" ).slider( "value" ))
+		  }});
+		$("#decVol_value").text($( "#slider_decVol" ).slider( "value" ))
+	  });
+
+	  
+});
+</script>
+</head>
+
+<body>
+<!-- tabs -->
+<ul class="tabs" id="tabAudioAndVideo">
+    <li><a href="javascript:ia(Video).update();" name="aVideo" id="aVideo" >视频</a></li>
+	<li><a href="javascript:ia(Audiocode).update();" name="aAudiocode" id="aAudiocode">音频编码</a></li>
+    <li><a href="javascript:ia(Audiodecoder).update();" name="aAudiodecoder" id="aAudiodecoder">音频解码</a></li>	
+</ul>
+
+<div id="divAudioAndVideo" class="panes panewidth">
+    <div class="pane" id="divVideo">
+	   
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="laStreamType">码流类型</label></span>
+            <span>
+		        <select onchange="jump_VideoStream(this.value)" class="selectwidth width152" id="StreamTypeIn">
+                    <option name="StreamTypeInOpt1" value="01">主码流（定时）</option>
+                    <option name="StreamTypeInOpt2" value="02">子码流（网传）</option>
+                    <option name="StreamTypeInOpt4" value="03">第三码流</option></select>
+            </span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution">分辨率</label></span>
+            <span>
+		        <select class="selectwidth width152" id="videoResolution">
+                  <!--<option value="1280*720P">1280*720P</option>
+                  <option value="1280*960">1280*960</option>
+                  <option value="1920*1080P">1920*1080P</option>-->
+                </select>
+            </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="laVideoQualityControlType" id="laVideoQualityControlType">码率类型</label></span>
+            <span>
+		        <select  class="selectwidth width152" id="videoQualityControlType">
+                    <option name="videoQualityControlTypeOpt1" id="videoQualityControlTypeOpt1" value="vbr">变码率</option>
+                    <option name="videoQualityControlTypeOpt2" id="videoQualityControlTypeOpt2" value="cbr">定码率</option>
+                </select>
+            </span>
+        </div>
+	    <div class="subparamsgray">
+            <span class="firstspan"><label name="lafixedQuality" id="lafixedQuality">图像质量</label></span>
+            <span>
+		        <select class="selectwidth width152" id="fixedQuality">
+			        <option name="fixedQualityOpt6" value="1">最低</option>
+                    <option name="fixedQualityOpt5" value="20">较低</option>
+                    <option name="fixedQualityOpt4" value="40">低</option>
+                    <option name="fixedQualityOpt3" value="60">中等</option>
+                    <option name="fixedQualityOpt2" value="80">较高</option>
+                    <option name="fixedQualityOpt1" value="100">最高</option>
+                </select>
+            </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="laVideoFrameRate" id="laVideoFrameRate">视频帧率</label></span>
+            <span>
+		        <select class="selectwidth width152" id="maxFrameRate">
+                   <option value="6">1/16</option>
+                   <option value="12">1/8</option>
+                   <option value="25">1/4</option>
+                   <option value="50">1/2</option>
+                   <option value="100">1</option>
+                   <option value="200">2</option>
+                   <option value="400">4</option>
+                   <option value="1200">12</option>
+                   <option value="1600">16</option>
+                   <option value="2000">20</option>
+                   <option value="1500">15</option>
+                   <option value="1800">18</option>
+                   <option value="2200">22</option>
+                   <option value="2200">25</option>
+		        </select>
+            </span>
+        </div>   
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="laconstantBitRate" id="laconstantBitRate">码率上限</label></span>
+            <span>
+                <input type="text" maxlength="5"  class="input_config width150" id="constantBitRate">
+		    </span>
+            <span id="MaxBitRatetips"></span>
+        </div>
+	    <div class="subparamswhite">
+            <span class="firstspan"><label name="laVideoCodeType">视频编码</label></span>
+            <span>
+		        <select  class="selectwidth width152" id="videoCodecType">
+                   <option value="H.264">H.264</option>
+                   <option value="MPEG4">MPEG4</option>
+                   <option value="MJPEG">MJPEG</option>
+                   
+                </select>
+            </span>
+        </div>
+        <div class="subparamsgray"  id="CodecComplexity_tr">
+            <span class="firstspan"><label name="laCodecComplexity">编码复杂度</label></span>
+            <span>
+		        <select class="selectwidth width152" id="selectCodecComplexity">
+                  <option value="Baseline" name="optionQuality1">低</option>
+                  <option value="Main" name="optionQuality2">中</option>
+                  <option value="High" name="optionQuality3">高</option>
+                </select>
+            </span>
+        </div>	  
+          
+        <div  class="subparamswhite" id="IntervalFrameI_tr">
+            <span class="firstspan"><label name="laIntervalFrameI" id="laIntervalFrameI">I帧间隔</label></span>
+            <span>
+			    <input type="text" value="100" maxlength="3"  class="input_config width150" id="IntervalFrameI">
+		    </span>
+            <span id="IntervalFrameItips"></span>
+        </div>
+        
+        <span class="spansave"><input type="button"  class="input_save" id="SaveConfigBtn" value="保存"></span>
+       
+       		   		    
+    </div>
+  
+    <div id="DivAudiocode" class="pane"   >
+        
+        <!--<div class="mainparams">
+					<label id="laBaseInfo" name="laBaseInfo1">音频编码</label>
+		</div>-->
+        <div class="subparamswhite">
+            <span class="firstspan"><label id="laDeviceName" name="laDeviceName1">编码音量</label></span>
+            <span class="localsecondspan">
+                <!--<div id="slider-range-footer" class="slider-range-footer"></div>-->
+                <div class="Images_slider210">
+                  <div id="slider_encVol" class="Images_slider"></div>
+                  <span id="encVol_value" class="Images_slider_value"></span>
+                </div>
+            </span>
+        </div>
+        <div class="clear"></div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label id="laDeviceName" name="laDeviceName1">音频编码格式</label></span>
+            <span class="localsecondspan">
+                <select class="selectwidth width152">
+                  <option>PCMA</option>
+                  <option>PCMU</option>
+                  <option>APPCM</option>
+                  <option selected="selected">G722</option>
+                  <option>G722.1.C</option>
+                  <option>AACLC</option>
+                  
+                </select>
+            </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label id="laDeviceName" name="laDeviceName1">回音抵消</label></span>
+            <span class="localsecondspan">
+                <input type="checkbox" class="main_top5" />
+            </span>
+					
+        </div>
+	     <span class="spansave"><input type="button"  class="input_save" id="SaveConfigBtn" value="保存"></span>
+	   <!-- <div  id="divAudioInputType" style="display: block;">
+	        <span class="firstspan"><label name="laAudioInput" id="laAudioInput">音频输入</label></span>
+	  	    <span>
+		        <select class="selectwidth width152" id="selectAudioInputType"><option value="MicIn">MicIn</option><option value="LineIn">LineIn</option></select>
+		    </span>
+	    </div>
+        <div id="divAudioVolume" style="display: block;">
+	        <span class="firstspan left"><label name="laAudioVolume" id="laAudioVolume">音量</label></span>
+	  	    <span style="padding-left:3px;" class="left">
+		        <div class="slider inputwidth" id="dvAudioVolume"><div id="dvAudioVolume_wrapper" style="position: relative;"><div id="dvAudioVolume_slider" class="imageslider1" style="position: absolute;"></div><div title="" id="dvAudioVolume_bar" class="imageBar2" style="position: absolute; left: 93px;"></div><input type="text" id="dvAudioVolume_box" class="boxBar1" style="position: absolute;" maxlength="3"></div></div>
+		    </span>
+	    </div>
+        <div  id="divNoiseReduce" style="display: none;">
+	        <span class="firstspan"><label name="laNoiseFilter">环境噪声过滤</label></span>
+	  	    <span>
+		        <select class="selectwidth width152" id="selEnableNoiseFilter">
+		            <option name="laEnable" value="true">启用</option>
+		            <option name="aStyleClose" value="false">关闭</option>
+		        </select>
+		    </span>
+	    </div>-->
+    </div>
+    
+    
+    
+    <div id="DivAudiodecoder" class="pane" >
+        
+        <!--<div class="mainparams">
+					<label id="laBaseInfo" name="laBaseInfo1">音频解码</label>
+		</div>-->
+        <div class="subparamswhite">
+            <span class="firstspan"><label id="laDeviceName" name="laDeviceName1">解码音量</label></span>
+            <span class="localsecondspan">
+               
+                <div class="Images_slider210">
+                  <div id="slider_decVol" class="Images_slider"></div>
+                  <span id="decVol_value" class="Images_slider_value"></span>
+                </div>
+            </span>
+					
+        </div>
+        <div class="clear"></div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label id="laDeviceName" name="laDeviceName1">混音录像</label></span>
+            <span class="localsecondspan">
+                <input type="checkbox" />
+            </span>
+        </div>
+       <span class="spansave"><input type="button" onclick="showmenuconfig('set', 1)" class="input_save" id="SaveConfigBtn" value="保存"></span>
+	    
+	 
+    </div>
+	<!--<div class="plugin0" name="main_plugin" id="main_plugin"><embed width="1" height="1" align="middle" playmode="undefined" wndtype="undefined" name="PreviewActiveX" id="PreviewActiveX" type="application/hwp-webvideo-plugin" style="width: 99.99%; height: 0px;"></div>-->      
+</div><!--<div class="panes">-->
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网络-IP及端口</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body>
+<div id="contenter" class="contenter">
+   <div class="topTitle STYLE1">IP Address &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="topTitlespan"><a href="index.htm">Return to Contents</a></span>  </div>
+  <div class="systext STYLE1"></div>
+  <div class="systext STYLE1">
+    <p>To configure the network settings for the camera:</p>
+  </div>
+  <div class="TitleExplain STYLE1">
+   <p><span class="marginright">1.</span> Select a mode.    </p>
+     <p><span class="marginright">2.</span> Specify parameters displayed. 
+     
+     <p><span class="marginright">3.</span> Configure DNS settings.
+     <p>If you set <strong>Mode</strong> to <strong>Static</strong>, you cannot select the <strong>Automatically Obtain DNS Server Address </strong>check box.
+     <p>The value range of the <strong>MTU</strong> parameter is from <strong>500</strong> to <strong>1500</strong>. The default value is <strong>1500</strong>.
+    <div class="systext note"></div>
+</div>
+  <div class="contenter STYLE1" id="contenter">
+   <div class="topTitle">Port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </div>
+  <div class="TitleExplaintable">
+  <table class="tabhelp">
+         <tr class="tabtr">
+           <td width="17%" class="tabtd"><b>HTTP Port </b></td>
+           <td width="83%" class="tabtd tableft">The default value is <strong>80</strong>. </td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>HTTPS Port</b></td>
+           <td  class="tabtd tableft">The default value is <strong>5544</strong>. When the default value is used, the camera can be reached by <strong>https://<em>X</em></strong> (<em>X</em> indicates the IP address of the camera). For example, https://198.12.12.12. When the default value is not used, the camera can be reached by <strong>https://<em>X</em>:<em>Y</em></strong> (<em>Y</em> indicates the value of this parameter). For example,   https://198.12.12.12:5000.</td>
+         </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>RTSP Port</b></td>
+           <td class="tabtd tableft">The default value is <strong>554</strong>. When the RTSP is applied, the camera can be reached by <strong> rtsp://<em>X</em>/id=<em>Z</em></strong>. <em>Z</em> can be set to <strong>0</strong> (main stream) or <strong>1</strong> (secondary  stream). </td>
+      </table>
+   </div>
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+</body>
+</html>

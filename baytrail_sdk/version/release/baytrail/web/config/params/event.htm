@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabEvent">
+	<li><a href="javascript:ia(Motion).update();"  name="aMotion" id="aMotion"></a></li>
+	<li><a href="javascript:ia(Alarm).update();" name="aAlarm" id="aAlarm"></a></li>
+    <li><a href="javascript:ia(Input).update();" name="aInput" id="aInput" ></a></li>
+	<li><a href="javascript:ia(Output).update();" name="aOutput" id="aOutput"></a></li>
+	<li><a href="javascript:ia(Abnormal).update();" name="aAbnormal" id="aAbnormal"></a></li>
+	<li><a href="javascript:ia(Screenshot).update();" name="aScreenshot" id="aScreenshot"></a></li>
+</ul>
+<div class="panes panewidth" id="divEvent">
+    <div class="pane" id="divMotion">
+	      <div class="Imags_left">
+             
+           </div>
+           <div class="Imags_right">  
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label name="Motionopen" id="Motionopen"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="checkbox" class="checkbox main_top8" />
+					</span>
+              </div>
+              <div class="subparamsgray360">
+				    <span class="Imags_firstspan"><label name="Regional" id="Regional"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="button"  name="Startdrawing" id="Startdrawing" />
+                       <input type="button"  name="ClearAll" id="ClearAll" />
+					</span>
+              </div> 
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label id="Sensitivity" name="Sensitivity"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider210">
+					    <div id="slider_sensitivity" class="Images_slider"></div>
+                        <div id="sensitivity_value" class="Images_slider_value"></div>
+                       </div>
+					</span>
+            </div>
+            <div class="clear"></div>
+            <div class="subparamsgray360">
+				    <span class="Imags_firstspan"><label name="RecoveryTime" id="RecoveryTime"></label></span>
+					<span class="Images_localsecondspan">
+                      
+					</span>
+              </div>
+             <div class="Right_mainparams main_top10"><label name="laNetCardConfig1" id="laNetCardConfig">联动方式（常规联动）</label></div> 
+                 <div class="subparamswhite360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">声音报警</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+                <div class="subparamsgray360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">上传中心</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+                <div class="subparamswhite360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">录像联动</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+                <div class="subparamsgray360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">显示字幕</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+              <div class="Right_mainparams main_top10"><label name="laNetCardConfig1" id="laNetCardConfig">联动方式（其他联动）</label></div> 
+                <div class="subparamswhite360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">联动报警输出</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+                <div class="subparamsgray360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">A->1</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+                <span class="Images_spansave"><input type="button" onclick="showmenuconfig('set', 1)" class="input_save" id="SaveConfigBtn" value="保存"></span>
+           </div>
+    </div>
+     <div class="pane" id="divAlarm">
+	      <div class="Imags_left">
+             
+           </div>
+           <div class="Imags_right">  
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label name="Alarmopen" id="Alarmopen"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="checkbox" class="checkbox main_top8" />
+					</span>
+              </div>
+              <div class="subparamsgray360">
+				    <span class="Imags_firstspan"><label name="Regional" id="Regional"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="button"  name="Startdrawing" id="Startdrawing" />
+                       <input type="button"  name="ClearAll" id="ClearAll" />
+					</span>
+              </div> 
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan"><label id="Sensitivity" name="Sensitivity"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider210">
+					    <div id="slider_sensitivity_Alarm" class="Images_slider"></div>
+                        <div id="sensitivity_Alarm_value" class="Images_slider_value"></div>
+                       </div>
+					</span>
+            </div>
+            <div class="clear"></div>
+            <div class="subparamsgray360">
+				    <span class="Imags_firstspan"><label name="RecoveryTime" id="RecoveryTime"></label></span>
+					<span class="Images_localsecondspan">
+                      
+					</span>
+              </div>
+             <div class="Right_mainparams main_top10"><label name="laNetCardConfig1" id="laNetCardConfig">联动方式（常规联动）</label></div> 
+                 <div class="subparamswhite360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">声音报警</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+                <div class="subparamsgray360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">上传中心</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+                <div class="subparamswhite360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">显示字幕</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+              <div class="Right_mainparams main_top10"><label name="laNetCardConfig1" id="laNetCardConfig">联动方式（其他联动）</label></div> 
+                <div class="subparamswhite360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">联动报警输出</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+                <div class="subparamsgray360">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">A->1</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" />
+                        </span>
+                </div>
+                <span class="Images_spansave"><input type="button" onclick="showmenuconfig('set', 1)" class="input_save" id="SaveConfigBtn" value="保存"></span>
+           </div>
+    </div>
+    
+    <!----- 报警输入开始------->
+    <div class="pane" id="divInput">
+         
+        
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="laStreamType1">报警输入号</label></span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width152">
+                   <option></option>
+                </select>
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">报警名称</label></span>
+            <span class="localsecondspan">
+		        <input type="text" class="input_config width150" />
+            </span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="laStreamType1">报警类型</label></span>
+            <span class="localsecondspan">
+		        <select id="InputType" class="selectwidth width152">
+                </select>
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">布防时间</label></span>
+            <span class="localsecondspan">
+		        布防时间显示
+            </span>
+           </div>
+          
+       <div class="mainparams main_top26"><label name="laNetCardConfig" id="laNetCardConfig1">联动方式（常规联动）</label></div>
+           <div class="subparamswhite main_top10">
+            <span class="firstspan"><label name="laStreamType1">声音报警</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">上传中心</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />
+            </span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="laStreamType1">上传FTP</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">录像联动</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />
+            </span>
+           </div>
+       <div class="mainparams main_top26"><label name="laNetCardConfig" id="laNetCardConfig1">联动方式（其他联动）</label></div>
+            <div class="subparamswhite">
+            <span class="firstspan"><label name="laStreamType1">联动报警输出</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">A->1</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />
+            </span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="laStreamType1">PTZ联动通道</label></span>
+            <span class="localsecondspan">
+		        
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">预置点序号</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />&nbsp;
+                  <select id="ptz_Input" class="selectwidth width120">
+                  </select>
+            </span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="laStreamType1">巡航序号</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />&nbsp;
+                  <select id="ptz_Cruise" class="selectwidth width120">
+                 </select>
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">轨迹号</label></span>
+            <span class="localsecondspan">
+		       <input type="checkbox" class="checkbox main_top8" />&nbsp;
+                  <select id="ptz_Track" class="selectwidth width120">
+                 </select>
+            </span>
+           </div>
+           <div class="subparamswhite">
+            <span class="firstspan"><label name="laStreamType1">复制到报警量</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />
+            </span>
+           </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="laVideoResolution1">A<-1</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" />A<-1
+            </span>
+           </div>
+           
+          <span class="spansave"><input type="button" onclick="showmenuconfig('set', 1)" class="input_save" id="SaveConfigBtn" value="保存"></span>
+    </div>
+    <!------ 报警输入结束------------------->
+    
+    
+    <!------ 报警输出开始------------------->
+    
+    <div class="pane" id="divOutput" >
+       
+        <div class="subparamswhite">
+            <span class="firstspan">
+		        <label name="AlarmOutput" id="AlarmOutput"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width152">
+                  <option></option>
+                </select>
+            </span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="laDDNSType" id="laDDNSType1">报警名称</label></span>
+		    <span class="localsecondspan">
+		        <input type="text" class="input_config" />
+		    </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="laServerAdd1" id="laServerAdd">延时</label></span>
+		    <span class="localsecondspan">
+		        <select class="selectwidth width152">
+                 <option>5秒</option>
+                 <option>10秒</option>
+                 <option>30秒</option>
+                 <option>1分</option>
+                 <option>2分</option>
+                 <option>5分</option>
+                 <option>10分</option>
+                 <option>手动</option>
+                </select>
+		    </span>
+		   
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="laDeviceDomain" id="laDeviceDomain1">布防时间</label></span>
+		    <span class="localsecondspan">
+		        布防时间显示
+		    </span>
+		    <span id="ServerNameDDNStips2"></span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="gePort1">复制到报警量</label></span>
+		    <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox" />
+		    </span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="geUserName1" id="laUserName">A<-1</label></span>
+		    <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox" />
+		    </span>
+		    <span id="UserNametips"></span>
+        </div>
+        
+        <span class="spansave"><input type="button" onclick="showmenuconfig('set', 1)" class="input_save" id="SaveConfigBtn" value="保存"></span>
+    </div>
+    <!---------------异常开始------------------>
+    <div class="pane" id="divAbnormal" >
+        <div class="subparamswhite">
+           <span class="firstspan">
+		        <label name="ExceptionTypes" id="ExceptionTypes"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8">
+            </span>
+        </div>
+       <div class="mainparams main_top26"><label name="laNetCardConfig" id="laNetCardConfig1">联动设置-常规联动</label></div>
+	    <div class="subparamsgray main_top10">
+            <span class="firstspan"><label name="laDevicePPPOEIP" id="laDevicePPPOEIP1">声音报警</label></span>
+            <span class="localsecondspan">
+              <input type="checkbox" class="checkbox main_top8">
+             </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="geUserName1" id="laUserName">上传中心</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8">
+		    </span>
+            
+        </div>
+       <div class="mainparams main_top26"><label name="laNetCardConfig" id="laNetCardConfig1">联动设置-其它联动</label></div>
+        <div class="subparamsgray main_top10">
+            <span class="firstspan"><label name="gePassword1">联动报警输出</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8">
+		    </span>
+            
+        </div>
+	    <div class="subparamswhite">
+            <span class="firstspan"><label name="laCheckPwd1" id="laCheckPwd">A->1</label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8">
+		    </span>
+        </div>
+        
+        <span class="spansave"><input type="button" onclick="showmenuconfig('set', 1)" class="input_save" id="SaveConfigBtn" value="保存"></span>
+    </div>
+    
+    <!------------抓图开始--------------->
+    <div id="divScreenshot" class="pane"  style="display:block">
+       
+            
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="ScreenshotOpen" id="ScreenshotOpen"></label></span>
+				<span class="localsecondspan">
+                  <input type="checkbox" class="checkbox main_top8">
+                </span>
+			</div>
+            <div class="subparamsgray">
+			    <span class="firstspan"><label name="laEnableV2c1" id="laEnableV2c">图片格式</label></span>
+				<span class="localsecondspan">
+                  <select class="selectwidth width152">
+                    <option>JPEG</option>
+                  </select>
+                </span>
+			</div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="laRwCommunity1" id="laRwCommunity">分辨率</label></span>
+				<span class="localsecondspan">
+                  <select class="selectwidth width152">
+                    <option>1280*720</option>
+                  </select>
+                </span>
+			</div>
+            <div class="subparamsgray">
+			    <span class="firstspan"><label name="laRCommunity1" id="laRCommunity">图片质量</label></span>
+				<span class="localsecondspan">
+                  <select class="selectwidth width152">
+                    <option>高</option>
+                    <option>中</option>
+                    <option selected="selected">低</option>
+                  </select>
+                </span>
+			</div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="laTrapIP1" id="laTrapIP">抓图间隔</label></span>
+				<span class="localsecondspan">
+                  <input type="text" class="input_config" />
+                  <!--<select class="selectwidth">
+                    <option>高</option>
+                    <option>中</option>
+                    <option selected="selected">低</option>
+                  </select>-->
+                </span>
+			</div>
+            
+        <span class="spansave"><input type="button" onclick="showmenuconfig('set', 1)" class="input_save" id="SaveConfigBtn" value="保存"></span>
+    </div>
+   
+</div><!--<div class="panes">-->

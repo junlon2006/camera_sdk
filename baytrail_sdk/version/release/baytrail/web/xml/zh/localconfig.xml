@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LocalConfig>
+  <Page>
+    <MPlayParams>播放参数</MPlayParams>
+    <MProtocolType>协议类型</MProtocolType>
+    <Mperformance>播放性能</Mperformance>
+    <MnetsPreach1>实时性好</MnetsPreach1>
+    <MnetsPreach2>均衡</MnetsPreach2>
+    <MnetsPreach3>流畅性好</MnetsPreach3>
+    <MImgReduction>启用图像降噪</MImgReduction>
+    <Mnoiselevel>降噪等级</Mnoiselevel>
+    <Mverticalsynchronization>启用垂直同步</Mverticalsynchronization>
+    <Maddcpu>开启会增加CPU消耗，普通情况下请关闭</Maddcpu>
+	<MStatusinfo>状态信息显示</MStatusinfo>
+    <Mlocalrecordconfig>录像</Mlocalrecordconfig>
+    <mpackSize>录像文件打包大小</mpackSize>
+    <MrecordPath>浏览录像保存路径</MrecordPath>
+    <MPlaybackFilePath>回放剪辑保存路径</MPlaybackFilePath>
+    <Mdownrecordconfig>下载录像配置</Mdownrecordconfig>
+    <MdownloadPath>回放下载保存路径</MdownloadPath>
+    <MCaptureClipParams>抓拍</MCaptureClipParams>
+    <MPreviewPicPath>浏览抓拍保存路径</MPreviewPicPath>
+    <MCapPath>前端抓拍保存路径</MCapPath>
+    <MPlaybackPicPath>回放抓拍保存路径</MPlaybackPicPath>
+    <Mdownplugin>下载插件</Mdownplugin>
+  </Page>
+  <Js></Js>
+</LocalConfig>

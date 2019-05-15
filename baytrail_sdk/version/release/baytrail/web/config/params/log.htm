@@ -1,0 +1,97 @@
+<ul class="tabs" id="tabLog">
+    <li><a id="MLogMain" name="MLogMain" href="javascript:ia(LogMain).update();"></a></li>
+</ul>
+<div class="panes"  id="divLog">
+   <div id="LogMain" class="panewidth">
+       <!---日志开始---->
+         <div>
+            <span class="firstspan">
+		        <label id="EnableLogRecord" name="EnableLogRecord"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <input type="checkbox" id="startrecord" class="checkbox main_top5" onclick="startrecord()">
+            </span>
+        </div>
+         <div class="margintop10 main_top5">
+            <table border="0" cellspacing="0" cellpadding="0" id="tablogtype">
+              <tbody>
+                 <tr style="height:40px; line-height:40px;">
+                    <td class="td1"><label name="MLogType"></label></td>
+                    <td><select class="selectwidth width120" style="margin:0 20px" id="LogType"  onchange="ChangeLogType()"></select></td>
+                    <td><label name="MStartTime"></label></td>
+                    <td><input id="StartTime" class="Wdate" type="text" style="width:160px; margin:0 20px;" onclick="CreateCalendar(1)"></td>
+                    <td><input type="button" value="" name="MCleanLog" id="ClearLog" onclick="ClearLog()" class="buttonclass" style="margin-right:10px;" /></td>
+                    <td></td>
+                 </tr>
+                 <tr  style="height:40px; line-height:40px;">
+                    <td><span class="LogTypexHide"  style="display:none"><label name="MSubtype"></label></span></td>
+                    <td><span class="LogTypexHide" style="display:none"><select class="selectwidth width120" onchange="changeLogTypex()" style="margin:0 20px" id="LogTypex"></select></span></td>
+                    <td><label name="MEndTime"></label></td>
+                    <td><input id="EndTime" class="Wdate" type="text" style="width:160px; margin:0 20px;" onclick="CreateCalendar(1)"></td>
+                    <td><input type="button" onclick="GetexPage('SearchLog')"  id="SaveConfigBtn" value="" name="MSearchLog"  class="buttonclass" style="margin-right:10px;">
+                    <input type="button" value="" name="MSaveLog" id="SaveLog" disabled="disabled" onclick="SaveLog()" class="buttonclass" />
+                    </td>
+                    <td></td>
+                 </tr>
+              </tbody>
+            </table>
+            
+         <div id="mainplugin" style="width:0; height:0"></div>
+
+        <div class="logtitle0" style="margin-top:20px;">
+         <table border="0" cellspacing="0" cellpadding="0" id="Table_Log">
+           <thead>
+             <tr>
+                <td class="td_user"><label name="MLoguser"></label></td>
+                <td class="td_user2"><label name="Museripadd"></label></td>
+                <td class="td_user2"><label name="Mlogtime"></label></td>
+                <td class="td_user2"><label name="MLogcontent"></label></td>
+             </tr>
+           </thead>
+           <tbody id="LogTableList">
+           </tbody>
+         </table>
+        </div>
+        <div id="pagetoolbar" class="PageLogtoolbar" style="display:none">
+         	    <div id="pagecount" class="PageLogcount">
+                    <span class="btnmouseout" onclick="GetexPage('lastPage')">
+                        <div id="lastPage" class="lastPage picpageico" title=""></div>
+                    </span>
+                    
+                    <span class="btnmousedefault" >
+                        <div id="previouspage" class="currentinput piccurrentico curPageClass" style="background:#FFF; color:#976d6d;">0</div>
+                    </span>
+                    
+                    <span class="btnmouseout" onclick="GetexPage('NextPage')">
+                        <div id="nextpage" class="nextpage picpageico" title=""></div>
+                    </span>
+                    
+                    <span class="btnmousedefault">
+                        <div class="jumppagetext" style="float:left;"><label name="Mtotal"></label><span id="curPagetext">0</span><label name="Mstrip"></label>  <span id="curPageClass" class="curPageClass">0</span>/<span id="total">0</span></div>
+                    </span>
+                    
+                    <span class="btnmousedefault">
+                        <div  class="jumppagetext"><label name="Mjump"></label></div>
+                    </span>
+                    
+                    <span class="btnmousedefault">
+                        <div id="previouspage">
+                           <input type="text" style="ime-mode:Disabled" class="jumppage" id="curPagevalue" value="0" disabled="disabled" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
+                        </div>
+                    </span>
+                    <span class="btnmouseout" onclick="GetexPage('GoPage')">
+                        <div id="previouspage" class="jumppage1">go</div>
+                    </span>
+                    
+                    
+                </div>
+        	 </div>
+        
+        <!---日志开始结束---->
+      
+        
+    </div>  
+     
+   </div>
+</div>
+

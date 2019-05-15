@@ -1,0 +1,276 @@
+@charset "utf-8";
+#header{
+	width:100%;
+	height:53px;
+	/*position:relative;*/
+	min-width:970px;
+	_min-width:970px;
+	background:#212326;
+}
+.head_top {
+	margin:0 auto;
+	width:960px;
+	height:53px;
+	text-align:center;
+	position:relative;
+	background:#212326;
+}
+.head_top .maindevicetype{
+	font-size:16px;
+	 text-align:center; 
+	  margin:0 auto;
+	 color:#b1b3b6;
+	 top:20px;
+	 left:0px;
+	 z-index:99;
+	 font-weight:bolder;
+	/* position:absolute;*/
+	 /*top:20px;
+	 position:absolute;
+	*/
+	position:absolute;
+	}
+#head_menu {
+	 width:100%; 
+	 background:#328de0;
+	 height:38px;
+	 line-height:38px;
+	 
+	 }
+.logo
+{
+    float:left;
+	width:157px;
+	height:22px;
+	margin-top:16px;
+	background:url(../images/main/logo.png) no-repeat;
+}
+.version
+{
+	display:inline-block;
+	width:300px;
+	height:27px;
+	line-height:27px;
+	font-size:12px;
+	color:#964444;
+	margin:10px 0 0 20px;
+}
+.languagepart
+{
+   /* float:right;
+	height:22px;
+	width:102px;
+	*/
+	float:right;
+	/*height:25px;*/
+	margin-top:20px;
+}
+.LanguageChage_main
+{
+    position:relative;
+	/*top:10px;
+	right:1px;*/
+	float:right;
+	width:50px;
+	z-index:999;
+	margin-right:15px;
+}
+
+
+.languageshow
+{
+	width:60px;
+	cursor:pointer;
+	height:20px;
+	text-align:left;
+	/*padding-left:10px;*/
+	line-height:20px; 
+	cursor:pointer;
+	color:#b1b3b6;
+	background: url(../images/login/expanded.png)  no-repeat 97% 50%;
+}
+.languagechange
+{
+    display:none;
+	/*width:60px;
+	/*height:105px; 下拉滚动条
+    height:60px;*/
+	background:#fff;
+	
+	border:1px #CCC solid;
+	cursor:pointer;
+	color:#000;
+	overflow-y:auto;
+	overflow-x:hidden;
+	position:absolute;
+	width:60px;
+	text-align:left;
+}
+.mouseoverlan
+{
+    /*width:90px;
+	padding-left:10px;
+	height:20px;*/ 
+	line-height:20px;
+	cursor:pointer;
+	margin-right:5px;
+	
+}
+.mouseoutlan
+{
+    /*width:90px;
+	/*padding-left:10px;
+	height:20px;*/
+	line-height:20px; 
+	cursor:pointer;  
+	margin-right:5px;
+}
+
+.edtioncolumn
+{
+    position:absolute;
+	top:5px;
+	right:5px;
+	display:none;
+	float:left;
+	margin-right:65px;
+}
+.edition
+{
+	line-height:20px; 
+	padding:0 10px;
+	color:#757575;
+	text-align:left;
+	background:#ffffff;
+	border:1px solid #d1d1d1;
+}
+
+
+.ipcworked {  float:left; margin-left:250px; height:34px; line-height:34px;font-weight:bold;}
+
+#menu{  width:960px;margin:0 auto; height:38px;  line-height:38px; font-size:14px; color:#fff;
+     background:#328de0;
+	
+ }
+#menu ul { z-index:100; }
+#menu ul li {float:left;width: 92px; display:block; text-align:center;  cursor:pointer; border-left:1px solid #3584bf }
+#menu ul li a {display:block;text-align:center; width:92px;  font-size: 14px;   color: #fff;}
+.menuborder{
+	border-right:1px solid #3584bf;
+}
+.menuground {color:#fff;background:#2b79c0;}
+#main_right { float:right; margin:0 0 0px 15px; width:auto;}
+.logoutgggg {  float:left;  padding-left:15px; margin:0 15px; cursor:pointer; font-weight:normal;  }
+.logout {  float:left; margin-right:10px;   }
+.logoutico { float:left;background:url(../images/main/admin_normal.png) no-repeat; margin-top:10px; width:20px; height:25px; margin-right:5px;}
+.help { float:left;padding-left:10px; cursor:pointer;font-weight:normal;}
+.about { float:left;padding-left:10px; cursor:pointer;font-weight:normal;}
+.menumouseoutlan { background:#fff;}
+.menumouseoverlan{ background:#ccc;}
+.conteng { width:100%; height:100%;}
+.contentframe { height:100%; width:100%;}
+
+
+/*************************************************
+                 主页面菜单栏 begin
+*************************************************/
+.nav
+{
+    margin:0 auto;
+	width:974px;
+	height:41px;
+	color:#757575;	
+	background:#eaeaea;
+	border:1px solid #b1b1b1; 
+}
+.menu
+{
+    float:left;
+	width:165px;
+	height:41px;
+	line-height:41px;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	cursor:pointer;
+	border-right:1px solid #dfdfdf;
+}
+.riser
+{
+    float:right;
+	padding-right:5px;
+	line-height:41px;
+	text-align:center;
+}
+
+.logoutimg
+{
+    float:right;
+	width:20px;
+	height:41px;
+	margin-right:5px;
+	cursor:pointer;
+	background:url(../images/main/logout.gif) no-repeat 0% 50%;
+}
+.loginuser
+{
+    float:right;
+	padding-right:5px;
+	line-height:41px;
+	text-align:center;
+}
+.loginuserimg
+{
+    float:right;
+	width:20px;
+	height:41px;
+	margin-right:5px;
+	background:url(../images/main/user.gif) no-repeat 0% 50%;
+}
+.menuBackground
+{
+	color:#a73737;
+	background:url(../images/menutab.gif);
+}
+/*************************************************
+                 主页面菜单栏 end
+*************************************************/
+
+.content
+{
+    margin:10px auto 0 auto;
+	width:960px;
+	height:575px;
+}
+/*.contenter{
+	width:960px;
+	/*height:546px!important;
+	background:#fff;
+	border:1px solid #d1d1d1;
+}*/
+
+
+.mainfooter { width:100%; background:#f9f9f9; border-top:1px solid #d1d1d1; height:30px; margin-top:20px;bottom:0px;left:0px;min-width:970px;position:absolute; } 
+.updateblock
+{
+    position:absolute; 
+	top:0; 
+	left:0; 
+	background-color:#343434;
+	filter:Alpha(opacity=40);
+	display:none;opacity:0.4;
+	z-index:10000;
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+.ipeditmain {
+	position:absolute; 
+	top:35%; 
+	left:0; 
+	z-index:10000;
+	width:100%;
+	text-align:center;
+	font-size:35px;
+	font-weight:bold;
+}

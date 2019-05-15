@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabAbnormal">
+    <li><a href="javascript:ia(Abnormal).update();" name="aAbnormal" id="aAbnormal"></a></li>
+</ul>
+<div class="panes panewidth" id="DivAbnormal">
+     <div class="pane" id="divAbnormal" >
+       		<div class="subparamswhite main_top10">
+                <span class="firstspan"><label name="laEnable"></label></span>
+                <span class="localsecondspan">
+                    <input type="checkbox" class="checkbox main_top8" id="AbnormalEnable" onclick="checkbox(this)"/>
+                </span>
+           </div>
+       
+        <div class="subparamswhite">
+           <span class="firstspan">
+		        <label name="ExceptionTypes" id="ExceptionTypes"></label>
+		    </span>
+            <span class="localsecondspan">
+		        <select class="selectwidth width152" id="exceptiontype" onchange="ChangeAbnormal()">
+                   
+                  </select>
+            </span>
+        </div>
+       <div class="mainparams main_top26" id="subNormalLink"><label name="LinkMode"></label>(<label name="NormalLink"></label>)</div>
+	    <div style="margin-top:10px;"></div>
+        <div class="subparamswhite" id="subAbnormaluploadcenter">
+            <span class="firstspan"><label name="UpCenter" ></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" id="Abnormaluploadcenter" onclick="checkbox(this)">
+		    </span>
+        </div>
+        <div class="subparamsgray" id="subAbnormalshowosd" style="display:none">
+            <span class="firstspan"><label name="ShowContex" ></label></span>
+            <span class="localsecondspan">
+              <input type="checkbox" class="checkbox main_top8" id="Abnormalshowosd" onclick="checkbox(this)">
+             </span>
+        </div>
+        <div class="subparamsgray" id="subAbnormalAudioout">
+            <span class="firstspan"><label name="SoundAlarm"></label></span>
+            <span class="localsecondspan">
+              <input type="checkbox" class="checkbox main_top8" id="AbnormalAudioout" onclick="checkbox(this)">
+             </span>
+        </div>
+        <div class="subparamsgray" id="suAbnormalrec" style="display:none">
+            <span class="firstspan"><label name="RecLink"></label></span>
+            <span class="localsecondspan">
+              <input type="checkbox" class="checkbox main_top8" id="subAbnormalrec" onclick="checkbox(this)">
+             </span>
+        </div>
+        
+        <div class="subparamsgray" id="suAbnormalsnap" style="display:none">
+            <span class="firstspan"><label name="Snap"></label></span>
+            <span class="localsecondspan">
+              <input type="checkbox" class="checkbox main_top8" id="subAbnormalsnap" onclick="checkbox(this)">
+             </span>
+        </div>
+        
+        <div class="subparamsgray" id="suAbnormalsmtp" style="display:none">
+            <span class="firstspan"><label name="Mailnotification"></label></span>
+            <span class="localsecondspan">
+              <input type="checkbox" class="checkbox main_top8" id="subAbnormalsmtp" onclick="checkbox(this)">
+             </span>
+        </div>
+      
+       <div class="mainparams main_top26" id="subotherLink"><label name="LinkMode"></label>(<label name="OtherLink"></label>)</div>
+               
+	    <div class="subparamswhite" id="subAbnormalalarmout">
+            <span class="firstspan"><label name="AlarmOut"></label></span>
+            <span class="localsecondspan">
+		        <div id="AbnormaA1"></div>
+		    </span>
+        </div>
+        <div class="subparamswhite" id="subAbnormalptz">
+            <span class="firstspan"><label name="PTZLink"></label></span>
+            <span class="localsecondspan">
+		        <input type="checkbox" class="checkbox main_top8" id="AbnormalInputPtz" onclick="checkbox(this)"/>&nbsp;
+            </span>
+           </div>
+           <div class="subparamsgray" id="subAbnormalptzpresent">
+            <span class="firstspan"><label name="presetNum"></label></span>
+            <span class="localsecondspan">
+                  <select id="Abnormalptz_Input" class="selectwidth width120">
+                  </select>
+            </span>
+           </div>
+        
+        <div class="spansave"><input type="button"  class="input_save"  id="SaveAbnormal" onclick="SaveAbnormal(this)" value="" name="MSaveConfigLocal"><span id="SetResultTipsAbnormal"></span></div>
+    </div>
+
+</div><!--<div class="panes">-->

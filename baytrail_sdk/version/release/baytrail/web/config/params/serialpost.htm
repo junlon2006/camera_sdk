@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ul class="tabs" id="tabSerialPost">
+    <li><a id="aSerial" name="aSerial" href="javascript:ia(RS485).update();"></a></li>
+</ul>
+<div class="panes"  id="divSerialPost">
+   <div class="pane" id="divRS485">
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="Type" id="Type"></label></span>
+            <span>
+                <select class="selectwidth width152" id="RsModeType" onchange="ChangeRsModeType()">
+                </select>
+            </span>
+        </div>
+        
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="Bound" id="Bound"></label></span>
+            <span>
+                <select class="selectwidth width152" id="baudrateType">
+                </select>
+            </span>
+            <span id="ServerIPtips" class="colortips"></span>
+        </div>
+         <div class="subparamsgray">
+            <span class="firstspan"><label name="DataBit" id="DataBit"></label></span>
+            <span>
+                <select class="selectwidth width152" id="databitType">
+                </select>
+            </span>
+            <span id="ServerIPtips"></span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="StopBit" id="StopBit"></label></span>
+            <span>
+                <select class="selectwidth width152" id="stopbitType">
+                </select>
+            </span>
+            <span id="ServerIPtips"></span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="SerialCheck" id="SerialCheck"></label></span>
+            <span>
+                <select class="selectwidth width152" id="paritybitType">
+                </select>
+            </span>
+        </div>
+        
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="StreamCtrl" id="StreamCtrl"></label></span>
+            <span>
+                <select class="selectwidth width152" id="streamcontrolType">
+                </select>
+            </span>
+        </div>
+        <div class="subparamswhite">
+            <span class="firstspan"><label name="Address" id="Address"></label></span>
+            <span>
+                <input id="addressnum" class="input_config width150" type="text"  onkeydown="CheckKeyDown(event)" maxlength="3">
+            </span>
+            <span id="fixedaddressnumTips" class="fixedTips"></span><span id="addressnumTips"></span>
+        </div>
+         <div class="subparamswhite">
+            <span class="firstspan"><label name="CtrlPotocol" id="CtrlPotocol"></label></span>
+            <span>
+                <select class="selectwidth width152" id="controlprotocol">
+                </select>
+            </span>
+            
+        </div>
+    
+        <div class="spansave"><input type="button"  class="input_save"  id="SaveRS485" onclick="SaveRS485(this)" value="" name="MSaveConfigLocal"><span id="SetResultTipsRS485"></span></div>
+   </div>
+
+</div>

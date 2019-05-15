@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LocalConfig>
+  <Page>
+    <MPlayParams>Play</MPlayParams>
+    <MProtocolType>Protocol</MProtocolType>
+    <Mperformance>Performance</Mperformance>
+    <MnetsPreach1>Real-time</MnetsPreach1>
+    <MnetsPreach2>Balanced</MnetsPreach2>
+    <MnetsPreach3>Smooth</MnetsPreach3>
+    <MImgReduction>Enable Image Noise Reduction</MImgReduction>
+    <Mnoiselevel>Noise Reduction Level</Mnoiselevel>
+    <Mverticalsynchronization>Enable Vertical Synchronization</Mverticalsynchronization>
+    <Maddcpu>Enabling this function will increase the CPU Utilization.</Maddcpu>
+    <MStatusinfo>Display Status Info</MStatusinfo>
+    <Mlocalrecordconfig>Recording</Mlocalrecordconfig>
+    <mpackSize>Packet size</mpackSize>
+    <MrecordPath>Local Recording Save Path</MrecordPath>
+    <MPlaybackFilePath>Clipping Save Path</MPlaybackFilePath>
+    <Mdownrecordconfig>Download Recording</Mdownrecordconfig>
+    <MdownloadPath>Download Save Path</MdownloadPath>
+    <MCaptureClipParams>Snapshot</MCaptureClipParams>
+    <MPreviewPicPath>Local Snapshot Save Path</MPreviewPicPath>
+    <MCapPath>Camera Snapshot Save Path</MCapPath>
+    <MPlaybackPicPath>Snapshot Save Path</MPlaybackPicPath>
+    <Mdownplugin>Download Plug-in</Mdownplugin>
+  </Page>
+  <Js></Js>
+</LocalConfig>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aadcap>
+  <Common>
+    <Page>
+      <Maadcap>工作模式</Maadcap>
+    </Page>
+  </Common>
+  <Mtcf>
+    <Page>
+      <Mmode>模式选择</Mmode>
+      <MLowdelaymodel>低延时</MLowdelaymodel>
+      <MautoLowdelaymodel>自动低延时模式</MautoLowdelaymodel>
+      <MNormalmode>普通模式</MNormalmode>
+      <MForcedlowdelaymodel>强制低延时模式</MForcedlowdelaymodel>
+      <Mvideodelay>以下两个功能会增加视频延时</Mvideodelay>
+      <Mnoisereduction3D>3D降嗓</Mnoisereduction3D>
+      <MImagemasking>图像遮蔽</MImagemasking>
+      <MNodelayoptimization>不对延时优化</MNodelayoptimization>
+      <MForcedclose3D>强制关闭3D降嗓和图像遮蔽功能,获得最佳延时</MForcedclose3D>
+      <MForcedclose3D2>在关闭3D降嗓和图像遮蔽时,自动启用低延时模式</MForcedclose3D2>
+	  <MRestart>重启生效</MRestart>
+    </Page>
+    <opt>
+      <Mhdr>超宽动态模式</Mhdr>
+      <Mfps60>60帧模式</Mfps60>
+      <Mstream4>四流模式</Mstream4>
+      <M4K>4K模式</M4K>
+      <Mdiv4>4K四分屏模式</Mdiv4>
+	  <Mnormal>普通模式</Mnormal>
+      <Mhdsdi>HDSDI-摄像机模式</Mhdsdi>
+	  <MhdsdiTips>HD-SDI回显支持高清输出,且支持回显OSD</MhdsdiTips>
+	  <MhdsdiTips1>仅支持单码流网络输出</MhdsdiTips1>
+    </opt>
+  </Mtcf>
+</aadcap>

@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabs -->
+<ul class="tabs" id="tabAlarm">
+    <li><a href="javascript:ia(Motion).update();" name="aMotion" id="aMotion"></a></li>
+    <li><a href="javascript:ia(Alarm).update();" name="aShiled" id="aShiled"></a></li>
+    <li><a href="javascript:ia(Guard).update();" name="aGuard" id="aGuard"></a></li>
+    <li><a href="javascript:ia(Virtualfocus).update();" name="aVirtualfocus" id="aVirtualfocus"></a></li>
+    <li><a href="javascript:ia(Scene).update();" name="aScene" id="aScene"></a></li>
+</ul>
+<div id="tabAlarm" class="panes panewidth">
+
+  <div class="pane" id="divMotion">
+	      <div class="Imags_left" style="height:350px; background:#FFF">
+           <div id="mainplugin" style="width:352px;height:254px;background:#3b3b3b;">
+           </div>
+           </div>
+           <div class="Imags_right">  
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan paddingleft10"><label name="laEnable"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="checkbox" class="checkbox main_top8" id="MotionCheck" onclick="checkboxMotion(this)" />
+					</span>
+              </div>
+              <div class="subparamsgray360">
+				    <span class="Imags_firstspan paddingleft10"><label name="Regional" id="Regional"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="button"  id="Startdrawing" class="buttonlength" value=""  onclick="Startdrawing(this)" />
+                       <input type="button"  id="ClearAll" class="buttonlength" value="" name="ClearAll" onclick="clearallarea('event','detect')" />
+					</span>
+              </div> 
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan paddingleft10"><label  name="Sensitivity"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider210">
+					    <div id="slider_Motion" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="Motion_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                        </div>
+                       </div>
+					</span>
+            </div>
+            <div class="clear"></div>
+            <div class="subparamsgray360">
+				    <span class="Imags_firstspan paddingleft10"><label name="RecoveryTime"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="button" onclick="EditSchedule()" class="buttonlength" name="MButEdit" id="ScheduleEditBtn"  value="">
+					</span>
+              </div>
+              <div class="mainparams main_top10" id="subMotionNormalLink">
+				<label id="laNetCardConfig1" name="laNetCardConfig"></label><label name="LinkMode"></label>(<label name="NormalLink"></label>)
+				</div>
+                
+                <div class="subparamsgray" id="subMotionaudioout">
+                    <span class="Imags_firstspan"><label name="SoundAlarm"></label></span>
+                    <span><input type="checkbox" class="checkbox main_top8" id="Motionaudioout" onclick="checkbox(this)"/>
+                    </span>
+           		</div>
+                
+                
+                <div class="subparamsgray" id="subMotionuploadcenter">
+                        <span class="Imags_firstspan"><label  name="UpCenter"></label></span>
+                        <span>
+                           <input type="checkbox" class="checkbox main_top8" id="Motionuploadcenter" onclick="checkbox(this)" />
+                        </span>
+                </div>
+               
+                
+                <div class="subparamsgray" id="subMotionrec">
+                        <span class="Imags_firstspan"><label name="RecLink"></label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" id="Motionrec" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+                <div class="subparamsgray" id="subMotionShowosd">
+                        <span class="Imags_firstspan"><label name="ShowContex"></label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" id="MotionShowosd" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+                <div class="subparamsgray" id="subMotionsnap">
+                        <span class="Imags_firstspan"><label name="Snap"></label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" id="Motionsnap" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+              <div class="Right_mainparams main_top10" id="subMotionOtherLink"><label name="LinkMode"></label>(<label name="OtherLink"></label>)</div> 
+                <div class="subparamsgrayinty" id="suMotion">
+                        <span class="Imags_firstspan"><label name="AlarmOut"></label></span>
+                        <span class="Images_localsecondspaninty">
+                            <div id="MotionAlCheck"></div>
+                        </span>
+                </div>
+                 <div class="clear"></div>
+             <div class="subparamswhite" id="subMotionptz">
+                <span class="Imags_firstspan"><label name="PTZLink"></label></span>
+                <span class="Images_localsecondspaninty">
+                    <input type="checkbox" class="checkbox main_top8" id="MotionInputPtz" onclick="checkbox(this)"/>&nbsp;
+                </span>
+              </div>
+              <div class="clear"></div>
+               <div class="subparamsgray" id="subMotionptzpresent">
+                <span class="Imags_firstspan"><label name="presetNum"></label></span>
+                <span class="Images_localsecondspaninty">
+                      <select id="Motionptz_Input" class="selectwidth width120">
+                      </select>
+                </span>
+               </div>
+                <div class="subparamsgray" style="display:none">
+                        <span class="Imags_firstspan"><label id="Sensitivity1" name="Sensitivity1">A->1</label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" id="Motiona1" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                <div class="spansave"  style="margin-left:140px;"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="TimingTaskSave(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsMotion"></span></div>
+           </div>
+    </div>
+
+
+
+
+
+    <div class="pane" id="Alarm" style="display:block">
+	      <div class="Imags_left" style="height:350px; background:#FFF">
+           <div id="mainpluginAlarm" style=" width:352px;height:254px;background:#3b3b3b;">
+           </div>
+           </div>
+           <div class="Imags_right">  
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan paddingleft10"><label name="laEnable"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="checkbox" class="checkbox main_top8"  id="CheckAlarm" onclick="checkboxAlarm(this)"/>
+					</span>
+              </div>
+              <div class="subparamsgray360">
+				    <span class="Imags_firstspan paddingleft10"><label name="Regional"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="button" value=""  id="StartdrawingAlarm" class="buttonlength" onclick="StartdAlarm(this)" />
+                       <input type="button" value="" name="Cleardrawing"  id="ClearAllAlarm" class="buttonlength" onclick="clearallarea('event','shieldalarm')" />
+					</span>
+              </div> 
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan paddingleft10"><label  name="Sensitivity"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider210">
+					    <div id="slider_sensitivity_Alarm" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="sensitivity_Alarm_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                        </div>
+                       </div>
+					</span>
+            </div>
+            <div class="clear"></div>
+            <div class="subparamsgray360">
+				    <span class="Imags_firstspan paddingleft10"><label name="RecoveryTime"></label></span>
+					<span class="Images_localsecondspan">
+                    <input type="button" onclick="EditSchedule()" class="savebtn" name="MButEdit" id="ScheduleEditBtnAlarm"  value="">
+					</span>
+              </div>
+             
+              
+              
+             <div id="subAlarmlinkmodecaps" class="Right_mainparams main_top10"><label name="LinkMode"></label>(<label name="NormalLink"></label>)</div> 
+                 <div class="subparamsgray" id="subAlarmAudioout">
+                        <span class="Imags_firstspan"><label name="SoundAlarm"></label></span>
+                        <span class="Imags_firstspan">
+                           <input type="checkbox" class="checkbox main_top8" id="AlarmAudioout" onclick="checkbox(this)" />
+                        </span>
+                </div>
+               
+                <div class="subparamsgray" id="subAlarmUploadcenter">
+                        <span class="Imags_firstspan"><label name="UpCenter"></label></span>
+                        <span class="Imags_firstspan">
+                           <input type="checkbox" class="checkbox main_top8" id="AlarmUploadcenter" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+                <div class="subparamsgray" id="subAlarmrec">
+                        <span class="Imags_firstspan"><label name="RecLink"></label></span>
+                        <span class="Imags_firstspan">
+                           <input type="checkbox" class="checkbox main_top8" id="Alarmrec" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+                <div class="subparamsgray" id="subAlarmshowosd">
+                        <span class="Imags_firstspan"><label name="ShowContex"></label></span>
+                        <span class="Imags_firstspan">
+                           <input type="checkbox" class="checkbox main_top8" id="Alarmshowosd" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+               
+                <div class="subparamsgray" id="subAlarmSnap">
+                        <span class="Imags_firstspan"><label name="Snap"></label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" id="AlarmSnap" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+               
+                
+              <div class="Right_mainparams main_top10" id="subAlarmOtherLink"><label name="LinkMode"></label>(<label name="OtherLink"></label>)</div> 
+               
+                <div class="subparamsgrayinty" id="subalarmout">
+                        <span class="Imags_firstspan"><label name="AlarmOut"></label></span>
+                        <span class="Images_localsecondspaninty">
+                          <div id="CheckAlarmEnabled"></div>
+                           <!--<input type="checkbox" class="checkbox main_top8" id="AlarmA1" onclick="checkbox(this)" />-->
+                        </span>
+                </div>
+                <div class="clear"></div>
+                <div class="subparamswhite" id="subAlarmptz">
+                    <span class="Imags_firstspan"><label name="PTZLink"></label></span>
+                    <span class="Images_localsecondspaninty">
+                        <input type="checkbox" class="checkbox main_top8" id="AlarmInputPtz" onclick="checkbox(this)"/>&nbsp;
+                    </span>
+                   </div>
+                   <div class="clear"></div>
+                   <div class="subparamsgray" id="subAlarmptzpresent">
+                    <span class="Imags_firstspan"><label name="presetNum"></label></span>
+                    <span class="Images_localsecondspaninty">
+                          <select id="Alarmptz_Input" class="selectwidth width120">
+                          </select>
+                    </span>
+                   </div>
+                <div class="spansave"  style="margin-left:140px;"><input type="button"  class="input_save"  id="SaveAlarm" onclick="TimingTaskSave(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsAlarm"></span></div>
+           </div>
+           
+    </div>
+    <!--**Guard Line*------>
+    <div class="pane" id="Guard" style="display:none">
+	      <div class="Imags_left" style="height:350px; background:#FFF">
+           <div id="mainpluginGuard" style=" width:352px;height:254px;background:#3b3b3b;">
+           </div>
+           <div id="blccustom" style="display:;margin-top:10px;">
+                <input id="SGuard"  class="buttonclass" type="button" value="" onclick="SGuard(this)" >
+                <input id="CGuard" class="buttonclass" type="button"  name="Cleardrawing" value="" onclick="CGuard('CGuard')"  >
+                <input id="GuardClearAll" class="buttonclass" type="button"  name="ClearAll" value="" onclick="CGuard('GuardClearAll')"  >
+            </div>
+           </div>
+           <div class="Imags_right">  
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan paddingleft10"><label name="laEnable"></label></span>
+					<span class="Images_localsecondspan">
+                       <input type="checkbox" class="checkbox main_top8"  id="CheckGuard" onclick="CheckboxEvent('guard')"/>
+					</span>
+              </div>
+              
+              <div class="subparamsgray360">
+				    <span class="Imags_firstspan paddingleft10"><label name="aGuard"></label></span>
+					<span class="Images_localsecondspan">
+                       <select id="GuardSelect" class="Images_select2" onchange="GuardSelect('Select')">
+                       </select>
+					</span>
+              </div>
+              <div class="subparamsgray360">
+				    <span class="Imags_firstspan paddingleft10"><label name="Mwarningline"></label></span>
+					<span class="Images_localsecondspan">
+                       <select id="GuardDirection" class="Images_select2" onchange="GuardSelect('Direction')">
+                         <option value="ab">A-></option>
+                         <option value="ba">B-></option>
+                         <option value="abba">A-> && B-></option>
+                       </select>
+					</span>
+              </div>
+              <div class="subparamswhite360">
+				    <span class="Imags_firstspan paddingleft10"><label  name="Sensitivity"></label></span>
+					<span class="Images_localsecondspan">
+                       <div class="Images_slider210">
+					    <div id="slider_Guard" class="Images_slider"></div>
+                        <div class="Images_slider_value">
+                            <input type="text" id="Guard_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                        </div>
+                       </div>
+					</span>
+            </div>
+            <div class="clear"></div>
+            <div class="subparamsgray360">
+				    <span class="Imags_firstspan paddingleft10"><label name="RecoveryTime"></label></span>
+					<span class="Images_localsecondspan">
+                    <input type="button" onclick="EditSchedule()" class="savebtn" name="MButEdit" id="ScheduleEditBtnGuard"  value="">
+					</span>
+              </div>
+             
+              
+              
+             <div id="subGuardlinkmodecaps" class="Right_mainparams main_top10"><label name="LinkMode"></label>(<label name="NormalLink"></label>)</div> 
+                 <div class="subparamsgray" id="subGuardAudioout">
+                        <span class="Imags_firstspan"><label name="SoundAlarm"></label></span>
+                        <span class="Imags_firstspan">
+                           <input type="checkbox" class="checkbox main_top8" id="GuardAudioout" onclick="checkbox(this)" />
+                        </span>
+                </div>
+               
+                <div class="subparamsgray" id="subGuardUploadcenter">
+                        <span class="Imags_firstspan"><label name="UpCenter"></label></span>
+                        <span class="Imags_firstspan">
+                           <input type="checkbox" class="checkbox main_top8" id="GuardUploadcenter" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+                <div class="subparamsgray" id="subGuardrec" style="display:none">
+                        <span class="Imags_firstspan"><label name="RecLink"></label></span>
+                        <span class="Imags_firstspan">
+                           <input type="checkbox" class="checkbox main_top8" id="Guardrec" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+                <div class="subparamsgray" id="subGuardshowosd" style="display:none">
+                        <span class="Imags_firstspan"><label name="ShowContex"></label></span>
+                        <span class="Imags_firstspan">
+                           <input type="checkbox" class="checkbox main_top8" id="Guardshowosd" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+               
+                <div class="subparamsgray" id="subGuardSnap">
+                        <span class="Imags_firstspan"><label name="Snap"></label></span>
+                        <span class="Images_localsecondspan">
+                           <input type="checkbox" class="checkbox main_top8" id="GuardSnap" onclick="checkbox(this)"/>
+                        </span>
+                </div>
+                
+               
+                
+              <div class="Right_mainparams main_top10" id="subGuardOtherLink"><label name="LinkMode"></label>(<label name="OtherLink"></label>)</div> 
+               
+                <div class="subparamsgrayinty" id="subGuardout">
+                        <span class="Imags_firstspan"><label name="AlarmOut"></label></span>
+                        <span class="Images_localsecondspaninty">
+                          <div id="CheckGuardEnabled"></div>
+                           <!--<input type="checkbox" class="checkbox main_top8" id="AlarmA1" onclick="checkbox(this)" />-->
+                        </span>
+                </div>
+                <div class="clear"></div>
+                <div class="subparamswhite" id="subGuardptz" style="display:none">
+                    <span class="Imags_firstspan"><label name="PTZLink"></label></span>
+                    <span class="Images_localsecondspaninty">
+                        <input type="checkbox" class="checkbox main_top8" id="GuardInputPtz" onclick="checkbox(this)"/>&nbsp;
+                    </span>
+                   </div>
+                   <div class="clear"></div>
+                   <div class="subparamsgray" id="suGuardptzpresent" style="display:none">
+                    <span class="Imags_firstspan"><label name="presetNum"></label></span>
+                    <span class="Images_localsecondspaninty">
+                          <select id="Guardptz_Input" class="selectwidth width120">
+                          </select>
+                    </span>
+                   </div>
+                <div class="spansave"  style="margin-left:140px;"><input type="button"  class="input_save"  id="SaveGuar" onclick="TimingTaskSave(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsGuar"></span></div>
+           </div>
+           
+    </div>
+    
+    
+    <div class="pane" id="divVirtualfocus">
+      <div class="subparamsgray" id="subVirtualSound">
+        <span class="firstspan"><label name="laEnable"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="Virtualfocuscheck" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      
+      <div class="subparamsgray">
+            <span class="firstspan"><label  name="Sensitivity"></label></span>
+            <span class="localsecondspan">
+               <div class="Images_slider210">
+                <div id="slider_Virtualfocus" class="Images_slider"></div>
+                <div class="Images_slider_value">
+                    <input type="text" id="Virtualfocus_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                </div>
+               </div>
+            </span>
+        </div>
+        <div class="clear"></div>
+      
+      <div class="mainparams main_top26" id="subVirtualNormalLink"><label name="LinkMode"></label>(<label name="NormalLink"></label>)</div>
+      <div class="subparamsgray" id="subVirtualUploadcenter">
+        <span class="firstspan"><label name="UpCenter"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="VirtualUploadcenter" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      
+      <div class="subparamsgray" id="subVirtualaudioout" style="display:none">
+        <span class="firstspan"><label name="SoundAlarm"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="Virtualaudioout" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      
+      
+      <div class="subparamsgray" id="subVirtualshowosd" style="display:none">
+        <span class="firstspan"><label name="ShowContex"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="Virtualshowosd" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      
+      <div class="subparamsgray" id="subVirtualrec" style="display:none">
+        <span class="firstspan"><label name="RecLink"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="Virtualrec" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      
+      <div class="subparamsgray" id="subVirtualsnap" style="display:none">
+        <span class="firstspan"><label name="Snap"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="Virtualsnap" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      
+      
+       <div class="subparamsgray" id="subVirtualfocus">
+        <span class="firstspan"><label name="Mfocus"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="Virtualfocus" onclick="checkbox(this)"/>
+        </span>
+      </div>
+     <div class="mainparams main_top10" id="subVirtualOtherLink"><label name="LinkMode"></label>(<label name="OtherLink"></label>)</div>
+     <div class="subparamsgray" id="subVirtualalarmout">
+        <span class="firstspan"><label name="AlarmOut"></label></span>
+        <span class="localsecondspan">
+            <div id="VirtualAlCheckEnable"></div>
+        </span>
+       </div>
+     <div class="spansave"><input type="button"  class="input_save"  id="SaveVirtual" onclick="SaveVirtual(this)" value="" name="MSaveConfigLocal"><span id="SetResultTipsVirtual"></span></div>
+  </div>
+    
+   <div class="pane" id="divScene">
+      <div class="subparamsgray">
+        <span class="firstspan"><label name="laEnable"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="Scenecheck" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      
+       <div class="subparamsgray">
+            <span class="firstspan"><label  name="Sensitivity"></label></span>
+            <span class="localsecondspan">
+               <div class="Images_slider210">
+                <div id="slider_Scene" class="Images_slider"></div>
+                <div class="Images_slider_value">
+                    <input type="text" id="Scene_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                </div>
+               </div>
+            </span>
+        </div>
+        <div class="clear"></div>
+      
+      <div class="subparamsgray">
+        <span class="firstspan"><label name="RecoveryTime"></label></span>
+        <span class="localsecondspan">
+            <input type="button" onclick="EditSchedule()" class="buttonclass" name="MButEdit" id="ScheduleEditBtnInput"  value="">
+        </span>
+      </div>
+      <div class="mainparams main_top26" id="subSceneNormalLink"><label name="LinkMode"></label>(<label name="NormalLink"></label>)</div>
+      <div class="subparamsgray" id="subSceneUploadcenter">
+        <span class="firstspan"><label name="UpCenter"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="SceneUploadcenter" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      <div class="subparamsgray" id="subSceneSoundAlarm">
+        <span class="firstspan"><label name="SoundAlarm"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="SceneSoundAlarm" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      <div class="subparamsgray" id="subSceneShowosdAlarm" style="display:none">
+        <span class="firstspan"><label name="ShowContex"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="SceneShowosdAlarm" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      <div class="subparamsgray" id="subSceneRecLink">
+        <span class="firstspan"><label name="RecLink"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="SceneRecLink" onclick="checkbox(this)"/>
+        </span>
+      </div>
+      <div class="subparamsgray" id="subSceneSnap">
+        <span class="firstspan"><label name="Snap"></label></span>
+        <span class="localsecondspan">
+            <input type="checkbox" class="checkbox main_top8" id="SceneSnap" onclick="checkbox(this)"/>
+        </span>
+      </div>
+     <div class="mainparams main_top10" id="subsightchangeOtherLink"><label name="LinkMode"></label>(<label name="OtherLink"></label>)</div>
+     <div class="subparamsgray" id="subsightchangealarmout">
+        <span class="firstspan"><label name="AlarmOut"></label></span>
+        <span class="localsecondspan">
+            <div id="SceneAlCheckEnable"></div>
+        </span>
+       </div>
+     <div class="spansave"><input type="button"  class="input_save"  id="SaveSightchange" onclick="TimingTaskSave(this)" value="" name="MSaveConfigLocal"><span id="SetResultTipsSightchange"></span></div>
+  </div> 
+    
+    
+   
+</div><!--<div class="panes">-->
+<div id="TimeScheduleEdit1"></div>

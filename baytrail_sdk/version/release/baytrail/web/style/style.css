@@ -1,0 +1,129 @@
+@charset "utf-8";
+*{ margin:0; padding:0;font-family: Arial,"宋体",sans-serif;}
+html { height: 100%;margin: 0px;padding: 0px;}
+body { width:100%;height:100%; font-size:12px; font-family:Arial,"宋体",sans-serif; background:#f9f9f9;-moz-user-select:-moz-none;}
+div,ul,li,h2,h3,h4,dl,dd,dt,tr,td,p,span{margin:0; padding:0;list-style:none; border:0;}
+img { border:0px;}
+select {font-size:12px;}
+select option {font-size:12px;}
+ul,li{list-style:none;}
+.clear {clear:both;height:0;font-size: 1px;line-height: 0px;} 
+.mousepointer {cursor:pointer;}
+.cursorpointer { cursor:default;}
+input {outline: none;}/*边框线的取消*/
+/**去掉IE10以上的叉叉**/
+input::-ms-clear{display:none;}
+input::-ms-reveal { display: none;}
+textarea {outline: none;}
+.displayblock {display:inline-block;}
+.displaynone {display:none;}
+.border_right_none { border-right:none;}
+a {text-decoration:none; }
+.pluginLink {color: #FFFFFF;font-size:16px;text-decoration:underline;cursor:pointer;display:inline-block;width:555px;word-wrap:break-word;}
+.pluginLinkSel {color: #0FFFFF;font-size:16px;text-decoration:underline;cursor:pointer;display:inline-block;width:555px;word-wrap:break-word;}
+.footer { width:100%; background:#f9f9f9; border-top:1px solid #d1d1d1; height:30px; margin-top:80px;bottom:0px;left:0px; min-width:970px;} 
+.buttonclass
+{
+    
+	/*width:130px;*/
+	min-width:85px;
+	height:24px;
+	line-height:20px; /*IE*/
+	vertical-align:middle;
+    cursor:pointer;
+    padding:0 5px;
+}
+.buttonlength
+{
+    
+	/*width:85px;*/
+	min-width:85px;
+	height:24px;
+	line-height:20px; /*IE*/
+	vertical-align:middle;
+    cursor:pointer;
+    padding:0 5px;
+}
+.isie {height:30px; background:#cecece; line-height:30px; display:none; color:#F00; font-size:16px; font-weight:bold; text-align:center;}
+.footerabsolute {position:absolute;}
+.width960{ width:960px; margin:0 auto;height:30px; line-height:30px;}
+.footer_logo{ background:url(../images/icon_kedacom.png) no-repeat; width:80px; height:16px; margin-top:14px; margin-left:10px; float:left; }
+.copyright { float:right; color:#9a9a9a}
+.ios { float:left; background:url(../images/main/ios.png) 0px 6px no-repeat; width:18px; height:24px;}
+.iosmb { float:left; margin-left:8px; color:#8b8b8b;}
+.android { float:left; margin-left:23px; background:url(../images/main/android.png) 0px 6px no-repeat; width:18px; height:24px; }
+.androidmb {float:left; margin-left:8px; color:#8b8b8b;}
+.iosreg { float:left; margin-left:19px; color:#8b8b8b;}
+.mycls{ color:#FFF}
+.mycls a:hover{ color:#FFF;}
+.checkbox {vertical-align:middle;cursor:pointer;}
+
+.plagndiv{
+	color:#000;
+	font-size:14px;  
+	width:100%; 
+	height:100%;
+	line-height:260px;
+	text-align:center;
+	background:#3b3b3b;
+
+	vertical-align:middle;  
+}
+.contenter{
+	
+	
+	overflow:hidden;
+	width:960px;
+	/*margin-top:10px;*/
+}
+
+
+.scheduleeditdiv
+{
+    width:600px; 
+	height:550px; 
+	margin:0 auto; 
+	border:1px solid #8e8e8e; 
+	background:#e7e7e7;
+}
+.scheduleedittitlediv
+{
+    height:35px; 
+	background:#d8d8d8; 
+	line-height:35px; 
+	padding-left:10px;
+}
+.Modalfirstspan
+{
+    /*display:inline-block;
+	text-align:left;
+	height:25px; line-height:25px;
+	*/
+	 display:inline-block;
+	text-align:left;
+	/*height:25px;*/ 
+	line-height:25px;
+	
+	display:inline-block;
+	width:430px;
+	vertical-align:top;
+	word-wrap:break-word; white-space:normal;
+	word-break:normal;
+}
+
+.trOdd { background:#f3f2f2;}
+.treven { background:#fff;}
+.etranslation{
+	display:inline-block;
+	vertical-align:top;
+	word-wrap:break-word;
+	white-space:normal;
+	word-break:normal;
+}
+.imgmiddle
+{
+	vertical-align:middle;
+}
+.siderwid{ 
+ height:15px; border:1px solid #d1d1d1;width:30px;
+ text-align:center;vertical-align:middle;}

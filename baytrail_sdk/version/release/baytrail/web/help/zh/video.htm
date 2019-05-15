@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>摄像机-视频</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"> 
+<script language="javascript" type="text/javascript" src="../../script/jquery-1.7.1.min.js"></script>
+<script>
+	document.write("<link rel='stylesheet' href='../../style/webhelp.css?version=" + new Date() + "' type='text/css' />");
+</script>
+</head>
+<body>
+<div id="contenter" class="contenter">
+   <div class="topTitle"><span>视频编码&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"><a href="index.htm">返回目录</a></span>
+  </div>
+  <div class="systext">在视频编码界面可设置编码参数。</div>
+  <div class="TitleExplaintable">
+   <table class="tabhelp">
+         <tr class="tabtr">
+           <td width="17%" class="tabtd"><b>多码流</b></td>
+           <td width="83%" class="tabtd tableft">可选择码流数量，更改后需要重启才能生效。默认：双码流。
+           <div class="note">说明：支持的码流数量和具体产品型号相关，如有疑问请核对产品具体参数。</div></td>
+         </tr>
+         <tr class="tabtr">
+           <td  class="tabtd"><b>码流类型</b></td>
+           <td  class="tabtd tableft">当选择双码流及以上码流数量时，可通过码流类型选择需要设置的码流，选中后即可设置选中码流的分辨率、码率的参数。</td>
+         </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>分辨率</b></td>
+           <td class="tabtd tableft">在下拉列表中选择图像显示的分辨率。</td>
+           </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>码率类型</b></td>
+           <td class="tabtd tableft">可选择定码率或变码率，对视频码流大小进行控制。默认：定码率。</td>
+           </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>视频帧率</b></td>
+           <td class="tabtd tableft">设置编码每秒帧数。
+           <div class="note">说明：在三码流模式下，主码流视频帧率会略微下降。</div></td>
+            </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>码率上限</b></td>
+           <td class="tabtd tableft">设置码率上限值。</td>
+            </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>编码格式</b></td>
+           <td class="tabtd tableft">选择视频编码格式，支持H.264和MJPEG，默认;H.264。</td>
+           </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>编码复杂度</b></td>
+           <td class="tabtd tableft">选择编码复杂度。
+            <div class="note">说明：编码复杂度越高，码流压缩就越大。这样能适当缓解带宽限制，但同时会占用更多设备的CPU资源。建议采用默认等级。</div></td>
+           </tr>
+         <tr class="tabtr">
+           <td class="tabtd"><b>1帧间隔</b></td>
+           <td class="tabtd tableft">最大关键帧间隔，1~250可设置，建议采用默认值75帧。</td>
+     </table>
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle"><span>编码裁剪&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext">创建自定义编码区域后，系统只对该区域进行编码和显示。</div>
+  <div class="systext">设置方法：</div>
+   <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选启用编码裁剪；
+     <p><span class="marginright">2.</span>点击开始绘制按钮，在左侧图像区域框选需要裁剪的区域；
+     <p><span class="marginright">3.</span>点击保存。也可点击清除绘制可重新选定区域。</div>
+     <div class="systext note">说明：要增加绘制区域有最小面积要求。</div>
+  </div>
+  <div id="contenter" class="contenter">
+    <div class="topTitle"><span>ROI&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+<div class="systext">将码率资源集中在选定的感兴趣区域，提升框选区域的图像质量，但同时会牺牲选定区域外的图像质量。实现保证关键区域图像质量的前提下，可同时降低码率。</div>
+  <div class="systext">设置方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选启用敏感区域编码；
+     <p><span class="marginright">2.</span>点击开始绘制按钮，在左侧图像区域框选需要裁剪的区域，并在等级下拉框中选择编码等级；
+     <p><span class="marginright">3.</span>点击保存。也可点击清楚绘制可重新选定区域。</div>
+     <div class="systext note">说明：启用敏感区域编码后，如果对图像采集分辨率或采集高宽比（标屏/宽屏）进行更改，设备将自动退出敏感区域编码。</div>
+  </div>
+  <div id="contenter" class="contenter">
+  <div class="topTitle"><span>视频遮蔽&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="topTitlespan"></span>
+  </div>
+  <div class="systext">对图像敏感区域进行遮蔽，遮挡不希望被看到的区域。</div>
+  <div class="systext">设置方法：</div>
+  <div class="TitleExplain">
+   <p><span></span></p>
+     <p><span class="marginright">1.</span>勾选开启视频遮蔽；
+     <p><span class="marginright">2.</span>点击开始绘制按钮，左侧视频图像被划分成16列12行的小方格，点击选中画面中的小方格确认遮蔽区域；
+     <p><span class="marginright">3.</span>可在遮蔽颜色下拉框中选择遮蔽颜色；
+     <p><span class="marginright">4.</span>点击保存。也可点击清空绘制可重新选定区域。</div>
+     <div class="systext note">说明：摄像机最多同时支持4个区域的图像遮蔽。</div>
+  </div>
+   <div class="subparamswhite">
+     <div class="firstspan"></div>
+   </div>
+</div>
+<span class="title1"></span>
+</body>
+</html>

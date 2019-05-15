@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ul class="tabs">
+    <li><a id="MLocalConfig" name="MLocalConfig" href="javascript: ia(LocalConfig).update();"></a></li>
+</ul>
+<div class="panes">
+   <div id="diLocalConfig" class="panewidth">
+       <!---播放参数开始---->
+        <div id="diPlayParams">
+            <div class="mainparams">
+				<label id="MPlayParams" name="MPlayParams"></label>
+			</div>
+            
+          <div class="subparamswhite main_top10" id="spAgreementType">
+				<span class="firstspan"><label name="MProtocolType" id="MProtocolType" class="displayblock"></label></span>
+				<span class="localsecondspan" style="width:120px;">
+				    <input type="radio" name="ProtocolType" id="ProtocolType" value="1" class="radio" />&nbsp;
+				    <label class="displayblock">TCP</label>
+				</span>
+				<span class="localsecondspan">
+				    <input type="radio" name="ProtocolType" id="ProtocolType" value="2" class="radio" />&nbsp;
+				    <label class="displayblock">UDP</label>
+				</span>
+			</div>
+		
+			<div class="subparamsgray" id="spNetsPreach">
+				<span class="firstspan"><label id="Mperformance" name="Mperformance"></label></span>
+				<span class="localsecondspan" style="width:120px;">
+				    <input type="radio" name="performance" value="1" class="radio">&nbsp;
+				    <label id="MnetsPreach1" name="MnetsPreach1" class="displayblock"></label>
+				</span>
+				<span class="localsecondspan"  style="width:120px;">
+				    <input type="radio" name="performance" value="2" class="radio">&nbsp;
+				    <label id="MnetsPreach2" name="MnetsPreach2" class="displayblock"></label>
+				</span>
+				<span>
+				    <input type="radio" name="performance" value="3" class="radio">&nbsp;
+				    <label id="MnetsPreach3" name="MnetsPreach3" class="displayblock"></label>
+				</span>
+			</div>
+            
+            
+            
+            
+		
+			
+            
+            <div class="subparamswhite" id="spNetsPreach">
+				<span class="firstspan"><label id="MImgReduction" name="MImgReduction"></label></span>
+				<span class="localsecondspan">
+               
+                    <input type="checkbox"  id="ReductionCheck" onclick="ReductionBox(this)"  class="checkbox"  />&nbsp;
+                    <select class="selectwidth width54"  id="seIPv6Mode" style="display:none">
+                        	<option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+				</span>
+                <span id="ImgReductionTips"></span>
+			</div>
+            
+            <div class="subparamswhite">
+				<span class="firstspan"><label id="Mnoiselevel" name="Mnoiselevel"></label></span>
+				<span class="localsecondspan" style="margin-left:5px;">
+                   <div class="Images_slider210">
+                    <div id="slider-reduction" class="Images_slider"></div>
+                    <div class="Images_slider_value">
+                         <input type="text" id="reduction_value" onblur="CheackOnlyNum(this.value)"  class="siderwid"  />
+                     </div>
+                   </div>
+                </span>
+			</div>
+            
+            
+            <div class="subparamsgray" id="spNetsPreach">
+				<span class="firstspan"><label id="Mverticalsynchronization" name="Mverticalsynchronization"></label></span>
+				<span class="localspanwidthauto">
+                    <input type="checkbox"  id="Verticalsync" onclick="checkbox(this)" class="checkbox" />&nbsp;(<label id="Maddcpu" name="Maddcpu"></label>)
+				</span>
+			</div>
+            
+            <div class="subparamsgray">
+				<span class="firstspan"><label id="MStatusinfo" name="MStatusinfo"></label></span>
+				<span class="localspanwidthauto">
+                    <input type="checkbox"  id="videodecstate" onclick="checkbox(this)" class="checkbox" />
+				</span>
+			</div>
+        
+        </div>
+        <!---播放参数结束---->
+        <!---录像文件开始---->
+        <div id="diRecordFileParams">
+             <div class="mainparams main_top26">
+				<label id="Mlocalrecordconfig" name="Mlocalrecordconfig"></label>
+			</div>
+            <div class="subparamswhite main_top10">
+				<span class="firstspan"><label name="mpackSize" id="mpackSize" class="displayblock"></label></span>
+				<span class="localsecondspan" style="width:120px;">
+				    <input type="radio" name="raAgreementTypesize" value="1" class="radio" />&nbsp;
+				    <label class="displayblock">256M</label>
+				</span>
+				<span class="localsecondspan" style="width:120px;">
+				    <input type="radio" name="raAgreementTypesize" value="2" class="radio" />&nbsp;
+				    <label class="displayblock">512M</label>
+				</span>
+                <span class="localsecondspan">
+				    <input type="radio" name="raAgreementTypesize" value="3" class="radio"  />&nbsp;
+				    <label class="displayblock">1G</label>
+				</span>
+            </div>
+            <!-----预览录像保存路径------->
+            <div class="subparamsgray">
+                <span class="firstspan"><label id="MrecordPath" name="MrecordPath"></label></span>
+                <span class="pathsecondspan"><input type="text" readonly="readonly" class="verticalmiddle" id="teRecpath" style="width: 380px;"></span>
+                <span class="paththirdspan"><input type="button" onclick="browseFilePath('teRecpath')" id="teRecpath" name="MbtnBrowse" class="buttonclass" value=""></span>
+           </div>
+           <!-----回放剪辑保存路径-------> 
+           <div class="subparamsgray">
+                <span class="firstspan"><label id="MPlaybackFilePath" name="MPlaybackFilePath"></label></span>
+                <span class="pathsecondspan"><input type="text" readonly="readonly" class="verticalmiddle" id="teilePath" style="width: 380px;"></span>
+                <span class="paththirdspan"><input type="button" onclick="browseFilePath('teilePath', 0)" id="teilePath" name="MbtnBrowse" class="buttonclass" value=""></span>
+           </div>
+           <!-----回放下载保存路径------->
+           <div class="subparamswhite">
+                <span class="firstspan"><label id="MdownloadPath" name="MdownloadPath"></label></span>
+                <span class="pathsecondspan"><input type="text" readonly="readonly" class="verticalmiddle" id="teDownloadPath" style="width: 380px;"></span>
+                <span class="paththirdspan"><input type="button" onclick="browseFilePath('teDownloadPath')" id="teDownloadPath" name="MbtnBrowse" class="buttonclass" value=""></span>
+           </div>
+        </div>
+       
+        <!----抓图开始--->
+        <div id="diRecordFileParams1">
+            <div class="mainparams main_top26">
+				<label id="MCaptureClipParams" name="MCaptureClipParams"></label>
+			</div>
+            <!----预览抓拍保存路径-------->
+            <div class="subparamswhite main_top10">
+				<span class="firstspan"><label name="MPreviewPicPath" id="MPreviewPicPath"></label></span>
+				<span class="pathsecondspan"><input type="text" readonly="readonly" class="verticalmiddle" id="tePreviewPicPath" style="width: 380px;"></span>
+                <span class="paththirdspan"><input type="button" onclick="browseFilePath('tePreviewPicPath')" id="tePreviewPicPath" name="MbtnBrowse" class="buttonclass" value=""></span>
+            </div> 
+           <!----前端抓拍保存路径--------> 
+           <div class="subparamsgray">
+                <span class="firstspan"><label id="MCapPath" name="MCapPath"></label></span>
+                <span class="pathsecondspan"><input type="text" readonly="readonly" class="verticalmiddle" id="teRecordPath" style="width: 380px;"></span>
+                <span class="paththirdspan"><input type="button" onclick="browseFilePath('teRecordPath')" id="teRecordPath" name="MbtnBrowse" class="buttonclass" value=""></span>
+           </div>
+           <!----回放抓拍保存路径--------> 
+           <div class="subparamswhite" id="subPlaybacksnapshot">
+                <span class="firstspan"><label id="MPlaybackPicPath" name="MPlaybackPicPath"></label></span>
+                <span class="pathsecondspan"><input type="text" readonly="readonly" class="verticalmiddle" id="tePlaybackFilePath" style="width: 380px;"></span>
+                <span class="paththirdspan"><input type="button" onclick="browseFilePath('tePlaybackFilePath')" id="tePlaybackFilePath" name="MbtnBrowse" class="buttonclass" value=""></span>
+           </div>
+           
+            <div class="mainparams main_top26">
+				<label name="Mdownplugin"></label>
+			</div>
+            <div class="subparamswhite main_top10" id="spAgreementType">
+				<span class="firstspan"><label name="Mdownplugin"></label></span>
+				     <span class="pathsecondspan"><input type="button"  class="buttonclass" value="" name="Mdownplugin" onclick="downplugin()" /></span>
+            </div>
+           
+          
+           <div class="spansave"><input type="button"  class="input_save"  id="MSaveConfigLocal" name="MSaveConfigLocal" onclick="SaveConfigLocal()" value=""><span id="SetResultTipsConfigLocal"></span></div>
+        </div>
+        <!----抓图和剪辑结束--->
+
+     
+   </div>
+</div><!--<div class="panes">-->

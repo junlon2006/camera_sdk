@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pic>
+  <Page>
+    <Mpictype>Picture Type</Mpictype>
+    <Mall>All</Mall>
+    <Malarmpic>Alarm Triggered Snapshot</Malarmpic>
+    <Mmanualpic>Manual Snapshot</Mmanualpic>
+	<MEvent>Event Snapshot</MEvent>
+	<MScheduled>Scheduled Snapshot</MScheduled>
+    <Mtime>Time</Mtime>
+    <Mallpic>All Pictures</Mallpic>
+    <Mweekpic>Within one week</Mweekpic>
+    <Mcustompic>Custom</Mcustompic>
+    <Mstarttime>Start Time</Mstarttime>
+    <Mendtime>End Time</Mendtime>
+    <Mnumber>ID</Mnumber>
+    <Msearch>Search</Msearch>
+    <Mtotal>Total</Mtotal>
+    <Mstrip></Mstrip>
+    <Mjump>Skip</Mjump>
+  </Page>
+  <titletips>
+    <Mdown>Download</Mdown>
+    <MlastPage>Previous Page</MlastPage>
+    <Mnextpage>Next Page</Mnextpage>
+	<Mfirstpage>First Page</Mfirstpage>
+	<Mendpage>End Page</Mendpage>
+    <LoginConnectTimeoutTips>Timeout, please login again.</LoginConnectTimeoutTips>
+  </titletips>
+  <Js>
+    <Mnomemorycard>No memory card.</Mnomemorycard>
+    <Mtypeofpicture>Please select a type.</Mtypeofpicture>
+    <Mnotmorethan>Not greater than</Mnotmorethan>
+    <MVerticaly>Vertical Coordinate</MVerticaly>
+    <Mnopic>No pictures.</Mnopic>
+    <Mbeyond>Exceed</Mbeyond>
+    <Mzhang>pictures</Mzhang>
+    <Msearchpic>User can narrow down search range.</Msearchpic>
+  </Js>
+</Pic>

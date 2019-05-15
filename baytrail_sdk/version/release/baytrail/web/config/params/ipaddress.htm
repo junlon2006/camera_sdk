@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ul class="tabs" id="tabIPAddress">
+    <li><a id="mIPAddress" name="mIPAddress" href="javascript:ia(IPAddress).update();">IP地址</a></li>
+</ul>
+<div id="divIPAddress" class="panes">
+   
+   <div id="divIPAddress" class="pane">
+      <div id="dvIPv4Settings" >
+                <div class="subparamsgray">
+                    <span>
+                        <input type="checkbox" id="IsUseDHCP" class="checkbox">&nbsp;
+                        <label name="laDHCP" id="laDHCP">自动获取</label>
+                    </span>
+                </div>
+                <div class="subparamswhite">
+                    <span class="firstspan"><label name="laDeviceIpAdd" id="laDeviceIpAdd">设备IPv4地址</label></span>
+                    <span>
+                        <input type="text" maxlength="16"  class="input_config width150" id="ipAddress"  onkeydown="CheckKeyDown(event)"  onblur="CheckDIPadd(this.value,'ServerIPtips','laIpAddress')" />
+                    </span>
+                    <span id="ServerIPtips"></span>
+                </div>
+                <div class="subparamsgray">
+                    <span class="firstspan"><label name="laSubNetMask" id="laSubNetMask">IPv4子网掩码</label></span>
+                    <span>
+                        <input type="text" maxlength="16"  class="input_config width150" id="subnetMask" onkeydown="CheckKeyDown(event)"  onblur="CheckDIPadd(this.value,'ServerMaskIPtips','jsMaskAdd')">
+                    </span>
+                    <span id="ServerMaskIPtips"></span>
+                </div>
+                <div class="subparamswhite">
+                    <span class="firstspan"><label name="laDefaultGateWay" id="laDefaultGateWay">IPv4默认网关</label></span>
+                    <span><input type="text" maxlength="16" class="input_config width150" id="DefaultGateway" onkeydown="CheckKeyDown(event)"></span>
+                    <span id="ServerGateWayIPtips"></span>
+                </div>
+            </div>
+            <div id="dvIPv6Settings" >
+            	<div class="subparamsgray">
+                    <span class="firstspan"><label name="laIPv6Mode">IPv6&nbsp;模式</label></span>
+                    <span>
+                        <select class="selectwidth width152" id="seIPv6Mode">
+                        	<option value="manual" name="aModeManual">手动</option>
+                            <option value="dhcp" name="laDHCP" selected="selected">自动获取</option>
+                            <option value="router" name="RouterOpt">路由公告</option>
+                        </select>
+                    </span>
+                    <span><input type="button"  value="查看路由公告" name="ViewRouterAd" class="wbutton" id="btnViewRoute"></span>
+                </div>
+                <div class="subparamswhite">
+                    <span class="firstspan"><label name="laDeviceIpV6Add">设备IPv6地址</label></span>
+                    <span>
+                        <input type="text"  maxlength="64"  class="input_config width150" id="ipv6Address" onkeydown="CheckKeyDown(event)">
+                    </span>
+                    <span id="ServerIPv6tips"></span>
+                </div>
+                <div class="subparamsgray">
+                    <span class="firstspan"><label name="laV6SubNetMask">IPv6子网掩码</label></span>
+                    <span>
+                        <input type="text"  maxlength="3" class="input_config width150" id="teV6SubnetMask" onkeydown="CheckKeyDown(event)">
+                    </span>
+                    <span id="ServerV6MaskIPtips"></span>
+                </div>
+                <div class="subparamswhite">
+                    <span class="firstspan"><label name="laDefaultV6GateWay">IPv6默认网关</label></span>
+                    <span><input type="text"  maxlength="64"  class="input_config width150" id="DefaultV6Gateway" onkeydown="CheckKeyDown(event)"></span>
+                    <span id="ServerV6GateWayIPtips"></span>
+                </div>
+            </div>
+            
+	        <div id="dvMacAddress" class="subparamsgray">
+	            <span class="firstspan"><label name="laMacAddress" id="laMacAddress">物理地址</label></span>
+		        <span><input type="text" maxlength="16" class="input_config width150" id="MacAddress"></span>
+		        <span id="ServerMacAddresstips"></span>
+	        </div>
+	        <div id="9000MTU" class="subparamswhite">
+	            <span class="firstspan ie6bug1">MTU</span>
+		        <span>
+		            <input type="text" maxlength="4"   class="input_config width150" id="MTU" onblur="CheackServerIDIntNum(this.value,'MTUtips','jsMtuParam',500,1500)">
+		        </span>
+		        <span id="MTUtips"></span>
+	        </div>
+	        <div class="subparamsgray" id="dvMulticast" style="display: block;">
+                <span class="firstspan"><label name="laMulticast">多播地址</label></span>
+                <span>
+		            <input type="text" value="" maxlength="40"  class="input_config width150" id="Multicast">
+		        </span>
+                <span id="Multicasttips"></span>
+            </div>
+        
+        <div>
+	        <div class="mainparams main_top26">
+	            <span><label name="laDNSServerConfig" id="laDNSServerConfig">DNS服务器配置</label></span>
+	        </div>
+	        <div class="subparamswhite main_top10">
+	            <span class="firstspan"><label name="laPrimaryDNS" id="laPrimaryDNS">首选DNS服务器</label></span>
+		        <span>
+		            <input type="text" maxlength="40" class="input_config width150" id="PrimaryDNS" onkeydown="CheckKeyDown(event)">
+		        </span>
+		        <span id="DNSServerIPtips"></span>
+	        </div>
+	        <div id="dvDNSServer2" class="subparamsgray">
+	            <span class="firstspan"><label name="laDNSServer2IP">备用DNS服务器</label></span>
+		        <span>
+		            <input type="text" maxlength="40"  class="input_config width150" id="DNSServer2IP" onkeydown="CheckKeyDown(event)">
+		        </span>
+		        <span id="DNSServer2IPtips"></span>
+	        </div>
+        </div>	
+        <span class="spansave"><input type="button"  class="input_save" id="SaveConfigBtn" value="保存"></span>
+   </div>
+   
+</div>
+

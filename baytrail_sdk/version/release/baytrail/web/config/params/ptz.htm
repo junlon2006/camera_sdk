@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- tabs -->
+<ul class="tabs" id="tabPTZ">
+    <li><a href="javascript:ia(PTZPan).update();" name="MPTZPan" id="MPTZPan" ></a></li>
+    <li><a href="javascript:ia(PanTask).update();" name='MWatchset' id='MWatchset' ></a></li>
+    <li><a href="javascript:ia(PresetPoint).update();" name='MPresetPoint' id='MPresetPoint' ></a></li>
+    <li><a href="javascript:ia(Limit).update();" name='MLimit' id='MLimit' ></a></li>
+    <li><a href="javascript:ia(V5Limit).update();" name='MLimit' id='MLimit' ></a></li>
+    <li><a href="javascript:ia(Cruise).update();" name='MCruise' id='MCruise' ></a></li>
+    <li><a href="javascript:ia(ScanPattern).update();" name='MScanpattern' id='MScanpattern' ></a></li>
+    <li><a href="javascript:ia(TimingTask).update();" name='MTimingTask' id='MTimingTask' ></a></li>
+    <li><a href="javascript:ia(Location).update();" name='MLocation' id='MLocation' ></a></li>
+</ul>
+
+<div id="DivPTZ" class="panes" >
+    <!----PTZ开始---->
+    <div class="pane" id="PTZPan">
+       <div class="subparamswhite" id="InputResolution_tr">
+            <span class="firstspan"><label name="MPTZversion" id="MPTZversion"></label></span>
+            <span id="ptzversion"></span>
+        </div>
+        <div class="subparamswhite" id="InputResolution_tr">
+            <span class="firstspan"><label name="MScanningspeedgrade" id="MScanningspeedgrade"></label></span>
+            <span>
+         	   <input type="text"  maxlength="2"  class="input_config width150" id="scanrate" />
+            </span>
+            <span id="fixedscanrateTips" class="fixedTips"></span><span id="scanratetips" class="colortips" ></span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MPTZEnable1" id="MPTZEnable1"></label></span>
+            <span><input type="checkbox" id="enabledepth" onclick="checkbox(this)"/></span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MPTZEnable2" id="MPTZEnable2"></label></span>
+            <span><input type="checkbox" id="enableoutage" onclick="checkbox(this)" /></span>
+        </div>
+        <div class="subparamswhite" id="InputResolution_tr">
+            <span class="firstspan"><label name="MRecoverymode" id="MRecoverymode"></label></span>
+            <span><select class="selectwidth width152" id="outagememery" onchange="outagememery()">
+                   </select></span>
+        </div>
+        <div class="subparamsgray" id="sbuoutagetime">
+            <span class="firstspan"><label name="Mrecoverytime"></label></span>
+            <span><input type="text" maxlength="3" value="10" class="input_config width150" id="outagetime" onkeydown="CheckKeyDown(event)"></span>
+            <span id="fixedoutagetimeTips" class="fixedTips"></span><label name="MSeconds"></label><span id="outagetimetips" class="colortips"></span>
+        </div>
+        <div class="subparamsgray" id="submodepreset">
+            <span class="firstspan"><label name="MPresetPoint" id="MPresetPoint"></label></span>
+            <span>
+              <select class="selectwidth width152" id="modepreset">
+                   
+               </select>
+            </span>
+           
+        </div>
+         <div class="subparamsgray">
+            <span class="firstspan"><label name="MPTZrestorefactory" id="MPTZrestorefactory"></label></span>
+            <span><input type="button" value="" name="MPTZrestorefactory" class="buttonclass" onclick="ptzfactory('restore_factory_settings')" /></span>
+        </div>
+         <div class="subparamsgray">
+            <span class="firstspan"><label name="Mupgrade" id="Mupgrade"></label></span>
+            <span><input type="button" value="" name="Mupgrade" class="buttonclass" onclick="ptzupgrade()" /></span>
+        </div>
+        <div class="spansave"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="PTZPanSave(this)" name="MSaveConfigLocal" value=""><span id="SetResultTips"></span></div>
+        </span>
+  </div>
+  
+  <!----PTZ结束----> 
+  
+  
+  
+  
+  
+  
+   <div class="pane" id="PanTask">
+       <div class="subparamswhite" id="InputResolution_tr">
+            <span class="firstspan"><label name="MWatchEnable" id="MWatchEnable"></label></span>
+            <span><input type="checkbox" id="enablewatchon" onclick="checkbox(this)" /></span>
+        </div>
+        <div class="subparamswhite" id="InputResolution_tr">
+            <span class="firstspan"><label name="MWatchmode" id="MWatchmode"></label></span>
+            <span><select class="selectwidth width152" id="modeWatchon" onchange="modeWatchon()">
+                  
+                   </select></span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="MWaitingtime" id="MWaitingtime"></label></span>
+            <span><input type="text"  onkeydown="CheckKeyDown(event)" class="input_config width150" id="waittime"></span>
+            <span class="fixedTips" id="fixewaittimeTips"></span>
+            <label name="MMinute"></label>
+            <span id="waittimetips" class="colortips"></span>
+        </div>
+        <div class="subparamsgray" id="subpreset">
+            <span class="firstspan"><label name="MPresetnumber" id="MPresetnumber"></label></span>
+          
+            <select class="selectwidth width152" id="waittimepreset">
+               </select>
+            
+           
+        </div>
+        <div class="subparamsgray" id="subpathcruise">
+            <span class="firstspan"><label name="Mcruisepath" id="Mcruisepath"></label></span>
+            <span><input type="text" maxlength="1" onkeydown="CheckKeyDown(event)" class="input_config width150" id="waittimepathcruise" value="1"></span>
+           <span class="fixedTips">1~8</span> <span id="pathcruisetips"></span>
+        </div>
+        <div class="subparamsgray" id="subsyncscan">
+            <span class="firstspan"><label name="Mscanningpath" id="Mscanningpath"></label></span>
+            <span><input type="text" maxlength="1" onkeydown="CheckKeyDown(event)" class="input_config width150" id="waittimesyncscan" value="1"></span>
+             <span class="fixedTips">1~4</span><span id="syncscantips"></span>
+        </div>
+        
+       <div class="spansave"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="PanTaskSave(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsPanTask"></span></div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="pane" id="PresetPoint">
+     <div class="Imags_left" style="height:350px; background:#FFF">
+       <div id="main_PresetPoint" style="height:260px;background:#3b3b3b;">
+       </div>
+        
+      </div>
+      
+      
+      
+      <div class="Imags_right">
+         
+           <div class="ptz_direction_left">
+                       <span id="ptz_leftup" class="ptz_direction ptz_leftup" onmousedown="SetPTZStart('move_leftup',1)" onmouseup="SetPTZStop('movestop',1)"  onmouseout="SetPTZStop('movestop',1)" ></span>
+                       <span id="ptz_up" class="ptz_direction ptz_up" onmousedown="SetPTZStart('moveup',1)" onmouseup="SetPTZStop('movestop',1)"  onmouseout="SetPTZStop('movestop',1)"></span>
+                       <span id="ptz_rightup" class="ptz_direction ptz_rightup" onmouseup="SetPTZStop('movestop',1)" onmousedown="SetPTZStart('move_rightup',1)" onmouseout="SetPTZStop('movestop',1)"></span>
+                       <span id="ptz_left" class="ptz_direction ptz_left" onmouseup="SetPTZStop('movestop',1)" onmousedown="SetPTZStart('moveleft',1)" onmouseout="SetPTZStop('movestop',1)"></span>
+                       <span id="ptz_auto" title="" class="ptz_direction ptz_auto" onclick="SetPTZClick('ptz_reset',1)" ></span>
+                       <span id="ptz_right" class="ptz_direction ptz_right" onmouseup="SetPTZStop('movestop',1)" onmousedown="SetPTZStart('moveright',1)" onmouseout="SetPTZStop('movestop',1)"></span>
+                       <span id="ptz_leftdown" class="ptz_direction ptz_leftdown" onmouseup="SetPTZStop('movestop',1)" onmousedown="SetPTZStart('move_leftdown',1)" onmouseout="SetPTZStop('movestop',1)"></span>
+                       <span id="ptz_down" class="ptz_direction ptz_down" onmouseup="SetPTZStop('movestop',1)" onmousedown="SetPTZStart('movedown',1)" onmouseout="SetPTZStop('movestop',1)"></span>
+                       <span id="ptz_rightdown" class="ptz_direction ptz_rightdown" onmouseup="SetPTZStop('movestop',1)" onmousedown="SetPTZStart('move_rightdown',1)" onmouseout="SetPTZStop('movestop',1)"></span>
+            </div>
+             <div class="ptz_direction_left" style="margin-left:20px;">
+                       <span id="ptz_zoomIn" class="ptz_direction ptz_zoomIn" title=""  onmouseup="SetPTZStop('zoomstop',1)" onmousedown="SetPTZStart('zoomtele',1)" onmouseout="SetPTZStop('zoomstop',1)"></span>
+                       <span id="ptz_zoomOut" class="ptz_direction ptz_zoomOut" title=""  onmouseup="SetPTZStop('zoomstop',1)" onmousedown="SetPTZStart('zoomwide',1)" onmouseout="SetPTZStop('zoomstop',1)"></span>
+                       
+                        <span id="ptz_PullAway" class="ptz_direction ptz_PullAway" title="" onmouseup="SetPTZStop('focusstop',1)" onmousedown="SetPTZStart('focusnear',1)" onmouseout="SetPTZStop('focusstop',1)"></span>
+                        <span id="ptz_PushIn" class="ptz_direction ptz_PushIn" title="" onmouseup="SetPTZStop('focusstop',1)" onmousedown="SetPTZStart('focusfar',1)" onmouseout="SetPTZStop('focusstop',1)"></span>
+                        <span id="ptz_focusautoPush" class="ptz_direction ptz_focusautoPush" title="" onclick="SetPTZClick('focusauto',1)"></span>
+                        <span id="ptz_irisIn" class="ptz_direction ptz_irisIn" title="" onmouseup="SetPTZStop('iris_stop',1)" onmousedown="SetPTZStart('iris_plus',1)" onmouseout="SetPTZStop('iris_stop',1)"></span>
+                        <span id="ptz_irisOut" class="ptz_direction ptz_irisOut" title="" onmouseup="SetPTZStop('iris_stop',1)" onmousedown="SetPTZStart('iris_minus',1)" onmouseout="SetPTZStop('iris_stop',1)"></span>
+                        <span id="ptz_focusauto" class="ptz_direction ptz_focusauto" title="" onclick="SetPTZClick('iris_auto',1)"></span>
+            </div>
+            <div class="clear"></div>
+            <div class="footer_slider_sound">
+                    <!-- <div id="slider-PresetPoint" class="slider-range-footer"></div>-->
+                     <div id="PTZ_Slider_1" class="slider-range-footer"></div>
+                     <div class="Images_slider_value" style=" margin:0px;margin-left:10px;">
+                        <input type="text" id="PTZ_Slider_value_1" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                     </div>
+                </div>
+            <div class="clear"></div>
+            <!--<div class="subparamswhite" style="margin-left:-10px; margin-top:5px;">
+				    <span class="Imags_firstspan"><label id="laDeviceType" name="laDeviceType1">预置点</label></span>
+					<span class="">
+					    <select class="selectwidth width152"  id="PTZPresetPoint">
+                        </select>
+					</span>
+            </div>-->
+            <div class="subparamsgray" style="margin-left:-10px; margin-top:10px;">
+                <span class="Imags_firstspan"><label name="MPresetnumber"id="MPresetnumber"></label></span>
+                <span><select class="selectwidth width152" id="PTZPresetNumber" onchange="PTZPresetNumber()">
+                       </select>
+                </span>
+                
+            </div>
+            <div class="subparamswhite" style="margin-left:-10px;">
+                <span class="Imags_firstspan"><label name="MPresetenable"></label></span>
+                <span><input type="text" id="PTZenable" class="input_config width150" disabled="disabled" />
+                
+                </span>
+            </div>
+            <div class="subparamsgray" style="margin-left:-10px;">
+                <span class="Imags_firstspan"><label name="MPresetname" id="MPresetname"></label></span>
+                <span><input type="text" id="PTZname"  class="input_config width150" maxlength="32"  />
+                </span>
+            </div>
+          
+          <input type="button" id="preset_set" value="" name="MPresetset" class="buttonlength" onclick="SetPreset('preset_set')" />
+        <input type="button" id="preset_remove" value="" name="MPresetdel" class="buttonlength" onclick="SetPresetRemove('preset_remove')" />
+        <input type="button" id="preset_load" value="" name="MPresetLoad" class="buttonlength" onclick="SetPresetload('preset_load')" />
+        <span id="PresetPointTips" style=" margin-top:20px;float:right; margin-right:100px;"></span>
+      </div>
+  </div>
+  
+  
+  <div class="pane" id="Limit">
+     <div class="Imags_left" style="height:350px; background:#FFF">
+       <div id="mainpluginLimit" style="height:260px;background:#3b3b3b;">
+       </div>
+        
+      </div>
+      
+      <div class="Imags_right">
+         
+           <div class="ptz_direction_left">
+                       <span id="ptz_leftup" class="ptz_direction ptz_leftup" onmousedown="SetPTZStart('move_leftup',2)" onmouseup="SetPTZStop('movestop',2)"  onmouseout="SetPTZStop('movestop',2)" ></span>
+                       <span id="ptz_up" class="ptz_direction ptz_up" onmousedown="SetPTZStart('moveup',2)" onmouseup="SetPTZStop('movestop',2)"  onmouseout="SetPTZStop('movestop',2)"></span>
+                       <span id="ptz_rightup" class="ptz_direction ptz_rightup" onmouseup="SetPTZStop('movestop',2)" onmousedown="SetPTZStart('move_rightup',2)" onmouseout="SetPTZStop('movestop',2)"></span>
+                       <span id="ptz_left" class="ptz_direction ptz_left" onmouseup="SetPTZStop('movestop',2)" onmousedown="SetPTZStart('moveleft',2)" onmouseout="SetPTZStop('movestop',2)"></span>
+                       <span id="ptz_auto" title="" class="ptz_direction ptz_auto" onclick="SetPTZClick('ptz_reset',2)" ></span>
+                       <span id="ptz_right" class="ptz_direction ptz_right" onmouseup="SetPTZStop('movestop',2)" onmousedown="SetPTZStart('moveright',2)" onmouseout="SetPTZStop('movestop',2)"></span>
+                       <span id="ptz_leftdown" class="ptz_direction ptz_leftdown" onmouseup="SetPTZStop('movestop',2)" onmousedown="SetPTZStart('move_leftdown',2)" onmouseout="SetPTZStop('movestop',2)"></span>
+                       <span id="ptz_down" class="ptz_direction ptz_down" onmouseup="SetPTZStop('movestop',2)" onmousedown="SetPTZStart('movedown',2)" onmouseout="SetPTZStop('movestop',2)"></span>
+                       <span id="ptz_rightdown" class="ptz_direction ptz_rightdown" onmouseup="SetPTZStop('movestop',2)" onmousedown="SetPTZStart('move_rightdown',2)" onmouseout="SetPTZStop('movestop',2)"></span>
+            </div>
+             <div class="ptz_direction_left" style="margin-left:20px;">
+                       <span id="ptz_zoomIn" class="ptz_direction ptz_zoomIn" title=""  onmouseup="SetPTZStop('zoomstop',2)" onmousedown="SetPTZStart('zoomtele',2)" onmouseout="SetPTZStop('zoomstop',2)"></span>
+                       <span id="ptz_zoomOut" class="ptz_direction ptz_zoomOut" title=""  onmouseup="SetPTZStop('zoomstop',2)" onmousedown="SetPTZStart('zoomwide',2)" onmouseout="SetPTZStop('zoomstop',2)"></span>
+                       
+                        <span id="ptz_PullAway" class="ptz_direction ptz_PullAway" title="" onmouseup="SetPTZStop('focusstop',2)" onmousedown="SetPTZStart('focusnear',2)" onmouseout="SetPTZStop('focusstop',2)"></span>
+                        <span id="ptz_PushIn" class="ptz_direction ptz_PushIn" title="" onmouseup="SetPTZStop('focusstop',2)" onmousedown="SetPTZStart('focusfar',2)" onmouseout="SetPTZStop('focusstop',2)"></span>
+                        <span id="ptz_focusautoPush" class="ptz_direction ptz_focusautoPush" title="" onclick="SetPTZClick('focusauto',2)"></span>
+                        <span id="ptz_irisIn" class="ptz_direction ptz_irisIn" title="" onmouseup="SetPTZStop('iris_stop',2)" onmousedown="SetPTZStart('iris_plus',2)" onmouseout="SetPTZStop('iris_stop',2)"></span>
+                        <span id="ptz_irisOut" class="ptz_direction ptz_irisOut" title="" onmouseup="SetPTZStop('iris_stop',2)" onmousedown="SetPTZStart('iris_minus',2)" onmouseout="SetPTZStop('iris_stop',2)"></span>
+                        <span id="ptz_focusauto" class="ptz_direction ptz_focusauto" title="" onclick="SetPTZClick('iris_auto',2)"></span>
+            </div>
+            <div class="clear"></div>
+            <div class="footer_slider_sound">
+                     <div id="PTZ_Slider_2" class="slider-range-footer"></div>
+                     <div class="Images_slider_value" style=" margin:0px;margin-left:10px;">
+                          <input type="text" id="PTZ_Slider_value_2" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                      </div>
+                </div>
+            <div class="clear"></div>
+            <!--<div class="subparamswhite" style="margin-left:-10px; margin-top:5px;">
+				    <span class="Imags_firstspan"><label id="laDeviceType" name="laDeviceType1">预置点</label></span>
+					<span class="">
+					    <select class="selectwidth width152"  id="PTZLimit">
+                        </select>
+					</span>
+            </div>-->
+          
+            <div class="mainparams main_top26">
+				<label id="MKeylimit" name="MKeylimit"></label>
+				</div>
+             <div class="subparamsgray" style="margin-top:10px;">
+                <span class="Imags_firstspan"><label name="MEnableKeylimit" id="MEnableKeylimit"></label></span>
+                <span><input type="checkbox" id="modekey" onclick="checkkey(this)" />
+                </span>
+            </div>
+             <div class="subparamswhite">
+				    <span class="Imags_firstspan"> </span>
+					<span>
+                        <input type="button" value="" name="Mleftlimit"  class="buttonlength" onclick="SetLimit('limit_horizonalleft')" />
+                        <br />
+                        <input type="button" value="" style="margin-left:123px;" name="Mrightlimit"  class="buttonlength" onclick="SetLimit('limit_horizonalright')"/>
+                        <br />
+                        <input type="button" value="" style="margin-left:123px;" name="Mcleanlimit" class="buttonlength"  onclick="SetLimit('limit_clear')" />
+					</span>
+              </div>
+             
+            
+             <div class="mainparams main_top10">
+				<label id="MScanninglimit" name="MScanninglimit"></label>
+				</div>
+             <div class="subparamsgray"  style="margin-top:10px;">
+                <span class="Imags_firstspan"><label name="MEnableKeylimit" id="MEnableKeylimit"></label></span>
+                <span><input type="checkbox" id="scan" onclick="checkscan(this)" />
+                </span>
+            </div>
+            <div class="subparamswhite">
+				    <span class="Imags_firstspan"></span>
+					<span>
+                        <input type="button" value="" name="Mleftlimit" class="buttonlength" onclick="SetScanLimit('limit_horizonalleft')" />
+                        <br />
+                    	<input type="button" value="" name="Mrightlimit" style="margin-left:123px;" class="buttonlength" onclick="SetScanLimit('limit_horizonalright')" />
+                        <br />
+                        <input type="button" value="" name="Mcleanlimit" style="margin-left:123px;" class="buttonlength" onclick="SetScanLimit('limit_clear')"/>
+					</span>
+            </div>
+            
+      </div>
+  </div>
+  
+  <!---v5限位--->
+  <div class="pane" id="V5Limit">
+     <div class="Imags_left" style="height:350px; background:#FFF">
+       <div id="mainpluginV5Limit" style="height:260px;background:#3b3b3b;">
+       </div>
+      </div>
+      
+      <div class="Imags_right">
+          <div class="ptz_direction_left">
+                       <span id="ptz_leftup" class="ptz_direction ptz_leftup" onmousedown="SetPTZStart('move_leftup',3)" onmouseup="SetPTZStop('movestop',3)"  onmouseout="SetPTZStop('movestop',3)" ></span>
+                       <span id="ptz_up" class="ptz_direction ptz_up" onmousedown="SetPTZStart('moveup',3)" onmouseup="SetPTZStop('movestop',3)"  onmouseout="SetPTZStop('movestop',3)"></span>
+                       <span id="ptz_rightup" class="ptz_direction ptz_rightup" onmouseup="SetPTZStop('movestop',3)" onmousedown="SetPTZStart('move_rightup',3)" onmouseout="SetPTZStop('movestop',3)"></span>
+                       <span id="ptz_left" class="ptz_direction ptz_left" onmouseup="SetPTZStop('movestop',3)" onmousedown="SetPTZStart('moveleft',3)" onmouseout="SetPTZStop('movestop',3)"></span>
+                       <span id="ptz_auto" title="" class="ptz_direction ptz_auto" onclick="SetPTZClick('ptz_reset',3)" ></span>
+                       <span id="ptz_right" class="ptz_direction ptz_right" onmouseup="SetPTZStop('movestop',3)" onmousedown="SetPTZStart('moveright',3)" onmouseout="SetPTZStop('movestop',3)"></span>
+                       <span id="ptz_leftdown" class="ptz_direction ptz_leftdown" onmouseup="SetPTZStop('movestop',3)" onmousedown="SetPTZStart('move_leftdown',3)" onmouseout="SetPTZStop('movestop',3)"></span>
+                       <span id="ptz_down" class="ptz_direction ptz_down" onmouseup="SetPTZStop('movestop',3)" onmousedown="SetPTZStart('movedown',3)" onmouseout="SetPTZStop('movestop',3)"></span>
+                       <span id="ptz_rightdown" class="ptz_direction ptz_rightdown" onmouseup="SetPTZStop('movestop',3)" onmousedown="SetPTZStart('move_rightdown',3)" onmouseout="SetPTZStop('movestop',3)"></span>
+            </div>
+             <div class="ptz_direction_left" style="margin-left:20px;">
+                       <span id="ptz_zoomIn" class="ptz_direction ptz_zoomIn" title=""  onmouseup="SetPTZStop('zoomstop',3)" onmousedown="SetPTZStart('zoomtele',3)" onmouseout="SetPTZStop('zoomstop',3)"></span>
+                       <span id="ptz_zoomOut" class="ptz_direction ptz_zoomOut" title=""  onmouseup="SetPTZStop('zoomstop',3)" onmousedown="SetPTZStart('zoomwide',3)" onmouseout="SetPTZStop('zoomstop',3)"></span>
+                       
+                        <span id="ptz_PullAway" class="ptz_direction ptz_PullAway" title="" onmouseup="SetPTZStop('focusstop',3)" onmousedown="SetPTZStart('focusnear',3)" onmouseout="SetPTZStop('focusstop',3)"></span>
+                        <span id="ptz_PushIn" class="ptz_direction ptz_PushIn" title="" onmouseup="SetPTZStop('focusstop',3)" onmousedown="SetPTZStart('focusfar',3)" onmouseout="SetPTZStop('focusstop',3)"></span>
+                        <span id="ptz_focusautoPush" class="ptz_direction ptz_focusautoPush" title="" onclick="SetPTZClick('focusauto',3)"></span>
+                        <span id="ptz_irisIn" class="ptz_direction ptz_irisIn" title="" onmouseup="SetPTZStop('iris_stop',3)" onmousedown="SetPTZStart('iris_plus',3)" onmouseout="SetPTZStop('iris_stop',3)"></span>
+                        <span id="ptz_irisOut" class="ptz_direction ptz_irisOut" title="" onmouseup="SetPTZStop('iris_stop',3)" onmousedown="SetPTZStart('iris_minus',3)" onmouseout="SetPTZStop('iris_stop',3)"></span>
+                        <span id="ptz_focusauto" class="ptz_direction ptz_focusauto" title="" onclick="SetPTZClick('iris_auto',3)"></span>
+            </div>
+            <div class="clear"></div>
+            <div class="footer_slider_sound">
+                     <div id="PTZ_Slider_3" class="slider-range-footer"></div>
+                     <div class="Images_slider_value" style=" margin:0px;margin-left:10px;">
+                        <input type="text" id="PTZ_Slider_value_3" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                     </div>
+                </div>
+            <div class="clear"></div>
+            <div class="mainparams main_top26">
+				<label id="Mlimit" name="Mlimit"></label>
+				</div>
+             <div class="subparamsgray" style="margin-top:10px;">
+                <span class="Imags_firstspan"><label name="MEnableKeylimit" id="MEnableKeylimit"></label></span>
+                <span><input type="checkbox" id="V5modekey" onclick="v5checkkey(this)" />
+                </span>
+            </div>
+            <div class="subparamsgray">
+                <span class="Imags_firstspan"><label name="MEnableScanninglimit" id="MEnableScanninglimit"></label></span>
+                <span><input type="checkbox" id="V5scan" onclick="v5checkscan(this)" />
+                </span>
+            </div>
+            <div class="subparamsgray" style="margin-top:10px;" >
+                <span class="Imags_firstspan"></span>
+                <span>
+                   <input type="button" value=""  name="Mleftlimit"  class="buttonlength"  onclick="v5SetLimit('limit_horizonalleft')" />
+                <br>
+                     <input type="button" value="" style="margin-left:123px;" name="Mrightlimit"  class="buttonlength"  onclick="v5SetLimit('limit_horizonalright')"/>
+                </span>
+            </div>
+            
+            
+      </div>
+  </div>
+  
+  
+  <div class="pane" id="Cruise">
+     <div class="Imags_left" style="height:260px; background:#FFF">
+       <div id="mainpluginCruise" style="height:260px;background:#3b3b3b;">
+       </div>
+        
+      </div>
+      
+      <div class="Imags_right">
+         
+            <div class="ptz_direction_left">
+                       <span id="ptz_leftup" class="ptz_direction ptz_leftup" onmousedown="SetPTZStart('move_leftup',4)" onmouseup="SetPTZStop('movestop',4)"  onmouseout="SetPTZStop('movestop',4)" ></span>
+                       <span id="ptz_up" class="ptz_direction ptz_up" onmousedown="SetPTZStart('moveup',4)" onmouseup="SetPTZStop('movestop',4)"  onmouseout="SetPTZStop('movestop',4)"></span>
+                       <span id="ptz_rightup" class="ptz_direction ptz_rightup" onmouseup="SetPTZStop('movestop',4)" onmousedown="SetPTZStart('move_rightup',4)" onmouseout="SetPTZStop('movestop',4)"></span>
+                       <span id="ptz_left" class="ptz_direction ptz_left" onmouseup="SetPTZStop('movestop',4)" onmousedown="SetPTZStart('moveleft',4)" onmouseout="SetPTZStop('movestop',4)"></span>
+                       <span id="ptz_auto" title="" class="ptz_direction ptz_auto" onclick="SetPTZClick('ptz_reset',4)" ></span>
+                       <span id="ptz_right" class="ptz_direction ptz_right" onmouseup="SetPTZStop('movestop',4)" onmousedown="SetPTZStart('moveright',4)" onmouseout="SetPTZStop('movestop',4)"></span>
+                       <span id="ptz_leftdown" class="ptz_direction ptz_leftdown" onmouseup="SetPTZStop('movestop',4)" onmousedown="SetPTZStart('move_leftdown',4)" onmouseout="SetPTZStop('movestop',4)"></span>
+                       <span id="ptz_down" class="ptz_direction ptz_down" onmouseup="SetPTZStop('movestop',4)" onmousedown="SetPTZStart('movedown',4)" onmouseout="SetPTZStop('movestop',4)"></span>
+                       <span id="ptz_rightdown" class="ptz_direction ptz_rightdown" onmouseup="SetPTZStop('movestop',4)" onmousedown="SetPTZStart('move_rightdown',4)" onmouseout="SetPTZStop('movestop',4)"></span>
+            </div>
+             <div class="ptz_direction_left" style="margin-left:20px;">
+                       <span id="ptz_zoomIn" class="ptz_direction ptz_zoomIn" title=""  onmouseup="SetPTZStop('zoomstop',4)" onmousedown="SetPTZStart('zoomtele',4)" onmouseout="SetPTZStop('zoomstop',4)"></span>
+                       <span id="ptz_zoomOut" class="ptz_direction ptz_zoomOut" title=""  onmouseup="SetPTZStop('zoomstop',4)" onmousedown="SetPTZStart('zoomwide',4)" onmouseout="SetPTZStop('zoomstop',4)"></span>
+                       
+                        <span id="ptz_PullAway" class="ptz_direction ptz_PullAway" title="" onmouseup="SetPTZStop('focusstop',4)" onmousedown="SetPTZStart('focusnear',4)" onmouseout="SetPTZStop('focusstop',4)"></span>
+                        <span id="ptz_PushIn" class="ptz_direction ptz_PushIn" title="" onmouseup="SetPTZStop('focusstop',4)" onmousedown="SetPTZStart('focusfar',4)" onmouseout="SetPTZStop('focusstop',4)"></span>
+                        <span id="ptz_focusautoPush" class="ptz_direction ptz_focusautoPush" title="" onclick="SetPTZClick('focusauto',4)"></span>
+                        <span id="ptz_irisIn" class="ptz_direction ptz_irisIn" title="" onmouseup="SetPTZStop('iris_stop',4)" onmousedown="SetPTZStart('iris_plus',4)" onmouseout="SetPTZStop('iris_stop',4)"></span>
+                        <span id="ptz_irisOut" class="ptz_direction ptz_irisOut" title="" onmouseup="SetPTZStop('iris_stop',4)" onmousedown="SetPTZStart('iris_minus',4)" onmouseout="SetPTZStop('iris_stop',4)"></span>
+                        <span id="ptz_focusauto" class="ptz_direction ptz_focusauto" title="" onclick="SetPTZClick('iris_auto',4)"></span>
+            </div>
+            <div class="clear"></div>
+            <div class="footer_slider_sound">
+                     <div id="PTZ_Slider_4" class="slider-range-footer"></div>
+                     <div class="Images_slider_value" style=" margin:0px;margin-left:10px;">
+                        <input type="text" id="PTZ_Slider_value_4" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                     </div>
+                </div>
+            <div class="clear"></div>
+           
+      </div>
+      <div class="clear"></div>
+      <div class="subparamswhite" style="margin-left:-10px; margin-top:5px;">
+				    <span class=""><label id="Mcruisepath" name="Mcruisepath"></label></span>
+					<span class="">
+					    <select class="selectwidth width152" id="SelectCruisenum" onchange="ChangeCruise()">
+                               
+                          </select>
+					</span>
+                    <span class="" style="margin-left:30px;">
+                       <input type="button" value="" name="MsaveCruise" class="buttonlength" onclick="CruiseSave()" />
+                       <input type="button" value="" name="MdelCruise" class="buttonlength" onclick="DelCruisepath()" />
+                       <input type="button" id="path_cruise_start" class="buttonlength" value="" name="MLoadCruise" onclick="Cruisepath('path_cruise_start')"/>
+                       <input type="button" id="path_cruise_end" class="buttonlength"  value="" name="MStopCruise" onclick="Cruisepath('path_cruise_end')" />
+                       <span id="PathcruiseTips"></span>
+                    </span>
+                    <div class="clear"></div>
+            </div>
+            <div class="mainparams main_top26" style="">
+                <span style="float:left;">
+                   <input type="button" id="showAddCruiseAddressWnd" class="buttonlength" value="" name="MaddCruise" onclick="showAddCruiseAddressWnd('add')" />
+                   <input type="button" disabled="disabled" class="buttonlength" value="" name="MEditCruise" id="EditCruise" onclick="showAddCruiseAddressWnd('edit')"/>
+                   <input type="button" disabled="disabled" class="buttonlength" value="" name="MdelCruise" id="DelCruise" onclick="tabledel()" />
+                </span>
+            </div>
+            <div class="clear"></div>
+            <div class="main_top10"></div>
+     
+        
+          <table border="0" cellspacing="0" cellpadding="0" id="Table_PTZCruise">
+              <thead>
+                 <tr>
+                    <td class="td1"><label id="MCruisepoint" name="MCruisepoint"></label></td>
+                    <td><label name="MPreset" id="MPreset"></label></td>
+                    <td><label name="Mstoptime" id="Mstoptime"></label><span id="PTZstoptime" style="margin:0 5px;"></span><label name="MSeconds"></label></td>
+                    <td><label name="MCruiseenable"></label></td>
+                    <td><label name="MPresetname" id="MPresetname"></label></td>
+                 </tr>
+              </thead>
+              <tbody id="TbodyCruise">
+              </tbody>
+            </table>
+  </div>
+  
+  
+  <div class="pane" id="ScanPattern">
+     <div class="Imags_left" style="height:350px; background:#FFF">
+       <div id="mainpluginScanPattern" style="height:260px;background:#3b3b3b;">
+       </div>
+        
+      </div>
+      <div class="Imags_right">
+         
+           <div class="ptz_direction_left">
+                       <span id="ptz_leftup" class="ptz_direction ptz_leftup" onmousedown="SetPTZStart('move_leftup',5)" onmouseup="SetPTZStop('movestop',5)"  onmouseout="SetPTZStop('movestop',5)" ></span>
+                       <span id="ptz_up" class="ptz_direction ptz_up" onmousedown="SetPTZStart('moveup',5)" onmouseup="SetPTZStop('movestop',5)"  onmouseout="SetPTZStop('movestop',5)"></span>
+                       <span id="ptz_rightup" class="ptz_direction ptz_rightup" onmouseup="SetPTZStop('movestop',5)" onmousedown="SetPTZStart('move_rightup',5)" onmouseout="SetPTZStop('movestop',5)"></span>
+                       <span id="ptz_left" class="ptz_direction ptz_left" onmouseup="SetPTZStop('movestop',5)" onmousedown="SetPTZStart('moveleft',5)" onmouseout="SetPTZStop('movestop',5)"></span>
+                       <span id="ptz_auto" title="" class="ptz_direction ptz_auto" onclick="SetPTZClick('ptz_reset',5)" ></span>
+                       <span id="ptz_right" class="ptz_direction ptz_right" onmouseup="SetPTZStop('movestop',5)" onmousedown="SetPTZStart('moveright',5)" onmouseout="SetPTZStop('movestop',5)"></span>
+                       <span id="ptz_leftdown" class="ptz_direction ptz_leftdown" onmouseup="SetPTZStop('movestop',5)" onmousedown="SetPTZStart('move_leftdown',5)" onmouseout="SetPTZStop('movestop',5)"></span>
+                       <span id="ptz_down" class="ptz_direction ptz_down" onmouseup="SetPTZStop('movestop',5)" onmousedown="SetPTZStart('movedown',5)" onmouseout="SetPTZStop('movestop',5)"></span>
+                       <span id="ptz_rightdown" class="ptz_direction ptz_rightdown" onmouseup="SetPTZStop('movestop',5)" onmousedown="SetPTZStart('move_rightdown',5)" onmouseout="SetPTZStop('movestop',5)"></span>
+            </div>
+             <div class="ptz_direction_left" style="margin-left:20px;">
+                       <span id="ptz_zoomIn" class="ptz_direction ptz_zoomIn" title=""  onmouseup="SetPTZStop('zoomstop',5)" onmousedown="SetPTZStart('zoomtele',5)" onmouseout="SetPTZStop('zoomstop',5)"></span>
+                       <span id="ptz_zoomOut" class="ptz_direction ptz_zoomOut" title=""  onmouseup="SetPTZStop('zoomstop',5)" onmousedown="SetPTZStart('zoomwide',5)" onmouseout="SetPTZStop('zoomstop',5)"></span>
+                       
+                        <span id="ptz_PullAway" class="ptz_direction ptz_PullAway" title="" onmouseup="SetPTZStop('focusstop',5)" onmousedown="SetPTZStart('focusnear',5)" onmouseout="SetPTZStop('focusstop',5)"></span>
+                        <span id="ptz_PushIn" class="ptz_direction ptz_PushIn" title="" onmouseup="SetPTZStop('focusstop',5)" onmousedown="SetPTZStart('focusfar',5)" onmouseout="SetPTZStop('focusstop',5)"></span>
+                        <span id="ptz_focusautoPush" class="ptz_direction ptz_focusautoPush" title="" onclick="SetPTZClick('focusauto',5)"></span>
+                        <span id="ptz_irisIn" class="ptz_direction ptz_irisIn" title="" onmouseup="SetPTZStop('iris_stop',5)" onmousedown="SetPTZStart('iris_plus',5)" onmouseout="SetPTZStop('iris_stop',5)"></span>
+                        <span id="ptz_irisOut" class="ptz_direction ptz_irisOut" title="" onmouseup="SetPTZStop('iris_stop',5)" onmousedown="SetPTZStart('iris_minus',5)" onmouseout="SetPTZStop('iris_stop',5)"></span>
+                        <span id="ptz_focusauto" class="ptz_direction ptz_focusauto" title="" onclick="SetPTZClick('iris_auto',5)"></span>
+            </div>
+            <div class="clear"></div>
+            <div class="footer_slider_sound">
+                     <div id="PTZ_Slider_5" class="slider-range-footer"></div>
+                     <div class="Images_slider_value" style=" margin:0px;margin-left:10px;">
+                        <input type="text" id="PTZ_Slider_value_5" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                     </div>
+                </div>
+            <div class="clear"></div>
+            <!--<div class="subparamswhite" style="margin-left:-10px; margin-top:5px;">
+				    <span class="Imags_firstspan"><label id="laDeviceType" name="laDeviceType1">预置点</label></span>
+					<span class="">
+					    <select class="selectwidth width152"  id="PTZScanPattern">
+                        </select>
+					</span>
+            </div>-->
+            <div class="subparamsgray" style="margin-left:-10px; margin-top:10px;">
+                <span class="Imags_firstspan"><label name="Mscanningpath" id="Mscanningpath"></label></span>
+                <span><select class="selectwidth width152" id="scanpath" onchange="scanpath()">
+                        
+                       </select>
+                </span>
+            </div>
+          
+          <input type="button" value="" name="Mstartrecord" id="StartScanPattern" class="buttonclass"  onclick="patternsinfo('syncscan_rec')"  />
+        <input type="button" value="" name="Mstoprecord" id="StopScanPattern" class="buttonclass"   onclick="patternsinfo('syncscan_stoprec')"/>
+        <input type="button" value="" name="Mcleanrecord" id="ClearScanPattern" class="buttonclass" onclick="patternsinfo('syncscan_delete')" />
+        
+         <input type="button" value="" name="MPreview" id="PlayScanPattern" class="buttonclass"  onclick="patternsinfo('syncscan_preview')"/>
+        <input type="button" value="" name="MScanPatternstop" id="PauseScanPattern" class="buttonclass"  onclick="patternsinfo('syncscan_stoppreview')" />
+         <span id="ScanPatternStartTips" style=" margin-top:20px;float:right; margin-right:20px;"></span>
+      </div>
+      
+  </div>
+  
+  
+  
+  
+  
+  <div class="pane" id="TimingTask">
+       <div class="subparamswhite" id="InputResolution_tr">
+            <span class="firstspan"><label name="MenableTimingTask" id="MenableTimingTask"></label></span>
+            <span><input type="checkbox" id="TimeTaskCheck" onclick="checkbox(this)" /></span>
+        </div>
+        <div class="subparamsgray">
+            <span class="firstspan"><label name="Mrecoverytime"></label></span>
+            <span><input type="text"  onkeydown="CheckKeyDown(event)" class="input_config width150" id="waittimeTask"></span>
+            <span id="waittimeTaskTips"></span>
+            <span><label name="MSeconds"></label></span>
+            <span id="MaxwaittimeTaskTips" class="colortips"></span>
+        </div>
+        <!--<div class="subparamswhite" id="InputResolution_tr">
+            <span class="firstspan"><label name="laInputResolution11" id="laInputResolution11">任务时间</label></span>
+            <span><select class="selectwidth width152" id="StreamTypeIn">
+                    <option name="StreamTypeInOpt2" value="02">星期一</option>
+                   </select></span>
+        </div>-->
+        <div class="subparamswhite" id="InputResolution_tr">
+            <span class="firstspan"><label name="MTimingTasktime" id="MTimingTasktime"></label></span>
+            <span><input id="ScheduleEditBtn" class="buttonclass" type="button" value="" name="MEdittime" onclick="EditSchedule()"></span>
+        </div>
+        
+       <div class="spansave"><input type="button"  class="input_save"  id="SaveConfigBtn" onclick="TimingTaskSave(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsTimingTask"></span></div>
+  </div>
+  
+  
+  
+  <div class="pane" id="Location">
+     <div class="Imags_left" style="height:350px; background:#FFF">
+       <div id="mainpluginLocation" style="height:260px;background:#3b3b3b;">
+       </div>
+        
+      </div>
+      
+      <div class="Imags_right">
+         
+           <div class="ptz_direction_left">
+                       <span id="ptz_leftup" class="ptz_direction ptz_leftup" onmousedown="SetPTZStart('move_leftup',6)" onmouseup="SetPTZStop('movestop',6)"  onmouseout="SetPTZStop('movestop',6)" ></span>
+                       <span id="ptz_up" class="ptz_direction ptz_up" onmousedown="SetPTZStart('moveup',6)" onmouseup="SetPTZStop('movestop',6)"  onmouseout="SetPTZStop('movestop',6)"></span>
+                       <span id="ptz_rightup" class="ptz_direction ptz_rightup" onmouseup="SetPTZStop('movestop',6)" onmousedown="SetPTZStart('move_rightup',6)" onmouseout="SetPTZStop('movestop',6)"></span>
+                       <span id="ptz_left" class="ptz_direction ptz_left" onmouseup="SetPTZStop('movestop',6)" onmousedown="SetPTZStart('moveleft',6)" onmouseout="SetPTZStop('movestop',6)"></span>
+                       <span id="ptz_auto" title="" class="ptz_direction ptz_auto" onclick="SetPTZClick('ptz_reset',6)" ></span>
+                       <span id="ptz_right" class="ptz_direction ptz_right" onmouseup="SetPTZStop('movestop',6)" onmousedown="SetPTZStart('moveright',6)" onmouseout="SetPTZStop('movestop',6)"></span>
+                       <span id="ptz_leftdown" class="ptz_direction ptz_leftdown" onmouseup="SetPTZStop('movestop',6)" onmousedown="SetPTZStart('move_leftdown',6)" onmouseout="SetPTZStop('movestop',6)"></span>
+                       <span id="ptz_down" class="ptz_direction ptz_down" onmouseup="SetPTZStop('movestop',6)" onmousedown="SetPTZStart('movedown',6)" onmouseout="SetPTZStop('movestop',6)"></span>
+                       <span id="ptz_rightdown" class="ptz_direction ptz_rightdown" onmouseup="SetPTZStop('movestop',6)" onmousedown="SetPTZStart('move_rightdown',6)" onmouseout="SetPTZStop('movestop',6)"></span>
+            </div>
+             <div class="ptz_direction_left" style="margin-left:20px;">
+                       <span id="ptz_zoomIn" class="ptz_direction ptz_zoomIn" title=""  onmouseup="SetPTZStop('zoomstop',6)" onmousedown="SetPTZStart('zoomtele',6)" onmouseout="SetPTZStop('zoomstop',6)"></span>
+                       <span id="ptz_zoomOut" class="ptz_direction ptz_zoomOut" title=""  onmouseup="SetPTZStop('zoomstop',6)" onmousedown="SetPTZStart('zoomwide',6)" onmouseout="SetPTZStop('zoomstop',6)"></span>
+                       
+                        <span id="ptz_PullAway" class="ptz_direction ptz_PullAway" title="" onmouseup="SetPTZStop('focusstop',6)" onmousedown="SetPTZStart('focusnear',6)" onmouseout="SetPTZStop('focusstop',6)"></span>
+                        <span id="ptz_PushIn" class="ptz_direction ptz_PushIn" title="" onmouseup="SetPTZStop('focusstop',6)" onmousedown="SetPTZStart('focusfar',6)" onmouseout="SetPTZStop('focusstop',6)"></span>
+                        <span id="ptz_focusautoPush" class="ptz_direction ptz_focusautoPush" title="" onclick="SetPTZClick('focusauto',6)"></span>
+                        <span id="ptz_irisIn" class="ptz_direction ptz_irisIn" title="" onmouseup="SetPTZStop('iris_stop',6)" onmousedown="SetPTZStart('iris_plus',6)" onmouseout="SetPTZStop('iris_stop',6)"></span>
+                        <span id="ptz_irisOut" class="ptz_direction ptz_irisOut" title="" onmouseup="SetPTZStop('iris_stop',6)" onmousedown="SetPTZStart('iris_minus',6)" onmouseout="SetPTZStop('iris_stop',6)"></span>
+                        <span id="ptz_focusauto" class="ptz_direction ptz_focusauto" title="" onclick="SetPTZClick('iris_auto',6)"></span>
+            </div>
+            <div class="clear"></div>
+            <div class="footer_slider_sound">
+                     <div id="PTZ_Slider_6" class="slider-range-footer"></div>
+                     <div class="Images_slider_value" style=" margin:0px;margin-left:10px;">
+                        <input type="text" id="PTZ_Slider_value_6" onblur="CheackOnlyNum(this.value)"  class="siderwid"   />
+                     </div>
+                </div>
+            <div class="clear"></div>
+            
+            
+            
+            
+            <div class="mainparams main_top26">
+				<label  name="MZerocorrection"></label>
+				</div>
+               
+             <div class="subparamsgray" style="margin-top:10px;">
+                <span class="Imags_firstspan"><label name="MZerocorrection"></label></span>
+                <span><input type="button" value="" name="MZerocorrection1"  class="buttonlength"  onclick="panposion_set('turnto_machinezero')" />
+                </span>
+            </div>
+            
+            
+                
+            
+           
+             <div class="mainparams main_top26">
+				<label id="MLocation" name="MLocation"></label>
+				</div>
+                <div class="subparamsgray"  style="margin-top:10px;">
+                <span class="Imags_firstspan"><label name="Mcurrentcoordinates"></label></span>
+                <span id="xy">
+                </span>
+            </div>
+             <div class="subparamsgray"  style="margin-top:10px;">
+                <span class="Imags_firstspan"><label name="Mhorizontalcoordinate"></label></span>
+                <span><input id="Levelx" name='Levelx' class="input_config width80" maxlength="6" type="text" ></span>
+                <span id="Levelxtips"></span>
+            </div>
+            <div class="subparamsgray">
+                <span class="Imags_firstspan"><label name="MVerticalcoordinate"></label></span>
+                <span><input id="Verticaly" class="input_config width80"  type="text" maxlength="6" ></span>
+                <span id="Verticalytips"></span>
+            </div>
+            
+             <div class="subparamsgray" style="margin-top:10px;">
+                <span class="Imags_firstspan">
+                </span>
+                <span>
+                <input type="button" value="" name="MHorizontalpositioning"  class="buttonlength"  onclick="panposion_set('panposion_set')" />
+                <br />
+                <input type="button" value="" name="MVerticalpositioning" style="margin-left:123px;"  class="buttonlength"  onclick="panposion_set('tiltposion_set')" />
+                <br />
+                <input type="button" id="MPrecisepositioning" value="" name="MPrecisepositioning" style="margin-left:123px;" class="buttonlength" onclick="panposion_set('ptposion_set')" />
+                </span>
+            </div>
+      </div>
+  </div>
+  
+
+  
+<div id="TimeScheduleEdit" style="display:none; height:370px;" >
+<style>
+.width100 {width:100px;}
+.width50 { width:50px;}
+.display { display:none;}
+</style>
+<div  class="scheduleeditdiv" >
+  <div class="scheduleedittitlediv" id="divScheduleTitle"><label name="laScheduleEdit" id="laScheduleEdit" style="font-weight:bold"></label></div>
+  <div style="width:550px;  margin:20px auto 10px auto;">
+    <ul id="ulSchedule" class="tabs">
+      <li><a href="javascript:jump_showdaytime('0');" name="MMonday" id="MMonday"></a></li>
+      <li><a href="javascript:jump_showdaytime('1');" name="MTuesday" id="MTuesday"></a></li>
+      <li><a href="javascript:jump_showdaytime('2');" name="MWednesday" id="MWednesday"></a></li>
+      <li><a href="javascript:jump_showdaytime('3');" name="MThursday" id="MThursday"></a></li>
+      <li><a href="javascript:jump_showdaytime('4');" name="MFriday" id="MFriday"></a></li>
+      <li><a href="javascript:jump_showdaytime('5');" name="MSaturday" id="MSaturday"></a></li>
+      <li><a href="javascript:jump_showdaytime('6');" name="MSunday" id="MSunday"></a></li>
+    </ul>
+   <div class="clear"></div>
+    <div style="padding:10px 0 0 0; height:185px; overflow:auto;overflow-x:hidden;" class="panes"> 
+		<table cellspacing="0" cellpadding="0" class="linkagetable" style="width:548px;">
+		  <tbody>
+            <tr style="background:#dedede; height:25px;">
+            <td class="scheduletd" style="width:55px;"></td>
+			<td class="scheduletd" style="width:100px;"><label name="MTimeslot" id="MTimeslot"></label></td>
+			<td class="scheduletd" style="width:150px;"><label name="MStartTime"></label></td>
+			<td class="scheduletd" style="width:150px;"><label name="MEndTime"></label></td>
+            <td class="scheduletd" style="width:150px;"><label name="MWatchmode">守望模式</label></td>
+            <td class="scheduletd" style="width:150px;"><label name="Mnumber">编号</label></td>
+		  </tr>
+		  <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox1" onchange="onChangeTime(this)" /></td>
+			<td class="scheduletd">1</td>
+			<td  class="scheduletd">
+			  <input id="StartTime1" name="StartTime1" class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td class="scheduletd">
+			  <input id="StopTime1" name="StopTime1" class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+            <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task1" onchange="onChangeTime(this)">
+                
+             </select>
+			</td> 
+            <td class="scheduletd">
+            
+             <select class="selectwidth width50" id="presettext1" onchange="onChangeTime(this)">
+             </select>
+			</td>   				
+		  </tr>
+		  <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox2"  onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">2</td>
+			<td class="scheduletd">
+			  <input id="StartTime2" name="StartTime2" class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>  
+			<td  class="scheduletd ">
+			 <input id="StopTime2" name="StopTime2" class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+             <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task2" onchange="onChangeTime(this)">
+                
+              </select>
+			</td>
+            <td class="scheduletd">
+             <select class="selectwidth width50" id="presettext2" onchange="onChangeTime(this)">
+             </select>
+			</td>   	  				
+		  </tr>
+		  <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox3" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">3</td>
+			<td  class="scheduletd">
+			  <input id="StartTime3" name="StartTime3"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd">
+			  <input id="StopTime3" name="StopTime3"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+            <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task3" onchange="onChangeTime(this)">
+                
+               </select>
+			</td>  
+            <td class="scheduletd">
+             <select class="selectwidth width50" id="presettext3" onchange="onChangeTime(this)">
+             </select>
+			</td> 			
+		  </tr>
+		  <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox4" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">4</td>
+			<td class="scheduletd ">
+			  <input id="StartTime4" name="StartTime4"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime4" name="StopTime4"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+            <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task4" onchange="onChangeTime(this)">
+                
+              </select>
+			</td> 
+             <td class="scheduletd">
+             <select class="selectwidth width50" id="presettext4" onchange="onChangeTime(this)">
+             </select>
+			</td> 	
+		  </tr>
+          
+           <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox5" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">5</td>
+			<td class="scheduletd ">
+			  <input id="StartTime5" name="StartTime5"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime5" name="StopTime5"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+            <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task5" onchange="onChangeTime(this)">
+                
+              </select>
+			</td> 
+             <td class="scheduletd">
+             <select class="selectwidth width50" id="presettext5" onchange="onChangeTime(this)">
+             </select>
+			</td>
+		  </tr>
+          
+          
+          <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox6" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">6</td>
+			<td class="scheduletd ">
+			  <input id="StartTime6" name="StartTime6"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime6" name="StopTime6"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+            <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task6" onchange="onChangeTime(this)">
+                
+              </select>
+			</td> 
+             <td class="scheduletd">
+             <select class="selectwidth width50" id="presettext6" onchange="onChangeTime(this)">
+             </select>
+			</td>
+		  </tr>
+          <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox7" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">7</td>
+			<td class="scheduletd ">
+			  <input id="StartTime7" name="StartTime7"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime7" name="StopTime7"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+            <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task7" onchange="onChangeTime(this)" >
+               
+              </select>
+			</td> 
+             <td class="scheduletd">
+             <select class="selectwidth width50" id="presettext7" onchange="onChangeTime(this)">
+             </select>
+			</td>
+		  </tr>
+          
+          <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox8" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">8</td>
+			<td class="scheduletd ">
+			  <input id="StartTime8" name="StartTime8"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime8" name="StopTime8"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+            <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task8" onchange="onChangeTime(this)" >
+                
+              </select>
+			</td> 
+            <td class="scheduletd">
+             <select class="selectwidth width50" id="presettext8" onchange="onChangeTime(this)">
+             </select>
+			</td>
+		  </tr>
+          
+          <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox9" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">9</td>
+			<td class="scheduletd ">
+			  <input id="StartTime9" name="StartTime9"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime9" name="StopTime9"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+            <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task9" onchange="onChangeTime(this)">
+                 
+              </select>
+			</td> 
+             <td class="scheduletd">
+             <select class="selectwidth width50" id="presettext9" onchange="onChangeTime(this)">
+             </select>
+			</td>
+		  </tr>
+          
+          <tr style="height:25px;">
+            <td class="scheduletd" style="width:55px;"><input type="checkbox" name="CheckboxTime" id="checkbox10" onclick="onChangeTime(this)" /></td>
+			<td class="scheduletd">10</td>
+			<td class="scheduletd ">
+			  <input id="StartTime10" name="StartTime10"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td>
+			<td  class="scheduletd ">
+			 <input id="StopTime10" name="StopTime10"  class="Wdate input_config width100" onchange="onChangeTime(this)" onclick="CreateCalendar(2)"></input>
+			</td> 
+            <td class="scheduletd">
+			 <select class="selectwidth width100" id="Task10" onchange="onChangeTime(this)">
+                
+              </select>
+			</td> 
+             <td class="scheduletd">
+             <select class="selectwidth width50" id="presettext10" onchange="onChangeTime(this)">
+             </select>
+			</td>
+           
+		  </tr>
+           
+	   </tbody></table>   
+    </div>
+	<div style="height:30px; line-height:30px;">
+	  <span class="skybluefont"><label name="laCopyToWeek1"></label></span>
+      <input type="checkbox" onclick="SelectAllplandayList()" id="alldaylist" class="checkbox" name="alldaylist">&nbsp;
+      <label name="MSelectAll"></label>
+	</div>
+	<div style="height:30px;">
+      <div style="float:left">
+          <input type="checkbox" checked="checked" disabled="disabled" onclick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList0" name="ChannelplandayList0">
+          <label name="MMonday" id="MMonday"></label>
+          <input type="checkbox" onclick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList1" name="ChannelplandayList1">
+          <label name="MTuesday" id="MTuesday"></label>
+          <input type="checkbox" onclick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList2" name="ChannelplandayList2">
+          <label name="MWednesday" id="MWednesday"></label>
+          <input type="checkbox" onclick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList3" name="ChannelplandayList3">
+          <label name="MThursday" id="MThursday"></label>
+          <input type="checkbox" onclick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList4" name="ChannelplandayList4">
+          <label name="MFriday" id="MFriday"></label>
+          <input type="checkbox" onclick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList5" name="ChannelplandayList5">
+          <label name="MSaturday" id="MSaturday"></label>
+          <input type="checkbox" onclick="CheackAllChanneldayList()" class="checkbox" id="ChannelplandayList6" name="ChannelplandayList6">
+          <label name="MSunday" id="MSunday"></label>
+	  </div>
+      <div style="float:right">
+      	<input type="button" onclick="CopyDayTimeInfo()" style="right; width:80px;height:24px;line-height:20px; vertical-align:middle;cursor:pointer;padding:0 5px;"  id="CopyTo" name="MCopyTo" value="">
+      </div>
+	</div>
+	<div style="height:40px; text-align:right;">
+	  <span class="formtips" id="SetResultTipsTwo"></span>
+      <input type="button" onclick="OKEditScheduleDlg()" style=" width:80px;height:24px;line-height:20px; vertical-align:middle;cursor:pointer;padding:0 5px;" value="" name="MButOK" id="ConfirmTips">
+	  <input type="button" onclick="CancelScheduleDlg();" style=" width:80px;height:24px;line-height:20px; vertical-align:middle;cursor:pointer;padding:0 5px;" value="" name="MlaCancel" id="laCancel">
+	</div>   
+  </div>
+</div>
+</div>
+ 
+    <!--<div class="panes">-->
+</div>
+
+
+
+
+<!-----添加修改巡航路径----->
+<div id="divAddCruiseTable" style="display:none; height:198px;" >
+    <div class="scheduleedittitlediv" id="divScheduleTitle" style="font-weight:normal;">
+      <label id="CruiseTielt" style="font-weight:bold"></label>
+    </div>
+    <div style="background:#FFF;">
+      <div class="subparamsgray" style="padding-top:10px;">
+        <span class="firstspan"><label name="MPreset"></label></span>
+        <span class="localsecondspan">
+           <select class="selectwidth width152" id="CruisePresetWin" onchange="GetPshowAddCruise()">
+            </select>
+        </span>
+        <span id="CruisePresetWintips"></span>
+      </div>
+      
+      <div class="subparamsgray" >
+        <span class="firstspan"><label name="MCruiseenable"></label></span>
+        <span>
+        <input type="text" class="input_config width150" id="CruiseEnable" disabled="disabled" /></span>
+      </div>
+      
+      <div class="subparamsgray" >
+        <span class="firstspan"><label name="MPresetname"></label></span>
+        <span>
+        <input type="text" class="input_config width150" id="CruiseName" disabled="disabled" /></span>
+        
+      </div>
+      
+      <div class="subparamsgray" >
+        <span class="firstspan"><label name="Mstoptime"></label></span>
+        <span>
+        <input type="text" class="input_config width150" id="CruiseTime" maxlength="" /></span>
+        <span class="fixedTips"><span id="Cruisestoptime" class="fixedTips"></span><label name="MSeconds"></label></span><span id="CruiseTimetips"></span>
+      </div>
+      <div  style="height:32px; width:100%; line-height:32px; background:#e7e7e7;">
+        <span style="float:right; margin-right:10px;">
+            <input id="btnCruiseAdd" class="buttonclass" style="display:none" type="button"  value="" name="MButOK" onclick="CruiseClickButton('add')">
+            <input id="btnCruiseEdit" class="buttonclass" style="display:none"" type="button"  value="" name="MButOK" onclick="CruiseClickButton('edit')">
+            <input id="" class="buttonclass" type="button" onclick="Cruiseclose();" name="MlaCancel" value="">
+        </span> 
+      </div>
+    </div>
+</div>
+
+
+
+<div id="mainpluginPTZ" style="width:0; height:0"></div>

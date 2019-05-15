@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ParamConfig>
+  <Common>
+    <Page>
+      <laParamConfig>Configuration</laParamConfig>
+      <Tree>
+        <MLocalConfig>Local Setting</MLocalConfig>
+        <Mfastset>Quick Settings</Mfastset>
+        <aIPAddress>IP Address</aIPAddress>
+        <atcpippost>Port</atcpippost>
+        <aAccessProtocol>Access Protocol</aAccessProtocol>
+        <aDeviceInformation>Device Info</aDeviceInformation>
+        <aDateTime>Time</aDateTime>
+        <aNetwork>Network</aNetwork>
+        <aTCPIPpost>IP and Port</aTCPIPpost>
+        <aOtherProtocol>Other Protocols</aOtherProtocol>
+        <aVideoCamera>Camera</aVideoCamera>
+        <aImagsSettings>Image</aImagsSettings>
+        <aVideo>Video</aVideo>
+        <aAudio>Audio</aAudio>
+        <aPTZ>PTZ</aPTZ>
+        <aadcap>Working Mode</aadcap>
+        <aEvent>Event</aEvent>
+        <aVideoAnalysis>Video Analysis</aVideoAnalysis>
+        <aOcclusionAlarm>Shield Area Alarm</aOcclusionAlarm>
+        <aAlarmInput>Alarm Input</aAlarmInput>
+        <aAlarmoutput>Alarm Output</aAlarmoutput>
+        <aAbnormal>Abnormality Linkage</aAbnormal>
+        <aStorage>Storage</aStorage>
+        <aStorageManagement>Storage Management</aStorageManagement>
+        <aVideoProgram>Recording</aVideoProgram>
+        <aScreenshot>Snapshot</aScreenshot>
+        <aBaseConfig>System</aBaseConfig>
+        <aSecurity>User Security</aSecurity>
+        <aSerialPost>Serial Port</aSerialPost>
+        <aLog>Log</aLog>
+        <aSystemMaintenance>System Maintenance</aSystemMaintenance>
+      </Tree>
+      <Meveryday>Everyday</Meveryday>
+      <MMonday>Monday</MMonday>
+      <MTuesday>Tuesday</MTuesday>
+      <MWednesday>Wednesday</MWednesday>
+      <MThursday>Thursday</MThursday>
+      <MFriday>Friday</MFriday>
+      <MSaturday>Saturday</MSaturday>
+      <MSunday>Sunday</MSunday>
+      <MSelectAll>Select All</MSelectAll>
+      <MCopyTo>Copy</MCopyTo>
+      <MTimeslot>Duration</MTimeslot>
+      <MStartTime>Start Time</MStartTime>
+      <MEndTime>End Time</MEndTime>
+      <MWatchmode>Patrol Mode</MWatchmode>
+      <RecoveryTime>Duration</RecoveryTime>
+      <Mnumber>ID</Mnumber>
+      <laState>Status</laState>
+      <StartMonthOpt1>January</StartMonthOpt1>
+      <StartMonthOpt2>February</StartMonthOpt2>
+      <StartMonthOpt3>March</StartMonthOpt3>
+      <StartMonthOpt4>April</StartMonthOpt4>
+      <StartMonthOpt5>May</StartMonthOpt5>
+      <StartMonthOpt6>June</StartMonthOpt6>
+      <StartMonthOpt7>July</StartMonthOpt7>
+      <StartMonthOpt8>August</StartMonthOpt8>
+      <StartMonthOpt9>September</StartMonthOpt9>
+      <StartMonthOpt10>October</StartMonthOpt10>
+      <StartMonthOpt11>November</StartMonthOpt11>
+      <StartMonthOpt12>December</StartMonthOpt12>
+      <MdfDigitalIpBtn>Modify</MdfDigitalIpBtn>
+      <AddDigitalIpBtn>Add</AddDigitalIpBtn>
+      <DelDigitalIpBtn>Delete</DelDigitalIpBtn>
+      <MCleanALl>Delete All</MCleanALl>
+      <MUserName>User Name</MUserName>
+      <MPassword>Password</MPassword>
+      <MPassword2>Password Confirm</MPassword2>
+      <laDay>Day</laDay>
+      <StartWeekOpt1>First Week</StartWeekOpt1>
+      <StartWeekOpt2>Second Week</StartWeekOpt2>
+      <StartWeekOpt3>Third Week</StartWeekOpt3>
+      <StartWeekOpt4>Fourth Week</StartWeekOpt4>
+      <StartWeekOpt5>Fifth Week</StartWeekOpt5>
+      <StartWeekOpt6>Sixth Week</StartWeekOpt6>
+      <laEnable>Enable</laEnable>
+      <MSaveConfigLocal>Save</MSaveConfigLocal>
+      <MlaCancel>Cancel</MlaCancel>
+      <MButEdit>Edit</MButEdit>
+      <MButEditTime>Edit Time</MButEditTime>
+      <MButOK>Confirm</MButOK>
+      <MbtnBrowse>View</MbtnBrowse>
+      <MEnable>Enable</MEnable>
+      <MAuto>Auto</MAuto>
+      <MSeconds>(s)</MSeconds>
+	  <MMinute>(min)</MMinute>
+      <MPaging>
+        <Mtotal>Total</Mtotal>
+        <Mstrip>item(s)</Mstrip>
+        <Mjump>Skip</Mjump>
+        <MlastPage>Page Up</MlastPage>
+        <Mnextpage>Next Page</Mnextpage>
+        <MjumpFast>Skip</MjumpFast>
+        <MupFast>Back</MupFast>
+        <MdownFast>Next</MdownFast>
+        <MfinishFase>Completed</MfinishFase>
+      </MPaging>
+      <opt>
+        <optclose>Close</optclose>
+        <opthscan>Pan Patrol</opthscan>
+        <optvscan>Tilt Patrol</optvscan>
+        <optpreset>Load Preset</optpreset>
+        <optpathcruise>Path Patrol</optpathcruise>
+        <optframescan>Frame Patrol</optframescan>
+        <optrandscan>Random Patrol</optrandscan>
+        <optfullviewscan>Panoramic Patrol</optfullviewscan>
+        <optsyncscan>Variety Patrol</optsyncscan>
+      </opt>
+      <MPagEvent>
+        <LinkMode>Linkage Method</LinkMode>
+        <NormalLink>Common Linkage</NormalLink>
+        <UpCenter>Upload Center</UpCenter>
+        <ShowContex>Text Overlay</ShowContex>
+        <SoundAlarm>Acoustic Alarm</SoundAlarm>
+        <Mfocus>Focus</Mfocus>
+        <RecLink>Recording Linkage</RecLink>
+        <Snap>Snapshot</Snap>
+        <OtherLink>Other Linkage</OtherLink>
+        <AlarmOut>Alarm Output</AlarmOut>
+        <PTZLink>PTZ Linkage</PTZLink>
+        <presetNum>Preset ID</presetNum>
+        <Mailnotification>Email Notification</Mailnotification>
+      </MPagEvent>
+    </Page>
+    <LoginConnectTimeoutTips>Timeout, please login again.</LoginConnectTimeoutTips>
+    <InputTips>Please input</InputTips>
+    <RangeTips>Scope</RangeTips>
+    <WrongTips>Faulty</WrongTips>
+    <LengthTips>Length cannot exceed</LengthTips>
+    <NullTips>Cannot be null</NullTips>
+    <WithTimeSegmentTips>Duration</WithTimeSegmentTips>
+    <MidenticalTips>Same</MidenticalTips>
+    <MConflictTips>Conflict</MConflictTips>
+    <UserNumTips>The first character must be an alphabet.</UserNumTips>
+    <UserTips>You can only input English number and -_@.</UserTips>
+    <UserNameCharTips>You can only input alphabet, number and underline.</UserNameCharTips>
+    <CheckLetterNumber>You can only input alphabet and number.</CheckLetterNumber>
+    <DevNameLengthTips>Length cannot exceed</DevNameLengthTips>
+    <DevNameNullTips>Name cannot be null!</DevNameNullTips>
+    <DevNameWrongCharTips>Cannot include</DevNameWrongCharTips>
+    <DevSpace>Blank Space</DevSpace>
+    <PTZCheckLetter>Numeric Error</PTZCheckLetter>
+    <jsPwdCheckMismatch>The password disagrees with the previous one.</jsPwdCheckMismatch>
+    <jsTimeSegmentErrorSegTips>Start Time should be earlier than End Time!</jsTimeSegmentErrorSegTips>
+    <UserNameLengthTips>Length cannot exceed</UserNameLengthTips>
+    <MPasswordTips>Please input password</MPasswordTips>
+    <Mnumbers>You can only input number.</Mnumbers>
+    <DIPAddInvalidTips>The first part is an integer from 1 to 223.</DIPAddInvalidTips>
+    <htlptitle>Important prompt for anti-flicker function</htlptitle>
+    <htlpmodeltips1>This parameter is very important. It should comply with the AC frequency and light frequency of the country and it relates with camera shutter, resolution and frame rate. It may affect the following parameters:</htlpmodeltips1>
+    <htlpmodeltips2>1. Camera\Image Quality: Shutter Lower Limit List</htlpmodeltips2>
+    <htlpmodeltips3>2. Camera\Video\Video Coding: Resolution List and Frame Rate Scope.</htlpmodeltips3>
+    <htlpmodeltips4>Example:</htlpmodeltips4>
+    <htlpmodeltips5>When it is 50Hz, compatible with China AC and lamp frequency, support minimum shutter of 1/25, maximum frame rate of 25fps or 50fps, and PAL resolution of D1(576p).</htlpmodeltips5>
+    <htlpmodeltips6>When it is 60Hz, compatible with America AC and lamp frequency, support minimum shutter of 1/30 and maximum frame rate of 30fps or 60fps, but not support PAL resolution of D1.</htlpmodeltips6>
+    <htlpmodeltips6>When it is natural light, mismatch with AC and lamp frequency. It may not support PAL resolution of D1.</htlpmodeltips6>
+  </Common>
+  <ParamConfig>
+    <Page></Page>
+    <Js>
+      <Success1>Saved</Success1>
+      <Success2>Saved and will take effect after reboot!</Success2>
+      <DeleteSuccTips>Deletion Succeeded</DeleteSuccTips>
+      <DeletefailedTips>Deletion Failed</DeletefailedTips>
+      <SetupSuccTips>Succeeded</SetupSuccTips>
+      <SetupfailedTips>Failed</SetupfailedTips>
+      <LoadSuccTips>Loaded</LoadSuccTips>
+      <LoadfailedTips>Load failed</LoadfailedTips>
+      <StopsuccTips>Stop Succeeded</StopsuccTips>
+      <StopfailedTips>Stop Failed</StopfailedTips>
+      <Success4>Deletion Succeeded, and will take effect after reboot!</Success4>
+      <Success5>Reboot Succeeded</Success5>
+      <Success6>Succeeded</Success6>
+      <Error1>Operation failed!</Error1>
+      <Error2>Parameter obtainment failed!</Error2>
+      <Error3>Invalid XML Content</Error3>
+      <Error4>Invalid XML Format</Error4>
+      <Error5>Invalid Operation</Error5>
+      <Error6>Device Error</Error6>
+      <Error7>Device Busy</Error7>
+      <ConnectTimeoutTips>Connection Timeout</ConnectTimeoutTips>
+      <Error9>Failed</Error9>
+      <jsNetworkAbnormal>Network Abnormal</jsNetworkAbnormal>
+      <Error10>No Alarm Input/Output Channel</Error10>
+      <Error11>User Name or Password Error</Error11>
+      <Error12>Not allowed</Error12>
+      <Error13>Parameter Error</Error13>
+      <Error14>Invalid URL</Error14>
+      <Error400>Obtainment failed: the network is disconnected or abnormal. Please check!</Error400>
+      <Error44>Parameter obtainment failed!</Error44>
+      <Error55>Channel</Error55>
+      <Error66>Configure Alarms</Error66>
+      <Error77>This channel does not support this function.</Error77>
+      <Error88>IP Address Error</Error88>
+      <Error99>Domain Name Error</Error99>
+      <Error100>Subnet Mask Error</Error100>
+      <Error101>Version Mismatch</Error101>
+      <Error102>Model Mismatching</Error102>
+      <Error104>Fail to connect to server</Error104>
+      <Error105>Domain Name Conflict</Error105>
+      <Error107>Port Conflict</Error107>
+      <MAsk>Need to reboot, do you want to continue?</MAsk>
+      <MAsk1>Restore defaults?</MAsk1>
+      <AskTip1>Delete the user?</AskTip1>
+      <RestartTips>Reboot device?</RestartTips>
+      <RestartParametersTips>Do you want to reboot the configurations?</RestartParametersTips>
+      <RestartSuccessTips>Rebooting...</RestartSuccessTips>
+      <RestartFailedTips>Reboot Failed!</RestartFailedTips>
+      <MFormattingTips>It is recording or the downloaded video or snapshot cannot be formatted.</MFormattingTips>
+      <MDeviceRestar>Reboot</MDeviceRestar>
+      <MDeviceRestaring>Rebooting</MDeviceRestaring>
+      <MDefaultRestar>After restoring to default values, the device will reboot. Are you sure to restore?</MDefaultRestar>
+      <OldPassError>Old Password Error</OldPassError>
+      <MUnknownerror>Unknown Error</MUnknownerror>
+      <tipsRebootErr>The device is disconnected or its IP has been changed.</tipsRebootErr>
+    </Js>
+  </ParamConfig>
+</ParamConfig>

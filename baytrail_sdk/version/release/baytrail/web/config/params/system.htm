@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ul class="tabs" id="tabSystem">
+    <li><a href="javascript:ia(DeviceInfo).update();" name="aDeviceInfo" id="aDeviceInfo"></a></li>
+</ul>
+<div id="Divsystem" class="panes">
+   <div class="pane"  >
+       <!---基本设置开始----->
+       <div id="diDeviceInfo">
+			<div id="diBaseInfo">
+				<div class="subparamswhite">
+				    <span class="firstspan"><label id="laDeviceName" name="laDeviceName"></label></span>
+					<span>
+					    <input id="devicename" class="input_config width150" type="text"  />
+					</span>
+                    <span class="localsecondspan">
+					    <input type="checkbox" id="setosd" class="checkbox"/>&nbsp;<label id="laSaveAsLabel" name="laSaveAsLabel"></label>
+					</span>
+                    <span id="fixedIntervalFrameITips" class="fixedTips"></span><span id="laDeviceNameTips" class="colortips"></span>
+				</div>
+                <div class="subparamsgray">
+				    <span class="firstspan"><label id="laDeviceType" name="laDeviceType"></label></span>
+					<span class="localsecondspan">
+					    <span id="devicetype"></span>
+					</span>
+				</div>
+                <div class="subparamswhite">
+				    <span class="firstspan"><label id="laDeviceSn" name="laDeviceSn"></label></span>
+					<span class="localsecondspan">
+					    <span id="deviceserial"></span>
+					</span>
+				</div>
+                <div class="subparamsgray">
+				    <span class="firstspan"><label id="laFirmwareVersion" name="laFirmwareVersion"></label></span>
+					<span class="localsecondspan">
+					    <span id="firmwareversion"></span>
+					</span>
+				</div>
+                <div class="subparamswhite">
+				    <span class="firstspan"><label id="laSoftwareVersion" name="laSoftwareVersion"></label></span>
+					<span>
+					    <span id="softversion"></span>
+					</span>
+				</div>
+                <div class="subparamsgray">
+				    <span class="firstspan"><label id="laVideoSrcNum" name="laVideoSrcNum"></label></span>
+					<span class="localsecondspan">
+					    <span id="videosourcenum"></span>
+					</span>
+				</div>
+                <!--<div class="spansave"><input type="button"  class="input_save" name="MSaveConfigLocal"  id="SaveDeviceInfo" onclick="SaveDeviceInfo(this)" value=""><span id="SetResultTipsDeviceInfo"></span></div>-->
+                <div class="spansave">
+                         <input type="button"  class="input_save" name="MSaveConfigLocal"  id="SaveDeviceInfo" onclick="SaveDeviceInfo(this,'save')" value="">
+                         <input type="button" class="input_save" id="Jumpsave"  onclick="JumpProtocol('deviceinfo')" value="" name="MjumpFast">
+                         <input type="button" class="input_save" id="deviceinfoup" onclick="SaveDeviceInfo(this,'up')" value="" name="MupFast">
+           				 <input type="button" class="input_save" id="deviceinfodown" onclick="SaveDeviceInfo(this,'down')" value="" name="MdownFast"><span id="SetResultTipsDeviceInfo"></span>
+        		 </div>
+			</div>
+		</div>
+       <!---基本设置结束----->
+   </div>
+</div><!--<div class="panes">-->

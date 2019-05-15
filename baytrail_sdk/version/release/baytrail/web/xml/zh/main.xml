@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Main>
+  <Common>
+    <Page>
+      <MPlugin>请点击此处下载插件，安装时请关闭浏览器</MPlugin>
+      <MNotWin32Plugin>未检测到插件</MNotWin32Plugin>
+      <MpluginTips>请安装插件</MpluginTips>
+    </Page>
+    <js>
+      <jsUpdatePlugin>插件检测到新版本，是否更新?</jsUpdatePlugin>
+      <jsPluginNotcompatible>插件版本不兼容，是否更新?</jsPluginNotcompatible>
+      <jsexit>是否注销</jsexit>
+	  <Mauthorization>没有权限</Mauthorization>
+	  <MIPlimit>IP限制</MIPlimit>
+	  <MNoXML>请求没有带XML</MNoXML>
+	  <MCGIerr>请求不支持或无效URL</MCGIerr>
+	  <MUserPassErr>无效的用户名或密码，请重新登录。</MUserPassErr>
+	  <MUserDisabled>用户被禁用</MUserDisabled>
+    </js>
+  </Common>
+  <Main>
+    <Page>
+	  <MWebPlugin>插件</MWebPlugin>
+	  <MFirmware>固件</MFirmware>
+      <MenuViewer>实时浏览</MenuViewer>
+      <MenuPlayback>录像回放</MenuPlayback>
+      <MenuPic>图片管理</MenuPic>
+      <MenuConfig>配置</MenuConfig>
+      <MenuAlgViewer>智能展示</MenuAlgViewer>
+      <MenuHelp>帮助</MenuHelp>
+      <MenuAbout>关于</MenuAbout>
+      <MenuExit>注销</MenuExit>
+    </Page>
+    <js>
+      <jsStream>未接收到码流,可能设备已断开,或因性能限制已停止发送码流</jsStream>
+      <jsUpgradeTips>状态:准备升级中...</jsUpgradeTips>
+      <jsUpgradeTips1>提示:整个升级过程大概需要几分钟,请不要断电</jsUpgradeTips1>
+      <jsCancel>关闭</jsCancel>
+	  <jsDownload>下载</jsDownload>
+    </js>
+  </Main>
+</Main>

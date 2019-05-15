@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AccessProtocol>
+  <VsipMain>
+    <page>
+      <MRegistrationplatform>注册平台</MRegistrationplatform>
+      <MEnableRegistrationplatform>启用</MEnableRegistrationplatform>
+      <MRplatformadd>注册平台方式</MRplatformadd>
+      <MRplatformipv4>注册平台IPv4地址</MRplatformipv4>
+      <MRplatformipv6>注册平台IPv6地址</MRplatformipv6>
+      <MRplatformurl>注册平台域名</MRplatformurl>
+      <MRplatformpost>注册平台端口</MRplatformpost>
+      <Mvsipuuid>入网设备UUID</Mvsipuuid>
+      <Mvsipnetpassword>入网设备密码</Mvsipnetpassword>
+      <MvsipNAT>发送NAT探测包</MvsipNAT>
+      <MvsipService>VSIP服务</MvsipService>
+      <Mautomaticnetwork>支持自动组网</Mautomaticnetwork>
+    </page>
+    <Option>
+      <Mip>IP地址</Mip>
+      <Murl>域名</Murl>
+    </Option>
+  </VsipMain>
+  <OnvifMain>
+    <page>
+      <Mbasicconfiguration>基本配置</Mbasicconfiguration>
+      <MOnvifEnable>启用</MOnvifEnable>
+      <MOnvifurl>服务器地址(URL)</MOnvifurl>
+      <MAuthentication>鉴权</MAuthentication>
+      <MAuthenticationmode>鉴权方式</MAuthenticationmode>
+      <Mnone>无</Mnone>
+    </page>
+  </OnvifMain>
+  <GB28181Main>
+    <Page>
+	  <MRegistrationplat>注册平台</MRegistrationplat>
+      <MRegistrationplatform1>注册平台 1</MRegistrationplatform1>
+	  <MRegistrationplatform2>注册平台 2</MRegistrationplatform2>
+	  <MRegistrationplatform3>注册平台 3</MRegistrationplatform3>
+	  <MRegistrationplatform4>注册平台 4</MRegistrationplatform4>
+      <MGb28181Enable>启用</MGb28181Enable>
+      <MLocalport>本地端口</MLocalport>
+      <Mgbnetid>入网ID</Mgbnetid>
+      <Mgbdevname>设备名称</Mgbdevname>
+      <Mgbplatid>平台ID</Mgbplatid>
+      <Mgbplataddrv4>平台IPv4地址</Mgbplataddrv4>
+      <Mgbplataddrv6>平台IPv6地址</Mgbplataddrv6>
+      <Mplatport>平台端口</Mplatport>
+      <Mgbusername>注册用户名</Mgbusername>
+      <Mgbuserpassword>注册密码</Mgbuserpassword>
+      <MAlarmnumber>告警数目</MAlarmnumber>
+      <Mgbrelettime>续租时间</Mgbrelettime>
+      <Mgbheartbeat>心跳间隔</Mgbheartbeat>
+      <Mownership>设备归属</Mownership>
+      <Mcivilcode>行政区域</Mcivilcode>
+      <Mpolicergn>警区</Mpolicergn>
+      <Msetupaddress>安装地址</Msetupaddress>
+      <Mgbencchns>通道号</Mgbencchns>
+      <MgbencvideoID>GB视频编码通道ID</MgbencvideoID>
+      <Mgbencvideoname>GB视频编码通道名称</Mgbencvideoname>
+      <Mgbalarmchnsid>告警ID</Mgbalarmchnsid>
+      <Mgbalarmchnsname>告警名称</Mgbalarmchnsname>
+      <Mconfiguration>扩展配置</Mconfiguration>
+      <MOptionalconfiguration>可选扩展配置</MOptionalconfiguration>
+      <MDataexists>数据已存在</MDataexists>
+	  <MStreamType>IPC码流类型</MStreamType>
+	  <StreamTypeInOpt1>主码流</StreamTypeInOpt1>
+      <StreamTypeInOpt2>辅码流</StreamTypeInOpt2>
+      <StreamTypeInOpt3>第三码流</StreamTypeInOpt3>
+      <StreamTypeInOpt4>第四码流</StreamTypeInOpt4>
+	  <StreamTypeInOpt5>第五码流</StreamTypeInOpt5>
+    </Page>
+    <titletips></titletips>
+  </GB28181Main>
+</AccessProtocol>

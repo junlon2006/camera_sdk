@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Main>
+  <Common>
+    <Page>
+      <MPlugin>Please click to download plug-in and close browser during installation.</MPlugin>
+      <MNotWin32Plugin>Plug-in not detected</MNotWin32Plugin>
+      <MpluginTips>Please install plug-in.</MpluginTips>
+    </Page>
+    <js>
+      <jsUpdatePlugin>Plug-in detects new version, upgrade?</jsUpdatePlugin>
+      <jsPluginNotcompatible>Plug-in version is incompatible, upgrade?</jsPluginNotcompatible>
+      <jsexit>Log out or not</jsexit>
+      <Mauthorization>Unauthorized</Mauthorization>
+      <MIPlimit>IP Limits</MIPlimit>
+      <MNoXML>Request does not include XML</MNoXML>
+      <MCGIerr>Request not supported or invalid UEL</MCGIerr>
+      <MUserPassErr>Invalid user name or password, please login again.</MUserPassErr>
+	  <MUserDisabled>The user is disabled</MUserDisabled>
+    </js>
+  </Common>
+  <Main>
+    <Page>
+	  <MWebPlugin>Web Plugin:</MWebPlugin>
+	  <MFirmware>Firmware:</MFirmware>
+      <MenuViewer>Live View</MenuViewer>
+      <MenuPlayback>Playback</MenuPlayback>
+      <MenuPic>Snapshot</MenuPic>
+      <MenuConfig>Settings</MenuConfig>
+      <MenuHelp>Help</MenuHelp>
+      <MenuAbout>About</MenuAbout>
+      <MenuExit>Logout</MenuExit>
+    </Page>
+    <js>
+      <jsStream>Stream is not received. The device may have been disconnected, or have stopped transmitting stream because of performance limits.</jsStream>
+      <jsUpgradeTips>Status: Ready to upgrade...</jsUpgradeTips>
+      <jsUpgradeTips1>Prompt: the upgrade takes a few minutes. Please do not power off.</jsUpgradeTips1>
+      <jsCancel>Close</jsCancel>
+	  <jsDownload>Download</jsDownload>
+    </js>
+  </Main>
+</Main>

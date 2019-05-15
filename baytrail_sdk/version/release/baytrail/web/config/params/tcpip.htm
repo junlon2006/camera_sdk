@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ul class="tabs" id="tabTCPIP">
+    <li><a id="MCabnetwork" name="MCabnetwork" href="javascript:ia(TCPIP).update();"></a></li>
+    <li><a id="Mwireless" name="Mwireless" href="javascript:ia(wireless).update();"></a></li>
+    <li><a id="MIPPost" name="MIPPost" href="javascript:ia(TCPIPpost).update();"></a></li>
+</ul>
+<div id="divTCPIP" class="panes">
+   <div id="TCPIP" class="pane">
+      <div id="dvIPv4Settings" >
+                <div id="subAutoIp" class="subparamsgray" style="display:none">
+                    <span class="firstspan"><label name="laMacAddress1" id="laMacAddress1">自动获取IP</label></span>
+                    <span>
+                          <input type="checkbox" id="autoip" class="checkbox" onclick="CheckBoxAutoIp(this)">
+                     </span>
+	        	</div>
+                <div id="subAutoIp6" class="subparamsgray" style="display:none">
+                    <span class="firstspan"><label name="laMacAddress1" id="laMacAddress1">自动获取IP</label></span>
+                    <span>
+                          <input type="checkbox" id="autoip6" class="checkbox" onclick="CheckBoxAutoIp6(this)">
+                     </span>
+	        	</div>
+                <div class="subparamsgray">
+                    <span class="firstspan"><label id="Mipversion" name="Mipversion"></label></span>
+                    <span>
+                        <select class="selectwidth width152" id="IPMode" onchange="ChangeIPMode()">
+                        	<option value="IPv4">IPV4</option>
+                            <!--<option value="IPv6">IPV6</option>-->
+                        </select>
+                    </span>
+                </div>
+                <div class="subparamsgray" id="subaddresstype">
+                    <span class="firstspan"><label name="Mpattern" id="Mpattern"></label></span>
+                    <span>
+                        <select class="selectwidth width152" id="addresstype" onchange="Chagneresstype()">
+                        	
+                        </select>
+                    </span>
+                </div>
+                
+                <div class="subparamsgray" id="subseIPv6Mode" style="display:none">
+                    <span class="firstspan">IPv6&nbsp;<label id="Mpattern" name="Mpattern"></label></span>
+                    <span>
+                        <select class="selectwidth width152" id="seIPv6Mode" onchange="ChangeIPv6Mode()">
+                        	<option value="auto" name="Mautoobtain"></option>
+                            <option value="manual" name="Mmanual"></option>
+                            <option value="route" name="Mroutannouncement"></option>
+                        </select>
+                    </span>
+                    <span id="spanroute"><input type="button"  value="" name="Mviewannouncement" class="wbutton" id="btnViewRoute"></span>
+                </div>
+                
+               
+                
+                 <div class="subparamswhite">
+                    <span class="firstspan"><label name="MIPAddress" id="MIPAddress"></label></span>
+                    <span>
+                        <input type="text" maxlength="16"  class="input_config width150" id="ipAddress"   name="DHCPdisabled" onkeydown="CheckKeyDown(event)" onblur="CheckDIPadd(this.value,'ipAddresstips','jsipAddress')">
+                        <input type="text" maxlength="16"  class="input_config width150" id="ipAddress6" style="display:none"  name="DHCPdisabled" onkeydown="CheckKeyDown(event)" onblur="CheckIPadd(this.value,'ipAddress6tips','jsipAddressv6')" />
+                    </span>
+                    <span id="ipAddresstips" class="colortips"></span>
+                    <span id="ipAddress6tips"  class="colortips"></span>
+                </div>
+                <div class="subparamsgray">
+                    <span class="firstspan"><label name="MmaskAddress" id="MmaskAddress"></label></span>
+                    <span>
+                        <input type="text" maxlength="16"  class="input_config width150" id="subnetMask"  name="DHCPdisabled" onkeydown="CheckKeyDown(event)"  onblur="CheckMaskIP(this.value,'subnetMasktips','MmaskAddress')">
+                        <input type="text" maxlength="16"  class="input_config width150" id="subnetMask6" style="display:none"  name="DHCPdisabled" onkeydown="CheckKeyDown(event)" onblur="CheckIPadd(this.value,'subnetMask6tips','jsMaskAddress')">
+                    </span>
+                    <span id="subnetMasktips" class="colortips"></span>
+                    <span id="subnetMask6tips" class="colortips"></span>
+                </div>
+                <div class="subparamswhite">
+                    <span class="firstspan"><label name="MDefaultGatewayAddress" id="MDefaultGatewayAddress"></label></span>
+                    <span>
+                     <input type="text" maxlength="16" class="input_config width150" id="DefaultGateway"  name="DHCPdisabled" onkeydown="CheckKeyDown(event)" onblur="CheckIPadd(this.value,'ServerGateWayIPtips','MDefaultGatewayAddress')">
+                     <input type="text" maxlength="16" class="input_config width150" id="DefaultGateway6" style="display:none"  name="DHCPdisabled" onkeydown="CheckKeyDown(event)" onblur="CheckIPadd(this.value,'ServerGateWayIPtips','jsDefaultGatewayAddress')">
+                    </span>
+                    <span id="ServerGateWayIPtips" class="colortips"></span>
+                </div>
+                 <div class="subparamsgray" id="dvMulticast" style="display: block;">
+                <span class="firstspan"><label id="MMulticastAddress" name="MMulticastAddress"></label></span>
+                <span>
+		            <input type="text" value="" maxlength="40"  class="input_config width150" id="Multicast" onblur="CheckMulticastIP(this.value,'Multicasttips','MMulticastAddress')">
+                    <input type="text" value="" maxlength="40"  class="input_config width150" id="Multicast6" style="display:none" onblur="CheckIPadd(this.value,'Multicasttips','jsMulticastAddress')">
+		        </span>
+                <span id="Multicasttips" class="colortips"></span>
+            </div>
+                
+                <div id="dvMacAddress" class="subparamsgray">
+                    <span class="firstspan"><label name="MMacAddress" id="MMacAddress"></label></span>
+                    <span>
+                    	 <input type="text" maxlength="16" class="input_config width150" id="MacAddress" disabled="disabled">
+                     </span>
+                    <span id="ServerMacAddresstips" class="colortips"></span>
+	        	</div>
+                
+                <div id="9000MTU" class="subparamswhite">
+                    <span class="firstspan">MTU</span>
+                    <span>
+                        <input type="text" maxlength="4"   class="input_config width150" id="MTU" onblur="CheackIDNORange(this.value,'MTUtips','jsMtuParam',500,1500)">
+                    </span>
+                    <span id="MTUtips" class="colortips"></span>
+                </div>
+                
+                
+                
+            	
+               
+   
+	       
+        
+       
+	        <div class="mainparams main_top26">
+	            <span><label name="MDNSServerConfig" id="MDNSServerConfig"></label></span>
+	        </div>
+            <div id="subautoDNS" class="subparamsgray main_top10">
+                <span class="firstspan"><label name="MautoDNS" id="MautoDNS"></label></span>
+                <span>
+                     <input type="checkbox" id="autoDNS" class="checkbox" onclick="CheckBoxAutoDNS(this)">
+                 </span>
+            </div>
+            <div id="subautoDNS6" class="subparamsgray main_top10" style="display:none">
+                <span class="firstspan"><label name="MautoDNS" id="MautoDNS"></label></span>
+                <span>
+                     <input type="checkbox" id="autoDNS6" class="checkbox" onclick="CheckBoxAutoDNS(this)">
+                 </span>
+            </div>
+	        <div class="subparamswhite">
+	            <span class="firstspan"><label name="MPrimaryDNS" id="MPrimaryDNS"></label></span>
+		        <span>
+		            <input type="text" maxlength="40" class="input_config width150" id="dnsserver1"   name="DHCPdisabled" onkeydown="CheckKeyDown(event)" onblur="CheckIPadd(this.value,'DNSServerIPtips','jsdnsserver1','0')">
+                    <input type="text" maxlength="40" class="input_config width150" id="dnsserver16" style="display:none"  name="DHCPdisabled"  onkeydown="CheckKeyDown(event)" onblur="CheckIPadd(this.value,'DNSServerIPtips','jsdnsserver1','0')">
+		        </span>
+		        <span id="DNSServerIPtips" class="colortips"></span>
+	        </div>
+	        <div id="dvDNSServer2" class="subparamsgray">
+	            <span class="firstspan"><label id="MPrimaryDNS1" name="MPrimaryDNS1"></label></span>
+		        <span>
+		            <input type="text" maxlength="40"  class="input_config width150" id="dnsserver2"  name="DHCPdisabled"  onkeydown="CheckKeyDown(event)" onblur="CheckIPadd(this.value,'DNSServer2IPtips','jsdnsserver2','0')">
+                    <input type="text" maxlength="40"  class="input_config width150" id="dnsserver26" style="display:none"  name="DHCPdisabled"  onkeydown="CheckKeyDown(event)" onblur="CheckIPadd(this.value,'DNSServer2IPtips','jsdnsserver2','0')">
+		        </span>
+		        <span id="DNSServer2IPtips" class="colortips"></span>
+	        </div>
+        </div>	
+         <!--<div class="spansave"><input type="button" name="MSaveConfigLocal"  class="input_save"  id="SaveIPTCP" onclick="SaveIPTCP(this)" value=""><span id="SetResultTipsIPTCP"></span></div>-->
+         <div class="spansave">
+            <input type="button" name="MSaveConfigLocal"  class="input_save"  id="SaveIPTCP"  onclick="SaveIPTCP(this,'save')" value="">
+            <input type="button" class="input_save"  id="IPTCPJump" onclick="JumpProtocol('tcpip')" value="" name="MjumpFast">
+            <input type="button" class="input_save"  id="IPTCPdown" onclick="SaveIPTCP(this,'down')" value="" name="MdownFast"><span id="SetResultTipsIPTCP"></span>
+         </div>
+   </div>
+  
+  <!----------wireless_str----------------->
+  
+  
+  <div id="wireless" class="pane">
+        <div id="subbluetooth">
+            <div class="mainparams">
+                <span><label name="jsBluetoothcon"></label></span>
+            </div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="laEnable"></label></span>
+				<span>
+                  <input id="enablebluetooth" class="checkbox main_top5" type="checkbox" onclick="checkbox(this)" value="">
+                </span>
+			</div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="jsbluetoothkey"></label></span>
+				<span>
+                  <input type="text" class="input_config width150" id="bluetoothkey" />
+                </span>
+                <span id="bluetoothkeytips" class="colortips"></span>
+			</div>
+           <div class="spansave"><input type="button"  class="input_save"  onclick="SaveBluetoothkey(this)" name="MSaveConfigLocal" value=""><span id="SetResultTipsbluetoothkey"></span></div>
+          </div>  
+            <div class="mainparams main_top10">
+        	<span><label  name="jsWLANcom"></label></span>
+      	    </div>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="jsStateWLAN"></label></span>
+				<span class="">
+                  <span style="height:25px; line-height:25px; display:inline-block;border:1px solid #CCC;width:142px;"><span id="wlanstate"></span><label name="jsWLANmode"></label><span id="mh">：</span><span style="display:inline-block; margin-right:10px;" id="wlanisconnect"></span></span>
+                  <span style="height:25px; line-height:25px; display:inline-block;border:1px solid #CCC;">MAC：<span style="display:inline-block; margin-right:10px;" id="wlanmac"></span></span>
+                  
+                </span>
+			</div>
+             <style>
+		.icon-large {
+			width:100px;
+			cursor:pointer;
+			height:20px;
+			text-align:left;
+			line-height:20px; 
+			cursor:pointer;
+			background: url(../../images/login/expanded.png)  no-repeat 97% 50%;
+			}
+		.icon1 {
+			background: url(../../images/config/select.png)  no-repeat 97% 80%;
+			width:16px; height:16px;
+			cursor:pointer;
+			float:right;
+			margin-top:8px;
+			margin-right:5px;
+		}
+		.delicon {
+			background: url(../../images/config/del.png)  no-repeat 97% 80%;
+			width:16px; height:28px;
+			cursor:pointer;
+			float:right;
+			
+			margin-right:5px;
+		}
+		.hoticon {
+			background: url(../../images/config/del.png)  no-repeat 97% 80%;
+			width:16px; height:28px;
+			cursor:pointer;
+			float:left;
+			margin-right:5px;
+		}
+		.wifi_pass {
+			background: url(../../images/config/wifi_pass_normal.png)  no-repeat 97% 80%;
+			width:20px; height:20px;
+			cursor:pointer;
+			float:left;
+			margin-right:5px;
+			margin-top:6px;
+		}
+		.wifiicon {
+			background: url(../../images/config/wifi_normal.png)  no-repeat 97% 80%;
+			width:20px; height:20px;
+			cursor:pointer;
+			float:left;
+			margin-right:5px;
+			margin-top:6px;
+		}
+		#UlWifi { border:1px #CCC solid; line-height:20px; margin:2px 0; width:300px; height:150px; overflow:scroll;overflow-x:hidden;}
+		#UlWifi li { cursor:pointer;height:35px; padding-left:4px;}
+		
+		#Ulhotspotlist { border:1px #CCC solid; margin-top:20px;  width:300px; height:150px; overflow:scroll;overflow-x:hidden;}
+		#Ulhotspotlist li { height:35px; padding-left:4px; /*border-bottom:1px solid #CCC;*/}
+		.scnbutton{width:140px; height:30px; line-height:30px; background:#4f9fe6; border:0px; color:#fff; font-weight:bold; margin-top:20px; cursor:pointer;}
+        .addico {width:32px; height:32px;
+			cursor:pointer;
+			float:right;
+			margin-right:5px;
+		}
+		.Ulhotspan {margin-left:10px; display:block}
+		.Ulhotspanblock {line-height:16px; display:block}
+		.Ulhotspanfont{ font-size:10px; color:#999;}
+		
+        </style>
+            <div class="subparamswhite">
+			    <span class="firstspan"><label name="jsHotlist"></label></span>
+				<span class="localsecondspan">
+                  <ul id="UlWifi">
+        		  </ul>
+                  
+                  <ul id="Ulhotspotlist">
+        		  </ul>
+                  <input type="button" id="WifiRefresh" value="" />
+                  <input type="button" value="" name="jsAddconnection" onclick="WalnTable('','add')" />
+                </span>
+			</div>
+    </div>
+  
+  
+  
+  <!----------Mwireless_end----------------->
+  
+   
+   <div class="pane" id="divPortConfiguration">
+        <div class="subparamswhite " id="divHttpPort">
+	        <span class="firstspan"><label name="jsHttpPortParam" id="jsHttpPortParam"></label></span>
+	        <span>
+			    <input type="text" maxlength="5"   class="input_config width150" id="httpport" onkeydown="CheckKeyDown(event)" >
+			</span>
+	        <span id="fixedhttpportTips" class="fixedTips"></span><span id="HttpPortTips" class="colortips"></span>
+	    </div>
+	    <div class="subparamswhite" id="divHttpsPort">
+	        <span class="firstspan"><label name="jsHttpsPortParam" id="jsHttpsPortParam"></label></span>
+	        <span>
+			    <input type="text" maxlength="5"  class="input_config width150" id="httpsport" onkeydown="CheckKeyDown(event)"  />
+			</span>
+	        <span id="fixedhttpsportTips" class="fixedTips"></span><span id="HttpsPortTips" class="colortips"></span>
+	    </div>
+        <div class="subparamsgray " id="divRtspPort">
+	        <span class="firstspan"><label name="jsRtspPortParam" id="jsRtspPortParam"></label></span>
+	        <span>
+			    <input type="text" maxlength="5"  class="input_config width150" id="rtpsport" onkeydown="CheckKeyDown(event)"  />
+			</span>
+	        <span id="fixedrtpsportTips"  class="fixedTips"></span><span id="RtspPortTips" class="colortips"></span>
+	    </div>
+	    
+        <div class="spansave"><input type="button"  class="input_save"  id="SavePost" onclick="SavePost(this)" value="" name="MSaveConfigLocal"><span id="SetResultTipsPost"></span></div>
+    </div>
+</div>
+
+
+<div id="divWalnTable" style="display:none; height:auto;" >
+    <div class="scheduleedittitlediv" id="divScheduleTitle" style="font-weight:normal;">
+      <label style="font-weight:bold" name="jsAddconnection"></label>
+    </div>
+    <div style="background:#FFF;">
+      <div class="subparamsgray" style="padding-top:10px;">
+        <span class="firstspan"><label name="jswinssid"></label></span>
+        <span class="">
+       	 	<input type="text" class="input_config width150" id="winSSID" maxlength="32" />
+        </span>
+        <span id="winSSIDtips" class="colortips"></span>
+      </div>
+      <div class="subparamsgray" >
+        <span class="firstspan"><label name="jsPassword"></label></span>
+        <span>
+        <input type="password" class="input_config width150" id="winpassword" maxlength="32"/></span>
+        <span id="winpasswordtips" class="colortips"></span>
+      </div>
+      <div class="subparamsgray">
+        <span class="firstspan"><label name="jsshowPassword"></label></span>
+        <span>
+        	<input class="checkbox main_top5" type="checkbox" onclick="checkpasswhow(this,'showpass')">
+         </span>
+      </div>
+      <div class="subparamsgray">
+        <span class="firstspan"><label name="jsadvopt"></label></span>
+        <span>
+           <input class="checkbox main_top5" type="checkbox" id="checkpasswhow" onclick="checkpasswhow(this,'showadv')">
+        </span>
+      </div>
+      
+      <div id="AdvOptWin" style="display:none">
+      	 <div class="subparamsgray" id="subrssi">
+            <span class="firstspan"><label name="jsrssi"></label></span>
+            <span id="winrssi">
+               
+            </span>
+          </div>
+          <div class="subparamsgray" id="SubEncrypttype">
+            <span class="firstspan"><label name="jsencrypttype"></label></span>
+            <span>
+               <select class="selectwidth width152" id="winencrypttype">
+                  <option value="aes">aes</option>
+              </select>
+            </span>
+          </div>
+          <div class="subparamsgray" id="SubSecuritytype">
+            <span class="firstspan"><label name="jssecuritytype"></label></span>
+            <span>
+               <select class="selectwidth width152" id="winsecuritytype">
+                  <option value="wpk">wpk</option>
+                  <option value="wpk2">wpk2</option>
+              </select>
+            </span>
+          </div>
+          <div class="subparamsgray">
+            <span class="firstspan"><label name="jsipmode"></label></span>
+            <span>
+               <select class="selectwidth width152" id="winipmode" onchange="winaddresstype(this,'wifi')">
+                  <option name="Mdynamic" value="dynamic">DHCP</option>
+                  <option name="Mstatic" value="static">静态</option>
+              </select>
+            </span>
+          </div>
+           <div class="subparamsgray">
+            <span class="firstspan"><label name="jsipAddress"></label></span>
+            <span>
+              <input type="text" class="input_config width150" id="winipaddress" onblur="CheckDIPadd(this.value,'winIPAddresstips','jsipAddress')" onkeydown="CheckKeyDown(event)" maxlength="16">
+            </span>
+            <span id="winIPAddresstips" class="colortips"></span>
+          </div>
+          <div class="subparamsgray">
+            <span class="firstspan"><label name="MmaskAddress"></label></span>
+            <span>
+              <input type="text" class="input_config width150" id="winsubnetmask" onblur="CheckMaskIP(this.value,'winsubnetmasktips','MmaskAddress')" onkeydown="CheckKeyDown(event)" maxlength="16">
+            </span>
+            <span id="winsubnetmasktips" class="colortips"></span>
+          </div>
+          <div class="subparamsgray">
+            <span class="firstspan"><label name="MDefaultGatewayAddress"></label></span>
+            <span>
+              <input type="text" class="input_config width150" id="windefaultgateway" onblur="CheckIPadd(this.value,'windefaultgatewaytips','MDefaultGatewayAddress')" onkeydown="CheckKeyDown(event)" maxlength="16">
+            </span>
+            <span id="windefaultgatewaytips" class="colortips"></span>
+          </div>
+          <div class="subparamsgray">
+            <span class="firstspan"><label name="MautoDNS"></label></span>
+            <span>
+              <input class="checkbox main_top5" type="checkbox" id="winautodns" onclick="CheckWifiDNS(this)" value="false">
+            </span>
+          </div>
+          <div class="subparamsgray">
+            <span class="firstspan"><label name="MPrimaryDNS"></label></span>
+            <span>
+              <input type="text" class="input_config width150"  id="windns1" onblur="CheckIPadd(this.value,'winjsdns1tips','MPrimaryDNS','0')" onkeydown="CheckKeyDown(event)" maxlength="16">
+            </span>
+            <span id="winjsdns1tips" class="colortips"></span>
+          </div>
+          <div class="subparamsgray">
+            <span class="firstspan"><label name="MPrimaryDNS1"></label></span>
+            <span>
+              <input type="text" class="input_config width150" id="windns2" onblur="CheckIPadd(this.value,'winjsdns2tips','MPrimaryDNS1','0')" onkeydown="CheckKeyDown(event)" maxlength="16">
+            </span>
+            <span id="winjsdns2tips" class="colortips"></span>
+          </div>
+      
+      </div>
+       <div  style="height:32px; width:100%; line-height:32px; background:#e7e7e7; clear:both;">
+       	   <span style="float:right; margin-right:10px;">
+            <span id="WalnOKTips" class="formtips"></span>
+            <input id="WalnOKclick" class="buttonclass"  type="button" name="" value="">
+            <input id="WalnCancelClick" class="buttonclass" type="button" onclick="WalnCancelClick()" name="MlaCancel" value="">
+           </span>
+      </div>
+     
+   </div>
+</div>
+<!-------扫描提示----------->
+<div id="divWalnAp" style="display:none; height:auto;" >
+    <div class="scheduleedittitlediv" id="divScheduleTitle" style="font-weight:normal;">
+      <label style="font-weight:bold"><label name="jsRescan"></label></label>
+    </div>
+    <div style="background:#FFF;">
+      <div class="subparamsgray" style="padding-top:10px;">
+        <span class="firstspan"><label name="jswinssid"></label></span>
+        <span class="">
+        </span>
+      </div>
+      </div>
+       <div  style="height:32px; width:100%; line-height:32px; background:#e7e7e7; clear:both;">
+       	   <span style="float:right; margin-right:10px;">
+            <span id="WalnOKTips" class="formtips"></span>
+            <input id="WalnOKclick11" class="buttonclass"  type="button" name="" value="">
+            <input id="WalnCancelClick11" class="buttonclass" type="button" onclick="WalnCancelClick()" name="MlaCancel" value="">
+           </span>
+      </div>
+</div>
